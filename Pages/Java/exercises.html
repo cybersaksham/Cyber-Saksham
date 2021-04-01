@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | Java | Exercises</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c3 {
+            display: none;
+        }
+
+        #d1,
+        #d5,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./java.html">Java</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./exercises.html">Exercises</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Exercises</h3>
+        <hr>
+        <h5 id="nothing">No exercise matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        1. Calculate Percentage
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-java"><code>/*
+* Take max marks & marks of 5 subjects.
+* Then calculate percentage & display it.
+* */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class E1_calculate_percentage {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Print your marks in following subjects.");
+
+        System.out.print("Max Marks of one subject - ");
+        float max_marks = sc.nextFloat();
+
+        System.out.print("Physics - ");
+        float physics = sc.nextFloat();
+
+        System.out.print("Maths - ");
+        float maths = sc.nextFloat();
+
+        System.out.print("Chemistry - ");
+        float chem = sc.nextFloat();
+
+        System.out.print("Hindi - ");
+        float hindi = sc.nextFloat();
+
+        System.out.print("English - ");
+        float eng = sc.nextFloat();
+
+        float marks = physics + maths + chem + hindi + eng;
+        float percentage = (marks / max_marks) * 20;
+
+        System.out.println("Your percentage is - " + percentage + " %");
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project2" class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        2. Rock Paper Scissors
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-java"><code>/*
+1 --&gt; Rock
+2 --&gt; Paper
+3 --&gt; Scissors
+
+Play game against computer of 5 rounds.
+Display score at end of each round.
+Finally display winner.
+ */
+
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class E2_rock_paper_scissors {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+
+        int comp, player, comp_score = 0, player_score = 0, i = 1;
+        String comp_char, player_char;
+        System.out.println("Lets, start game!!");
+
+        // Game Loop
+        while (i &lt;= 5) {
+            // Initializing round
+            System.out.println("\nRound " + i + " :");
+            System.out.print("Enter 1 for rock, 2 for paper & 3 for scissors : ");
+            player = sc.nextInt();
+            comp = rand.nextInt(3);
+
+            // Checking for winner of this round
+            if (player == 1) {
+                player_char = "Rock";
+                comp_char = "Rock";
+                if (comp == 1) { // Rock Paper
+                    comp_score += 1;
+                    comp_char = "Paper";
+                } else if (comp == 2) { // Rock Scissors
+                    player_score += 1;
+                    comp_char = "Scissors";
+                }
+            } else if (player == 2) {
+                player_char = "Paper";
+                comp_char = "Paper";
+                if (comp == 0) { // Paper Rock
+                    player_score += 1;
+                    comp_char = "Rock";
+                } else if (comp == 2) { // Paper Scissors
+                    comp_score += 1;
+                    comp_char = "Scissors";
+                }
+            } else if (player == 3) {
+                player_char = "Scissors";
+                comp_char = "Scissors";
+                if (comp == 0) { // Scissors Rock
+                    comp_score += 1;
+                    comp_char = "Rock";
+                } else if (comp == 1) { // Scissors Paper
+                    player_score += 1;
+                    comp_char = "Paper";
+                }
+            } else {
+                System.out.println("Enter correct choice!!!");
+                continue;
+            }
+
+            // Printing status
+            System.out.println("\tRound " + i + " --&gt; " + player_char + " " + comp_char);
+            System.out.println("\tScore   --&gt;   " + player_score + "    " + comp_score);
+
+            // Increasing round no
+            i += 1;
+        }
+
+        // Checking for final winner
+        if (comp_score &gt; player_score) {
+            System.out.println("\nComputer won by " + (comp_score - player_score) + " points!!!");
+        } else if (comp_score &lt; player_score) {
+            System.out.println("\nYou won by " + (player_score - comp_score) + " points!!!");
+        } else {
+            System.out.println("\nGame Tied!!!");
+        }
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        3. Getters & Setters
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-java"><code>/*
+Make a Circle class & set its radius, area & perimeter.
+Then check their validity.
+ */
+
+package com.company;
+
+class Circle {
+    private float rad, area, peri;
+
+    public void setRad(float rad) {
+        this.rad = rad;
+    }
+
+    public void setArea(float area) {
+        this.area = area;
+        if (this.area != (3.14f * rad * rad)) {
+            System.out.println("Area is incorrect according to radius.");
+        }
+    }
+
+    public void setPeri(float peri) {
+        this.peri = peri;
+        if (this.peri != (2.0f * 3.14f * rad)) {
+            System.out.println("Perimeter is incorrect according to radius.");
+        }
+    }
+}
+
+public class E3_getters_setters {
+    public static void main(String[] args) {
+        Circle c1 = new Circle();
+        c1.setRad(1.0f);
+        c1.setArea(2.0f);
+        c1.setPeri(3.0f);
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        4. Guess Number
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-java"><code>/*
+Create a class Game, which allows user to play "Guess The Number" game once.
+1. Constructor to generate random number.
+2. takeUserInout() to take input number.
+3. isCorrectNumber() to detect whether number entered is correct.
+4. getter & setter for no of guesses.
+Maximum no of guesses are 10
+ */
+
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+class Game {
+    Random rand = new Random();
+    Scanner sc = new Scanner(System.in);
+    private int guesses, randNo, input;
+    private boolean win;
+
+    public Game() {
+        randNo = rand.nextInt(100);
+        randNo++;
+        guesses = 0;
+        win = false;
+    }
+
+    public void takeUserInput() {
+        System.out.print("Guess a number from 1 to 100 : ");
+        input = sc.nextInt();
+        guesses++;
+    }
+
+    public void isCorrectNo() {
+        if (randNo == input) {
+            win = true;
+            System.out.println("Yay!! Correct number guessed.");
+        } else if ((randNo - input) &lt;= 10 && (randNo &gt; input)) {
+            System.out.println("Guess a little big");
+        } else if ((randNo - input) &gt; 10 && (randNo &gt; input)) {
+            System.out.println("Guess a big");
+        } else if ((input - randNo) &lt;= 10) {
+            System.out.println("Guess a little small");
+        } else {
+            System.out.println("Guess a small");
+        }
+        System.out.println("Only " + (10 - guesses) + " guesses left.");
+    }
+
+    public int getGuesses() {
+        return guesses;
+    }
+
+    public boolean isWon() {
+        return win;
+    }
+
+    public void checkResult() {
+        if (win) {
+            System.out.println("Yay!! you guessed in " + guesses + " guesses.");
+        } else {
+            System.out.println("Alas!! you lost the game.");
+        }
+        System.out.println("The correct no was " + randNo);
+    }
+}
+
+public class E4_guess_number {
+    public static void main(String[] args) {
+        Game player = new Game();
+        System.out.println("Lets start the game!!!");
+
+        while (player.getGuesses() &lt; 10 && !player.isWon()) {
+            player.takeUserInput();
+            player.isCorrectNo();
+        }
+
+        player.checkResult();
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project5" class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        5. Library
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-java"><code>/*
+You have to create a Library class with following methods & properties :
+1. issueBook()
+2. returnBook()
+3. showBooks()
+4. addBooks()
+5. Array to store available books
+6. Array to store issued books
+ */
+
+package com.company;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+class Library {
+    Scanner sc1 = new Scanner(System.in);
+    private String[] availableBooks = new String[5];
+    private String[] issuedBooks = new String[0];
+
+    public Library() {
+        availableBooks[0] = "A";
+        availableBooks[1] = "B";
+        availableBooks[2] = "C";
+        availableBooks[3] = "D";
+        availableBooks[4] = "E";
+    }
+
+    // For showing available books
+    public void showBooks() {
+        System.out.println("The available books are :");
+        for (String item : availableBooks) {
+            System.out.println(item);
+        }
+    }
+
+    // For adding books
+    public void addBooks() {
+        System.out.print("Enter name of book you want to add : ");
+        String str = sc1.nextLine();
+        boolean check = true;
+        for (String item : availableBooks) {
+            if (item.equals(str)) {
+                check = false; // Becomes false if book already present in library
+                System.out.println("Book " + str + " is already present in library.");
+                break;
+            }
+        }
+        for (String item : issuedBooks) {
+            if (item.equals(str)) {
+                check = false; // Becomes false if book is issued to someone
+                System.out.println("Book " + str + " is issued to someone. Cannot add another one.");
+                break;
+            }
+        }
+        int n = availableBooks.length;
+        if (check) {
+            // If boolean remains true then add book at end of array
+            availableBooks = Arrays.copyOf(availableBooks, n + 1);
+            availableBooks[n] = str;
+            System.out.println("Book " + str + " successfully added to library.");
+        }
+    }
+
+    // For issuing books
+    public void issueBook() {
+        System.out.print("Enter name of book you want to borrow : ");
+        String str = sc1.nextLine();
+        System.out.print("Enter your name : ");
+        String name = sc1.nextLine();
+        int n = -1;
+        boolean check = true;
+        for (String j : issuedBooks) {
+            if (j.equals(str)) {
+                check = false; // Becomes false if already issued to someone
+                break;
+            }
+        }
+        if (check) {
+            // If boolean remains true
+            for (int i = 0; i &lt; availableBooks.length; i++) {
+                if (availableBooks[i].equals(str)) {
+                    // If present in available books then delete that & add in issued books
+                    n = i;
+                    for (int k = n; k &lt; availableBooks.length - 1; k++) {
+                        availableBooks[k] = availableBooks[k + 1];
+                    }
+                    availableBooks = Arrays.copyOf(availableBooks, availableBooks.length - 1);
+                    issuedBooks = Arrays.copyOf(issuedBooks, issuedBooks.length + 1);
+                    issuedBooks[issuedBooks.length - 1] = str;
+                    break;
+                }
+            }
+        } else {
+            n = -2;
+            System.out.println("Book " + str + " is already issued to someone.");
+        }
+        if (n == -1) {
+            System.out.println("Book " + str + " is not present in library.");
+        } else if (n &gt;= 0) {
+            System.out.println("Book " + str + " successfully issued to " + name + ".");
+        }
+    }
+
+    // For returning an issued book
+    public void returnBook() {
+        System.out.print("Enter name of book you want to return : ");
+        String str = sc1.nextLine();
+        int n = -1;
+        for (int i = 0; i &lt; issuedBooks.length; i++) {
+            if (issuedBooks[i].equals(str)) {
+                // If present in issued books then delete that & add in available books
+                n = i;
+                for (int k = n; k &lt; issuedBooks.length - 1; k++) {
+                    issuedBooks[k] = issuedBooks[k + 1];
+                }
+                issuedBooks = Arrays.copyOf(issuedBooks, issuedBooks.length - 1);
+                availableBooks = Arrays.copyOf(availableBooks, availableBooks.length + 1);
+                availableBooks[availableBooks.length - 1] = str;
+                break;
+            }
+        }
+        if (n == -1) {
+            System.out.println("Book " + str + " is not issued to anyone.");
+        } else {
+            System.out.println("Book " + str + " successfully returned.");
+        }
+    }
+}
+
+public class E5_library {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Library obj = new Library();
+        int input = -1;
+        while (input != 0) {
+            System.out.println();
+            System.out.println("Enter 1 to show available books.");
+            System.out.println("Enter 2 to add books.");
+            System.out.println("Enter 3 to issue books.");
+            System.out.println("Enter 4 to return books.");
+            System.out.println("Enter 0 to exit library.");
+            System.out.print("Your input : ");
+            input = sc.nextInt();
+            System.out.println();
+
+            switch (input) {
+                case 1 -&gt; obj.showBooks();
+                case 2 -&gt; obj.addBooks();
+                case 3 -&gt; obj.issueBook();
+                case 4 -&gt; obj.returnBook();
+                case 0 -&gt; System.out.println("Exiting library...");
+                default -&gt; System.out.println("Enter correct input!!!");
+            }
+        }
+        System.out.println("Thanks for coming. Visit Again!!!");
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        6. Custom Calculator
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-java"><code>/*
+Create a calculator with functions :
++, -, *, /
+Handle these exceptions :
+1. Invalid Input Exception ex- 8 & 9
+2. Cannot Divide by 0 Exception
+3. Max input Exception (input cannot be greater than 100000)
+4. Max Multiplier reached Exception (don't allow any multiplication input to be greater than 7000)
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+class calcExceptions extends Exception {
+    String msg, name;
+
+    public calcExceptions(String name, String msg) {
+        this.name = name;
+        this.msg = msg;
+    }
+
+    @Override
+    public String toString() {
+        return "Name - " + name;
+    }
+
+    @Override
+    public String getMessage() {
+        return "Cause - " + msg;
+    }
+}
+
+public class E6_custom_calculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a, b, check = 0;
+        String c;
+        System.out.println("Welcome to Custom Calculator!!!\n");
+
+        while (check == 0) {
+            System.out.print("Enter first operand = ");
+            a = sc.nextInt();
+            System.out.print("Enter second operand = ");
+            b = sc.nextInt();
+            System.out.print("Enter Operation = ");
+            c = sc.next();
+
+            // Checking exceptions
+            try {
+                if (a &gt; 100000 || b &gt; 100000) {
+                    throw new calcExceptions("Max Input Exception!!!", "Both operands must be less than 100000.");
+                }
+                if ((a &gt; 7000 || b &gt; 7000) && c.equals("*")) {
+                    throw new calcExceptions("Max Multiplier Reached Exception!!!", "In multiplication both input must be less than 7000.");
+                }
+                if (b == 0 && c.equals("/")) {
+                    throw new calcExceptions("Cannot Divide By 0 Exception!!!", "In maths denominator cannot have zero.");
+                }
+                switch (c) {
+                    case "+" -&gt; System.out.println(a + " + " + b + " = " + (a + b));
+                    case "-" -&gt; System.out.println(a + " - " + b + " = " + (a - b));
+                    case "*" -&gt; System.out.println(a + " * " + b + " = " + (a * b));
+                    case "/" -&gt; System.out.println(a + " / " + b + " = " + (a / b));
+                    default -&gt; {
+                        throw new calcExceptions("Invalid Input Exception!!!", "Operator can be +, -, *, / only.");
+                    }
+                }
+            } catch (Exception e) {
+                // Showing errors
+                System.out.println();
+                System.out.println("Following error occurred!!!");
+                System.out.println(e.toString());
+                System.out.println(e.getMessage());
+            }
+
+            // Asking user for exiting or not
+            check = 2;
+            System.out.println();
+            while (!(check == 0 || check == 1)) {
+                System.out.print("Enter 0 for play & 1 for exit = ");
+                check = sc.nextInt();
+            }
+            System.out.println();
+        }
+        System.out.println("Thanks for using Custom Calculator!!!");
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        7. Library Management System
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-java"><code>/*
+Create a library management system capable of issuing books to students.
+Book should have info like :
+1. Book Name
+2. Book Author
+3. Issued To
+4. Issued On
+User should be able to add books, return issued books, issue books.
+Assume that all users are registered with their name in current database.
+ */
+
+package com.company;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Book7 {
+    public String name, author, issued_to, issued_on;
+
+    public Book7(String name, String author) {
+        this.name = name;
+        this.author = author;
+    }
+
+    public Book7(String name, String author, String issued_to, String issued_on) {
+        this.name = name;
+        this.author = author;
+        this.issued_to = issued_to;
+        this.issued_on = issued_on;
+    }
+
+    public void showBooks() {
+        System.out.println(this.name + " " + this.author);
+    }
+}
+
+class Library7 {
+    private ArrayList&lt;Book7&gt; availableBooks;
+    private ArrayList&lt;Book7&gt; issuedBooks = new ArrayList&lt;&gt;();
+    private boolean avlBook;
+    private boolean issBook;
+
+    public Library7(ArrayList&lt;Book7&gt; books) {
+        this.availableBooks = books;
+    }
+
+    private Book7 check(Book7 book) {
+        avlBook = false;
+        issBook = false;
+        Book7 temp = new Book7("a", "b");
+        for (Book7 o : availableBooks) {
+            if ((o.name).equals(book.name) && (o.author).equals(book.author)) {
+                this.avlBook = true;
+                return o;
+            }
+        }
+        for (Book7 o : issuedBooks) {
+            if ((o.name).equals(book.name) && (o.author).equals(book.author)) {
+                this.issBook = true;
+                return o;
+            }
+        }
+        return temp;
+    }
+
+    public void showBook() {
+        System.out.println("Showing books :");
+        for (Book7 books : availableBooks) {
+            books.showBooks();
+        }
+    }
+
+    public void addBook(Book7 book) {
+        System.out.println();
+        Book7 pointer = this.check(book);
+        if (this.issBook) {
+            System.out.println("This book is issued to someone. Cannot add another.");
+        } else if (this.avlBook) {
+            System.out.println("This book is already present in library.");
+        } else {
+            this.availableBooks.add(book);
+            System.out.println("Book has been added successfully.");
+        }
+    }
+
+    public void issueBook(Book7 book) {
+        System.out.println();
+        Book7 pointer = this.check(book);
+        if (this.issBook) {
+            System.out.println("This book is already issued to someone.");
+        } else if (this.avlBook) {
+            pointer.issued_to = book.issued_to;
+            pointer.issued_on = book.issued_on;
+            this.availableBooks.remove(pointer);
+            this.issuedBooks.add(pointer);
+            System.out.println("Book has been issued successfully to " + book.issued_to + " on " + book.issued_on + ".");
+        } else {
+            System.out.println("This book is not present in library.");
+        }
+    }
+
+    public void returnBook(Book7 book) {
+        System.out.println();
+        Book7 pointer = this.check(book);
+        if (this.issBook) {
+            System.out.println("Book was issued to " + pointer.issued_to + " on " + pointer.issued_on + ".");
+            this.availableBooks.add(pointer);
+            this.issuedBooks.remove(pointer);
+            System.out.println("Now it has been returned successfully.");
+        } else {
+            System.out.println("This book is not issued to someone yet.");
+        }
+    }
+}
+
+public class E7_Library_Management_System {
+    public static Book7 input() {
+        Scanner sc = new Scanner(System.in);
+        String name, author;
+        System.out.print("Enter book name : ");
+        name = sc.next();
+        System.out.print("Enter author name : ");
+        author = sc.next();
+
+        return new Book7(name, author);
+    }
+
+    public static Book7 input2() {
+        Scanner sc = new Scanner(System.in);
+
+        String name, author, user;
+        System.out.print("Enter book name : ");
+        name = sc.next();
+        System.out.print("Enter author name : ");
+        author = sc.next();
+        System.out.print("Enter your name : ");
+        user = sc.next();
+
+        LocalDateTime ldt = LocalDateTime.now();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy -- H:m:s");
+        String myDate = ldt.format(dtf);
+
+        return new Book7(name, author, user, myDate);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Welcome to our library!!!");
+
+        ArrayList&lt;Book7&gt; book = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; 5; i++) {
+            book.add(new Book7("Book-" + (i + 1), "Author-" + (i + 1)));
+        }
+
+        Library7 obj = new Library7(book);
+        String issued_to;
+
+        int input = -1;
+        while (input != 0) {
+            System.out.println();
+            System.out.println("Enter 1 to show available books.");
+            System.out.println("Enter 2 to add books.");
+            System.out.println("Enter 3 to issue books.");
+            System.out.println("Enter 4 to return books.");
+            System.out.println("Enter 0 to exit library.");
+            System.out.print("Your input : ");
+            input = sc.nextInt();
+            System.out.println();
+
+            switch (input) {
+                case 1 -&gt; obj.showBook();
+                case 2 -&gt; obj.addBook(input());
+                case 3 -&gt; obj.issueBook(input2());
+                case 4 -&gt; obj.returnBook(input());
+                case 0 -&gt; System.out.println("Exiting library...");
+                default -&gt; System.out.println("Enter correct input!!!");
+            }
+        }
+        System.out.println("Thanks for coming. Visit Again!!!");
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>

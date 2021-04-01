@@ -1,0 +1,2667 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | Java | Tutorials</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c3 {
+            display: none;
+        }
+
+        #d2,
+        #d5,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./java.html">Java</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./tutorials.html">Tutorials</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Chapters</h3>
+        <hr>
+        <h5 id="nothing">No chapter matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        1. Basics
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c1.pdf"></a>
+                        <h3>Hello World</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T1_Hello_World {
+    public static void main(String[] args) {
+        System.out.println("Hello World"); // println gives new line after printing
+        System.out.print("Hello "); // print does not give new line after printing
+        System.out.print("World");
+    }
+}
+</code></pre>
+                        <h3>Printing Methods</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T2_printing_methods {
+    public static void main(String[] args) {
+        int a = 4;
+        float b = 3.14f;
+
+        // Printing Methods
+        System.out.println("The value of a is " + a + " & value of b is " + b);
+        System.out.printf("The value of a is %d & value of b is %f\n", a, b);
+        System.out.format("The value of a is %d & value of b is %f\n", a, b);
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        2. Variables & Data Types
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c2.pdf"></a>
+                        <h3>Variables & Data Types</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T3_variables_and_data_types {
+    public static void main(String[] args) {
+        System.out.print("The sum of numbers is : ");
+        int a = 3;
+        double b = 3.1;
+        float c = 4.2f;
+        double d = a + b + c;
+        System.out.println(d);
+    }
+}
+</code></pre>
+                        <h3>Literals</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T4_literals {
+    public static void main(String[] args) {
+        byte a = 110; // byte has no literal
+        int b = 560; // int has no literal
+        short c = 87;  // short has no literal
+        long d = 454845197416494L; // long has literal L or l
+        char e = 'A'; // char is written in single quotes
+        float f = 3.14f; // float has literal f
+        double g = 3.1428445; // double has literal D but no need to specify
+        boolean h = true; // true or false
+        String i = "saksham"; // String is written in double quotes
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+        System.out.println(e);
+        System.out.println(f);
+        System.out.println(g);
+        System.out.println(h);
+        System.out.println(i);
+    }
+}
+</code></pre>
+                        <h3>Input</h3>
+                        <pre class="language-java"><code>package com.company;
+
+import java.util.Scanner;
+
+public class T5_input {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number : ");
+        int a = sc.nextInt(); // For integer
+        System.out.println("Entered no is " + a);
+
+        System.out.print("Enter a floating point : ");
+        float b = sc.nextFloat(); // For float
+        System.out.println("Entered no is " + b);
+
+        System.out.print("Enter a string : ");
+        String d = sc.next(); // Only takes first word
+        System.out.println(d);
+
+        System.out.print("Enter a string : ");
+        String e = sc.nextLine(); // Takes all words
+        System.out.println(e);
+
+        System.out.print("Enter an integer : ");
+        boolean c = sc.hasNextInt(); // Check if entered no is int or not
+        System.out.println(c);
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        3. Operators
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c3.pdf"></a>
+                        <h3>Operators</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T6_operators {
+    public static void main(String[] args) {
+        /* ARITHMETIC OPERATORS
+         * a + b --&gt; sum
+         * a - b --&gt; subtract
+         * a * b --&gt; multiply
+         * a / b --&gt; divide
+         * a % b --&gt; remainder of (a / b) --&gt; Modulo Operator
+         * */
+
+        /* ASSIGNMENT OPERATORS
+         * a = b --&gt; Assigning value of b in a
+         * a += b --&gt; Add b in a
+         * a *= b --&gt; Multiply a by b
+         * a -= b --&gt; Subtract b from a
+         * a /= b --&gt; Divide a by b
+         * */
+
+        /* COMPARISON OPERATORS
+         * a == b --&gt; return true if a & b are equal
+         * a &gt; b --&gt; return true if a is greater than b
+         * a &lt; b --&gt; return true if a is less than b
+         * &lt;=, &gt;= also present
+         * */
+
+        /* LOGICAL OPERATOR
+         * a && b --&gt; return true if a & b both are true
+         * a || b --&gt; return true if any one of a & b is true
+         * !a --&gt; return reverse of a
+         * */
+
+        /* BITWISE OPERATOR
+         * a & b --&gt; work on bits of a, b and returns & value
+         * a | b --&gt; work on bits of a, b and returns | value
+         * Example :
+         * 2 & 3                2 | 3
+         * 2 --&gt; 10             2 --&gt; 10
+         * 3 --&gt; 11             3 --&gt; 11
+         * & --&gt; 10             | --&gt; 11
+         * Ans --&gt; 10 --&gt; 2     Ans --&gt; 11 --&gt; 3
+         * */
+
+        /*
+        INCREMENT or DECREMENT OPERATOR
+        a++ --&gt; first use a then increase by 1 --&gt; Post-increment
+        ++a --&gt; first increase by 1 then use a --&gt; Pre-increment
+        a-- --&gt; first use a then decrease by 1 --&gt; Post-decrement
+        --a --&gt; first decrease by 1 then use a --&gt; Pre-decrement
+         */
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        4. Strings
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c4.pdf"></a>
+                        <h3>Strings</h3>
+                        <pre class="language-java"><code>// Strings are immutable
+
+package com.company;
+
+import java.util.Scanner;
+
+public class T7_string {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // String name = new String("Saksham");
+        String name = "Saksham";
+        System.out.print("The name is : ");
+        System.out.println(name);
+
+        // Taking input for string
+        String s1 = sc.next(); // Take only one word
+        String s2 = sc.nextLine(); // Take whole line
+    }
+}
+</code></pre>
+                        <h3>String Functions</h3>
+                        <pre class="language-java"><code>// Since strings are immutable so original string cannot be changed. New string will be formed
+
+package com.company;
+
+public class T8_string_methods {
+    public static void main(String[] args) {
+        String name = "SaksHam";
+        String str1 = "     saksham  bindal   ";
+
+        System.out.println(name.length()); // Returns length of string
+
+        System.out.println(name.toLowerCase()); // Returns new string with lower case letters
+        System.out.println(name.toUpperCase()); // Returns new string with upper case letters
+
+        System.out.println(str1.trim()); // Remove all leading & trailing white-spaces
+
+        System.out.println(name.substring(3)); // Return string with index 3 to end
+        System.out.println(name.substring(3, 5)); // Return string with index 3 to index 4
+
+        System.out.println(name.replace('a', 'b')); // Replace all 'a' to 'b'
+        System.out.println(name.replace("aks", "new")); // Replace all "aks" to "new"
+        System.out.println(name.replace("a", "new")); // Replace all 'a' to "new"
+
+        System.out.println(name.startsWith("Sak")); // Return true if starts with "Sak"
+        System.out.println(name.endsWith("Sak")); // Return true if ends with "Sak"
+
+        String str2 = "Sakshamsham";
+        System.out.println(name.charAt(2)); // Returns character at index 2
+        System.out.println(str2.indexOf("sHa")); // Returns index of first occurence of "sHa" if present nowhere then returns -1
+        System.out.println(str2.indexOf("sha", 4)); // Returns index of first occurence of "sha" starting from index no 4
+
+        String str3 = "Sakshamsham";
+        System.out.println(str3.lastIndexOf("sha")); // Returns index of first occurence of "sHa" from last
+        System.out.println(str3.lastIndexOf("sha", 4)); // Returns index of first occurence of "sha" starting from index no 4 reverse to index 0
+
+        System.out.println(name.equals("SaksHam")); // Returns true if name is equal to "SaksHam"
+        System.out.println(name.equalsIgnoreCase("SakSham")); // Returns true if name is equal to "SakSham" ignoring cases
+
+        // Escape Sequence Characters
+        System.out.println("Escape sequence for \"double quotes\"");
+        System.out.println("Escape sequence for \\backslash\\");
+        System.out.println("Escape sequence for \nnewline\n");
+        System.out.println("Escape sequence for \ttab");
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project9" class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        5. Conditionals
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c5.pdf"></a>
+                        <h3>If Else</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T9_if_else {
+    public static void main(String[] args) {
+        int age = 12;
+        if (age &gt; 18) {
+            System.out.println("Yes you can drive.");
+        } else if (age &gt; 10) {
+            System.out.println("You can start learn driving.");
+        } else {
+            System.out.println("No you cannot drive.");
+        } // else statement is optional
+    }
+}
+</code></pre>
+                        <h3>Logical Operators</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T10_logical_operators {
+    public static void main(String[] args) {
+        boolean y = true;
+        boolean n = false;
+
+        if (y && n) {
+            System.out.println("Both are true.");
+        } else if (y || n) {
+            System.out.println("Atleast one is true");
+        } else {
+            System.out.println("Both are false");
+        }
+
+        if (!y) {
+            System.out.println("y is false");
+        } else {
+            System.out.println("y is true");
+        }
+    }
+}
+</code></pre>
+                        <h3>Switch Case</h3>
+                        <pre class="language-java"><code>/*
+When switch get a correct case then switch start executing until it find break statement.
+Variable on which we want to run switch should be int, char or string only.
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class T11_switch_case {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter age = ");
+        int age = sc.nextInt();
+
+        switch (age) {
+            case 18:
+                System.out.println("Your are going to become adult!");
+            case 23:
+                System.out.println("You are going to join a job!");
+                break;
+            case 60:
+                System.out.println("You are going to get retired!");
+                break;
+            default: // If any case does not match
+                System.out.println("Enjoy your life!");
+                break;
+        }
+
+        // Enhanced Switch --&gt; no need of break after every statement
+        /*
+        switch(var) {
+            case 1 -&gt; // Single Line Code
+            case 2 -&gt; {
+                // Multi Line Code
+            }
+            default -&gt; // Code
+        }
+         */
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project12" class="accordion-item">
+                <h2 class="accordion-header" id="heading12">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                        6. Loops
+                    </button>
+                </h2>
+                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c6.pdf"></a>
+                        <h3>While Loops</h3>
+                        <pre class="language-java"><code>/*
+Syntax :
+while (condition) {
+    // Code --&gt; If condition is true
+}
+When condition becomes false loop exits
+ */
+
+package com.company;
+
+public class T12_while_loops {
+    public static void main(String[] args) {
+        System.out.println("Printning number from 1 to 100");
+        int i = 1;
+        while (i &lt;= 100) {
+            System.out.println(i);
+            i++;
+        }
+        System.out.println("Numbers printed!!!");
+    }
+}
+</code></pre>
+                        <h3>Do While Loops</h3>
+                        <pre class="language-java"><code>/*
+Syntax :
+do {
+    // Code --&gt; without checking anything
+} while (condition);
+if condition is true then re-enter loop else exit & move ahead.
+ */
+
+package com.company;
+
+public class T13_do_while_loops {
+    public static void main(String[] args) {
+        int a = 10;
+        do {
+            // do-while loop executes atleast once
+            System.out.println(a);
+            a++;
+        } while (a &lt; 5);
+    }
+}
+</code></pre>
+                        <h3>For Loops</h3>
+                        <pre class="language-java"><code>/*
+for (initialize; condition; update) {
+    // Code --&gt; if condition is true
+}
+When condition becomes false
+ */
+
+package com.company;
+
+public class T14_for_loops {
+    public static void main(String[] args) {
+        for (int a = 0; a &lt; 10; a++) {
+            System.out.println(a);
+        }
+    }
+}
+</code></pre>
+                        <h3>Break & Continue</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T15_break_continue {
+    public static void main(String[] args) {
+        for (int i = 0; i &lt; 10; i++) {
+            if (i == 8) {
+                break; // All iterations of loop breaks
+            }
+            if (i == 6) {
+                continue; // Current loop breaks & move on to next iteration
+            }
+            System.out.println(i); // Printing values
+        }
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project16" class="accordion-item">
+                <h2 class="accordion-header" id="heading16">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                        7. Arrays
+                    </button>
+                </h2>
+                <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c7.pdf"></a>
+                        <h3>Array</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T16_array {
+    public static void main(String[] args) {
+        // There are 3 ways to make arrays
+
+        // 1. Declaring & Memory Allocating
+        int[] marks1 = new int[5];
+        // Initializing
+        marks1[0] = 1;
+        marks1[1] = 2;
+        marks1[2] = 3;
+        marks1[3] = 4;
+        marks1[4] = 5;
+
+        // 2. Declaring then Memory Allocating
+        int[] marks2;
+        marks2 = new int[5];
+        // Initializing
+        marks2[0] = 1;
+        marks2[1] = 2;
+        marks2[2] = 3;
+        marks2[3] = 4;
+        marks2[4] = 5;
+
+        // 3. Declaring, Allocating & Initializing together
+        int[] marks3 = {1, 2, 3, 4, 5};
+
+        // Printing marks1
+        System.out.println("Array 1 :");
+        for (int i = 0; i &lt; 5; i++) {
+            System.out.print(marks1[i] + " ");
+        }
+        System.out.println();
+
+        // Printing marks2
+        System.out.println("Array 2 :");
+        for (int i = 0; i &lt; 5; i++) {
+            System.out.print(marks2[i] + " ");
+        }
+        System.out.println();
+
+        // Printing marks3
+        System.out.println("Array 3 :");
+        for (int i = 0; i &lt; 5; i++) {
+            System.out.print(marks3[i] + " ");
+        }
+        System.out.println();
+    }
+}
+</code></pre>
+                        <h3>Array Functions</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T17_array_functions {
+    public static void main(String[] args) {
+        String[] students = {"saksham", "rohan", "shubham", "harry"};
+        System.out.println(students.length); // Returns length of array
+
+        /*
+        Array can be printed by for loop that us called "Array Traversal".
+        But it is better to use for-each loop for arrays.
+         */
+        // For-Each loop
+        for (String item : students) {
+            System.out.println(item);
+        }
+    }
+}
+</code></pre>
+                        <h3>Multi-Dimentional Array</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T18_multidimensional_array {
+    public static void main(String[] args) {
+        int[][] flats; // 2D array
+        flats = new int[2][3]; // Dimensions are 2 * 3
+
+        flats[0][0] = 101;
+        flats[0][1] = 102;
+        flats[0][2] = 103;
+        flats[1][0] = 201;
+        flats[1][1] = 202;
+        flats[1][2] = 203;
+
+        // Printing using for loop
+        for (int i = 0; i &lt; flats.length; i++) {
+            for (int j = 0; j &lt; flats[i].length; j++) {
+                System.out.print(flats[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project19" class="accordion-item">
+                <h2 class="accordion-header" id="heading19">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                        8. Methods
+                    </button>
+                </h2>
+                <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c8.pdf"></a>
+                        <h3>Methods</h3>
+                        <pre class="language-java"><code>/*
+Sometimes we have to implement same code many times.
+But we do not want to repeat the code so we make a method & use it where ever required.
+It is same as functions in other programming languages.
+
+Our main method is static so we can call a static method inside main.
+So we must have to write static in starting of each method.
+
+For non-static method see method2
+ */
+
+package com.company;
+
+public class T19_methods {
+    // Ways to make methods
+
+    // 1. Static Method
+    static int method1(int x, int y) {
+        int z;
+        if (x &gt; y) {
+            z = x + y;
+        } else {
+            z = (x + y) * 5;
+        }
+        return z;
+    }
+
+    // 2. Non-Static Method
+    int method2(int x, int y) {
+        int z;
+        if (x &gt; y) {
+            z = x + y;
+        } else {
+            z = (x + y) * 5;
+        }
+        return z;
+    }
+
+    // Void Return type
+    static void greet() {
+        System.out.println("Hello, Good Morning");
+    }
+
+    public static void main(String[] args) {
+        int a = 5, b = 7;
+        int a1 = 7, b1 = 5;
+        int c, c1;
+
+        // Ways to call methods
+
+        // 1. Static Method
+        c = method1(a, b);
+
+        // 2. Non-Static Method
+        T19_methods obj = new T19_methods(); // We have to make an object
+        c1 = obj.method2(a1, b1);
+
+        greet();
+        System.out.println(c);
+        System.out.println(c1);
+    }
+}
+</code></pre>
+                        <h3>Passing Arrays</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T20_passing_arrays {
+    static void change1(int a) {
+        a = 98;
+    }
+
+    static void change2(int[] arr) {
+        arr[0] = 98;
+    }
+
+    public static void main(String[] args) {
+        // Case 1 : Changing the integer
+        int x = 5;
+        change1(x); // Value will not change
+        System.out.println("The value of x after running change1() is " + x);
+
+        // Case 2 : Changing the array
+        int[] marks = {1, 2, 3, 4, 5};
+        change2(marks); // Value will be changed because in array address of array is passed as argument
+        System.out.println("The value of marks[0] after running change2() is " + marks[0]);
+    }
+}
+</code></pre>
+                        <h3>Method Overloading</h3>
+                        <pre class="language-java"><code>/*
+If we made more than one method of same name then it run appropriate method according to arguments.
+But it cannot be identified according to return type.
+ */
+
+package com.company;
+
+public class T21_method_overloading {
+    static void method() {
+        System.out.println("Good Morning!!");
+    }
+
+    static void method(int a) {
+        System.out.println("The integer is " + a);
+    }
+
+    static void method(float a) {
+        System.out.println("The floating point is " + a);
+    }
+
+    static void method(int a, int b) {
+        System.out.println("The sum is " + (a + b));
+    }
+
+    public static void main(String[] args) {
+        method();
+        method(300);
+        method(3.14f);
+        method(4, 5);
+    }
+}
+</code></pre>
+                        <h3>Variable Arguments</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T22_variable_arguments {
+    // Packing all arguments given in an array
+    static int sum(int... arr) {
+        int res = 0;
+        for (int item : arr) {
+            res += item;
+        }
+        return res;
+    }
+
+    // If we want to give a compulsory argument
+    static int sum2(int x, int... arr) {
+        int res = x;
+        for (int item : arr) {
+            res += item;
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        // Giving variable no of arguments to method
+        System.out.println("The value of sum() is " + sum());
+        System.out.println("The sum of 1 & 2 is " + sum(1, 2));
+        System.out.println("The sum of 1, 2 & 3 is " + sum(1, 2, 3));
+        System.out.println("The sum of 1, 2, 3 & 4 is " + sum(1, 2, 3, 4));
+        System.out.println("The sum of 1, 2, 3, 4 & 5 is " + sum(1, 2, 3, 4, 5));
+
+        // System.out.println(sum2()); --&gt; Will produce an error
+        System.out.println("The value of 1, 2 & 3 by sum2 is " + sum2(1, 2, 3));
+    }
+}
+</code></pre>
+                        <h3>Recursion</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T23_recursion {
+    static int factorial(int n) {
+        if (n &lt;= 1) { // Base condition is necessary otherwise recursion will continue infinitely
+            return 1;
+        } else {
+            return n * factorial(n - 1); // Calling itself means recursion
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        System.out.println("The value of factorial(" + n + ") is " + factorial(n));
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project24" class="accordion-item">
+                <h2 class="accordion-header" id="heading24">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                        9. OOPS
+                    </button>
+                </h2>
+                <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c9.pdf"></a>
+                        <h3>Custom Class</h3>
+                        <pre class="language-java"><code>package com.company;
+
+class Employee {
+    int id, salary;
+    String name;
+
+    public void printDet() {
+        System.out.println("My id is " + id);
+        System.out.println("My salary is " + salary);
+        System.out.println("My name is " + name);
+    }
+}
+
+public class T24_custom_class {
+    public static void main(String[] args) {
+
+        // Making an object
+        Employee saksham = new Employee();
+        Employee harry = new Employee();
+
+        // Setting Attributes
+        saksham.id = 101;
+        saksham.salary = 10000;
+        saksham.name = "Saksham Bindal";
+
+        harry.id = 102;
+        harry.salary = 15000;
+        harry.name = "Harry";
+
+        /*
+         Printing Attributes
+         System.out.println(saksham.id);
+         System.out.println(saksham.name);
+        */
+        saksham.printDet();
+        harry.printDet();
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project25" class="accordion-item">
+                <h2 class="accordion-header" id="heading25">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                        10. Access Modifiers & Constructors
+                    </button>
+                </h2>
+                <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="heading25"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c10.pdf"></a>
+                        <h3>Access Modifiers</h3>
+                        <pre class="language-java"><code>package com.company;
+
+class Employee_25 {
+    private int id;
+    private String name;
+
+    public void setId(int id) {
+        this.id = id; // this is a pointer which points to this class
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class T25_access_modifiers {
+    public static void main(String[] args) {
+        Employee_25 saksham = new Employee_25();
+        saksham.setId(101);
+        saksham.setName("Saksham Bindal");
+        System.out.println("The id is " + saksham.getId());
+        System.out.println("The name is " + saksham.getName());
+    }
+}
+</code></pre>
+                        <h3>Constructors</h3>
+                        <pre class="language-java"><code>package com.company;
+
+class Employee_26 {
+    private int id;
+    private String name;
+
+    // We can overload constructors like other methods in java.
+    // Constructors must have same name as of class.
+    // Constructor automatically run when objects is created.
+
+    public Employee_26() {
+        this.id = 1;
+        this.name = "Saksham";
+    }
+
+    public Employee_26(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Employee_26(String name) {
+        this.id = 1;
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class T26_constructors {
+    public static void main(String[] args) {
+
+        // For first constructor
+        Employee_26 obj1 = new Employee_26();
+        System.out.println("The id is " + obj1.getId());
+        System.out.println("The name is " + obj1.getName());
+
+        // For second constructor
+        Employee_26 saksham = new Employee_26(101, "Saksham Bindal");
+        System.out.println("The id is " + saksham.getId());
+        System.out.println("The name is " + saksham.getName());
+
+        // For third constructor
+        Employee_26 obj3 = new Employee_26("Harry");
+        System.out.println("The id is " + obj3.getId());
+        System.out.println("The name is " + obj3.getName());
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project27" class="accordion-item">
+                <h2 class="accordion-header" id="heading27">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+                        11. Inheritance
+                    </button>
+                </h2>
+                <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="heading27"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c11.pdf"></a>
+                        <h3>Inheritance</h3>
+                        <pre class="language-java"><code>/*
+Java does not support multiple inheritance i.e. cannot not inherit from more than one class.
+ */
+
+package com.company;
+
+class Base {
+    private int x;
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void printMe() {
+        System.out.println("I am base class.");
+    }
+}
+
+class Derived extends Base {
+    private int y;
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+}
+
+public class T27_inheritance {
+    public static void main(String[] args) {
+        // Object of Base class
+        Base o1 = new Base();
+        o1.setX(4);
+        System.out.println(o1.getX());
+
+        // Object of Derived class
+        Derived o2 = new Derived();
+        o2.setX(5);
+        System.out.println(o2.getX());
+    }
+}
+</code></pre>
+                        <h3>Constructor in Inheritance</h3>
+                        <pre class="language-java"><code>/*
+First Base class constructor runs & then Derived class.
+ */
+
+package com.company;
+
+class Base2 {
+    public Base2() {
+        System.out.println("I am Base2 class constructor.");
+    }
+
+    public Base2(int x) {
+        System.out.println("I am Base2 class constructor with an argument.");
+    }
+}
+
+class Derived2 extends Base2 {
+    public Derived2() {
+        // super(0); // Use this if you want to run overloaded constructor else original constructor will run.
+        System.out.println("I am Derived2 class constructor.");
+    }
+
+    public Derived2(int a, int b) {
+        super(5);
+        System.out.println("I am Derived2 class constructor with 2 arguments.");
+    }
+}
+
+class Child2 extends Derived2 {
+    public Child2() {
+        System.out.println("I am Child2 class constructor.");
+    }
+
+    public Child2(int p, int q, int r) {
+        super(1, 4);
+        System.out.println("I am Child2 class constructor with 3 arguments.");
+    }
+}
+
+public class T28_constructor_in_inheritance {
+    public static void main(String[] args) {
+        Child2 obj = new Child2(1, 2, 3);
+    }
+}
+</code></pre>
+                        <h3>This & Super</h3>
+                        <pre class="language-java"><code>package com.company;
+
+class A {
+    private int a;
+
+    public A(int a) {
+        this.a = a; // this keyword points to object of class for which current method is running
+        System.out.println("A class constructor run.");
+    }
+
+    public int getA() {
+        return a;
+    }
+}
+
+class B extends A {
+    public B(int a) {
+        super(a); // super keyword used to determine which constructor of base class should be run
+        // If super os not written then constructor with 0 arguments will be called
+        System.out.println("B class constructor run.");
+    }
+}
+
+public class T29_this_super {
+    public static void main(String[] args) {
+        B obj = new B(5);
+        System.out.println(obj.getA());
+    }
+}
+</code></pre>
+                        <h3>Method Over-riding</h3>
+                        <pre class="language-java"><code>package com.company;
+
+class A30 {
+    public void m1() {
+        System.out.println("I am method 1 of class A30");
+    }
+
+    public void m2() {
+        System.out.println("I am method 2 of class A30");
+    }
+}
+
+class B30 extends A30 {
+    public void m3() {
+        System.out.println("I am method 3 of class B30");
+    }
+
+    @Override // It is not necessary to write this notation but it is recommended
+    public void m2() { // Over-riding m2
+        System.out.println("I am method 2 of class B30");
+    }
+}
+
+public class T30_method_overriding {
+    public static void main(String[] args) {
+        B30 obj = new B30();
+        obj.m1();
+        obj.m2(); //  If not over-ride then it will use original m2 of class A30
+        obj.m3();
+    }
+}
+</code></pre>
+                        <h3>Dynamic Method Dispatch</h3>
+                        <pre class="language-java"><code>package com.company;
+
+class A31 {
+    public void name() {
+        System.out.println("I am class A31");
+    }
+
+    public void greet() {
+        System.out.println("Good Morning");
+    }
+}
+
+class B31 extends A31 {
+    public void name() {
+        System.out.println("I am class B31");
+    }
+
+    public void greet2() {
+        System.out.println("Good Evening");
+    }
+}
+
+public class T31_dynamic_method_dispatch {
+    public static void main(String[] args) {
+        A31 obj = new B31(); // Allowed
+        // B31 obj2 = new A31(); // Not Allowed
+        obj.name(); // Overridden method will be called
+        // obj.greet2(); // Not Allowed --&gt; Only overridden methods of subclass & all methods of superclass can be accessed
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project32" class="accordion-item">
+                <h2 class="accordion-header" id="heading32">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse32" aria-expanded="false" aria-controls="collapse32">
+                        12. Abstract Classes & Interfaces
+                    </button>
+                </h2>
+                <div id="collapse32" class="accordion-collapse collapse" aria-labelledby="heading32"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c12.pdf"></a>
+                        <h3>Abstract Classes</h3>
+                        <pre class="language-java"><code>package com.company;
+
+abstract class Base32 {
+    public Base32() {
+        System.out.println("I am constructor of base class.");
+    }
+
+    public void hello() {
+        System.out.println("Hello");
+    }
+
+    abstract public void greet();
+
+    abstract public void greet2();
+}
+
+class Derived32 extends Base32 {
+    @Override
+    public void greet() {
+        System.out.println("Good Morning");
+    }
+
+    @Override
+    public void greet2() {
+        System.out.println("Good Morning Again");
+    }
+}
+
+abstract class Derived32_2 extends Base32 {
+    @Override
+    public void greet() {
+        System.out.println("Good Evening");
+    }
+}
+
+public class T32_abstract_class {
+    public static void main(String[] args) {
+        // We cannot make object of abstract class
+        // Base32 obj1 = new Base32(); --&gt; Will throw error
+        Derived32 obj2 = new Derived32();
+        // Derived32_2 obj3 = new Derived32_2(); --&gt; Will throw error
+
+        obj2.greet();
+        obj2.greet2();
+    }
+}
+</code></pre>
+                        <h3>Interfaces</h3>
+                        <pre class="language-java"><code>/*
+Cannot make object of interface but can make reference.
+All functions inside interface are abstract.
+A class can implement more than one interfaces.
+We can create properties in interfaces but cannot modify them.
+Interfaces methods are public by default.
+ */
+
+package com.company;
+
+interface Bicycle {
+    int a = 45;
+
+    void applyBrake(int decrement);
+
+    void speedUp(int increment);
+}
+
+interface Vehicle {
+    void speed();
+}
+
+class AvonCycle implements Bicycle, Vehicle {
+    public void blowHorn() {
+        System.out.println("Blowing Horn...");
+    }
+
+    public void applyBrake(int decrement) {
+        System.out.println("Applying Brake...");
+    }
+
+    public void speedUp(int increment) {
+        System.out.println("Increasing Speed...");
+    }
+
+    public void speed() {
+        System.out.println("The speed is fast...");
+    }
+}
+
+public class T33_interfaces {
+    public static void main(String[] args) {
+        AvonCycle obj = new AvonCycle();
+        System.out.println(obj.a);
+        obj.blowHorn();
+        obj.applyBrake(1);
+        obj.speedUp(2);
+        obj.speed();
+    }
+}
+</code></pre>
+                        <h3>Interface Example</h3>
+                        <pre class="language-java"><code>package com.company;
+
+interface camera {
+    void takeSnap();
+
+    void recordVideo();
+}
+
+interface WiFi {
+    String[] getNetworks();
+
+    void connectToNetwork();
+}
+
+class cellPhone {
+    void callNo(int phoneNo) {
+        System.out.println("Calling " + phoneNo);
+    }
+
+    void pickCall() {
+        System.out.println("Connecting...");
+    }
+}
+
+class smartPhone extends cellPhone implements camera, WiFi {
+    @Override
+    public void takeSnap() {
+        System.out.println("Taking Snap...");
+    }
+
+    @Override
+    public void recordVideo() {
+        System.out.println("Recording Video...");
+    }
+
+    @Override
+    public String[] getNetworks() {
+        System.out.println("Getting list of connections...");
+        return new String[]{"net1", "net2", "net3"};
+    }
+
+    @Override
+    public void connectToNetwork() {
+        System.out.println("Connecting to network...");
+    }
+}
+
+public class T34_interface_example {
+    public static void main(String[] args) {
+        smartPhone obj = new smartPhone();
+
+        String[] arr = obj.getNetworks();
+        for (String item : arr) {
+            System.out.println(item);
+        }
+    }
+}
+</code></pre>
+                        <h3>Default Methods</h3>
+                        <pre class="language-java"><code>package com.company;
+
+interface inter35 {
+    // There is no need to initialize default methods again in derived classes
+    // If we over-ride default methods then over-ridden method is called.
+    default void print() {
+        System.out.println("This is default method");
+    }
+    // If we want to made some function for helping in logic of default methods
+    // Then we can make private methods in interface which are not accessible to any derived class.
+}
+
+class class35 implements inter35 {
+    public class35() {
+        System.out.println("Class made!!!");
+    }
+}
+
+public class T35_default_methods {
+    public static void main(String[] args) {
+        class35 obj = new class35();
+        obj.print();
+    }
+}
+</code></pre>
+                        <h3>Inheritance in Interfaces</h3>
+                        <pre class="language-java"><code>package com.company;
+
+interface inter36 {
+    void m1();
+
+    void m2();
+}
+
+// Inheriting interfaces
+interface inter36_2 extends inter36 {
+    void m3();
+
+    void m4();
+}
+
+class class36 implements inter36_2 {
+    @Override
+    public void m1() {
+        System.out.println("This is m1");
+    }
+
+    @Override
+    public void m2() {
+        System.out.println("This is m2");
+    }
+
+    @Override
+    public void m3() {
+        System.out.println("This is m3");
+    }
+
+    @Override
+    public void m4() {
+        System.out.println("This is m4");
+    }
+}
+
+public class T36_inheritance_in_interfaces {
+    public static void main(String[] args) {
+        class36 obj = new class36();
+        obj.m1();
+        obj.m2();
+        obj.m3();
+        obj.m4();
+    }
+}
+</code></pre>
+                        <h3>Polymorphism in Interfaces</h3>
+                        <pre class="language-java"><code>package com.company;
+
+interface camera37 {
+    void takeSnap();
+
+    void recordVideo();
+}
+
+interface WiFi37 {
+    String[] getNetworks();
+
+    void connectToNetwork();
+}
+
+class cellPhone37 {
+    void callNo(int phoneNo) {
+        System.out.println("Calling " + phoneNo);
+    }
+
+    void pickCall() {
+        System.out.println("Connecting...");
+    }
+}
+
+class smartPhone37 extends cellPhone37 implements camera37, WiFi37 {
+    @Override
+    public void takeSnap() {
+        System.out.println("Taking Snap...");
+    }
+
+    @Override
+    public void recordVideo() {
+        System.out.println("Recording Video...");
+    }
+
+    @Override
+    public String[] getNetworks() {
+        System.out.println("Getting list of connections...");
+        return new String[]{"net1", "net2", "net3"};
+    }
+
+    @Override
+    public void connectToNetwork() {
+        System.out.println("Connecting to network...");
+    }
+}
+
+public class T37_polymorphism_in_interfaces {
+    public static void main(String[] args) {
+        camera37 obj = new smartPhone37();
+        // obj.getNetworks --&gt; Not Allowed, can only access functions of camera37
+        obj.recordVideo();
+
+        WiFi37 obj2 = new smartPhone37();
+        // obj2.recordVideo --&gt; Not Allowed, can only access functions of WiFi37
+        obj2.getNetworks();
+
+        cellPhone37 obj3 = new smartPhone37();
+        obj3.callNo(12345); // Can access only methods of cellPhone37 class
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project38" class="accordion-item">
+                <h2 class="accordion-header" id="heading38">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse38" aria-expanded="false" aria-controls="collapse38">
+                        13. Packages & Modifiers
+                    </button>
+                </h2>
+                <div id="collapse38" class="accordion-collapse collapse" aria-labelledby="heading38"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c13.pdf"></a>
+                        <h3>Packages</h3>
+                        <pre class="language-java"><code>// Manual Packages
+/*
+For making packages :
+    write javac -d . {{filename}}.java --&gt; this will send that file to corresponding package
+    write javac -d . *.java --&gt; For sending all java files at once
+
+For running a class :
+    write java {{classname}}
+*/
+package saksham.notes;
+
+// In-built packages
+import java.util.Scanner; // Importing Scanner class from java.util
+import java.util.*; // Importing all classes form java.util
+
+public class T38_packages {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+    }
+}
+</code></pre>
+                        <h3>Making Package</h3>
+                        <pre class="language-java"><code>package saksham.notes;
+
+public class T38_to_be_used {
+    public int add(int a, int b) { // We will use this add function
+        return a + b;
+    }
+}</code></pre>
+                        <h3>Using Packages</h3>
+                        <pre class="language-java"><code>
+// Importing a class from manual package
+
+import saksham.notes.T38_to_be_used;
+
+public class T38_using_packages {
+    public static void main(String[] args) {
+        int a = 4, b = 5;
+        int sum = new T38_to_be_used().add(a, b); // This is how to call function of a custom class stored in a package
+        System.out.println(sum);
+    }
+}</code></pre>
+                        <h3>Modifiers Scope</h3>
+                        <pre class="language-java"><code>/*
+                        (Accessible or Not)
+(Modifier)    (Class)   (Package)    (SubClass)    (World)
+ Public          Y          Y            Y            Y
+ Protected       Y          Y            Y            N
+ Private         Y          N            N            N
+ Default         Y          Y            N            N
+ */
+
+package com.company;
+
+class Modifiers {
+    public int a = 4; // Public
+    protected int b = 5; // Protected
+    private int c = 6; // Private
+    int d = 7; // Default
+}
+
+public class T39_modifiers_scope {
+    public static void main(String[] args) {
+
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project40" class="accordion-item">
+                <h2 class="accordion-header" id="heading40">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse40" aria-expanded="false" aria-controls="collapse40">
+                        14. Multi Threading
+                    </button>
+                </h2>
+                <div id="collapse40" class="accordion-collapse collapse" aria-labelledby="heading40"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c14.pdf"></a>
+                        <h3>Multi Threading</h3>
+                        <pre class="language-java"><code>package com.company;
+
+class myThread extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 40; i++) {
+            System.out.println("My thread is running");
+            System.out.println("I am happy");
+        }
+    }
+}
+
+class myThread2 extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 40; i++) {
+            System.out.println("My thread2 is running");
+            System.out.println("I am very happy");
+        }
+    }
+}
+
+public class T40_multi_threading {
+    public static void main(String[] args) {
+        myThread t1 = new myThread();
+        myThread2 t2 = new myThread2();
+
+        // These both run together not one after one
+        t1.start(); // For starting a thread
+        t2.start();
+    }
+}
+</code></pre>
+                        <h3>Runnable</h3>
+                        <pre class="language-java"><code>package com.company;
+
+class myRunnable1 implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("I am myRunnable1");
+        }
+    }
+}
+
+class myRunnable2 implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("I am myRunnable2");
+        }
+    }
+}
+
+public class T41_runnable {
+    public static void main(String[] args) {
+        myRunnable1 r1 = new myRunnable1();
+        Thread t1 = new Thread(r1);
+
+        myRunnable2 r2 = new myRunnable2();
+        Thread t2 = new Thread(r2);
+
+        t1.start();
+        t2.start();
+    }
+}
+</code></pre>
+                        <h3>Thread Life Cycle</h3>
+                        <pre class="language-java"><code>package com.company;
+
+/*
+A thread has following states :
+1. New --&gt; Instance of thread created which is not yet started.
+2. Runnable --&gt; After invocation of start() & before it is selected to be run by scheduler.
+3. Running --&gt; After thread scheduler has selected it.
+4. Non Runnable  --&gt; Thread alive, not eligible to run
+5. Terminated --&gt; run() method has exited
+*/
+
+public class T42_thread_life_cycle {
+    public static void main(String[] args) {
+
+    }
+}
+</code></pre>
+                        <h3>Thread Constructor</h3>
+                        <pre class="language-java"><code>/*
+Some common constructors :
+1. Thread()
+2. Thread(String name)
+3. Thread(Runnable r)
+4. Thread(Runnable r, String name)
+ */
+
+package com.company;
+
+class myThread43 extends Thread {
+    public myThread43(String name) {
+        super(name);
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("I am myThread43");
+        }
+    }
+}
+
+public class T43_thread_constructor {
+    public static void main(String[] args) {
+        myThread43 t1 = new myThread43("Saksham");
+        myThread43 t2 = new myThread43("Harry");
+
+        t1.start();
+        t2.start();
+
+        System.out.println("The id of thread t1 is " + t1.getId()); // ReEvery thread has its id
+        System.out.println("The name of thread t1 is " + t1.getName()); // name is given bu us in constructor
+
+        System.out.println("The id of thread t2 is " + t2.getId());
+        System.out.println("The name of thread t2 is " + t2.getName());
+    }
+}
+</code></pre>
+                        <h3>Thread Priorities</h3>
+                        <pre class="language-java"><code>package com.company;
+
+class myThread44 extends Thread {
+    public myThread44(String name) {
+        super(name);
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("The name is " + this.getName());
+        }
+    }
+}
+
+public class T44_thread_priorities {
+    public static void main(String[] args) {
+        myThread44 t1 = new myThread44("1");
+        myThread44 t2 = new myThread44("2");
+        myThread44 t3 = new myThread44("3");
+        myThread44 t4 = new myThread44("4");
+        myThread44 t5 = new myThread44("5");
+
+        t1.setPriority(Thread.MAX_PRIORITY); // Will have maximum priority
+
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+        t5.start();
+    }
+}
+</code></pre>
+                        <h3>Join Method</h3>
+                        <pre class="language-java"><code>package com.company;
+
+class thread45 extends Thread {
+    public thread45(String name) {
+        super(name);
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("The name is " + this.getName());
+        }
+    }
+}
+
+public class T45_thread_method_join {
+    public static void main(String[] args) {
+        thread45 t1 = new thread45("Thread 1");
+        thread45 t2 = new thread45("Thread 2");
+        thread45 t3 = new thread45("Thread 3");
+
+        t1.start();
+        // try-catch is used to handle exceptions
+        // join method can give errors so we put it in try block
+        try {
+            t1.join(); // First t1 run until it terminates
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        // Then t2 & t3 run normally
+        t2.start();
+        t3.start();
+    }
+}
+</code></pre>
+                        <h3>Sleep Method</h3>
+                        <pre class="language-java"><code>package com.company;
+
+class thread46 extends Thread {
+    public thread46(String name) {
+        super(name);
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("The name is " + this.getName());
+            try {
+                Thread.sleep(1000); // Thread stops for 1000 ms
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+public class T46_thread_method_sleep {
+    public static void main(String[] args) {
+        thread46 t1 = new thread46("Thread 1");
+
+        t1.start();
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project47" class="accordion-item">
+                <h2 class="accordion-header" id="heading47">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse47" aria-expanded="false" aria-controls="collapse47">
+                        15. Exceptions
+                    </button>
+                </h2>
+                <div id="collapse47" class="accordion-collapse collapse" aria-labelledby="heading47"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c15.pdf"></a>
+                        <h3>Errors</h3>
+                        <pre class="language-java"><code>/*
+There are 3 types of errors :
+1. Syntax Error
+2. Logical Error
+3. Runtime Error
+ */
+
+package com.company;
+
+public class T47_errors {
+    public static void main(String[] args) {
+        // 1. Syntax Error
+        // int a = 5 --&gt; error (we have not put ';' at end so it is syntax error)
+
+        // 2. Logical Error
+        // If we did some logical mistakes then program runs successfully but give unexpected output
+        System.out.println("Printing prime numbers from 1 to 10.");
+        System.out.println(2);
+        for (int i = 1; i &lt; 5; i++) {
+            System.out.println(2 * i + 1);
+        }
+        // The logic is wrong for printing prime numbers. Our IDE cannot find these errors.
+
+        /*
+        3. Runtime Error
+        If user enters incorrect input then error may occur.
+        These are also called exceptions
+        */
+    }
+}
+</code></pre>
+                        <h3>Try Catch</h3>
+                        <pre class="language-java"><code>package com.company;
+
+import java.util.Scanner;
+
+public class T48_try_catch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter an number : ");
+        int a = sc.nextInt();
+
+        try {
+            int b = 100 / a;
+            System.out.println("The res is " + b);
+        } catch (Exception e) {
+            /*
+             If user input 0 then program stops after throwing error
+             But if we put try & catch block then it catches error & program does not stops.
+             First it go to try block, if successfully executes then move ahead in code.
+             If try block give some error then it comes in catch block
+            */
+            System.out.println("We failed to divide because of error");
+            System.out.println(e);
+        }
+
+        System.out.println("End of Program!!!");
+    }
+}
+</code></pre>
+                        <h3>Handling Specific Exceptions</h3>
+                        <pre class="language-java"><code>package com.company;
+
+import java.util.Scanner;
+
+public class T49_handling_specific_exceptions {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] marks = {10, 20, 30};
+
+        System.out.print("Enter index no = ");
+        int ind = sc.nextInt();
+
+        System.out.print("Enter no you want to divide with = ");
+        int num = sc.nextInt();
+
+        try {
+            System.out.println("The value of array index is " + marks[ind]);
+            System.out.println("After dividing result is " + marks[ind] / num);
+        } catch (IndexOutOfBoundsException e1) { // If user enters invalid index
+            System.out.println("Index entered is incorrect!!!");
+        } catch (ArithmeticException e2) { // If user enters 0 in number
+            System.out.println("Cannot divide with that number!!!");
+        } catch (Exception e) { // If other exception occurred
+            System.out.println("Some unknown exception occurred!!!");
+            System.out.println(e);
+        }
+    }
+}
+</code></pre>
+                        <h3>Nested Try Catch</h3>
+                        <pre class="language-java"><code>package com.company;
+
+import java.util.Scanner;
+
+public class T50_nested_try_catch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] marks = {10, 20, 30};
+        System.out.print("Enter index no = ");
+        int ind = sc.nextInt();
+
+        try {
+            // If user input invalid index
+            try {
+                System.out.println("The value at index is " + marks[ind]);
+                System.out.print("Enter no you want to divide with = ");
+                int num = sc.nextInt();
+                // If user input in num
+                try {
+                    System.out.println("The result is " + marks[ind] / num);
+                } catch (Exception e) {
+                    System.out.println("Cannot divide with that number!!!");
+                }
+            } catch (Exception e) {
+                System.out.println("This index does not exist!!!");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+</code></pre>
+                        <h3>Exception Class</h3>
+                        <pre class="language-java"><code>package com.company;
+
+import java.util.Scanner;
+
+// Making our own exception
+class Exception51 extends Exception {
+    String error;
+
+    public Exception51() {
+        error = "No custom error given";
+    }
+
+    public Exception51(String message) {
+        super(message);
+        this.error = message;
+    }
+
+    @Override
+    public String toString() {
+        return error;
+    }
+
+    @Override
+    public String getMessage() {
+        return "I am getMessage()!!!";
+    }
+}
+
+public class T51_exception_class {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a = ");
+        int a = sc.nextInt();
+        if (a &lt; 20) {
+            try {
+                System.out.println("a = " + a);
+                // throw new Exception51(); // Throwing error
+                // Creating custom error
+                if (a == 6) {
+                    throw new Exception51("You cannot enter 6");
+                }
+            } catch (Exception e) {
+                System.out.println(e.getMessage()); // Over-written function
+                System.out.println(e.toString()); // Over-written function
+                e.printStackTrace(); // Put error occurred in program at end
+            }
+        }
+        System.out.println("Finished...");
+    }
+}
+</code></pre>
+                        <h3>Throw & Throws</h3>
+                        <pre class="language-java"><code>package com.company;
+
+import java.util.Scanner;
+
+class Exception52 extends Exception {
+    @Override
+    public String toString() {
+        return "Radius cannot be negative or zero!!!";
+    }
+
+    @Override
+    public String getMessage() {
+        return "Radius cannot be negative or zero!!!";
+    }
+}
+
+public class T52_throw_and_throws {
+    // throws is used to warn that this method may throw an exception
+    public static int divide(int a, int b) throws ArithmeticException {
+        return a / b;
+    }
+
+    public static double area(int r) throws Exception52 {
+        if (r &lt;= 0) {
+            // throw is used to throw an exception
+            throw new Exception52();
+        }
+        return Math.PI * r * r;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a = ");
+        int a = sc.nextInt();
+        System.out.print("Enter b = ");
+        int b = sc.nextInt();
+
+        try {
+            System.out.println(divide(a, b));
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        System.out.print("Enter radius = ");
+        int r = sc.nextInt();
+
+        try {
+            System.out.println(area(r));
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+</code></pre>
+                        <h3>Finally Block</h3>
+                        <pre class="language-java"><code>/*
+Finally block executes in every condition.
+ */
+
+package com.company;
+
+public class T53_finally_block {
+    public static int greet(int a) {
+        try {
+            if (a == 0) {
+                return 0; // Returns here but finally block will also execute
+            }
+        } finally {
+            System.out.println("This is in finally block!!!");
+        }
+        System.out.println("This is not in finally block!!!");
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(greet(0));
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project54" class="accordion-item">
+                <h2 class="accordion-header" id="heading54">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse54" aria-expanded="false" aria-controls="collapse54">
+                        16. Advanced-1
+                    </button>
+                </h2>
+                <div id="collapse54" class="accordion-collapse collapse" aria-labelledby="heading54"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c16.pdf"></a>
+                        <h3>ArrayList</h3>
+                        <pre class="language-java"><code>/*
+Some Common Methods :
+1. add(a) --&gt; add element a at end
+2. add(i, a) --&gt; add element a at index i
+3. List1.addAll(List2) --&gt; add all elements of List2 at end of List1
+4. List1.addAll(i, List2) --&gt; add all elements of List2 at index i of List1
+5. l1.clear() --&gt; clear all elements of a list
+6. l1.size() --&gt; returns size of list
+7. l1.get(i) --&gt; returns element at index i of l1
+8. l1.contains(a) --&gt; returns true if a is present in l1
+9. l1.indexOf(a) --&gt; If a is present in l1 then returns first index of a, else -1
+10. l1.lastIndexOf(a) --&gt; If a is present in l1 then returns last index of a, else -1
+11. l1.remove(i) --&gt; Remove element present at index i
+12. l1.set(i, a) --&gt; Replace element present at index i with a
+
+Reference https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/ArrayList.html
+ */
+
+package com.company;
+
+import java.util.ArrayList;
+
+public class T54_ArrayList {
+    public static void main(String[] args) {
+        ArrayList&lt;Integer&gt; l1 = new ArrayList&lt;&gt;();
+        l1.add(5);
+        l1.add(6);
+        l1.add(1, 4);
+        l1.add(8);
+
+        ArrayList&lt;Integer&gt; l2 = new ArrayList&lt;&gt;(5); // Initializing with initial size 5
+        l2.add(15);
+        l2.add(16);
+        l2.add(17);
+
+        l1.addAll(l2);
+        l1.addAll(1, l2);
+        for (int i = 0; i &lt; l1.size(); i++) {
+            System.out.println(l1.get(i));
+        }
+    }
+}
+</code></pre>
+                        <h3>Linked List</h3>
+                        <pre class="language-java"><code>/*
+Methods are same as ArrayList but some different methods are :
+1. l1.addLast(a) --&gt; add a at last
+2. l1.addFirst(a) --&gt; add a at first
+
+// Reference https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/LinkedList.html
+ */
+
+package com.company;
+
+
+import java.util.LinkedList;
+
+public class T55_Linked_List {
+    public static void main(String[] args) {
+        LinkedList&lt;Integer&gt; l1 = new LinkedList&lt;&gt;();
+        l1.add(5);
+        l1.add(6);
+        l1.add(1, 4);
+        l1.add(8);
+
+        LinkedList&lt;Integer&gt; l2 = new LinkedList&lt;&gt;(); // Initializing with initial size 5
+        l2.add(15);
+        l2.add(16);
+        l2.add(17);
+
+        l1.addAll(l2);
+        l1.addAll(1, l2);
+        l1.offer(500);
+        for (Integer integer : l1) {
+            System.out.println(integer);
+        }
+    }
+}
+</code></pre>
+                        <h3>Array Deque</h3>
+                        <pre class="language-java"><code>/*
+Reference https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/ArrayDeque.html
+ */
+
+package com.company;
+
+import java.util.ArrayDeque;
+
+public class T56_ArrayDeque {
+    public static void main(String[] args) {
+        ArrayDeque&lt;Integer&gt; a = new ArrayDeque&lt;&gt;();
+        a.add(4);
+        a.add(5);
+        a.add(6);
+        a.add(7);
+        System.out.println(a.getFirst());
+        System.out.println(a.getLast());
+    }
+}
+</code></pre>
+                        <h3>Hash Set</h3>
+                        <pre class="language-java"><code>/*
+Reference https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/HashSet.html
+ */
+
+package com.company;
+
+import java.util.HashSet;
+
+public class T57_HashSet {
+    public static void main(String[] args) {
+        HashSet&lt;Integer&gt; a = new HashSet&lt;&gt;();
+        a.add(6);
+        a.add(7);
+        a.add(8);
+        System.out.println(a);
+    }
+}
+</code></pre>
+                        <h3>Date Time</h3>
+                        <pre class="language-java"><code>/*
+Reference https://docs.oracle.com/en/java/javase/14/docs/api/java.sql/java/sql/Date.html
+ */
+
+package com.company;
+
+import java.util.Date;
+
+public class T58_date_time {
+    public static void main(String[] args) {
+        System.out.println(System.currentTimeMillis()); // Tells how much milliseconds spent from a reference time
+        // We can print hours, minutes, days etc.... by doing mathematical operation. For eg. for hours
+        System.out.println(((System.currentTimeMillis() / 1000) / 3600));
+
+        // It is appropriate to store currentTimeMillis() in long variable
+
+        // Making date class
+        Date d1 = new Date();
+        System.out.println("d1 = " + d1);
+        System.out.println(d1.getYear());
+    }
+}
+</code></pre>
+                        <h3>Calendar</h3>
+                        <pre class="language-java"><code>/*
+Calendar is an abstract class.
+Reference https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Calendar.html
+ */
+
+package com.company;
+
+import java.util.Calendar;
+import java.util.TimeZone;
+
+public class T59_calendar {
+    public static void main(String[] args) {
+        Calendar c = Calendar.getInstance();
+        Calendar c2 = Calendar.getInstance(TimeZone.getTimeZone("Asia/Singapore"));
+
+        System.out.println(c.getCalendarType());
+        System.out.println(c.getTimeZone());
+        System.out.println(c2.getTimeZone());
+
+        System.out.println(c.getTimeZone().getID());
+        System.out.println(c.getTime());
+        System.out.println(c.get(Calendar.DATE));
+        System.out.println(c.get(Calendar.HOUR));
+        System.out.println(c.get(Calendar.HOUR_OF_DAY));
+        System.out.println(c.get(Calendar.MINUTE));
+        System.out.println(c.get(Calendar.SECOND));
+        System.out.println(c.get(Calendar.YEAR));
+        System.out.println(c.get(Calendar.WEEK_OF_YEAR));
+        System.out.println(c.get(Calendar.DAY_OF_YEAR));
+
+        // Station Clock
+        System.out.println(c.get(Calendar.HOUR_OF_DAY)+":"+c.get(Calendar.MINUTE)+":"+c.get(Calendar.SECOND));
+    }
+}
+</code></pre>
+                        <h3>Gregorian Calendar</h3>
+                        <pre class="language-java"><code>/*
+Reference https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/GregorianCalendar.html
+ */
+
+package com.company;
+
+import java.util.GregorianCalendar;
+
+public class T60_gregorian_calendar {
+    public static void main(String[] args) {
+        GregorianCalendar c = new GregorianCalendar();
+
+        System.out.println(c.isLeapYear(2021));
+    }
+}
+</code></pre>
+                        <h3>Time Zone</h3>
+                        <pre class="language-java"><code>/*
+Reference https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/TimeZone.html
+ */
+
+package com.company;
+
+import java.util.TimeZone;
+
+public class T61_timezone {
+    public static void main(String[] args) {
+        for (String item : TimeZone.getAvailableIDs()) {
+            System.out.println(item);
+        }
+    }
+}
+</code></pre>
+                        <h3>Time API</h3>
+                        <pre class="language-java"><code>/*
+Reference https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/time/package-summary.html
+ */
+
+package com.company;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
+public class T62_java_time {
+    public static void main(String[] args) {
+        LocalDate ld = LocalDate.now();
+        System.out.println(ld);
+
+        LocalTime lt = LocalTime.now();
+        System.out.println(lt);
+
+        LocalDateTime ldt = LocalDateTime.now();
+        System.out.println(ldt);
+    }
+}
+</code></pre>
+                        <h3>Date Time Formatter</h3>
+                        <pre class="language-java"><code>/*
+Reference https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/time/format/DateTimeFormatter.html
+ */
+
+package com.company;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class T63_date_time_formatter {
+    public static void main(String[] args) {
+        LocalDateTime ldt = LocalDateTime.now();
+        System.out.println(ldt);
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM/yyyy");
+        String myDate = ldt.format(dtf);
+        System.out.println(myDate);
+
+        DateTimeFormatter dtf2 = DateTimeFormatter.ISO_LOCAL_DATE;
+        String myDate2 = ldt.format(dtf2);
+        System.out.println(myDate2);
+
+        DateTimeFormatter dtf3 = DateTimeFormatter.ofPattern("dd/MM/yyyy -- E H:m a");
+        String myDate3 = ldt.format(dtf3);
+        System.out.println(myDate3);
+
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project64" class="accordion-item">
+                <h2 class="accordion-header" id="heading64">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse64" aria-expanded="false" aria-controls="collapse64">
+                        17. Advanced-2
+                    </button>
+                </h2>
+                <div id="collapse64" class="accordion-collapse collapse" aria-labelledby="heading64"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/c17.pdf"></a>
+                        <h3>Java Docs</h3>
+                        <pre class="language-java"><code>package com.company;
+
+/**
+* @author Saksham
+* @version 0.1
+* @see &lt;a target = "_blank" href = "https://cybersaksham.github.io/Cyber-Saksham/"&gt;Cyber Saksham&lt;/a&gt;
+* @since 2004
+* */
+public class T64_javadocs {
+    public static void add(int a, int b) {
+        System.out.println("The sum is : " + (a + b));
+    }
+
+    public static void main(String[] args) {
+        System.out.println("This is main method.");
+        add(4, 5);
+    }
+}
+</code></pre>
+                        <h3>Method Docs</h3>
+                        <pre class="language-java"><code>package com.company;
+
+public class T65_method_docs_tags {
+    /**
+     * @param args These are arguments supplied to command line
+     */
+    public static void main(String[] args) {
+        System.out.println("This is main method.");
+    }
+
+    /**
+     * This method is to add two numbers.
+     * @param a This is first operand
+     * @param b This is second operand
+     * @return Sum of two numbers as an integer
+     */
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    /**
+     * This method is to divide two numbers.
+     * @param a This is first operand
+     * @param b This is second operand
+     * @return Sum of two numbers as an integer
+     * @throws ArithmeticException if b is 0
+     * @deprecated This method is deprecated
+     */
+    public int divide(int a, int b) throws ArithmeticException {
+        if (b == 0) {
+            throw new ArithmeticException();
+        }
+        return a + b;
+    }
+}
+</code></pre>
+                        <h3>Annotations</h3>
+                        <pre class="language-java"><code>package com.company;
+
+@FunctionalInterface // To ensure that interface contain only one abstract method
+interface Inter66 {
+    void method1();
+    // void method2();
+}
+
+class A66 {
+    public void show() {
+        System.out.println("I am A66");
+    }
+}
+
+class B66 extends A66 {
+    @Override // For overriding a method
+    public void show() {
+        System.out.println("I am B66");
+    }
+
+    @Deprecated // For deprecating methods
+    public void sum(int a, int b) {
+        System.out.println("The sum is " + (a + b));
+    }
+}
+
+public class T66_annotations {
+    @SuppressWarnings("deprecation") // To suppress warnings
+    public static void main(String[] args) {
+        B66 obj = new B66();
+        obj.show();
+        obj.sum(4, 5);
+    }
+}
+</code></pre>
+                        <h3>Lambda Expressions</h3>
+                        <pre class="language-java"><code>package com.company;
+
+interface Inter67 {
+    void meth1(int a);
+}
+
+public class T67_lambda_expressions {
+    public static void main(String[] args) {
+
+        // Anonymous class
+        Inter67 obj = new Inter67() {
+            // Making an anonymous class
+            @Override
+            public void meth1(int a) {
+                System.out.println("I am meth1. " + a);
+            }
+        };
+
+        obj.meth1(5);
+
+        // Lambda Expressions
+        Inter67 obj2 = (a) -&gt; {
+            System.out.println("I am lambda expression " + a);
+        };
+        obj2.meth1(6);
+    }
+}
+</code></pre>
+                        <h3>Generics</h3>
+                        <pre class="language-java"><code>package com.company;
+
+import java.util.ArrayList;
+
+class myGeneric&lt;T1, T2&gt; {
+    private T1 a;
+    private T2 b;
+
+    public myGeneric(T1 a, T2 b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public T1 getA() {
+        return a;
+    }
+
+    public void setA(T1 a) {
+        this.a = a;
+    }
+
+    public T2 getB() {
+        return b;
+    }
+
+    public void setB(T2 b) {
+        this.b = b;
+    }
+}
+
+public class T68_generics {
+    public static void main(String[] args) {
+        ArrayList arrayList = new ArrayList();
+        arrayList.add("str1");
+        arrayList.add(5);
+        arrayList.add(true);
+
+        // int a = arrayList.get(1); -- will give error because it is object type
+        int a = (int) arrayList.get(1);
+        System.out.println(a);
+
+        // Generic
+        myGeneric&lt;Integer, String&gt; b = new myGeneric&lt;&gt;(4, "hello");
+        System.out.println(b.getA());
+        System.out.println(b.getB());
+    }
+}
+</code></pre>
+                        <h3>File Handling</h3>
+                        <pre class="language-java"><code>package com.company;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class T69_file_handling {
+    public static void main(String[] args) {
+
+        // Creating a new file
+        File f1 = new File("T69_sample_file.txt");
+        try {
+            f1.createNewFile();
+        } catch (IOException e) {
+            System.out.println("Unable to create file...");
+            e.printStackTrace();
+        }
+
+        // Writing in a file (after removing all present content)
+        try {
+            FileWriter f2 = new FileWriter("T69_sample_file.txt");
+            f2.write("Hi\nSaksham here!!!");
+            f2.close(); // Remember to close a file
+        } catch (IOException e) {
+            System.out.println("Failed to reach the file...");
+            e.printStackTrace();
+        }
+
+        // Reading a file
+        File f3 = new File("T69_sample_file.txt");
+        try {
+            Scanner sc = new Scanner(f3);
+            System.out.println("File contains...");
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+                System.out.println(line);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found!!!");
+            e.printStackTrace();
+        }
+
+        // Deleting a file
+        File f4 = new File("T69_sample_file.txt");
+        if (f4.delete()) {
+            System.out.println("File deleted...");
+        } else {
+            System.out.println("Some error occurred...");
+        }
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/insertPdf.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>

@@ -1,0 +1,107 @@
+/* Navbar */
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+#icon {
+    width: 60px;
+    height: 60px;
+}
+
+#pdf {
+    width: 35px;
+    height: 35px;
+}
+
+/* Projects */
+
+pre {
+    max-height: 400px;
+}
+
+#nothing {
+    height: 266px;
+}
+
+.accordion-button img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+/* Footer */
+
+footer {
+    background: #5e7361;
+    color: white;
+    padding: 9px 20px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    cursor: pointer;
+    color: burlywood;
+}
+
+footer img {
+    margin: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Domains */
+
+#d1, #d2, #d3, #d4, #d5, #d6, #d7 {
+    display: none;
+}
+
+/* Cards */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 20px;
+}
+
+.card img {
+    height: 258px;
+    transition: 0.3s;
+}
+
+.images {
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.card:hover .images img {
+    transform: scale(1.3);
+}
+
+/* Utility classes */
+
+.h-primary {
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+
+.h-secondary {
+    font-size: 2.3rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+
+.center {
+    text-align: center;
+}

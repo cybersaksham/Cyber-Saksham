@@ -1,0 +1,2762 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | Java | Practice Sets</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c3 {
+            display: none;
+        }
+
+        #d1,
+        #d2,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./java.html">Java</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./practice_sets.html">Practice Sets</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Chapters</h3>
+        <hr>
+        <h5 id="nothing">No chapter matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        1. Data Types & Variables
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps2.pdf"></a>
+                        <h3>Q.1</h3>
+                        <pre class="language-java"><code>/*
+ * Take input for 3 integers & print sum.
+ * */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS1_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter 3 numbers : ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        System.out.println(a + " + " + b + " + " + c + " = " + (a + b + c));
+    }
+}
+</code></pre>
+                        <h3>Q.2</h3>
+                        <pre class="language-java"><code>/*
+* Take input for 3 numbers & print their CGPA.
+* */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS1_2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter marks in 3 subjects : ");
+        float a = sc.nextFloat();
+        float b = sc.nextFloat();
+        float c = sc.nextFloat();
+        System.out.println("The CGPA is " + ((a + b + c) / 30));
+    }
+}
+</code></pre>
+                        <h3>Q.3</h3>
+                        <pre class="language-java"><code>/*
+* Take input for name & print this :
+* Hello {{name}}, have a good day.
+* */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS1_3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your name :");
+        String name = sc.next();
+        System.out.println("Hello " + name + ", have a good day.");
+    }
+}
+</code></pre>
+                        <h3>Q.4</h3>
+                        <pre class="language-java"><code>/*
+* Take input for kms & convert it into milse.
+* */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS1_4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter no of kms : ");
+        double kms = sc.nextDouble();
+        System.out.println(kms + " kms = " + (kms * 0.621371) + " miles");
+    }
+}
+</code></pre>
+                        <h3>Q.5</h3>
+                        <pre class="language-java"><code>/*
+* Take input for an integer & check whether it is integer or not.
+* */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS1_5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter an integer : ");
+        System.out.println(sc.hasNextInt());
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project2" class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        2. Operators
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps3.pdf"></a>
+                        <h3>Q.1</h3>
+                        <pre class="language-java"><code>/*
+Solve the expression :
+7 / 4 * 9 / 2
+ */
+
+package com.company;
+
+public class PS2_1 {
+    public static void main(String[] args) {
+        float a = 7 / 4 * 9 / 2;
+        System.out.println(a);
+        /*
+        7 / 4 = 1
+        1 * 9 = 9
+        9 / 2 = 4
+        Ans will be 4.0
+         */
+    }
+}
+</code></pre>
+                        <h3>Q.2</h3>
+                        <pre class="language-java"><code>/*
+Take input for a grade.
+Encrypt it by adding it & then decrypt.
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS2_2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your grade : ");
+        char grade = sc.next().charAt(0);
+
+        // Encrypting Grade
+        grade = (char) (grade + 8);
+        System.out.println("Encrypted grade is : " + grade);
+
+        // Decrypting Grade
+        grade = (char) (grade - 8);
+        System.out.println("Decrypted grade is : " + grade);
+    }
+}
+</code></pre>
+                        <h3>Q.3</h3>
+                        <pre class="language-java"><code>/*
+Take a number as input & check whether it is greater than 8 or not
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS2_3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number : ");
+        int a = sc.nextInt();
+        System.out.println(a &gt; 8);
+    }
+}
+</code></pre>
+                        <h3>Q.4</h3>
+                        <pre class="language-java"><code>/*
+Write (v^2-u^2)/(2as) by precedence rules.
+ */
+
+package com.company;
+
+public class PS2_4 {
+    public static void main(String[] args) {
+        int v = 1, u = 1, a = 1, s = 1;
+        int res = (v * v - u * u) / (2 * a * s);
+        System.out.println(res);
+    }
+}
+</code></pre>
+                        <h3>Q.5</h3>
+                        <pre class="language-java"><code>/*
+Find value of 7 * 49 / 7 + 35 / 7
+ */
+
+package com.company;
+
+public class PS2_5 {
+    public static void main(String[] args) {
+        int a = 7 * 49 / 7 + 35 / 7;
+        System.out.println(a);
+        /*
+        7 * 49 = 343 and 35 / 7 = 5
+        343 / 7 = 49
+        49 + 5 = 54
+         */
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        3. Strings
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps4.pdf"></a>
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+Take input for a string & convert it into lowercase.
+ */
+
+package com.company;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class PS3_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string :");
+        String s1 = sc.nextLine();
+        s1 = s1.toLowerCase();
+        System.out.println(s1);
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+Take a string as input & replace all space with '_'
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS3_2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string :");
+        String s1 = sc.nextLine();
+        s1 = s1.replace(" ", "_");
+        System.out.println(s1);
+    }
+}
+</code></pre>
+<h3>Q.3</h3>
+<pre class="language-java"><code>/*
+Take a string as input & fill template :
+"Dear {{string}}, Thanks a lot."
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS3_3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your name :");
+        String name = sc.nextLine();
+        String letter = "Dear &lt;|name|&gt;, Thanks a lot.";
+        letter = letter.replace("&lt;|name|&gt;", name);
+        System.out.println(letter);
+    }
+}
+</code></pre>
+<h3>Q.4</h3>
+<pre class="language-java"><code>/*
+Detect index of "  " and "   " in a string.
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS3_4 {
+    public static void main(String[] args) {
+        String s1 = "This string  contains double    & triple spaces.";
+        System.out.println(s1.indexOf("  "));
+        System.out.println(s1.indexOf("   "));
+    }
+}
+</code></pre>
+<h3>Q.5</h3>
+<pre class="language-java"><code>/*
+Format this string as letter :
+"Dear Harry, This java course is nice. Thanks!"
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS3_5 {
+    public static void main(String[] args) {
+        String letter = "Dear Harry,\n\tThis java course is nice.\n\tThanks!";
+        System.out.println(letter);
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        4. Conditionals
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps5.pdf"></a>
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+Find output of :
+
+int a = 10;
+if (a == 11) {
+    System.out.println("I am 11");
+} else {
+    System.out.println("I am not 11");
+}
+ */
+
+package com.company;
+
+public class PS4_1 {
+    public static void main(String[] args) {
+        int a = 10;
+        if (a == 11) {
+            System.out.println("I am 11");
+        } else {
+            System.out.println("I am not 11");
+        }
+
+        // Ans = I am not 11
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+Take 3 marks as input.
+Pass --&gt; if percentage &gt;= 40 and marks in each subject &gt;= 33
+else fail
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS4_2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a, b, c;
+        float percentage;
+        System.out.println("Enter your marks in three subjects :");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        c = sc.nextInt();
+        percentage = (a + b + c) / 3.0f;
+
+        System.out.println("Your overall percentage is " + percentage + " %");
+
+        if (percentage &gt;= 40 && a &gt;= 33 && b &gt;= 33 && c &gt;= 33) {
+            System.out.println("Pass!!");
+        } else {
+            System.out.println("Fail!!");
+        }
+    }
+}
+</code></pre>
+<h3>Q.3</h3>
+<pre class="language-java"><code>/*
+Calculate income tax based on following table :
+    Income Slab     Tax
+    0.0L - 2.5L     0.0%
+    2.5L - 5.0L     5.0%
+    5.0L - 10.0L    20.0%
+    Above 10.0L     30.0%
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS4_3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        float income, tax = 0.0f;
+        System.out.print("Enter your income in lacs = ");
+        income = sc.nextFloat();
+
+        if (income &lt; 2.5f) {
+            tax += 0;
+        } else if (income &lt; 5.0f) {
+            tax += 0.05f * (income - 2.5f);
+        } else if (income &lt; 10.0f) {
+            tax += 0.05f * (5.0f - 2.5f);
+            tax += 0.2f * (income - 5.0f);
+        } else {
+            tax += 0.05f * (5.0f - 2.5f);
+            tax += 0.2f * (10.0f - 5.0f);
+            tax += 0.3f * (income - 10.0f);
+        }
+
+        System.out.println("You have to pay total tax of " + tax + " lacs.");
+    }
+}
+</code></pre>
+<h3>Q.4</h3>
+<pre class="language-java"><code>/*
+Print week days base on numbers.
+1 for monday, 2 for tuesday ......
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS4_4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a day = ");
+        int day = sc.nextInt();
+
+        switch (day) {
+            case 1 -&gt; System.out.println("Monday");
+            case 2 -&gt; System.out.println("Tuesday");
+            case 3 -&gt; System.out.println("Wednesday");
+            case 4 -&gt; System.out.println("Thursday");
+            case 5 -&gt; System.out.println("Friday");
+            case 6 -&gt; System.out.println("Saturday");
+            case 7 -&gt; System.out.println("Sunday");
+            default -&gt; System.out.println("Incorrect");
+        }
+    }
+}
+</code></pre>
+<h3>Q.5</h3>
+<pre class="language-java"><code>/*
+WAP to check a year is leap year or not.
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS4_5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter an year = ");
+        int year = sc.nextInt();
+
+        if (year % 400 == 0) {
+            System.out.println("Leap year");
+        } else if (year % 100 == 0) {
+            System.out.println("Not Leap Year");
+        } else if (year % 4 == 0) {
+            System.out.println("Leap year");
+        } else {
+            System.out.println("Not Leap Year");
+        }
+    }
+}
+</code></pre>
+<h3>Q.6</h3>
+<pre class="language-java"><code>/*
+Take a website url & check
+.com --&gt; Commercial Website
+.org --&gt; Organisational Website
+.in --&gt; Indian Website
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS4_6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter an url :");
+        String url = sc.nextLine();
+
+        if (url.endsWith(".com")) {
+            System.out.println("Commercial Website");
+        } else if (url.endsWith(".org")) {
+            System.out.println("Organisational Website");
+        } else if (url.endsWith(".in")) {
+            System.out.println("Indian Website");
+        }
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project5" class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        5. Loops
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps6.pdf"></a>
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+WAP to print following pattern by for loop :
+****
+***
+**
+*
+ */
+
+package com.company;
+
+public class PS5_1 {
+    public static void main(String[] args) {
+        for (int i = 4; i &gt; 0; i--) {
+            for (int j = 0; j &lt; i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+WAP to find sum of first n even numbers using while loop.
+ */
+
+package com.company;
+
+public class PS5_2 {
+    public static void main(String[] args) {
+        int n = 10, i = 1, sum = 0;
+        while (i &lt;= n) {
+            sum += (2 * i);
+            i++;
+        }
+        System.out.println("The sum is " + sum);
+    }
+}
+</code></pre>
+<h3>Q.3</h3>
+<pre class="language-java"><code>/*
+WAP to print multiplication table of a number n
+ */
+
+package com.company;
+
+public class PS5_3 {
+    public static void main(String[] args) {
+        int n = 6;
+        for (int i = 1; i &lt;= 10; i++) {
+            System.out.println(n + " * " + i + " = " + (n * i));
+        }
+    }
+}
+</code></pre>
+<h3>Q.4</h3>
+<pre class="language-java"><code>/*
+WAP to print multiplication table of 10 in reverse order
+ */
+
+package com.company;
+
+public class PS5_4 {
+    public static void main(String[] args) {
+        for (int i = 10; i &gt;= 1; i--) {
+            System.out.println("10 * " + i + " = " + (10 * i));
+        }
+    }
+}
+</code></pre>
+<h3>Q.5</h3>
+<pre class="language-java"><code>/*
+WAP to print factorial of a given no using for loop
+ */
+
+package com.company;
+
+public class PS5_5 {
+    public static void main(String[] args) {
+        int n = 5, fact = 1;
+        for (int i = n; i &gt; 1; i--) {
+            fact *= i;
+        }
+        System.out.println(n + "! = " + fact);
+    }
+}
+</code></pre>
+<h3>Q.6</h3>
+<pre class="language-java"><code>/*
+WAP to print factorial of a given no using while loop
+ */
+
+package com.company;
+
+public class PS5_6 {
+    public static void main(String[] args) {
+        int n = 6, fact = 1, i = n;
+        while (i &gt; 1) {
+            fact *= i;
+            i--;
+        }
+        System.out.println(n + "! = " + fact);
+    }
+}
+</code></pre>
+<h3>Q.7</h3>
+<pre class="language-java"><code>/*
+WAP to print following pattern by for & while loop :
+****
+***
+**
+*
+ */
+
+package com.company;
+
+public class PS5_7 {
+    public static void main(String[] args) {
+        int j;
+        for (int i = 4; i &gt; 0; i--) {
+            j = i;
+            while (j &gt; 0) {
+                System.out.print("*");
+                j--;
+            }
+            System.out.println();
+        }
+    }
+}
+</code></pre>
+<h3>Q.8</h3>
+<pre class="language-java"><code></code></pre>
+<h3>Q.9</h3>
+<pre class="language-java"><code>/*
+WAP to find sum of numbers occuring in multiplication table of 8
+ */
+
+package com.company;
+
+public class PS5_9 {
+    public static void main(String[] args) {
+        int n = 8, sum = 0;
+        for (int i = 1; i &lt;= 10; i++) {
+            sum += (i * n);
+        }
+        System.out.println("The sum is " + sum);
+    }
+}
+</code></pre>
+<h3>Q.10</h3>
+<pre class="language-java"><code></code></pre>
+<h3>Q.11</h3>
+<pre class="language-java"><code>/*
+WAP to find sum of first n even numbers using for loop.
+ */
+
+package com.company;
+
+public class PS5_11 {
+    public static void main(String[] args) {
+        int n = 10, sum = 0;
+        for (int i = 1; i &lt;= n; i++) {
+            sum += (2 * i);
+        }
+        System.out.println("The sum is " + sum);
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        6. Arrays
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps7.pdf"></a>
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+Create an array of 5 floats & print their sum
+ */
+
+package com.company;
+
+public class PS6_1 {
+    public static void main(String[] args) {
+        float[] arr = {1.1f, 2.2f, 3.3f, 4.4f, 5.5f};
+        float sum = 0;
+
+        for (float item : arr) {
+            sum += item;
+        }
+        System.out.println(sum);
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+WAP to check whether a given integer is present in array or not
+ */
+
+package com.company;
+
+public class PS6_2 {
+    public static void main(String[] args) {
+        int a = 5;
+        boolean isIn = false;
+        int[] arr = {1, 2, 3, 4, 5};
+
+        for (int item : arr) {
+            if (a == item) {
+                isIn = true;
+                break;
+            }
+        }
+
+        if (isIn) {
+            System.out.println(a + " is present");
+        } else {
+            System.out.println(a + " is not present");
+        }
+    }
+}
+</code></pre>
+<h3>Q.3</h3>
+<pre class="language-java"><code>/*
+Make an array containing marks of all students.
+Then find average by for-each loop.
+ */
+
+package com.company;
+
+public class PS6_3 {
+    public static void main(String[] args) {
+        float avg, sum = 0;
+        float[] arr = {45.1f, 31.4f, 82.2f, 56.4f, 94.7f};
+        for (float item : arr) {
+            sum += item;
+        }
+        avg = sum / arr.length;
+        System.out.println("The average marks are " + avg);
+    }
+}
+</code></pre>
+<h3>Q.4</h3>
+<pre class="language-java"><code>/*
+WAP to add 2 matrices of size 2 * 3
+ */
+
+package com.company;
+
+public class PS6_4 {
+    public static void main(String[] args) {
+        int[][] A = {{1, 2, 3},
+                {4, 5, 6}};
+        int[][] B = {{4, 5, 6},
+                {1, 2, 3}};
+        int[][] res = {{0, 0, 0},
+                {0, 0, 0}};
+
+        for (int i = 0; i &lt; A.length; i++) {
+            for (int j = 0; j &lt; A[i].length; j++) {
+                res[i][j] = (A[i][j] + B[i][j]);
+                System.out.print(res[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+</code></pre>
+<h3>Q.5</h3>
+<pre class="language-java"><code>/*
+WAP to reverse an array
+ */
+
+package com.company;
+
+public class PS6_5 {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6};
+        int temp;
+
+        for (int i = 0; i &lt; arr.length / 2; i++) {
+            temp = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = arr[i];
+            arr[i] = temp;
+        }
+
+        for (int item : arr) {
+            System.out.print(item + " ");
+        }
+    }
+}
+</code></pre>
+<h3>Q.6</h3>
+<pre class="language-java"><code>/*
+WAP to find max element in array
+ */
+
+package com.company;
+
+public class PS6_6 {
+    public static void main(String[] args) {
+        int[] arr = {5, 8, 1, 6, 9, -2};
+        int max = arr[0];
+
+        for (int item : arr) {
+            if (max &lt; item) {
+                max = item;
+            }
+        }
+        System.out.println("The maximum no is " + max);
+    }
+}
+</code></pre>
+<h3>Q.7</h3>
+<pre class="language-java"><code>/*
+WAP to find min element in array
+ */
+
+package com.company;
+
+public class PS6_7 {
+    public static void main(String[] args) {
+        int[] arr = {5, 8, 1, 6, 9, -2};
+        int min = arr[0];
+
+        for (int item : arr) {
+            if (min &gt; item) {
+                min = item;
+            }
+        }
+        System.out.println("The minimum no is " + min);
+    }
+}
+</code></pre>
+<h3>Q.8</h3>
+<pre class="language-java"><code>/*
+WAP to find an array is sorted or not
+ */
+
+package com.company;
+
+public class PS6_8 {
+    public static void main(String[] args) {
+        int[] arr = {12, 6, -1, -5, -8};
+        boolean increasing = true;
+        boolean decreasing = true;
+
+        // Checking for increasing array
+        for (int i = 0; i &lt; arr.length - 1; i++) {
+            if (arr[i + 1] &lt; arr[i]) {
+                increasing = false;
+                break;
+            }
+        }
+
+        // Checking for decreasing array
+        for (int i = 0; i &lt; arr.length - 1; i++) {
+            if (arr[i + 1] &gt; arr[i]) {
+                decreasing = false;
+                break;
+            }
+        }
+
+        // If any increasing or decrasing is true then Sorted
+        if (increasing || decreasing) {
+            System.out.println("Sorted");
+        } else {
+            System.out.println("Not Sorted");
+        }
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        7. Methods
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps8.pdf"></a>
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+Write a java method to print multiplication table.
+ */
+
+package com.company;
+
+public class PS7_1 {
+    static void table(int n) {
+        for (int i = 1; i &lt;= 10; i++) {
+            System.out.println(n + " * " + i + " = " + (n * i));
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 7;
+        table(n);
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+Write a java method to print the pattern :
+*
+**
+***
+****
+ */
+
+package com.company;
+
+public class PS7_2 {
+    static void pattern(int n) {
+        for (int i = 1; i &lt;= n; i++) {
+            for (int j = 0; j &lt; i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int row = 4;
+        pattern(row);
+    }
+}
+</code></pre>
+<h3>Q.3</h3>
+<pre class="language-java"><code>/*
+Write a recursive method to find sum of first n natural numbers.
+ */
+
+package com.company;
+
+public class PS7_3 {
+    static int sum(int n) {
+        if (n == 1) {
+            return 1;
+        } else {
+            return n + sum(n - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 10;
+        System.out.println("The sum is " + sum(n));
+    }
+}
+</code></pre>
+<h3>Q.4</h3>
+<pre class="language-java"><code>/*
+Write a java method to print the pattern :
+****
+***
+**
+*
+ */
+
+package com.company;
+
+public class PS7_4 {
+    static void pattern(int n) {
+        for (int i = n; i &gt;= 1; i--) {
+            for (int j = 0; j &lt; i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int row = 4;
+        pattern(row);
+    }
+}
+</code></pre>
+<h3>Q.5</h3>
+<pre class="language-java"><code>/*
+Write a method to find nth term of fibonacci series.
+ */
+
+package com.company;
+
+public class PS7_5 {
+    static int fibonacci(int n) {
+        if (n &lt;= 2) {
+            return n - 1;
+        } else {
+            return (fibonacci(n - 1) + fibonacci(n - 2));
+        }
+    }
+
+    public static void main(String[] args) {
+        int a = 8;
+        System.out.println("The fibonacci at " + a + " is " + fibonacci(a));
+    }
+}
+</code></pre>
+<h3>Q.6</h3>
+<pre class="language-java"><code>/*
+Write a function to find average of a set of numbers.
+ */
+
+package com.company;
+
+public class PS7_6 {
+    static float avg(float... arr) {
+        float sum = 0.0f;
+        for (float i : arr) {
+            sum += i;
+        }
+        return sum / arr.length;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("The average of 1, 2, 3, 4 & 5 is " + avg(1, 2, 3, 4, 5));
+    }
+}
+</code></pre>
+<h3>Q.7</h3>
+<pre class="language-java"><code>/*
+Write a java method to print the pattern using recursion :
+****
+***
+**
+*
+ */
+
+package com.company;
+
+public class PS7_7 {
+    static void pattern(int n) {
+        if (n &gt;= 1) {
+            for (int i = 1; i &lt;= n; i++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            pattern(n - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int row = 4;
+        pattern(row);
+    }
+}
+</code></pre>
+<h3>Q.8</h3>
+<pre class="language-java"><code>/*
+Write a java method to print the pattern using recursion :
+*
+**
+***
+****
+ */
+
+package com.company;
+
+public class PS7_8 {
+    static void pattern(int n) {
+        if (n &gt;= 1) {
+            pattern(n - 1);
+            for (int i = 1; i &lt;= n; i++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int row = 4;
+        pattern(row);
+    }
+}
+</code></pre>
+<h3>Q.9</h3>
+<pre class="language-java"><code>/*
+Write a method to convert celsius to fahrenheit.
+ */
+
+package com.company;
+
+public class PS7_9 {
+    static float convert(float c) {
+        return (c * 1.8f) + 32.0f;
+    }
+
+    public static void main(String[] args) {
+        float cel = 36.7f;
+        float far = convert(cel);
+        System.out.println(cel + " celsius in fahrenheit is " + far);
+    }
+}
+</code></pre>
+<h3>Q.10</h3>
+<pre class="language-java"><code>/*
+Write a iterative method to find sum of first n natural numbers.
+ */
+
+package com.company;
+
+public class PS7_10 {
+    static int sum(int n) {
+        int sum = 0;
+        for (int i = 0; i &lt; n; i++) {
+            sum += (i + 1);
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int n = 10;
+        System.out.println("The sum is " + sum(n));
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project8" class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        8. OOPS
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps9.pdf"></a>
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+Create a class Employee with following properties
+1. salary - int
+2. getSalary() - returning salary
+3. name - String
+4. getName() - returning name
+5. setName() - setting name
+ */
+
+package com.company;
+
+class Employee {
+    int salary;
+    String name;
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String str) {
+        name = str;
+    }
+}
+
+public class PS8_1 {
+    public static void main(String[] args) {
+        Employee saksham = new Employee();
+        saksham.salary = 10000;
+        saksham.setName("Saksham Bindal");
+        System.out.println(saksham.getSalary());
+        System.out.println(saksham.getName());
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+Create a class cellPhone with methods printing ringing, vibrating etc.
+ */
+
+package com.company;
+
+class cellPhone {
+    public void ring() {
+        System.out.println("Ringing.....");
+    }
+
+    public void vibrate() {
+        System.out.println("Vibrating.....");
+    }
+
+    public void play() {
+        System.out.println("Playing.....");
+    }
+}
+
+public class PS8_2 {
+    public static void main(String[] args) {
+        cellPhone ph = new cellPhone();
+        ph.ring();
+        ph.vibrate();
+        ph.play();
+    }
+}
+</code></pre>
+<h3>Q.3</h3>
+<pre class="language-java"><code>/*
+Make a class Square for initializing side, find area & perimeter.
+ */
+
+package com.company;
+
+class Square {
+    float side;
+
+    public void setSide(float a) {
+        side = a;
+    }
+
+    public float getArea() {
+        return (side * side);
+    }
+
+    public float getPeri() {
+        return (4 * side);
+    }
+}
+
+public class PS8_3 {
+    public static void main(String[] args) {
+        Square s1 = new Square();
+        s1.setSide(1.2f);
+        System.out.println("Area is " + s1.getArea());
+        System.out.println("Perimeter is " + s1.getPeri());
+    }
+}
+</code></pre>
+<h3>Q.4</h3>
+<pre class="language-java"><code>/*
+Make a class Rectangle for initializing sides, find area & perimeter.
+ */
+
+package com.company;
+
+class Rectangle {
+    float len, wid;
+
+    public void setSides(float a, float b) {
+        len = a;
+        wid = b;
+    }
+
+    public float getArea() {
+        return (len * wid);
+    }
+
+    public float getPeri() {
+        return (2 * (len + wid));
+    }
+}
+
+public class PS8_4 {
+    public static void main(String[] args) {
+        Rectangle s1 = new Rectangle();
+        s1.setSides(1.2f, 2.1f);
+        System.out.println("Area is " + s1.getArea());
+        System.out.println("Perimeter is " + s1.getPeri());
+    }
+}
+</code></pre>
+<h3>Q.5</h3>
+<pre class="language-java"><code>/*
+Create a class TommyVecetti capable of hitting, running, firing etc.
+ */
+
+package com.company;
+
+class TommyVecetti {
+    public void hitting() {
+        System.out.println("Hitting...");
+    }
+
+    public void running() {
+        System.out.println("Running...");
+    }
+
+    public void firing() {
+        System.out.println("Firing...");
+    }
+}
+
+public class PS8_5 {
+    public static void main(String[] args) {
+        TommyVecetti player = new TommyVecetti();
+        player.hitting();
+        player.running();
+        player.firing();
+    }
+}
+</code></pre>
+<h3>Q.6</h3>
+<pre class="language-java"><code>/*
+Make a class Circle for initializing radius, find area & perimeter.
+ */
+
+package com.company;
+
+class Circle {
+    float rad;
+
+    public void setRad(float a) {
+        rad = a;
+    }
+
+    public float getArea() {
+        return (rad * rad * 3.14f);
+    }
+
+    public float getPeri() {
+        return (2.0f * 3.14f * rad);
+    }
+}
+
+public class PS8_6 {
+    public static void main(String[] args) {
+        Circle s1 = new Circle();
+        s1.setRad(1.2f);
+        System.out.println("Area is " + s1.getArea());
+        System.out.println("Perimeter is " + s1.getPeri());
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project9" class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        9. Access Modifiers & Constructors
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps10.pdf"></a>
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+Create a class Cylinder & use getters & setters to set radius & height.
+ */
+
+package com.company;
+
+class Cylinder {
+    private int radius, height;
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+}
+
+public class PS9_1 {
+    public static void main(String[] args) {
+        Cylinder obj = new Cylinder();
+        obj.setRadius(1);
+        obj.setHeight(2);
+        System.out.println("The radius is " + obj.getRadius());
+        System.out.println("The height is " + obj.getHeight());
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+Create a class Cylinder & use setters to set radius & height.
+Find surface area and volume of cylinder.
+ */
+
+package com.company;
+
+class Cylinder2 {
+    private int radius, height;
+    private float s_area, volume;
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public float getArea() {
+        s_area = (2.0f * 3.14f * radius * height);
+        return s_area;
+    }
+
+    public float getVol() {
+        volume = (3.14f * radius * radius * height);
+        return volume;
+    }
+}
+
+public class PS9_2 {
+    public static void main(String[] args) {
+        Cylinder2 obj = new Cylinder2();
+        obj.setRadius(1);
+        obj.setHeight(2);
+        System.out.println("The surface area is " + obj.getArea());
+        System.out.println("The volume is " + obj.getVol());
+    }
+}
+</code></pre>
+<h3>Q.3</h3>
+<pre class="language-java"><code>/*
+Use a constructor & repeat 1
+ */
+
+package com.company;
+
+class Cylinder3 {
+    private int radius, height;
+
+    public Cylinder3(int radius, int height) {
+        this.radius = radius;
+        this.height = height;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+}
+
+public class PS9_3 {
+    public static void main(String[] args) {
+        Cylinder3 obj = new Cylinder3(1, 2);
+        System.out.println("The radius is " + obj.getRadius());
+        System.out.println("The height is " + obj.getHeight());
+    }
+}
+</code></pre>
+<h3>Q.4</h3>
+<pre class="language-java"><code>/*
+Overload a constructor used to initialize rectangle of length 4 & width 5.
+ */
+
+package com.company;
+
+class Rectangle2 {
+    private int len, wid;
+
+    Rectangle2() {
+        this.len = 4;
+        this.wid = 5;
+    }
+
+    public Rectangle2(int l) {
+        this.len = l;
+        this.wid = 5;
+    }
+
+    public Rectangle2(int l, int b) {
+        this.len = l;
+        this.wid = b;
+    }
+
+    public int getLen() {
+        return len;
+    }
+
+    public int getWid() {
+        return wid;
+    }
+}
+
+public class PS9_4 {
+    public static void main(String[] args) {
+        Rectangle2 obj = new Rectangle2();
+        System.out.println("The length is " + obj.getLen());
+        System.out.println("The width is " + obj.getWid());
+    }
+}
+</code></pre>
+<h3>Q.5</h3>
+<pre class="language-java"><code>/*
+Create a class Cylinder & use getters & setters to set radius & height.
+ */
+
+package com.company;
+
+class Sphere {
+    private int radius;
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+}
+
+public class PS9_5 {
+    public static void main(String[] args) {
+        Sphere obj = new Sphere();
+        obj.setRadius(1);
+        System.out.println("The radius is " + obj.getRadius());
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project10" class="accordion-item">
+                <h2 class="accordion-header" id="heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        10. Inheritance
+                    </button>
+                </h2>
+                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps11.pdf"></a>
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+Create a class circle & use inheritance to create Cylinder from it.
+ */
+
+package com.company;
+
+class Circle10_1 {
+    private int radius;
+
+    public Circle10_1(int radius) {
+        this.radius = radius;
+    }
+
+    public double area() {
+        return Math.PI * this.radius * this.radius;
+    }
+}
+
+class Cylinder10_1 extends Circle10_1 {
+    private int height;
+
+    public Cylinder10_1(int radius, int height) {
+        super(radius);
+        this.height = height;
+    }
+
+    public double volume() {
+        return this.area() * this.height;
+    }
+}
+
+public class PS10_1 {
+    public static void main(String[] args) {
+        Cylinder10_1 obj = new Cylinder10_1(1, 2);
+        System.out.println("The area of circle is " + obj.area());
+        System.out.println("The volume of cylinder is " + obj.volume());
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+Create a class Rectangle & use inheritance to create Cuboid from it.
+ */
+
+package com.company;
+
+class Rectangle10_2 {
+    private int len, wid;
+
+    public Rectangle10_2(int len, int wid) {
+        this.len = len;
+        this.wid = wid;
+    }
+
+    public int area() {
+        return this.len * this.wid;
+    }
+}
+
+class Cuboid10_2 extends Rectangle10_2 {
+    private int height;
+
+    public Cuboid10_2(int len, int wid, int height) {
+        super(len, wid);
+        this.height = height;
+    }
+
+    public int volume() {
+        return this.area() * this.height;
+    }
+}
+
+public class PS10_2 {
+    public static void main(String[] args) {
+        Cuboid10_2 obj = new Cuboid10_2(1, 2, 3);
+        System.out.println("The area of rectangle is " + obj.area());
+        System.out.println("The volume of cuboid is " + obj.volume());
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project11" class="accordion-item">
+                <h2 class="accordion-header" id="heading11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                        11. Abstract Classes & Interfaces
+                    </button>
+                </h2>
+                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps12.pdf"></a>
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+Create an abstract class with methods write() & refill().
+ */
+
+package com.company;
+
+abstract class Pen {
+    abstract void write();
+
+    abstract void refill();
+}
+
+public class PS11_1 {
+    public static void main(String[] args) {
+
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+Create an abstract class with methods write() & refill().
+Use it to make fountainPen with method changeNib().
+ */
+
+package com.company;
+
+abstract class Pen1 {
+    abstract void write();
+
+    abstract void refill();
+}
+
+class fountainPen extends Pen1 {
+    void write() {
+        System.out.println("Writing...");
+    }
+
+    void refill() {
+        System.out.println("Refilling...");
+    }
+
+    void changeNib() {
+        System.out.println("Changing the nib...");
+    }
+}
+
+public class PS11_2 {
+    public static void main(String[] args) {
+
+    }
+}
+</code></pre>
+<h3>Q.3</h3>
+<pre class="language-java"><code>/*
+Create a Monkey class with methods jump() & bite().
+Create a Human class inherited from monkey class
+& implements basicAnimal interface with methods eat() & sleep()
+ */
+
+package com.company;
+
+interface basicAnimals {
+    void eat();
+
+    void sleep();
+}
+
+class Monkey {
+    public void jump() {
+        System.out.println("Jumping...");
+    }
+
+    public void bite() {
+        System.out.println("Biting...");
+    }
+}
+
+class Humans extends Monkey implements basicAnimals {
+    void speak() {
+        System.out.println("Hello...");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Eating...");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Sleeping...");
+    }
+}
+
+public class PS11_3 {
+    public static void main(String[] args) {
+        Humans obj = new Humans();
+        obj.eat();
+        obj.sleep();
+        obj.speak();
+        obj.bite();
+        obj.bite();
+    }
+}
+</code></pre>
+<h3>Q.4</h3>
+<pre class="language-java"><code>/*
+Create a class with abstract methods ring(), lift(), disconnect()
+Create smartTelephone class & demonstrate polymorphism.
+ */
+
+package com.company;
+
+abstract class c11_4 {
+    abstract void ring();
+
+    abstract void lift();
+
+    abstract void disconnect();
+}
+
+class c11_4_2 extends c11_4 {
+    @Override
+    void ring() {
+        System.out.println("Ringing...");
+    }
+
+    @Override
+    void disconnect() {
+        System.out.println("Disconnecting...");
+    }
+
+    @Override
+    void lift() {
+        System.out.println("Lifting...");
+    }
+
+    public void m1() {
+        System.out.println("This is my method...");
+    }
+}
+
+public class PS11_4 {
+    public static void main(String[] args) {
+        c11_4 obj = new c11_4_2();
+        obj.ring();
+        obj.disconnect();
+        obj.lift();
+        // obj.m1(); --&gt; will give error
+    }
+}
+</code></pre>
+<h3>Q.5</h3>
+<pre class="language-java"><code>/*
+Use 1 to demonstrate polymorphism with monkey class.
+ */
+
+package com.company;
+
+interface basicAnimals2 {
+    void eat();
+
+    void sleep();
+}
+
+class Monkey2 {
+    public void jump() {
+        System.out.println("Jumping...");
+    }
+
+    public void bite() {
+        System.out.println("Biting...");
+    }
+}
+
+class Humans2 extends Monkey2 implements basicAnimals2 {
+    void speak() {
+        System.out.println("Hello...");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Eating...");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Sleeping...");
+    }
+}
+
+public class PS11_5 {
+    public static void main(String[] args) {
+        Monkey2 obj = new Humans2();
+        // obj.eat();
+        // obj.sleep();
+        // obj.speak();
+        obj.bite();
+        obj.bite();
+    }
+}
+</code></pre>
+<h3>Q.6</h3>
+<pre class="language-java"><code>/*
+Create an interface tvRemote & use it to inherit another interface SmartTvRemote
+ */
+
+package com.company;
+
+interface tvRemote {
+    void changeChannel();
+
+    void increaseVolume();
+}
+
+interface SmartTvRemote extends tvRemote {
+    void pauseScreen();
+
+    void changeGraphics();
+}
+
+public class PS11_6 {
+    public static void main(String[] args) {
+    }
+}
+</code></pre>
+<h3>Q.7</h3>
+<pre class="language-java"><code>/*
+Create an class TV which implements to interfaces of Q.6
+ */
+
+package com.company;
+
+interface tvRemote1 {
+    void changeChannel();
+
+    void increaseVolume();
+}
+
+interface SmartTvRemote1 extends tvRemote1 {
+    void pauseScreen();
+
+    void changeGraphics();
+}
+
+class TV implements tvRemote1, SmartTvRemote1 {
+    @Override
+    public void changeChannel() {
+        System.out.println("Changing the channel...");
+    }
+
+    @Override
+    public void increaseVolume() {
+        System.out.println("Increasing the volume...");
+    }
+
+    @Override
+    public void pauseScreen() {
+        System.out.println("Screen is paused...");
+    }
+
+    @Override
+    public void changeGraphics() {
+        System.out.println("Graphics switched...");
+    }
+}
+
+public class PS11_7 {
+    public static void main(String[] args) {
+        TV obj = new TV();
+        obj.changeChannel();
+        obj.changeGraphics();
+        obj.pauseScreen();
+        obj.increaseVolume();
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project12" class="accordion-item">
+                <h2 class="accordion-header" id="heading12">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                        12. Packages & Modifiers
+                    </button>
+                </h2>
+                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps13.pdf"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="project13" class="accordion-item">
+                <h2 class="accordion-header" id="heading13">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                        13. Multi Threading
+                    </button>
+                </h2>
+                <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps14.pdf"></a>
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+WAP to print "Good Morning" & "Welcome" continuously on screen using threads.
+ */
+
+package com.company;
+
+class class13_1_1 extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("Good Morning");
+        }
+    }
+}
+
+class class13_1_2 extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("Welcome");
+        }
+    }
+}
+
+public class PS13_1 {
+    public static void main(String[] args) {
+        class13_1_1 t1 = new class13_1_1();
+        class13_1_2 t2 = new class13_1_2();
+
+        t1.start();
+        t2.start();
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+Use sleep method to delay welcome thread for 200ms in Q.1
+ */
+
+package com.company;
+
+class class13_2_1 extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("Good Morning");
+        }
+    }
+}
+
+class class13_2_2 extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("Welcome");
+            try {
+                Thread.sleep(2000);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+    }
+}
+
+public class PS13_2 {
+    public static void main(String[] args) {
+        class13_2_1 t1 = new class13_2_1();
+        class13_2_2 t2 = new class13_2_2();
+
+        t1.start();
+        t2.start();
+    }
+}
+</code></pre>
+<h3>Q.3</h3>
+<pre class="language-java"><code>/*
+Use getPriority() & setPriority() methods
+ */
+
+package com.company;
+
+class class13_3_1 extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("Good Morning");
+        }
+    }
+}
+
+public class PS13_3 {
+    public static void main(String[] args) {
+        class13_3_1 t1 = new class13_3_1();
+        class13_3_1 t2 = new class13_3_1();
+
+        t1.setPriority(6);
+        t2.setPriority(9);
+
+        System.out.println(t1.getPriority());
+        System.out.println(t2.getPriority());
+    }
+}
+</code></pre>
+<h3>Q.4</h3>
+<pre class="language-java"><code>/*
+How to get state of a thread
+ */
+
+package com.company;
+
+class class13_4_1 extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("Good Morning");
+        }
+    }
+}
+
+public class PS13_4 {
+    public static void main(String[] args) {
+        class13_4_1 t1 = new class13_4_1();
+
+        System.out.println(t1.getState());
+
+        t1.start();
+        System.out.println(t1.getState());
+    }
+}
+</code></pre>
+<h3>Q.5</h3>
+<pre class="language-java"><code>/*
+How to get reference to current thread
+ */
+
+package com.company;
+
+class class13_5_1 extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.println("Good Morning");
+        }
+    }
+}
+
+
+public class PS13_5 {
+    public static void main(String[] args) {
+        class13_5_1 t1 = new class13_5_1();
+
+        t1.start();
+        System.out.println(Thread.currentThread().getState()); // referring to current running thread
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project14" class="accordion-item">
+                <h2 class="accordion-header" id="heading14">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                        14. Exceptions
+                    </button>
+                </h2>
+                <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps15.pdf"></a>
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+Demonstrate syntax, logical & runtime errors.
+ */
+
+package com.company;
+
+public class PS14_1 {
+    public static void main(String[] args) {
+        // Syntax Error
+        // int a = 7 --&gt; ';' mistake
+
+        // Logical Error
+        int age = 70;
+        int year_born = 2000 - age;
+
+        // Exception
+        System.out.println(6 / 0);
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+WAP that print "haha" on arithmetic exception
+& "hehe" at illegal arguments.
+ */
+
+package com.company;
+
+public class PS14_2 {
+    public static void main(String[] args) {
+        try {
+            System.out.println(66 / 0);
+        } catch (ArithmeticException e) {
+            System.out.println("haha");
+        } catch (IllegalArgumentException e) {
+            System.out.println("hehe");
+        }
+    }
+}
+</code></pre>
+<h3>Q.3</h3>
+<pre class="language-java"><code>/*
+WAP to access an array until index is valid.
+If max retries exceed 5 then print error.
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class PS14_3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] marks = {1, 2, 3, 4, 5};
+        boolean flag = true;
+        int i = 0;
+
+        while (flag && i &lt; 5) {
+            try {
+                System.out.print("Enter an index : ");
+                int ind = sc.nextInt();
+                System.out.println("The value is " + marks[ind]);
+                flag = false;
+            } catch (Exception e) {
+                System.out.println("Invalid Index!!!");
+                i++;
+            }
+        }
+        if (i &gt;= 5) {
+            System.out.println("error");
+        }
+    }
+}
+</code></pre>
+<h3>Q.4</h3>
+<pre class="language-java"><code>/*
+Throw a custom exception in Q.3 after max retries.
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+class Exception14_4 extends Exception {
+    @Override
+    public String toString() {
+        return "Max retries reached!!!";
+    }
+
+    @Override
+    public String getMessage() {
+        return "Max retries reached!!!";
+    }
+}
+
+public class PS14_4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] marks = {1, 2, 3, 4, 5};
+        boolean flag = true;
+        int i = 0;
+
+        while (flag && i &lt; 5) {
+            try {
+                System.out.print("Enter an index : ");
+                int ind = sc.nextInt();
+                System.out.println("The value is " + marks[ind]);
+                flag = false;
+            } catch (Exception e) {
+                System.out.println("Invalid Index!!!");
+                i++;
+            }
+        }
+        try {
+            if (i &gt;= 5) {
+                throw new Exception14_4();
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+</code></pre>
+<h3>Q.5</h3>
+<pre class="language-java"><code>/*
+Wrap Q.3 in a method which throw custom exception.
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+class Exception14_5 extends Exception {
+    @Override
+    public String toString() {
+        return "Max retries reached!!!";
+    }
+
+    @Override
+    public String getMessage() {
+        return "Max retries reached!!!";
+    }
+}
+
+public class PS14_5 {
+    public static void check() throws Exception14_5 {
+        Scanner sc = new Scanner(System.in);
+
+        int[] marks = {1, 2, 3, 4, 5};
+        boolean flag = true;
+        int i = 0;
+
+        while (flag && i &lt; 5) {
+            try {
+                System.out.print("Enter an index : ");
+                int ind = sc.nextInt();
+                System.out.println("The value is " + marks[ind]);
+                flag = false;
+            } catch (Exception e) {
+                System.out.println("Invalid Index!!!");
+                i++;
+            }
+        }
+        try {
+            if (i &gt;= 5) {
+                throw new Exception14_4();
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            check();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project15" class="accordion-item">
+                <h2 class="accordion-header" id="heading15">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                        15. Advanced-1
+                    </button>
+                </h2>
+                <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a class="insertPdf" target="_blank" href="./Reference/ps16.pdf"></a>
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+Create an ArrayList & store 10 names in it.
+ */
+
+package com.company;
+
+import java.util.ArrayList;
+
+public class PS15_1 {
+    public static void main(String[] args) {
+        ArrayList&lt;String&gt; arr = new ArrayList&lt;&gt;();
+
+        for (int i = 0; i &lt; 10; i++) {
+            arr.add("Student " + (i + 1));
+        }
+
+        for (Object o : arr) {
+            System.out.println(o);
+        }
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+Use Date class to print in following format ;
+21:47:02
+ */
+
+package com.company;
+
+import java.util.Date;
+
+public class PS15_2 {
+    public static void main(String[] args) {
+        Date d = new Date();
+        System.out.println(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
+    }
+}
+</code></pre>
+<h3>Q.3</h3>
+<pre class="language-java"><code>/*
+Repeat Q.2 by Calendar class.
+ */
+
+package com.company;
+
+import java.util.Calendar;
+
+public class PS15_3 {
+    public static void main(String[] args) {
+        Calendar c = Calendar.getInstance();
+        System.out.println(c.get(Calendar.HOUR_OF_DAY) + ":" + c.get(Calendar.MINUTE) + ":" + c.get(Calendar.SECOND));
+    }
+}
+</code></pre>
+<h3>Q.4</h3>
+<pre class="language-java"><code>/*
+Repeat Q.2 by java.time API
+ */
+
+package com.company;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class PS15_4 {
+    public static void main(String[] args) {
+        LocalDateTime ldt = LocalDateTime.now();
+        DateTimeFormatter ldf = DateTimeFormatter.ofPattern("H:m:s");
+
+        String myTime = ldt.format(ldf);
+        System.out.println(myTime);
+    }
+}
+</code></pre>
+<h3>Q.5</h3>
+<pre class="language-java"><code>/*
+Create a set with duplicate elements & show that only one element is stored.
+ */
+
+package com.company;
+
+import java.util.HashSet;
+
+public class PS15_5 {
+    public static void main(String[] args) {
+        HashSet&lt;Integer&gt; obj = new HashSet&lt;&gt;();
+        obj.add(1);
+        obj.add(2);
+        obj.add(1);
+        obj.add(2);
+        obj.add(3);
+        for (Object o : obj) {
+            System.out.println(o);
+        }
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project16" class="accordion-item">
+                <h2 class="accordion-header" id="heading16">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                        16. Advanced-2
+                    </button>
+                </h2>
+                <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <h3>Q.1</h3>
+<pre class="language-java"><code>/*
+Generate javadocs with & without using intellij
+ */
+
+package com.company;
+
+public class PS16_1 {
+    public static void main(String[] args) {
+        // With Intellij
+        /*
+        Go to Tools &gt; Generate JavaDoc
+         */
+    }
+}
+</code></pre>
+<h3>Q.2</h3>
+<pre class="language-java"><code>/*
+Create a deprecated method in a class
+ */
+
+package com.company;
+
+class A16_2 {
+    @Deprecated
+    public void greet() {
+        System.out.println("hello!!!");
+    }
+}
+
+public class PS16_2 {
+    public static void main(String[] args) {
+        A16_2 obj = new A16_2();
+        obj.greet();
+    }
+}
+</code></pre>
+<h3>Q.3</h3>
+<pre class="language-java"><code>/*
+Suppress method in Q.2
+ */
+
+package com.company;
+
+class A16_3 {
+    @Deprecated
+    public void greet() {
+        System.out.println("hello!!!");
+    }
+}
+
+public class PS16_3 {
+    @SuppressWarnings("deprecation")
+    public static void main(String[] args) {
+        A16_3 obj = new A16_3();
+        obj.greet();
+    }
+}
+</code></pre>
+<h3>Q.4</h3>
+<pre class="language-java"><code>/*
+Create an interface & make an instance from it
+ */
+
+package com.company;
+
+interface Inter16_4 {
+    void greet();
+}
+
+public class PS16_4 {
+    public static void main(String[] args) {
+        Inter16_4 obj = new Inter16_4() {
+            @Override
+            public void greet() {
+                System.out.println("Hello...");
+            }
+        };
+        obj.greet();
+    }
+}
+</code></pre>
+<h3>Q.5</h3>
+<pre class="language-java"><code>/*
+Store multiplication table of 6 in a file
+ */
+
+package com.company;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class PS16_5 {
+    public static void main(String[] args) {
+        File f1 = new File("multi_6.txt");
+        try {
+            f1.createNewFile();
+            System.out.println("Created Successfully...");
+        } catch (IOException e) {
+            System.out.println("Some error occurred in creating...");
+            e.printStackTrace();
+        }
+
+        try {
+            FileWriter f2 = new FileWriter("multi_6.txt");
+            for (int i = 1; i &lt;= 10; i++) {
+                f2.write("6 * " + i + " = " + (6 * i) + "\n");
+            }
+            f2.close();
+            System.out.println("Written Successfully...");
+        } catch (IOException e) {
+            System.out.println("Some error occurred in writing...");
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+<h3>Q.6</h3>
+<pre class="language-java"><code>/*
+Repeat Q.5 with numbers 2-9 & store all in a folder.
+ */
+
+package com.company;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+class Tables {
+    public int str;
+
+    public void createFile() {
+        File f1 = new File("Tables_ps16/multi_" + str + ".txt");
+        try {
+            f1.createNewFile();
+        } catch (IOException e) {
+            System.out.println("Some error occurred while creating file : multi_" + str + ".txt");
+            e.printStackTrace();
+        }
+    }
+
+    public void writeFile(int a) {
+        try {
+            FileWriter f2 = new FileWriter("Tables_ps16/multi_" + str + ".txt");
+            for (int i = 1; i &lt;= 10; i++) {
+                f2.write(a + " * " + i + " = " + (a * i) + "\n");
+            }
+            f2.close();
+        } catch (IOException e) {
+            System.out.println("Some error occurred while writing file : multi_" + str + ".txt");
+            e.printStackTrace();
+        }
+    }
+}
+
+public class PS16_6 {
+    public static void main(String[] args) {
+        Tables t = new Tables();
+        for (int i = 2; i &lt;= 9; i++) {
+            t.str = i;
+            t.createFile();
+            t.writeFile(i);
+        }
+    }
+}
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/insertPdf.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>

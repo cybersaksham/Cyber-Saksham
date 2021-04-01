@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | Java Script | Exercises</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c4 {
+            display: none;
+        }
+
+        #d1,
+        #d3,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./js.html">JS</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./exercises.html">Exercises</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Exercises</h3>
+        <hr>
+        <h5 id="nothing">No exercise matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        1. Webpage Crawler
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;WebPage Crawler&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;a href="https://www.link1-javascript.com"&gt;link1&lt;/a&gt;
+    &lt;a href="https://www.link2-java.com"&gt;link2&lt;/a&gt;
+    &lt;a href="https://www.link3-javascript.com"&gt;link3&lt;/a&gt;
+    &lt;a href="https://www.link4-java.com"&gt;link4&lt;/a&gt;
+    &lt;a href="https://www.link5-javascript.com"&gt;link5&lt;/a&gt;
+    &lt;a href="https://www.link6-javascript.com"&gt;link6&lt;/a&gt;
+    &lt;a href="https://www.link7-java.com"&gt;link7&lt;/a&gt;
+&lt;/body&gt;
+&lt;script src="../JS/E1_webpage_crawler.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>/*
+Make a html file which contains some links.
+If link contain "javascript" word then fetch it.
+*/
+
+let a = document;
+let arr_links = Array.from(a.links);
+let arr_res = [];
+
+arr_links.forEach(function (link) {
+    if ((link.href).includes("javascript")) {
+        arr_res.push(link.href);
+    }
+})
+
+arr_res.forEach(function (item) {
+    console.log(item);
+})
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project2" class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        2. Editable Div
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Editable Div&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id="container"&gt;
+        &lt;h1 id="heading"&gt;This is Editable Div&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/E2_editable_div.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>/*
+Create an editabel div & inject it into page which contains a heading.
+Whenever someone clicks on div, it should be converted into an editable item.
+Whenever user clicks away (blur), save the note to local storage.
+*/
+
+// Creating
+let myDiv = document.createElement('div');
+let val = localStorage.getItem('text');
+let text;
+if (val == null) {
+    text = document.createTextNode('This is editable div. Click to edit.');
+} else {
+    text = document.createTextNode(val);
+}
+myDiv.appendChild(text);
+
+// Setting Attributes
+myDiv.setAttribute('id', 'div1');
+myDiv.setAttribute('style', 'border : 2px solid black; width : 100px; margin : 34px; padding : 34px;');
+
+// Inserting in html
+let container = document.getElementById('container');
+let heading = document.getElementById('heading');
+container.appendChild(myDiv, heading);
+
+// Adding event listener
+let count = 0;
+myDiv.addEventListener('click', function () {
+    if (count == 0) {
+        let html = myDiv.innerHTML;
+        myDiv.innerHTML = `&lt;textarea class="text-area" id="text-area" rows="3"&gt;${html}&lt;/textarea&gt;`;
+        count += 1;
+    }
+
+    // Listening the blur event
+    let textarea = document.getElementById('text-area');
+    textarea.addEventListener('blur', function () {
+        myDiv.innerHTML = textarea.value;
+        localStorage.setItem('text', textarea.value);
+        count = 0;
+    })
+});
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        3. Library Class
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Library Class&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Welcome to Library Class.&lt;/h1&gt;
+&lt;/body&gt;
+&lt;script src="../JS/E3_library_class.js"&gt;&lt;/script&gt;
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>/*
+Create a Library class & implement following :
+1. getBookList()
+2. issuebook(bookname, user)
+3. returnBook(bookname)
+*/
+
+class Library {
+    constructor(books) {
+        this.books = books;
+        this.issuedBooks=[];
+    }
+    getBookList() {
+        console.log(this.books);
+    }
+    issueBook(book, name) {
+        if (this.issuedBooks.indexOf(book) != -1) {
+            console.log(`${book} is already issued to someone.`);
+        } else if (this.books.indexOf(book) == -1) {
+            console.log(`${book} is not present in library.`);
+        } else {
+            this.books.splice(this.books.indexOf(book), 1);
+            this.issuedBooks.push(book);
+            console.log(`${book} has been issued successfully.`);
+        }
+    }
+    returnBook(book) {
+        if (this.issuedBooks.indexOf(book) == -1) {
+            console.log(`${book} is not issued to anyone.`);
+        } else {
+            this.issuedBooks.splice(this.issuedBooks.indexOf(book), 1);
+            this.books.push(book);
+            console.log(`${book} has been returned successfully.`);
+        }
+    }
+}
+
+let lib1 = new Library(["b1", "b2", "b3", "b4", "b5"]);
+lib1.getBookList();
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        4. Dictionary API
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+
+    &lt;title&gt;Dictionary API&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link active" aria-current="page" href="#"&gt;Home&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;form class="d-flex"&gt;
+                    &lt;input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"&gt;
+                    &lt;button class="btn btn-outline-success" type="submit"&gt;Search&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div class="my-4 container"&gt;
+        &lt;button type="button" id="popBtn" class="btn btn-primary"&gt;Populate&lt;/button&gt;
+        &lt;hr&gt;
+        &lt;div id="status"&gt;
+            
+        &lt;/div&gt;
+        &lt;h5 id="nothing"&gt;Nothing to show...&lt;/h5&gt;
+        &lt;table id="table" class="table table-striped"&gt;
+
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="../JS/E4_dictionary_api.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>/*
+You have to pretend to use a word api which will contain an object.
+Then print definition from all results of api in dom.
+*/
+
+let popBtn = document.getElementById('popBtn');
+popBtn.addEventListener('click', btnClickHandler);
+
+function btnClickHandler() {
+    // Instantiate an XHR object
+    const xhr = new XMLHttpRequest();
+
+    // Open the object
+    xhr.open('GET', 'Ex4_data.json', true);
+
+    // What to do when response is ready
+    xhr.onload = function () {
+        if (this.status === 200) {
+            let nothing = document.getElementById('nothing');
+            nothing.style.display = 'none';
+
+            let table = document.getElementById('table');
+            table.innerHTML = `&lt;thead&gt;
+                                    &lt;tr&gt;
+                                        &lt;th scope="col"&gt;#&lt;/th&gt;
+                                        &lt;th scope="col"&gt;Definition&lt;/th&gt;
+                                    &lt;/tr&gt;
+                                &lt;/thead&gt;
+                                &lt;tbody id="rows"&gt;
+                                &lt;/tbody&gt;`;
+
+            let obj = JSON.parse(this.responseText);
+            let rows = document.getElementById('rows');
+            let str = "";
+            for (let i = 0; i &lt; (obj.results).length; i++) {
+                str += `&lt;tr&gt;
+                            &lt;th scope="row"&gt;${i + 1}&lt;/th&gt;
+                            &lt;td&gt;${(obj.results)[i].definition}&lt;/td&gt;
+                        &lt;/tr&gt;`;
+            }
+            rows.innerHTML = str;
+            statusShow("success");
+        } else {
+            statusShow("error");
+        }
+    }
+
+    // Send the request
+    xhr.send();
+}
+
+function statusShow(msg) {
+    let status = document.getElementById('status');
+    let strStatus = "";
+    if (msg == "error") {
+        strStatus += `&lt;div class="alert alert-danger alert-dismissible fade show" role="alert"&gt;
+                        &lt;strong&gt;Error :&lt;/strong&gt; some problem occurred while fetching data.
+                        &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                    &lt;/div&gt;`;
+    } else if (msg == "success") {
+        strStatus += `&lt;div class="alert alert-success alert-dismissible fade show" role="alert"&gt;
+                        &lt;strong&gt;Success :&lt;/strong&gt; data is successfully fetched.
+                        &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                    &lt;/div&gt;`;
+    }
+    status.innerHTML = strStatus;
+    setTimeout(function () {
+        status.innerHTML = ``;
+    }, 3000)
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project5" class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        5. Alarm App
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+
+    &lt;title&gt;Alarm App&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id="alert"&gt;&lt;/div&gt;
+    &lt;div class="my-3 container"&gt;
+        &lt;h2&gt;Set alarm&lt;/h2&gt;
+        &lt;form class="row gy-2 gx-3 align-items-center"&gt;
+            &lt;div class="col-auto"&gt;
+                &lt;label class="visually-hidden" for="hour"&gt;Hour&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="hour" placeholder="Hour"&gt;
+            &lt;/div&gt;
+            &lt;div class="col-auto"&gt;
+                &lt;label class="visually-hidden" for="minute"&gt;Minute&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="minute" placeholder="Minute"&gt;
+            &lt;/div&gt;
+            &lt;div class="col-auto"&gt;
+                &lt;label class="visually-hidden" for="second"&gt;Second&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="second" placeholder="Second"&gt;
+            &lt;/div&gt;
+            &lt;div class="col-auto"&gt;
+                &lt;select id="select" class="form-select" aria-label="Default select example"&gt;
+                    &lt;option value="1"&gt;AM&lt;/option&gt;
+                    &lt;option value="2"&gt;PM&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div class="my-2 container"&gt;
+                &lt;button id="setAlarm" style="margin: 2px;" type="submit" class="btn btn-primary"&gt;Set alarm&lt;/button&gt;
+                &lt;button id="stopAlarm" style="margin: 2px;" type="submit" class="btn btn-secondary"&gt;Stop alarm&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="../JS/E5_alarm_app.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>/*
+Create an alarm clock where user set time & alarm ring at that time
+*/
+
+let alarmStopped = false;
+
+// Grabbing alert
+const alertMsg = document.getElementById('alert');
+
+// Grabbing Form Elements
+const hour = document.getElementById('hour');
+const minute = document.getElementById('minute');
+const second = document.getElementById('second');
+const select = document.getElementById('select');
+const setAlarm = document.getElementById('setAlarm');
+const stopAlarm = document.getElementById('stopAlarm');
+
+// Validating Hour
+hour.addEventListener('input', () =&gt; {
+    let reg = /^([0-9]){1,2}$/;
+    let correct = true;
+    if (!reg.test(hour.value)) {
+        correct = false;
+    } else if (!(Number(hour.value) &lt; 13 & Number(hour.value) &gt; 0)) {
+        correct = false;
+    }
+    if (correct) {
+        hour.classList.remove('is-invalid');
+    } else {
+        hour.classList.add('is-invalid');
+    }
+})
+
+// Validating Minute
+minute.addEventListener('input', () =&gt; {
+    let reg = /^([0-9]){1,2}$/;
+    let correct = true;
+    if (!reg.test(minute.value)) {
+        correct = false;
+    } else if (!(Number(minute.value) &lt; 60 & Number(minute.value) &gt;= 0)) {
+        correct = false;
+    }
+    if (correct) {
+        minute.classList.remove('is-invalid');
+    } else {
+        minute.classList.add('is-invalid');
+    }
+})
+
+// Validating Second
+second.addEventListener('input', () =&gt; {
+    let reg = /^([0-9]){1,2}$/;
+    let correct = true;
+    if (!reg.test(second.value)) {
+        correct = false;
+    } else if (!(Number(second.value) &lt; 60 & Number(second.value) &gt;= 0)) {
+        correct = false;
+    }
+    if (correct) {
+        second.classList.remove('is-invalid');
+    } else {
+        second.classList.add('is-invalid');
+    }
+})
+
+// Making time objects
+let time = new Date();
+let setTimeTemp = new Date();
+
+// Declaring time variables
+let setHour;
+let setMinutes;
+let setSeconds;
+
+// Time left variables
+let timeLeft;
+
+let audio = new Audio('alarm.mp3');
+
+// Setting Alarm
+setAlarm.addEventListener('click', (e) =&gt; {
+    e.preventDefault();
+    if (setAlarm.classList.contains('btn-primary')) {
+        alarmStopped = false;
+        // Setting hour in 24 format
+        if (select.value == 1) {
+            if (hour.value == "12") {
+                setHour = 0;
+            } else {
+                setHour = Number(hour.value);
+            }
+        } else {
+            if (hour.value == "12") {
+                setHour = Number(hour.value);
+            } else {
+                setHour = Number(hour.value) + 12;
+            }
+        }
+        setMinutes = Number(minute.value);
+        setSeconds = Number(second.value);
+
+        // Showing message
+        let className = "";
+        let msg = "";
+        let text = "";
+        if (hour.value == "" | minute.value == "" | second.value == "") {
+            className = "danger";
+            msg = "Error";
+            text = "Some fields are empty. Cannot set alarm.";
+        } else if (hour.classList.contains('is-invalid') | minute.classList.contains('is-invalid') | second.classList.contains('is-invalid')) {
+            className = "danger";
+            msg = "Error";
+            text = "Some fields are invalid. Cannot set alarm.";
+        } else {
+            // Making object of time set
+            setTimeTemp = new Date(`${time.getMonth() + 1}-${time.getDate()}-${time.getFullYear()} ${setHour}:${setMinutes}:${setSeconds}`);
+
+            // Finding time left
+            timeLeft = setTimeTemp.getTime() - time.getTime();
+
+            // Ringing alarm
+            console.log(timeLeft);
+            if (timeLeft &gt; 0 & !alarmStopped) {
+                setTimeout(() =&gt; {
+                    audio = new Audio('alarm.mp3')
+                    audio.play();
+                }, timeLeft);
+
+                className = "success";
+                msg = "Success";
+                text = "Alarm will ring on time."
+
+                // Disabling setAlarm button
+                setAlarm.classList.remove('btn-primary');
+                setAlarm.classList.add('btn-secondary');
+
+                // Enabling stopAlarm button
+                stopAlarm.classList.add('btn-primary');
+                stopAlarm.classList.remove('btn-secondary');
+
+                // Disabling form
+                hour.disabled = true;
+                minute.disabled = true;
+                second.disabled = true;
+                select.disabled = true;
+            } else {
+                className = "danger";
+                msg = "Error";
+                text = "Time has alrady gone. Cannot set alarm."
+            }
+        }
+        alertMsg.innerHTML = `&lt;div class="alert alert-${className} alert-dismissible fade show" role="alert"&gt;
+                                &lt;strong&gt;${msg}:&lt;/strong&gt; ${text}
+                                &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                            &lt;/div&gt;`;
+        setTimeout(() =&gt; {
+            alertMsg.innerHTML = "";
+        }, 3000);
+
+        // Clearing form
+        hour.value = "";
+        minute.value = "";
+        second.value = "";
+        select.value = 1;
+    }
+})
+
+// Stopping Alarm
+stopAlarm.addEventListener('click', (e) =&gt; {
+    e.preventDefault();
+    if (stopAlarm.classList.contains('btn-primary')) {
+        hourLeft = 0;
+        minuteLeft = 0;
+        secondLeft = 0;
+
+        // Enabling setAlarm button
+        setAlarm.classList.add('btn-primary');
+        setAlarm.classList.remove('btn-secondary');
+
+        // Disabling stopAlarm button
+        stopAlarm.classList.remove('btn-primary');
+        stopAlarm.classList.add('btn-secondary');
+
+        // Enabling form
+        hour.disabled = false;
+        minute.disabled = false;
+        second.disabled = false;
+        select.disabled = false;
+
+        // Stopping alarm
+        alarmStopped = true;
+        audio.pause();
+
+        // Displaying message
+        alertMsg.innerHTML = `&lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+                                &lt;strong&gt;Stopped:&lt;/strong&gt; Alarm is forcefully stopped.
+                                &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                            &lt;/div&gt;`;
+        setTimeout(() =&gt; {
+            alertMsg.innerHTML = "";
+        }, 3000);
+    }
+})
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        6. Clock
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Clock&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id="clock"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/E6_clock.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>/*
+Make a webpage showing current time & update it each second
+*/
+
+// Grabbing Element
+const clock = document.getElementById('clock');
+
+// Declaring variables
+let time;
+let hours, minutes, seconds;
+let msg;
+
+// At reloading page
+updateTime();
+
+// Every Second
+setInterval(() =&gt; {
+    updateTime();
+}, 1000);
+
+// Updating Time
+function updateTime() {
+    time = new Date();
+    hours = time.getHours();
+    minutes = time.getMinutes();
+    seconds = time.getSeconds();
+    checktime();
+    clock.innerHTML = `${hours}:${minutes}:${seconds} ${msg}`;
+}
+
+// Checking Format of Time
+function checktime() {
+    // Checking for AM or PM
+    if (hours &gt; 12) {
+        hours = hours - 12;
+        msg = "PM";
+    } else if (hours == 12) {
+        msg = "PM";
+    } else if (hours == 0) {
+        hours = 12;
+        msg = "AM";
+    } else {
+        msg = "AM";
+    }
+
+    // Checking for Hours
+    hours = (hours &lt; 10 ? "0" : "") + hours;
+
+    // Checking for Minutes
+    minutes = (minutes &lt; 10 ? "0" : "") + minutes;
+
+    // Checking for Seconds
+    seconds = (seconds &lt; 10 ? "0" : "") + seconds;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        7. Drag & Drop
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Drag & Drop&lt;/title&gt;
+    &lt;style&gt;
+        html {
+            background-color: aquamarine;
+        }
+
+        .whiteBox {
+            display: inline-block;
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        .imgBox {
+            background: url('https://cybersaksham.github.io/Cyber-Saksham/gallery/saksham.png') no-repeat center center/cover;
+            position: relative;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+        }
+
+        .hold {
+            border: 4px solid red;
+        }
+
+        .hide {
+            display: none;
+        }
+        .dashed{
+            border-style: dashed;
+            background-color: violet;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="whiteBox"&gt;
+        &lt;div class="imgBox" draggable="true"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="whiteBox"&gt;&lt;/div&gt;
+    &lt;div class="whiteBox"&gt;&lt;/div&gt;
+    &lt;div class="whiteBox"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/E7_drag_drop.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>const imgBox = document.querySelector('.imgBox');
+const whiteBoxes = document.getElementsByClassName('whiteBox');
+
+imgBox.addEventListener('dragstart', (e) =&gt; {
+    e.target.className += " hold";
+    setTimeout(() =&gt; {
+        e.target.className += " hide";
+    }, 0);
+})
+
+imgBox.addEventListener('dragend', (e) =&gt; {
+    e.target.className = "imgBox";
+})
+
+for (whiteBox of whiteBoxes) {
+    whiteBox.addEventListener('dragover', (e) =&gt; {
+        e.preventDefault();
+    })
+    whiteBox.addEventListener('dragenter', (e) =&gt; {
+        e.target.className += " dashed";
+    })
+    whiteBox.addEventListener('dragleave', (e) =&gt; {
+        e.target.className = "whiteBox";
+    })
+    whiteBox.addEventListener('drop', (e) =&gt; {
+        e.target.append(imgBox);
+        e.target.className = "whiteBox";
+    })
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>

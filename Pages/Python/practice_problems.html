@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | Python | Practice Problems</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c5 {
+            display: none;
+        }
+
+        #d1,
+        #d2,
+        #d3,
+        #d4,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./python.html">Python</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./practice_problems.html">Practice Problems</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Problems</h3>
+        <hr>
+        <h5 id="nothing">No problem matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        Problem 1
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Take age or year of birth as input from user.
+Tell them when they will turn 100 yeras old.
+Do not use any module.
+They can then optionally provide a year & program must tell their age in that particular year.
+You must handle all errors.
+"""
+
+while True:
+    user = int(input("Enter your age or Year of Birth = "))
+    if user &gt; 0 and user &lt; 100:
+        year100 = 2021 - user + 100
+        print(f"You will turn 100 in {year100}")
+    elif user &gt; 1920 and user &lt; 2021:
+        year100 = user + 100
+        print(f"You will turn 100 in {year100}")
+    else:
+        print("It seems that you entered incorrect input")
+        continue
+
+    while 1:
+        add_choice = input("Do you want to get your age in specific year (Y/N) = ")
+        if add_choice.lower() == 'y':
+            add_year = int(input("Enter that specific year = "))
+            if add_year &gt; year100 - 100 and add_year &lt; 2021:
+                print(f"Your age in {add_year} was {-year100 + 100 + add_year}")
+            elif add_year &gt;= 2021 and add_year &lt; year100 + 50:
+                print(f"Your age in {add_year} will be {-year100 + 100 + add_year}")
+            elif add_year == year100 - 100:
+                print(f"You had just born in {add_year}")
+            elif add_year &gt;= year100 + 50:
+                print("You will turn too old. Please enter again.")
+            else:
+                print(f"You had not born in {add_year}")
+        elif add_choice.lower() == 'n':
+            break
+        else:
+            print("Enter correct input")
+            continue
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project2" class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        Problem 2
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Take input as no of apples, maximum to check, minimum to check.
+Print numbers from min to max that are divisors of no of apples.
+"""
+
+while True:
+    apples = input("Enter the number of apples = ")
+    mn = input("Enter the minimum number to check = ")
+    mx = input("Enter the maximum number to check = ")
+
+    try:
+        if int(apples) &gt; 0 and int(mx) &gt; 0 and int(mn) &gt; 0:
+            if int(mx) &gt; int(mn):
+                if int(mx) &lt;= int(apples):
+                    for i in range(int(mn), int(mx) + 1):
+                        if int(apples) % i == 0:
+                            print(f"{i} is a divisor of {int(apples)}")
+                        else:
+                            print(f"{i} is not a divisor of {int(apples)}")
+                else:
+                    print("maximum value cannot be greater than number of apples.")
+            else:
+                print("You have entered incorrect range")
+        else:
+            print("You can only enter positive integers")
+
+    except Exception as e:
+        print("You can enter only integer values")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        Problem 3
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Take a list from user & reverse it using following methods : -
+1. By inbuilt method of ptthon
+2. By list[::-1]
+3. By swapping first element by last & so on
+
+If all 3 methods return same list then print it.
+"""
+
+
+def rev_inbuilt(menu):
+    list(menu).reverse()
+    return menu
+
+
+def rev_colons(menu):
+    rev = menu[::-1]
+    return rev
+
+
+def rev_swap(menu):
+    for i in range(len(menu) // 2):
+        menu[i], menu[len(menu) - 1 - i] = menu[len(menu) - 1 - i], menu[i]
+    return menu
+
+
+if __name__ == '__main__':
+    menu_inp = input("Enter items of list seperated by space = ")
+    menu = menu_inp.split(" ")
+    print(menu)
+    print(type(menu))
+    rev1 = rev_inbuilt(menu)
+    rev2 = rev_colons(menu)
+    rev3 = rev_swap(menu)
+    print(rev1)
+    print(rev2)
+    print(rev3)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        Problem 4
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Take a positive number as input.
+Find first number greater than input which is palindrome
+"""
+
+
+def is_palindrome(num):
+    return str(num) == str(num)[::-1]
+
+
+def next_palindrome(num):
+    temp = num + 1
+    while not is_palindrome(temp):
+        temp += 1
+    print(f"Next palindrome to {num} is {temp}")
+
+
+if __name__ == '__main__':
+    while True:
+        number = input("Enter a positive integer = ")
+
+        try:
+            if int(number) &gt; 0:
+                next_palindrome(int(number))
+            else:
+                print("You have entered incorrect number")
+        except:
+            print("You have entered incorrect number")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project5" class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        Problem 5
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Take a number list as input.
+Find first number which is palindrome, greater than items of list only if number is greater then 10
+"""
+
+
+def is_palindrome(num):
+    return str(num) == str(num)[::-1]
+
+
+def next_palindrome(num_list):
+    num_list2 = []
+    for items in list(num_list):
+        if int(items) &gt; 10:
+            temp = int(items)
+            while not is_palindrome(temp):
+                temp += 1
+        else:
+            temp = int(items)
+        num_list2.append(temp)
+    print(f"The new list is {num_list2}")
+
+
+if __name__ == '__main__':
+    while True:
+        numbers = input("Enter a positive integer's list seperate by space = ")
+        num_list = numbers.split(" ")
+        print(f"The old list is {num_list}")
+
+        try:
+            result = 1
+            i = 0
+            while i &lt; len(num_list):
+                if int(num_list[i]) &gt; 0:
+                    result = 0
+                else:
+                    result = 1
+                    break
+                i += 1
+            if result == 0:
+                next_palindrome(num_list)
+            else:
+                print("You must have to enter positive numbers")
+        except:
+            print("You must have to enter integers")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        Problem 6
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Take a & b from user (a &lt; b)
+Generate a random number b/w a & b
+You & your friend should guess numbers
+who guesses correct number in less trials wins the game
+"""
+
+import random
+
+
+def guess(player):
+    trial = 0
+    c_guess = random.randint(a + 1, b - 1)
+    print(f"{player} :-")
+    p_guess = int(input(f"Guess a number b/w {a} & {b} = "))
+    while True:
+        if p_guess &gt; a and p_guess &lt; c_guess:
+            trial += 1
+            p_guess = int(input("Wrong!!Guess greater = "))
+        elif p_guess &lt; b and p_guess &gt; c_guess:
+            trial += 1
+            p_guess = int(input("Wrong!!Guess smaller = "))
+        elif p_guess == c_guess:
+            trial += 1
+            print(f"Correct!!You guessed in {trial} trials")
+            break
+        else:
+            p_guess = int(input("Guess correct number = "))
+    return trial
+
+
+if __name__ == '__main__':
+    p1 = input("Enter player 1's name --&gt; ")
+    p2 = input("Enter player 2's name --&gt; ")
+    a = int(input("Guess min limit = "))
+    b = int(input("Guess max limit = "))
+
+    p1_trial = guess(p1)
+    p2_trial = guess(p2)
+
+    if p1_trial &gt; p2_trial:
+        print(f"{p2} won the game by {p1_trial - p2_trial} trials")
+    elif p1_trial &lt; p2_trial:
+        print(f"{p1} won the game by {p2_trial - p1_trial} trials")
+    else:
+        print("Game tied!!")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        Problem 7
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>'''
+You are given few sentences as a list (Python list of sentences). Take a query string as an input from the user. You have to pull out the sentences matching this query inputted by the user in decreasing order of relevance after converting every word in the query and the sentence to lowercase. Most relevant sentence is the one with the maximum number of matching words with the query.
+Sentences = [“This is good”, “python is good”, “python is not python snake”]
+
+Input:
+Please input your query string
+“Python is”
+
+Output:
+3 results found:
+1.	python is not python snake
+2.	python is good
+3.	This is good
+'''
+
+
+def matchingWords(sentence1, sentence2):
+    words1 = sentence1.strip().split(" ")
+    words2 = sentence2.strip().split(" ")
+    score = 0
+    for word1 in words1:
+        for word2 in words2:
+            if word1.lower() == word2.lower():
+                score += 1
+    return score
+
+
+if __name__ == "__main__":
+    sentences = ["python is a good", "this is snake",
+                 "harry is a good boy", "Subscribe to code with harry"]
+
+    query = input("Please enter the query string --&gt; ")
+
+    scores = [matchingWords(query, sentence) for sentence in sentences]
+
+    sortedSentScore = [sentScore for sentScore in sorted(zip(scores, sentences), reverse=True) if sentScore[0] != 0]
+    # In above making list of senScore which is sorted list(zip) of scores[i] & sentences[i]
+    # Reverse = True is written for sort in decreasing order
+    # If condition is given for removing elements which not contain query
+
+    print(f"{len(sortedSentScore)} matches found!")
+    for score, item in sortedSentScore:
+        print(f"in \"{item}\" : matches found {score}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project8" class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        Problem 8
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Rohan makes a function to print multiplication table of a number.
+But he intentionally make a random number incorrect.
+You cannot tolerate this so you made a function.
+You finds the wrong value in table & then correct this.
+"""
+
+import random
+
+
+def rohanTable(num):
+    table = []
+    for i in range(10):
+        table.append(num * (i + 1))
+    error_index = random.randint(1, 8)
+    while table[error_index] == num * (error_index + 1):
+        error = random.randint(num * (error_index) + 1, num * (error_index + 2) - 1)
+        table[error_index] = error
+
+    return table
+
+
+def correct(table, num):
+    i = 0
+    while i &lt; 10:
+        if table[i] != num * (i + 1):
+            print(f"Rohan mistakes at index no {i}")
+            print(f"According to him value is {table[i]}")
+            table[i] = num * (i + 1)
+            print(f"But correct value is {table[i]}")
+            break
+        else:
+            i += 1
+            continue
+
+
+if __name__ == '__main__':
+    number = int(input("Enter a number to make multiplication table = "))
+    table = rohanTable(number)
+    print(f"The multiplication table of {number} is :-\n{table}")
+    correct(table, number)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project9" class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        Problem 9
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Make jumbled names.
+Take some names as input.
+Then interchange their surnames to make fun.
+"""
+
+import random
+
+if __name__ == '__main__':
+    names = input("Enter names seperated by *\n")
+    name_list = names.split("*")
+    name_split = [items.split(" ") for items in name_list]
+    f_names = [name_split[items][0] for items in range(len(name_split))]
+    l_names = [name_split[items][1] for items in range(len(name_split))]
+    print(name_list)
+    print(name_split)
+    print(f_names)
+    print(l_names)
+
+    for i in range(len(l_names) - 1):
+        choice = random.randint(i + 1, len(l_names) - 1)
+        l_names[i], l_names[choice] = l_names[choice], l_names[i]
+
+    jumb_names = list(zip(f_names, l_names))
+    print("Jumbled names are :-")
+    for i in range(len(jumb_names)):
+        print(f"{jumb_names[i][0]} {jumb_names[i][1]}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>

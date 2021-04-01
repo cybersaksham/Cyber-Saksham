@@ -1,0 +1,2841 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | Java Script | Projects</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c4 {
+            display: none;
+        }
+
+        #d1,
+        #d2,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./js.html">JS</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./projects.html">Projects</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Project</h3>
+        <a target="_blank" href="https://cybersaksham.github.io/Javascript-Projects/">Go to website</a>
+        <hr>
+        <h5 id="nothing">No project matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        1. Notes App
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Notes App&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"&gt;
+    &lt;link rel="shortcut icon" href="./gallery/fav.png" type="image/x-icon"&gt;
+    &lt;style&gt;
+        #p1 {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;Notes App&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;form class="d-flex"&gt;
+                    &lt;input class="form-control me-2" id="searchTxt" type="search" placeholder="Search"
+                        aria-label="Search"&gt;
+                &lt;/form&gt;
+                &lt;button class="my-2 btn btn-outline-success" id="dltAll" onclick="dltAll()"&gt;Delete All&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;div class="container my-3"&gt;
+        &lt;h1&gt;Welcome to Magic Notes.&lt;/h1&gt;
+        &lt;div class="card"&gt;
+            &lt;div class="card-body"&gt;
+                &lt;h5 class="card-title"&gt;Add Title (Optional)&lt;/h5&gt;
+                &lt;div class="form-group"&gt;
+                    &lt;textarea style="margin: 5px; height: 10px;" class="form-control"
+                        placeholder="Add your title here..." id="addTxtTitle"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="card-body"&gt;
+                &lt;h5 class="card-title"&gt;Add a note&lt;/h5&gt;
+                &lt;div class="form-group"&gt;
+                    &lt;textarea style="margin: 5px; height: 100px;" class="form-control"
+                        placeholder="Add your note here..." id="addTxt"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;button class="mx-2 my-2 btn btn-primary" id="addBtn"&gt;Add Note&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;br&gt;
+        &lt;h1&gt;Your Notes&lt;/h1&gt;
+        &lt;hr&gt;
+        &lt;div id="nothing" class="row container-fluid"&gt;
+            &lt;h5&gt;Nothing to show&lt;/h5&gt;
+        &lt;/div&gt;
+        &lt;div id="notes" class="row container-fluid"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;script src="./JS/app.js"&gt;&lt;/script&gt;
+&lt;script src="../JS/addProject1.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>showNotes();
+
+// Clicking addBtn
+let addBtn = document.getElementById('addBtn');
+addBtn.addEventListener('click', function (e) {
+    let addTxt = document.getElementById('addTxt');
+    let addTxtTitle = document.getElementById('addTxtTitle');
+    let notes = localStorage.getItem("notes");
+    let titles = localStorage.getItem("titles");
+    if (addTxt.value == "") {
+        alert("Your note cannot be empty.")
+    } else {
+        if (notes == null) {
+            notesObj = [];
+            titlesObj = [];
+        } else {
+            notesObj = JSON.parse(notes);
+            titlesObj = JSON.parse(titles);
+        }
+        notesObj.push(addTxt.value);
+        localStorage.setItem('notes', JSON.stringify(notesObj));
+        if (addTxtTitle.value == "") {
+            titlesObj.push(null);
+            localStorage.setItem('titles', JSON.stringify(titlesObj));
+        } else {
+            titlesObj.push(addTxtTitle.value);
+            localStorage.setItem('titles', JSON.stringify(titlesObj));
+        }
+        addTxt.value = "";
+        addTxtTitle.value = "";
+        showNotes();
+    }
+})
+
+// Function to show notes
+function showNotes() {
+    let notes = localStorage.getItem("notes");
+    let titles = localStorage.getItem("titles");
+    if (notes == null) {
+        notesObj = [];
+        titlesObj = [];
+    } else {
+        notesObj = JSON.parse(notes);
+        titlesObj = JSON.parse(titles);
+    }
+    let html = "";
+    notesObj.forEach(function (element, index) {
+        if (titlesObj[index] == null) {
+            html += `&lt;div class="noteCard card my-2 mx-2" style="width: 18rem;"&gt;
+                    &lt;div class="card-body"&gt;
+                        &lt;h5 class="card-title"&gt;Note ${index + 1}&lt;/h5&gt;
+                        &lt;p class="card-text"&gt;${element}&lt;/p&gt;
+                        &lt;button id="${index}" onclick="dltNote(this.id)" class="btn btn-primary"&gt;Delete Note&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;`;
+        } else {
+            html += `&lt;div class="noteCard card my-2 mx-2" style="width: 18rem;"&gt;
+                    &lt;div class="card-body"&gt;
+                        &lt;h5 class="card-title"&gt;${titlesObj[index]}&lt;/h5&gt;
+                        &lt;p class="card-text"&gt;${element}&lt;/p&gt;
+                        &lt;button id="${index}" onclick="dltNote(this.id)" class="btn btn-primary"&gt;Delete Note&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;`;
+        }
+    });
+    let notesElem = document.getElementById('notes');
+    let nothing = document.getElementById('nothing');
+    if (notesObj.length != 0) {
+        nothing.style.display = 'none';
+        notesElem.innerHTML = html;
+    }
+}
+
+// Function to delete a note
+function dltNote(index) {
+    let confirmDlt = confirm("Do you really want to delete this note.");
+    if (confirmDlt == true) {
+        let notes = localStorage.getItem("notes");
+        let titles = localStorage.getItem("titles");
+        if (notes == null) {
+            notesObj = [];
+            titlesObj = [];
+        } else {
+            notesObj = JSON.parse(notes);
+            titlesObj = JSON.parse(titles);
+        }
+        notesObj.splice(index, 1);
+        titlesObj.splice(index, 1);
+        localStorage.setItem('notes', JSON.stringify(notesObj));
+        localStorage.setItem('titles', JSON.stringify(titlesObj));
+        location.reload();
+    }
+}
+
+// Function to delete all notes
+function dltAll(index) {
+    let confirmDlt = confirm("Do you really want to delete all notes.");
+    if (confirmDlt == true) {
+        let notes = localStorage.getItem("notes");
+        let titles = localStorage.getItem("titles");
+        if (notes == null) {
+            notesObj = [];
+            titlesObj = [];
+        } else {
+            notesObj = JSON.parse(notes);
+            titlesObj = JSON.parse(titles);
+        }
+        notesObj.splice(0, notesObj.length);
+        titlesObj.splice(0, titlesObj.length);
+        localStorage.setItem('notes', JSON.stringify(notesObj));
+        localStorage.setItem('titles', JSON.stringify(titlesObj));
+        location.reload();
+    }
+}
+
+// Search Button
+let search = document.getElementById('searchTxt');
+search.addEventListener('input', function () {
+    let inputVal = search.value.toLowerCase();
+    let noteCards = document.getElementsByClassName('noteCard');
+    let count = 0;
+    Array.from(noteCards).forEach(function (element) {
+        let cardTxt = element.getElementsByTagName('p')[0].innerText.toLowerCase();
+        let cardTxt2 = element.getElementsByTagName('h5')[0].innerText.toLowerCase();
+        if (cardTxt.includes(inputVal) || cardTxt2.includes(inputVal)) {
+            count += 1;
+            nothing.style.display = 'none';
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    })
+    if (count == 0) {
+        let nothing = document.getElementById('nothing');
+        nothing.style.display = 'block';
+    }
+})
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project2" class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        2. College Library
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <h3>Prototype</h3>
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"&gt;
+    &lt;style&gt;
+        #p2 {
+            display: none;
+        }
+    &lt;/style&gt;
+
+    &lt;title&gt;College Library&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link active" aria-current="page" href="./Pages/es6.html"&gt;Es6&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;College Library&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div id="msg"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="my-3 container"&gt;
+        &lt;h2&gt;Saksham Library&lt;/h2&gt;
+        &lt;hr&gt;
+        &lt;form id="libForm"&gt;
+            &lt;div class="row mb-3"&gt;
+                &lt;label for="bookName" class="col-sm-2 col-form-label"&gt;Name&lt;/label&gt;
+                &lt;div class="col-sm-10"&gt;
+                    &lt;input type="text" class="form-control" id="bookName" placeholder="Book Name"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row mb-3"&gt;
+                &lt;label for="Author" class="col-sm-2 col-form-label"&gt;Author&lt;/label&gt;
+                &lt;div class="col-sm-10"&gt;
+                    &lt;input type="text" class="form-control" id="author" placeholder="Author"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;fieldset class="row mb-3"&gt;
+                &lt;legend class="col-form-label col-sm-2 pt-0"&gt;Type&lt;/legend&gt;
+                &lt;div class="col-sm-10"&gt;
+                    &lt;div class="form-check"&gt;
+                        &lt;input class="form-check-input" type="radio" name="type" id="fiction" value="fiction" checked&gt;
+                        &lt;label class="form-check-label" for="fiction"&gt;
+                            Fiction
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-check"&gt;
+                        &lt;input class="form-check-input" type="radio" name="type" id="programming" value="programming"&gt;
+                        &lt;label class="form-check-label" for="programming"&gt;
+                            Programming
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-check disabled"&gt;
+                        &lt;input class="form-check-input" type="radio" name="type" id="cooking" value="cooking"&gt;
+                        &lt;label class="form-check-label" for="cooking"&gt;
+                            Cooking
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/fieldset&gt;
+            &lt;button type="submit" class="btn btn-primary"&gt;Add Book&lt;/button&gt;
+        &lt;/form&gt;
+
+        &lt;div id="table" class="my-4"&gt;
+            &lt;h2&gt;Your Books&lt;/h2&gt;
+            &lt;table class="table table-striped"&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th scope="col"&gt;#&lt;/th&gt;
+                        &lt;th scope="col"&gt;Name&lt;/th&gt;
+                        &lt;th scope="col"&gt;Author&lt;/th&gt;
+                        &lt;th scope="col"&gt;Type&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody id="tableBody"&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="./JS/index.js"&gt;&lt;/script&gt;
+&lt;script src="../JS/addProject1.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Constructor
+function Book(name, author, type) {
+    this.name = name;
+    this.author = author;
+    this.type = type;
+}
+
+// Display Constructor
+function Display() {
+
+}
+
+// Add method to display prototype
+let count = 0;
+Display.prototype.add = function (book) {
+    let tableBody = document.getElementById('tableBody');
+    let uiStr = `&lt;tr&gt;
+                    &lt;th scope="row"&gt;${count}&lt;/th&gt;
+                    &lt;td&gt;${book.name}&lt;/td&gt;
+                    &lt;td&gt;${book.author}&lt;/td&gt;
+                    &lt;td&gt;${book.type}&lt;/td&gt;
+                &lt;/tr&gt;`;
+    tableBody.innerHTML += uiStr;
+}
+
+// Clear method to clear form
+Display.prototype.clear = function () {
+    let libForm = document.getElementById('libForm');
+    libForm.reset();
+}
+
+// Validate method to validate form
+Display.prototype.validate = function (book) {
+    if (book.name.length &lt; 2 || book.author.length &lt; 2) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+// Show method to show result
+Display.prototype.show = function (type, message) {
+    let msg = document.getElementById('msg');
+    msg.innerHTML = `&lt;div class="alert alert-${type} alert-dismissible fade show" role="alert"&gt;
+                        &lt;strong&gt;Message : &lt;/strong&gt;${message}.
+                        &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                    &lt;/div&gt;`;
+    setTimeout(function () {
+        msg.innerHTML = ``;
+    }, 3000)
+}
+
+// Add submit event listener to libForm
+let libForm = document.getElementById('libForm');
+libForm.addEventListener('submit', libFormSubmit);
+
+function libFormSubmit(e) {
+    e.preventDefault();
+
+    let name = document.getElementById('bookName').value;
+    let author = document.getElementById('author').value;
+
+    let fiction = document.getElementById('fiction');
+    let programming = document.getElementById('programming');
+    let cooking = document.getElementById('cooking');
+    let type;
+
+    if (fiction.checked) {
+        type = fiction.value;
+    } else if (programming.checked) {
+        type = programming.value;
+    } else if (cooking.checked) {
+        type = cooking.value;
+    }
+
+    let book = new Book(name, author, type);
+
+    let display = new Display();
+
+    if (display.validate(book)) {
+        count += 1;
+        display.add(book);
+        display.show('success', "Your book has been successfully added");
+        display.clear();
+    } else {
+        // Show error
+        display.show('danger', "Length of some fields is very less");
+    }
+}
+</code></pre>
+                        <h3>ES6</h3>
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"&gt;
+    &lt;style&gt;
+        #p2 {
+            display: none;
+        }
+    &lt;/style&gt;
+
+    &lt;title&gt;College Library&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link active" aria-current="page" href="../"&gt;Prototype&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./es6.html"&gt;College Library&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div id="msg"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="my-3 container"&gt;
+        &lt;h2&gt;Saksham Library&lt;/h2&gt;
+        &lt;hr&gt;
+        &lt;form id="libForm"&gt;
+            &lt;div class="row mb-3"&gt;
+                &lt;label for="bookName" class="col-sm-2 col-form-label"&gt;Name&lt;/label&gt;
+                &lt;div class="col-sm-10"&gt;
+                    &lt;input type="text" class="form-control" id="bookName" placeholder="Book Name"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row mb-3"&gt;
+                &lt;label for="Author" class="col-sm-2 col-form-label"&gt;Author&lt;/label&gt;
+                &lt;div class="col-sm-10"&gt;
+                    &lt;input type="text" class="form-control" id="author" placeholder="Author"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;fieldset class="row mb-3"&gt;
+                &lt;legend class="col-form-label col-sm-2 pt-0"&gt;Type&lt;/legend&gt;
+                &lt;div class="col-sm-10"&gt;
+                    &lt;div class="form-check"&gt;
+                        &lt;input class="form-check-input" type="radio" name="type" id="fiction" value="fiction" checked&gt;
+                        &lt;label class="form-check-label" for="fiction"&gt;
+                            Fiction
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-check"&gt;
+                        &lt;input class="form-check-input" type="radio" name="type" id="programming" value="programming"&gt;
+                        &lt;label class="form-check-label" for="programming"&gt;
+                            Programming
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-check disabled"&gt;
+                        &lt;input class="form-check-input" type="radio" name="type" id="cooking" value="cooking"&gt;
+                        &lt;label class="form-check-label" for="cooking"&gt;
+                            Cooking
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/fieldset&gt;
+            &lt;button type="submit" class="btn btn-primary"&gt;Add Book&lt;/button&gt;
+        &lt;/form&gt;
+
+        &lt;div id="table" class="my-4"&gt;
+            &lt;h2&gt;Your Books&lt;/h2&gt;
+            &lt;table class="table table-striped"&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th scope="col"&gt;#&lt;/th&gt;
+                        &lt;th scope="col"&gt;Name&lt;/th&gt;
+                        &lt;th scope="col"&gt;Author&lt;/th&gt;
+                        &lt;th scope="col"&gt;Type&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody id="tableBody"&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="../JS/es6.js"&gt;&lt;/script&gt;
+&lt;script src="../../JS/addProject2.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>let count = 0;
+class Book {
+    constructor(name, author, type) {
+        this.name = name;
+        this.author = author;
+        this.type = type;
+    }
+}
+
+class Display {
+    add(book) {
+        let tableBody = document.getElementById('tableBody');
+        let uiStr = `&lt;tr&gt;
+                        &lt;th scope="row"&gt;${count}&lt;/th&gt;
+                        &lt;td&gt;${book.name}&lt;/td&gt;
+                        &lt;td&gt;${book.author}&lt;/td&gt;
+                        &lt;td&gt;${book.type}&lt;/td&gt;
+                    &lt;/tr&gt;`;
+        tableBody.innerHTML += uiStr;
+    }
+
+    clear() {
+        let libForm = document.getElementById('libForm');
+        libForm.reset();
+    }
+
+    validate(book) {
+        if (book.name.length &lt; 2 || book.author.length &lt; 2) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    show(type, message) {
+        let msg = document.getElementById('msg');
+        msg.innerHTML = `&lt;div class="alert alert-${type} alert-dismissible fade show" role="alert"&gt;
+                            &lt;strong&gt;Message : &lt;/strong&gt;${message}.
+                            &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                        &lt;/div&gt;`;
+        setTimeout(function () {
+            msg.innerHTML = ``;
+        }, 3000)
+    }
+}
+
+// Add submit event listener to libForm
+let libForm = document.getElementById('libForm');
+libForm.addEventListener('submit', libFormSubmit);
+
+function libFormSubmit(e) {
+    e.preventDefault();
+
+    let name = document.getElementById('bookName').value;
+    let author = document.getElementById('author').value;
+
+    let fiction = document.getElementById('fiction');
+    let programming = document.getElementById('programming');
+    let cooking = document.getElementById('cooking');
+    let type;
+
+    if (fiction.checked) {
+        type = fiction.value;
+    } else if (programming.checked) {
+        type = programming.value;
+    } else if (cooking.checked) {
+        type = cooking.value;
+    }
+
+    let book = new Book(name, author, type);
+
+    let display = new Display();
+
+    if (display.validate(book)) {
+        count += 1;
+        display.add(book);
+        display.show('success', "Your book has been successfully added");
+        display.clear();
+    } else {
+        // Show error
+        display.show('danger', "Length of some fields is very less");
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        3. News Website
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+    &lt;style&gt;
+        #p3 {
+            display: none;
+        }
+    &lt;/style&gt;
+
+    &lt;title&gt;News API&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;News Website&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div class="my-3 container"&gt;
+        &lt;h3&gt;Top News &lt;span class="badge bg-info text-dark"&gt;by Indian Shatabdi News&lt;/span&gt;&lt;/h3&gt;
+        &lt;hr&gt;
+        &lt;div class="accordion" id="newsAccordion"&gt;
+            &lt;div class="alert alert-danger alert-dismissible fade show" role="alert"&gt;
+                &lt;strong&gt;Error: &lt;/strong&gt; Some error occurred while fetching current news.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="./JS/index.js"&gt;&lt;/script&gt;
+&lt;script src="../JS/addProject1.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Not using API key in this project because of some error
+
+// API Key - 09def55c3971413f8b7882b3f8f56979
+let api = '09def55c3971413f8b7882b3f8f56979';
+
+// Grabbing news container
+let newsAccordion = document.getElementById('newsAccordion');
+
+// Creating an AZAX get request
+const xhr = new XMLHttpRequest();
+xhr.open('GET', `JSON/data.json`, true);
+
+// What to do when response is ready
+xhr.onload = function () {
+    if (this.status == 200) {
+        let json = JSON.parse(this.responseText);
+        let articles = json.articles;
+        let newsHtml = "";
+        articles.forEach(function (element, index) {
+            let newsStr = `&lt;div class="accordion-item"&gt;
+                                &lt;h2 class="accordion-header" id="heading${index + 1}"&gt;
+                                    &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index + 1}" aria-expanded="false" aria-controls="collapse${index + 1}"&gt;
+                                    &lt;b&gt;News ${index + 1}:&lt;/b&gt;${element.title}
+                                    &lt;/button&gt;
+                                &lt;/h2&gt;
+                                &lt;div id="collapse${index + 1}" class="accordion-collapse collapse" aria-labelledby="heading${index + 1}" data-bs-parent="#newsAccordion"&gt;
+                                    &lt;div class="accordion-body"&gt;
+                                        &lt;strong&gt;${element.source.name}&lt;/strong&gt;&lt;br&gt;
+                                        &lt;strong&gt;Description :&lt;/strong&gt; ${element.description}&lt;br&gt;
+                                        &lt;strong&gt;Content :&lt;/strong&gt; ${element.content}
+                                        &lt;a target="_blank" href="${element.url}"&gt;Read More&lt;/a&gt;
+                                        &lt;br&gt;
+                                        &lt;strong&gt;Published At : &lt;/strong&gt;${element.publishedAt}
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;`;
+            newsHtml += newsStr;
+        });
+        newsAccordion.innerHTML = newsHtml;
+    } else {
+        console.log("Some error occurred.");
+    }
+}
+xhr.send();
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        4. Form Validation
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+    &lt;style&gt;
+        #p4 {
+            display: none;
+        }
+    &lt;/style&gt;
+
+    &lt;title&gt;Form Validation&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;Form Validation&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;div id="result" class="sticky-top"&gt;&lt;/div&gt;
+    &lt;div class="my-3 container"&gt;
+        &lt;h1&gt;Dragon Travel Desk&lt;/h1&gt;
+        &lt;hr&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;label for="name" class="form-label"&gt;Name&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="name" placeholder="Enter your name"&gt;
+            &lt;div id="nameMsg"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;label for="email" class="form-label"&gt;Email address&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="email" placeholder="name@example.com"&gt;
+            &lt;div id="emailMsg"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label for="select"&gt;Select your car&lt;/label&gt;
+            &lt;select class="form-control" id="select"&gt;
+                &lt;option&gt;Omni&lt;/option&gt;
+                &lt;option&gt;Maruti 800&lt;/option&gt;
+                &lt;option&gt;Ford&lt;/option&gt;
+                &lt;option&gt;Audi&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-3 form-group"&gt;
+            &lt;label for="number" class="form-label"&gt;Phone No&lt;/label&gt;
+            &lt;input class="form-control" name="number" id="number" placeholder="xxxxxxxxxx"&gt;
+            &lt;div id="numberMsg"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-3 form-group"&gt;
+            &lt;label for="address" class="form-label"&gt;Address&lt;/label&gt;
+            &lt;textarea class="form-control" name="address" id="address" rows="3"
+                placeholder="Enter your address"&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-3 form-group"&gt;
+            &lt;label for="other" class="form-label"&gt;Any other message&lt;/label&gt;
+            &lt;textarea class="form-control" name="other" id="other" rows="3"&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;button id="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="./JS/index.js"&gt;&lt;/script&gt;
+&lt;script src="../JS/addProject1.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Name Validation
+const name1 = document.getElementById('name');
+const nameMsg = document.getElementById('nameMsg');
+
+name1.addEventListener('input', () =&gt; {
+    let reg = /^([a-zA-Z\s]){2,20}$/;
+    let str = name1.value;
+    let msg = "";
+    if (str == "") {
+        name1.classList.add('is-invalid');
+        msg += `This is required field`;
+    } else if (!reg.test(str)) {
+        name1.classList.add('is-invalid');
+        msg += `Your name must be 2-20 characters & should only contain alphabates`;
+    } else if (str.startsWith(" ")) {
+        name1.classList.add('is-invalid');
+        msg += `Your name must starts with an alphabate`;
+    } else if (str.endsWith(" ")) {
+        name1.classList.add('is-invalid');
+        msg += `Your name must ends with an alphabate`;
+    } else {
+        name1.classList.remove('is-invalid');
+    }
+    nameMsg.innerHTML = `&lt;small id="nameValid" class="form-text text-muted"&gt;
+                            ${msg}
+                        &lt;/small&gt;`;
+})
+
+// Email Validation
+const email = document.getElementById('email');
+const emailMsg = document.getElementById('emailMsg');
+
+email.addEventListener('input', () =&gt; {
+    let reg = /^([a-zA-Z0-9_\.\-]+)@([a-zA-Z0-9\.]+)\.([a-zA-Z]+)$/;
+    let str = email.value;
+    let msg = "";
+    if (str == "") {
+        email.classList.add('is-invalid');
+        msg += `This is required field`;
+    } else if (!reg.test(str)) {
+        email.classList.add('is-invalid');
+        msg += `Email format is not valid`;
+    } else {
+        email.classList.remove('is-invalid');
+    }
+    emailMsg.innerHTML = `&lt;small id="nameValid" class="form-text text-muted"&gt;
+                            ${msg}
+                        &lt;/small&gt;`;
+})
+
+// Number Validation
+const number = document.getElementById('number');
+const numberMsg = document.getElementById('numberMsg');
+
+number.addEventListener('input', () =&gt; {
+    let reg = /^[0-9]{10}$/;
+    let str = number.value;
+    let msg = "";
+    if (str == "") {
+        number.classList.add('is-invalid');
+        msg += `This is required field`;
+    } else if (!reg.test(str)) {
+        number.classList.add('is-invalid');
+        msg += `Your phone no must contain only 10 digits`;
+    } else {
+        number.classList.remove('is-invalid');
+    }
+    numberMsg.innerHTML = `&lt;small id="nameValid" class="form-text text-muted"&gt;
+                            ${msg}
+                        &lt;/small&gt;`;
+})
+
+// Submitting
+const select = document.getElementById('select');
+const address = document.getElementById('address');
+const other = document.getElementById('other');
+let submit = document.getElementById('submit');
+let result = document.getElementById('result');
+submit.addEventListener('click', () =&gt; {
+    let text = "";
+    let msg = "";
+    let head = "";
+    if (name1.classList.contains('is-invalid') | email.classList.contains('is-invalid') | number.classList.contains('is-invalid')) {
+        msg = "danger";
+        head = "Error";
+        text = "Some fields are invalid. Cannot submit the form."
+    } else if (name1.value == "" | email.value == "" | number.value == "" | address.value == "") {
+        msg = "danger";
+        head = "Error";
+        text = "Some fields are empty. Cannot submit the form."
+    } else {
+        msg = "success";
+        head = "Success";
+        text = "Your travel request has been successfully submitted."
+    }
+    result.innerHTML = `&lt;div class="alert alert-${msg} alert-dismissible fade show" role="alert"&gt;
+                            &lt;strong&gt;${head}:&lt;/strong&gt; ${text}
+                            &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                        &lt;/div&gt;`;
+    name1.value = "";
+    email.value = "";
+    number.value = "";
+    select.value = "Omni";
+    address.value = "";
+    other.value = "";
+    setTimeout(() =&gt; {
+        result.innerHTML = "";
+    }, 3000);
+})
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project5" class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        5. CV Screener
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+    &lt;style&gt;
+        #p5 {
+            display: none;
+        }
+    &lt;/style&gt;
+
+    &lt;title&gt;CV Screener&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;CV Screener&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;div class="container my-3"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-md-6 mx-auto text-center"&gt;
+                &lt;h2&gt;Browse through these CV profiles.&lt;/h2&gt;
+                &lt;div id="image"&gt;&lt;/div&gt;
+                &lt;br&gt;
+                &lt;h3&gt;Details :&lt;/h3&gt;
+                &lt;div id="profile"&gt;&lt;/div&gt;
+                &lt;br&gt;
+                &lt;button id="next" class="btn btn-primary"&gt;Next&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="./JS/index.js"&gt;&lt;/script&gt;
+&lt;script src="../JS/addProject1.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>const data = [
+    {
+        name: 'Person 1',
+        age: 'age 1',
+        city: 'city 1',
+        language: 'Lang 1',
+        framework: 'Frame 1',
+        image: 'https://randomuser.me/api/portraits/men/51.jpg'
+    },
+    {
+        name: 'Person 2',
+        age: 'age 2',
+        city: 'city 2',
+        language: 'Lang 2',
+        framework: 'Frame 2',
+        image: 'https://randomuser.me/api/portraits/men/52.jpg'
+    },
+    {
+        name: 'Person 3',
+        age: 'age 3',
+        city: 'city 3',
+        language: 'Lang 3',
+        framework: 'Frame 3',
+        image: 'https://randomuser.me/api/portraits/men/53.jpg'
+    },
+    {
+        name: 'Person 4',
+        age: 'age 4',
+        city: 'city 4',
+        language: 'Lang 4',
+        framework: 'Frame 4',
+        image: 'https://randomuser.me/api/portraits/men/54.jpg'
+    },
+    {
+        name: 'Person 5',
+        age: 'age 5',
+        city: 'city 5',
+        language: 'Lang 5',
+        framework: 'Frame 5',
+        image: 'https://randomuser.me/api/portraits/men/55.jpg'
+    }
+]
+
+// Starting
+let image2 = document.getElementById('image');
+let profile = document.getElementById('profile');
+
+// CV Iterator
+function cvIter(profiles) {
+    let nextIndex = 0
+    return {
+        next: () =&gt; {
+            return nextIndex &lt; profiles.length ? {
+                value: profiles[nextIndex++],
+                done: false
+            } : {
+                done: true
+            }
+        }
+    }
+}
+
+// nextBtn listener
+const next = document.getElementById('next');
+const candidates = cvIter(data);
+cvShow();
+
+next.addEventListener('click', cvShow)
+
+// Showing in DOM
+function cvShow() {
+    const currentCandidate = candidates.next().value;
+
+    if (currentCandidate != undefined) {
+        image2.innerHTML = `&lt;img src=${currentCandidate.image}&gt;`;
+
+        profile.innerHTML = `&lt;ul class="list-group"&gt;
+                            &lt;li class="list-group-item"&gt;${currentCandidate.name}&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;${currentCandidate.age}&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;${currentCandidate.city}&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;${currentCandidate.language}&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;${currentCandidate.framework}&lt;/li&gt;
+                        &lt;/ul&gt;`;
+    } else {
+        alert("End of candidates.")
+        window.location.reload();
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        6. Postman Clone
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+
+    &lt;title&gt;Postman Clone&lt;/title&gt;
+    &lt;link rel="stylesheet" href="./CSS/prism.css"&gt;
+    &lt;style&gt;
+        #p6 {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;Postman Clone&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div class="container my-3"&gt;
+        &lt;h3&gt;Welcome to Postman&lt;/h3&gt;
+        &lt;div style="border: 2px solid black; border-radius: 10px;" id="myForm"&gt;
+            &lt;!-- URL input & request type --&gt;
+            &lt;div class="container my-3"&gt;
+                &lt;h5&gt;Enter URL:&lt;/h5&gt;
+                &lt;div class="input-group px-4"&gt;
+                    &lt;select id="requestType" class="btn btn-primary" aria-label="Default select example"&gt;
+                        &lt;option style="background-color: white;" disabled value="0" class="btn btn-primary"&gt;Action
+                        &lt;/option&gt;
+                        &lt;option value="1"&gt;GET&lt;/option&gt;
+                        &lt;option value="2"&gt;POST&lt;/option&gt;
+                    &lt;/select&gt;
+                    &lt;input type="text" id="urlField" class="form-control"
+                        aria-label="Text input with segmented dropdown button" placeholder="Enter URL here"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Content type --&gt;
+            &lt;div id="contentTypeBox" class="container my-3"&gt;
+                &lt;h5&gt;Content Type:&lt;/h5&gt;
+                &lt;div class="form-check px-5"&gt;
+                    &lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="contentType1"&gt;
+                    &lt;label class="form-check-label" for="flexRadioDefault1"&gt;JSON&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="form-check px-5"&gt;
+                    &lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="contentType2"&gt;
+                    &lt;label class="form-check-label" for="flexRadioDefault1"&gt;Custom parameters&lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- parameter Box -- This box will hide on clicking json option in content type --&gt;
+            &lt;div id="parameterBox" class="container my-3"&gt;
+                &lt;h5&gt;Enter custom parameters:&lt;/h5&gt;
+                &lt;div class="px-4 row"&gt;
+                    &lt;div class="col-md-2"&gt;
+                        &lt;input id="parameter1Key" type="text" class="form-control" placeholder="Enter key"
+                            aria-label="First name"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-2"&gt;
+                        &lt;input id="parameter1Value" type="text" class="form-control" placeholder="Enter value"
+                            aria-label="Last name"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-2"&gt;
+                        &lt;button id="addBtn1" class="btn btn-primary"&gt;+&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Extra parameters --&gt;
+            &lt;div id="params"&gt;&lt;/div&gt;
+
+            &lt;!-- JSON Box -- This box will hide on clicking parameter option in content type --&gt;
+            &lt;div id="jsonBox" class="container my-3"&gt;
+                &lt;h5&gt;Enter JSON data:&lt;/h5&gt;
+                &lt;div class="px-4"&gt;
+                    &lt;textarea class="form-control" id="jsonTextArea" rows="3"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Submit button --&gt;
+        &lt;div class="my-3 container"&gt;
+            &lt;button id="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Response Box --&gt;
+        &lt;div id="responseBox" class="container my-3"&gt;
+            &lt;h5&gt;Your response:&lt;/h5&gt;
+            &lt;pre style="max-height: 500px;"
+                class="language-javascript"&gt;&lt;code class="language-javascript" id="responseArea"&gt;&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="./JS/index.js"&gt;&lt;/script&gt;
+&lt;script src="./JS/prism.js"&gt;&lt;/script&gt;
+&lt;script src="../JS/addProject1.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Grabbing url & request types
+const requestType = document.getElementById('requestType');
+const urlField = document.getElementById('urlField');
+
+// Grabbing Boxes
+const parameterBox = document.getElementById('parameterBox');
+const jsonBox = document.getElementById('jsonBox');
+const responseBox = document.getElementById('responseBox');
+
+// Grabbing Content type radios
+const contentTypeBox = document.getElementById('contentTypeBox');
+const contentType1 = document.getElementById('contentType1');
+const contentType2 = document.getElementById('contentType2');
+
+// Grabbing add parameter elements
+const addBtn1 = document.getElementById('addBtn1');
+const params = document.getElementById('params');
+let paramsCount = 1; // No of params
+
+// Grabbing submit button
+const submit = document.getElementById('submit');
+
+// Grabbing response area
+const responseArea = document.getElementById('responseArea');
+
+// Set default URL
+urlField.value = "https://jsonplaceholder.typicode.com/posts";
+
+// Hiding Boxes initially
+parameterBox.style.display = 'none';
+jsonBox.style.display = 'none';
+responseBox.style.display = 'none';
+contentTypeBox.style.display = 'none';
+
+// Showing boxes according to content type
+contentType1.addEventListener('click', () =&gt; {
+    parameterBox.style.display = 'none';
+    params.style.display = 'none';
+    jsonBox.style.display = 'block';
+})
+contentType2.addEventListener('click', () =&gt; {
+    parameterBox.style.display = 'block';
+    params.style.display = 'block';
+    jsonBox.style.display = 'none';
+})
+
+// Showing content according to request type
+requestType.addEventListener('click', () =&gt; {
+    let request = Number(requestType.value);
+    if (request == 1) {
+        contentTypeBox.style.display = 'none';
+        parameterBox.style.display = 'none';
+        params.style.display = 'none';
+        jsonBox.style.display = 'none';
+    } else if (request == 2) {
+        contentTypeBox.style.display = 'block';
+    }
+})
+
+// Utility Functions
+// 1. Function to get DOM element from a string
+function strToDOM(str) {
+    let div = document.createElement('div');
+    div.innerHTML = str;
+    return div.firstElementChild;
+}
+
+// Adding parameters on clicking add button
+addBtn1.addEventListener('click', () =&gt; {
+    let str = `&lt;div class="container my-3"&gt;
+                    &lt;div class="px-4 row"&gt;
+                        &lt;div class="col-md-2"&gt;
+                            &lt;input id="parameter${paramsCount + 1}Key" type="text" class="form-control" placeholder="Enter key"
+                                aria-label="First name"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-md-2"&gt;
+                            &lt;input id="parameter${paramsCount + 1}Value" type="text" class="form-control" placeholder="Enter value"
+                                aria-label="Last name"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-md-2"&gt;
+                            &lt;button class="deleteBtn btn btn-primary"&gt;-&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;`;
+    // Storing delete buttons
+    let deleteBtn = document.getElementsByClassName('deleteBtn');
+
+    // Convert element string to DOM node
+    let paramElement = strToDOM(str);
+    params.appendChild(paramElement);
+    paramsCount += 1;
+
+    // Deleting parameter on clicking delete button
+    for (item of deleteBtn) {
+        item.addEventListener('click', (e) =&gt; {
+            (((e.target.parentElement).parentElement).parentElement).remove();
+            deleteBtn = document.getElementsByClassName('deleteBtn');
+        })
+    }
+})
+
+// On clicling submit button
+submit.addEventListener('click', () =&gt; {
+    responseBox.style.display = 'block';
+
+    // Showing please wait
+    responseArea.innerHTML = "Please wait... Fetching response..."
+
+    // Fetch all values user has entered
+    let url = urlField.value;
+    let request = Number(requestType.value);
+    let content = 0;
+    if (contentType1.checked) {
+        content = 1;
+    } else if (contentType2.checked) {
+        content = 2;
+    }
+
+    // Collecting data
+    let data;
+    if (content == 2) {
+        // Taking key value pairs
+        data = {};
+        for (let i = 0; i &lt; paramsCount; i++) {
+            if (document.getElementById(`parameter${i + 1}Key`) != undefined) {
+                let key = document.getElementById(`parameter${i + 1}Key`).value;
+                let value = document.getElementById(`parameter${i + 1}Value`).value;
+                data[key] = value;
+            }
+        }
+        data = JSON.stringify(data);
+    } else if (content == 1) {
+        // Taking json as string
+        data = document.getElementById('jsonTextArea').value;
+    }
+
+    // Using Fetch API
+    if (request == 1) {
+        // GET request
+        if (url != "") {
+            fetch(url, {
+                method: 'GET'
+            })
+                .then(response =&gt; response.text())
+                .then(text =&gt; {
+                    responseArea.innerHTML = text;
+                    Prism.highlightAll();
+                })
+        } else {
+            responseArea.innerHTML = "No url given";
+            Prism.highlightAll();
+        }
+    } else if (request == 2) {
+        // POST request
+        if (url != "") {
+            fetch(url, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            })
+                .then(response =&gt; response.text())
+                .then(text =&gt; {
+                    responseArea.innerHTML = text;
+                    Prism.highlightAll();
+                })
+        } else {
+            responseArea.innerHTML = "No url given";
+            Prism.highlightAll();
+        }
+    }
+})
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        7. Calculator
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+
+    &lt;title&gt;Calculator&lt;/title&gt;
+    &lt;link rel="stylesheet" href="./CSS/style.css"&gt;
+    &lt;style&gt;
+        #p7 {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;Calculator&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;div class="container"&gt;
+        &lt;h2&gt;Calculator&lt;/h2&gt;
+        &lt;div id="calculator"&gt;
+            &lt;input disabled type="text" name="screen" id="screen"&gt;
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;(&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;)&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;C&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;%&lt;/button&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;7&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;8&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;9&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;X&lt;/button&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;4&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;5&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;6&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;-&lt;/button&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;1&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;2&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;3&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;+&lt;/button&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;0&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;.&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;=&lt;/button&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;button class="keys"&gt;/&lt;/button&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="./JS/index.js"&gt;&lt;/script&gt;
+&lt;script src="../JS/addProject1.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Grabbing Elements
+const screen = document.getElementById('screen');
+const buttons = document.getElementsByClassName('keys');
+let screenValue = "";
+let restart = false;
+
+// Target the buttons
+for (item of buttons) {
+    item.addEventListener('click', (e) =&gt; {
+        let buttonText = e.target.innerText;
+        if (restart) {
+            screenValue = "";
+            restart = false;
+        }
+        if (buttonText == 'X') {
+            buttonText = '*';
+            screenValue += buttonText
+        } else if (buttonText == "C") {
+            screenValue = "";
+        }
+        else if (buttonText == "=") {
+            restart = true;
+            screenValue = eval(screenValue);
+        } else {
+            screenValue += buttonText;
+        }
+        screen.value = screenValue;
+    })
+}
+</code></pre>
+                        <pre class="language-css"><code>.container {
+    margin: 20px;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+}
+
+*:focus {
+    outline: none;
+}
+
+input {
+    font-size: 30px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+    text-align: right;
+    background-color: white;
+}
+
+.keys {
+    font-size: 20px;
+    background-color: #b0c2c9;
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+}
+
+#calculator {
+    display: inline-block;
+    background-color: #a821d2;
+    padding: 20px;
+    border-radius: 20px;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project8" class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        8. Clock App
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+
+    &lt;title&gt;Clock App&lt;/title&gt;
+    &lt;link rel="stylesheet" href="./CSS/style.css"&gt;
+    &lt;style&gt;
+        #p8 {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;Clock App&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div class="my-3 container text-center"&gt;
+        &lt;div class="text-center" id="clockContainer"&gt;
+            &lt;div id="center"&gt;&lt;/div&gt;
+            &lt;div id="hour"&gt;&lt;/div&gt;
+            &lt;div id="minute"&gt;&lt;/div&gt;
+            &lt;div id="second"&gt;&lt;/div&gt;
+            &lt;div id="secondLeg"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div style="cursor: default;" class="my-3 btn" id="time"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="./JS/index.js"&gt;&lt;/script&gt;
+&lt;script src="../JS/addProject1.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Grabbing hands
+let hour = document.getElementById('hour');
+let minute = document.getElementById('minute');
+let second = document.getElementById('second');
+let secondLeg = document.getElementById('secondLeg');
+
+let time = document.getElementById('time');
+
+// Starting
+showClock();
+
+// Each second
+setInterval(() =&gt; {
+    showClock();
+    let tick = new Audio('Gallery/tick.mp3');
+    tick.play();
+    setTimeout(() =&gt; {
+        tick.pause();
+    }, 1000);
+}, 1000);
+
+// Function to show clock
+function showClock() {
+    let d = new Date();
+    let hours = d.getHours();
+    let minutes = d.getMinutes();
+    let seconds = d.getSeconds();
+    let dateShow = `${d.getDate()}`;
+    let monthShow = `${d.getMonth() + 1}`;
+    let yearShow = `${d.getFullYear() % 2000}`;
+    let format = "";
+    let dateStr = "";
+
+    // Converting hour into 12 hour format
+    if (hours &gt;= 12) {
+        hours = hours - 12;
+        format = "PM";
+    } else {
+        format = "AM";
+    }
+
+    // Calculating rotation
+    let hRot = (hours * 30) + (minutes * 0.5) + (seconds * (1 / 120));
+    let mRot = (minutes * 6) + (seconds * 0.1);
+    let sRot = (seconds * 6);
+
+    // Rotating hands
+    hour.style.transform = `rotate(${hRot}deg)`;
+    minute.style.transform = `rotate(${mRot}deg)`;
+    second.style.transform = `rotate(${sRot}deg)`;
+    secondLeg.style.transform = `rotate(${sRot + 180}deg)`;
+
+    // Converting in 2 digits
+    if (d.getDate() &lt; 10) {
+        dateShow = `0${d.getDate()}`;
+    }
+    if (d.getMonth() &lt; 9) {
+        monthShow = `0${d.getMonth() + 1}`;
+    }
+
+    // Time formatting
+    if (hours == 0) {
+        hours = 12;
+    }
+    if (hours &lt; 10) {
+        hours = `0${hours}`;
+    }
+    if (minutes &lt; 10) {
+        minutes = `0${minutes}`;
+    }
+    if (seconds &lt; 10) {
+        seconds = `0${seconds}`;
+    }
+
+    // Printing date & format
+    dateStr = `&lt;p&gt;${hours}-${minutes}-${seconds} ${format}&lt;/p&gt;
+                &lt;hr&gt;
+                &lt;p&gt;${dateShow}/${monthShow}/${yearShow}&lt;/p&gt;`;
+    time.innerHTML = dateStr;
+}
+</code></pre>
+                        <pre class="language-css"><code>#clockContainer {
+    position: relative;
+    margin: auto;
+    height: 30vw;
+    width: 30vw;
+    background: url('../Gallery/clock.png') no-repeat;
+    background-size: 100%;
+}
+
+#hour, #minute, #second {
+    position: absolute;
+    border-radius: 10px;
+    opacity: 0.8;
+    transform-origin: bottom;
+    background-color: #6294d891;
+    z-index: 5;
+}
+
+#hour {
+    height: 25%;
+    width: 1.3%;
+    top: 24.5%;
+    left: 49.35%;
+}
+
+#minute {
+    height: 30%;
+    width: 1%;
+    top: 19.5%;
+    left: 49.5%;
+}
+
+#second {
+    height: 35%;
+    width: 0.7%;
+    top: 14.4%;
+    left: 49.65%;
+}
+
+#secondLeg {
+    position: absolute;
+    height: 10%;
+    width: 2%;
+    z-index: 5;
+    top: 39.4%;
+    left: 49.1%;
+    transform-origin: bottom;
+    background-color: #6294d8;
+}
+
+#center {
+    position: absolute;
+    height: 3%;
+    width: 3%;
+    background-color: black;
+    border-radius: 50px;
+    z-index: 10;
+    top: 48%;
+    left: 48.5%;
+}
+
+#time {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    #clockContainer {
+        width: 70vw;
+        height: 70vw;
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project9" class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        9. Dino Game
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+
+    &lt;title&gt;Dino Game&lt;/title&gt;
+    &lt;link rel="stylesheet" href="./CSS/style.css"&gt;
+    &lt;style&gt;
+        #p9 {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;Dino Game&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div id="gameContainer"&gt;
+        &lt;div id="gameOver"&gt;&lt;span style="color: #eea962;"&gt;Game Over&lt;/span&gt; Reload to Play Again&lt;/div&gt;
+        &lt;div id="dino"&gt;&lt;/div&gt;
+        &lt;div id="scoreCount"&gt;Your Score: 0&lt;/div&gt;
+        &lt;div id="obstacle" class="animateObstacle"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="./JS/index.js"&gt;&lt;/script&gt;
+&lt;script src="../JS/addProject1.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Grabbing elements
+const gameOver = document.getElementById('gameOver');
+const dino = document.getElementById('dino');
+const obstacle = document.getElementById('obstacle');
+const scoreCount = document.getElementById('scoreCount');
+
+// Global variables
+let score = 0;
+let crossed = true;
+let gameOvered = false;
+
+// Moving dino
+document.onkeydown = (e) =&gt; {
+    let dinoX = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+    if (e.keyCode == 38) {
+        dino.classList.add('animateDino');
+        setTimeout(() =&gt; {
+            dino.classList.remove('animateDino');
+        }, 600);
+    } else if (e.keyCode == 39 & dinoX &lt;= 1200) {
+        dino.style.left = dinoX + 100 + "px";
+    } else if (e.keyCode == 37 & dinoX &gt;= 0) {
+        let dinoX = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+        dino.style.left = dinoX - 100 + "px";
+    }
+}
+
+setInterval(() =&gt; {
+    // Finding positions
+    let dx = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+    let dy = parseInt(window.getComputedStyle(dino, null).getPropertyValue('bottom'));
+    let ox = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('left'));
+    let oy = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('bottom'));
+
+    // Calculating difference
+    let offsetX = Math.abs(dx - ox);
+    let offsetY = Math.abs(dy - oy);
+
+    // Chekcing collision
+    if (offsetX &lt; 50 & offsetY &lt; 50) {
+        gameOver.style.visibility = 'visible';
+        obstacle.classList.remove('animateObstacle');
+        gameOvered = true;
+        score -= 1;
+    } else if (offsetX &lt; 100 & crossed & !gameOvered) {
+        score += 1;
+        updateScore(score);
+        crossed = false;
+        setTimeout(() =&gt; {
+            crossed = true;
+            let animDur = parseFloat(window.getComputedStyle(obstacle, null).getPropertyValue('animation-duration'));
+            if (animDur &gt;= 3) {
+                obstacle.style.animationDuration = `${animDur - 0.02}s`;
+            }
+        }, 1000);
+    }
+}, 10);
+
+// Increasing score
+function updateScore(curScore) {
+    scoreCount.innerHTML = `Your Score: ${curScore}`;
+}
+</code></pre>
+                        <pre class="language-css"><code>* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+#gameContainer {
+    background-image: url(../Gallery/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100vw;
+    height: 100vh;
+}
+
+#dino {
+    background-image: url(../Gallery/dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 216px;
+    height: 184px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#obstacle {
+    background-image: url(../Gallery/dragon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 185px;
+    height: 180px;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+}
+
+#gameOver {
+    visibility: hidden;
+    color: white;
+    position: relative;
+    font-size: 53px;
+    text-align: center;
+}
+
+#scoreCount {
+    position: absolute;
+    top: 68px;
+    right: 33px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.animateDino {
+    animation: dino 0.6s linear;
+}
+
+@keyframes dino {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 400px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+
+.animateObstacle {
+    animation: obstacle 4s linear infinite;
+}
+
+@keyframes obstacle {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -10vw;
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project10" class="accordion-item">
+                <h2 class="accordion-header" id="heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        10. Cheatsheet Template
+                    </button>
+                </h2>
+                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <h3>Index</h3>
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+
+    &lt;title&gt;Cheatsheet Template&lt;/title&gt;
+    &lt;!-- &lt;link rel="stylesheet" href="./CSS/style.css"&gt; --&gt;
+    &lt;link rel="stylesheet" href="./CSS/prism.css"&gt;
+    &lt;link rel="stylesheet" href="./CSS/style.css"&gt;
+    &lt;script src="./JS/prism.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        #p10 {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;Cheatsheet Template&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div class=" my-3 container"&gt;
+        &lt;h3&gt;Languages&lt;/h3&gt;
+        &lt;hr&gt;
+        &lt;ul class="list-group"&gt;
+            &lt;a href="./Pages/html.html"&gt;&lt;li class="list-group-item"&gt;HTML&lt;/li&gt;&lt;/a&gt;
+            &lt;a href="./Pages/js.html"&gt;&lt;li class="list-group-item"&gt;Java Script&lt;/li&gt;&lt;/a&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="../JS/addProject1.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Grabbing search button
+const search = document.getElementById('search');
+
+// Grabbing nothing
+const nothing = document.getElementById('nothing');
+nothing.style.display = 'none';
+
+// Grabbing snippets
+const snippets = document.getElementsByClassName('accordion-item');
+
+// Search Button
+search.addEventListener('input', (e) =&gt; {
+    let value = search.value.toLowerCase();
+    let count = false;
+
+    for (let i = 0; i &lt; snippets.length; i++) {
+        let title = snippets[i].firstElementChild.firstElementChild.textContent.toLowerCase();
+        let para = snippets[i].lastElementChild.firstElementChild.firstElementChild.firstElementChild.textContent.toLowerCase();
+
+        let snippet = document.getElementById(`snippet${i + 1}`);
+        if (title.includes(value) | para.includes(value)) {
+            snippet.style.display = 'block';
+            count = true;
+        } else {
+            snippet.style.display = 'none';
+        }
+    }
+
+    if (!count) {
+        nothing.style.display = 'block';
+    } else {
+        nothing.style.display = 'none';
+    }
+})
+</code></pre>
+                        <pre class="language-css"><code>a {
+    text-decoration: none;
+}
+
+.list-group a {
+    margin-bottom: 20px;
+}
+
+pre {
+    max-height: 400px;
+}
+</code></pre>
+                        <h3>Adding a Language</h3>
+                        <pre class="language-js"><code>// Grabbing addLanguage
+let languageList = document.getElementById('languageList');
+
+// Adding language
+let languageStr = `&lt;li id="l1"&gt;&lt;a class="dropdown-item" href="./html.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+                    &lt;li id="l2"&gt;&lt;a class="dropdown-item" href="./js.html"&gt;JS&lt;/a&gt;&lt;/li&gt;`;
+languageList.innerHTML = languageStr;</code></pre>
+                        <h3>HTML Template</h3>
+                        <pre class="language-html"><code>
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+
+    &lt;title&gt;Cheatsheet Template&lt;/title&gt;
+    &lt;!-- &lt;link rel="stylesheet" href="./CSS/style.css"&gt; --&gt;
+    &lt;link rel="stylesheet" href="../CSS/prism.css"&gt;
+    &lt;link rel="stylesheet" href="../CSS/style.css"&gt;
+    &lt;script src="../JS/prism.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        #p10,
+        #l1 {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="../"&gt;Cheatsheet Template&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Languages
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./html.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="languageList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;form class="d-flex"&gt;
+                    &lt;input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div class=" my-3 container"&gt;
+        &lt;h3&gt;My Snippets&lt;/h3&gt;
+        &lt;hr&gt;
+        &lt;h5 id="nothing"&gt;No snippet matched&lt;/h5&gt;
+        &lt;div class="accordion" id="accordionExample"&gt;
+            &lt;div id="snippet1" class="accordion-item"&gt;
+                &lt;h2 class="accordion-header" id="heading1"&gt;
+                    &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1"&gt;HTML Boiler
+                        Plate&lt;/button&gt;
+                &lt;/h2&gt;
+                &lt;div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample"&gt;
+                    &lt;div class="accordion-body"&gt;
+                        &lt;pre class="language-html"&gt;&lt;code&gt;&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title here&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    HTML body here
+&lt;/body&gt;
+
+&lt;/html&gt;&lt;/code&gt;&lt;/pre&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id="snippet2" class="accordion-item"&gt;
+                &lt;h2 class="accordion-header" id="heading2"&gt;
+                    &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2"&gt;Bootstrap Starter
+                        Plate&lt;/button&gt;
+                &lt;/h2&gt;
+                &lt;div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample"&gt;
+                    &lt;div class="accordion-body"&gt;
+                        &lt;pre class="language-html"&gt;&lt;code&gt;&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+
+    &lt;title&gt;Hello, world!&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;&lt;/code&gt;&lt;/pre&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id="snippet3" class="accordion-item"&gt;
+                &lt;h2 class="accordion-header" id="heading3"&gt;
+                    &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3"&gt;Bootstrap Navbar&lt;/button&gt;
+                &lt;/h2&gt;
+                &lt;div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample"&gt;
+                    &lt;div class="accordion-body"&gt;
+                        &lt;pre class="language-html"&gt;&lt;code&gt;&lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;a class="navbar-brand" href="./"&gt;Home&lt;/a&gt;
+        &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+            &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link active" aria-current="page" href="#"&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item dropdown"&gt;
+                    &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                        Dropdowns
+                    &lt;/a&gt;
+                    &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                        &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;Dropdown 1&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;hr class="dropdown-divider"&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;Dropdown 2&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;Dropdown 3&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a class="dropdown-item" href="./"&gt;Dropdown 4&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;form class="d-flex"&gt;
+                &lt;input class="form-control me-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search"&gt;
+            &lt;/form&gt;
+            &lt;button class="my-2 btn btn-outline-success"&gt;Search&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;&lt;/code&gt;&lt;/pre&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="../JS/index.js"&gt;&lt;/script&gt;
+&lt;script src="../JS/addLanguage.js"&gt;&lt;/script&gt;
+&lt;script src="../../JS/addProject2.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;</code></pre>
+                        <h3>JS Template</h3>
+                        <pre class="language-html"><code>
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+
+    &lt;title&gt;Cheatsheet Template&lt;/title&gt;
+    &lt;!-- &lt;link rel="stylesheet" href="./CSS/style.css"&gt; --&gt;
+    &lt;link rel="stylesheet" href="../CSS/prism.css"&gt;
+    &lt;link rel="stylesheet" href="../CSS/style.css"&gt;
+    &lt;script src="../JS/prism.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        #p10,
+        #l2 {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;a class="navbar-brand" href="../../"&gt;Home&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Projects
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="../"&gt;Cheatsheet Template&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="projectList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Languages
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="./js.html"&gt;JS&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;div id="languageList"&gt;&lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;form class="d-flex"&gt;
+                    &lt;input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div class=" my-3 container"&gt;
+        &lt;h3&gt;My Snippets&lt;/h3&gt;
+        &lt;hr&gt;
+        &lt;h5 id="nothing"&gt;No snippet matched&lt;/h5&gt;
+        &lt;div class="accordion" id="accordionExample"&gt;
+            &lt;div id="snippet1" class="accordion-item"&gt;
+                &lt;h2 class="accordion-header" id="heading1"&gt;
+                    &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1"&gt;Search Bar&lt;/button&gt;
+                &lt;/h2&gt;
+                &lt;div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample"&gt;
+                    &lt;div class="accordion-body"&gt;
+                        &lt;pre class="language-js"&gt;&lt;code&gt;let search = document.getElementById('search'); // search bar
+let nothing = document.getElementById('nothing'); // when no element matches to search bar value
+search.addEventListener('input', function () {
+    let inputVal = search.value.toLowerCase();
+    let elements = document.getElementsByClassName('elements'); // On which we want to perform search
+    let count = 0;
+    Array.from(elements).forEach(function (element) {
+        if (element.includes(inputVal)) {
+            count += 1;
+            nothing.style.display = 'none';
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    })
+    if (count == 0) {
+        nothing.style.display = 'block';
+    }
+})&lt;/code&gt;&lt;/pre&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="../JS/index.js"&gt;&lt;/script&gt;
+&lt;script src="../JS/addLanguage.js"&gt;&lt;/script&gt;
+&lt;script src="../../JS/addProject2.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>

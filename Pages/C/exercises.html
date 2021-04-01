@@ -1,0 +1,2104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | C | Exercises</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c1 {
+            display: none;
+        }
+
+        #d1,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./c.html">C</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./exercises.html">Exercises</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Exercises</h3>
+        <hr>
+        <h5 id="nothing">No exercise matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        1. Multiplication Table
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+Print multiplication table of a number entered by the user in pretty form
+
+Example:
+Input
+Enter the number you want multiplication table of
+6
+Output
+Table of 6:
+6 x 1 = 6
+6 x 2 = 12
+.
+.
+.
+6 x 10 = 60
+*/
+
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int num, j;
+    printf("Enter the number you want multiplication table of\t");
+    scanf("%d", &num);
+    printf("Enter the number until you want multiplication table:\t");
+    scanf("%d", &j);
+
+    for (int i = 1; i &lt; j + 1; i++)
+    {
+        printf("%d * %d = %d\n", num, i, num * i);
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project2" class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        2. If Else
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+Give gifts to students who pass
+Maths, Physics - 20 rs
+Maths - 10 rs
+Physics - 10 rs
+None - 5 rs
+*/
+
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int pass;
+    printf("Enter the subjects you pass\n");
+    printf("For Math alone enter 1\n");
+    printf("For Physics alone enter 2\n");
+    printf("For Math & Physics both enter 3\n");
+    printf("For none enter 4\n");
+    scanf("%d", &pass);
+    if (pass == 1)
+    {
+        printf("You passed in Maths so you are gifted Rs-10.");
+    }
+    else if (pass == 2)
+    {
+        printf("You passed in Physics so you are gifted Rs-10.");
+    }
+    else if (pass == 3)
+    {
+        printf("You passed in both subjects so yoou are gifted Rs-20.");
+    }
+    else if (pass == 4)
+    {
+        printf("You passed in no one subject but still you are gifted Rs-5.");
+    }
+    else
+    {
+        printf("You have entered invalid syntax.");
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        3. Unit Conversion
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+kms to miles - 0.621371192
+inches to foot - 0.083333333
+cms to inches - 0.393700787
+pound to kgs - 0.45359237
+inches to metres - 0.0254
+*/
+
+// float convert(float num)
+// {
+// }
+
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char input;
+    float kmstomiles = 0.621371192;
+    float inchestofoot = 0.083333333;
+    float cmstoinches = 0.393700787;
+    float poundtokgs = 0.45359237;
+    float inchestometres = 0.0254;
+    float first, second;
+
+    while (1)
+    {
+    start:
+        printf("Enter the input character. q to quit\n1 - kms to miles\n2 - inches to foot\n3 - cms to inches\n4 - pound to kgs\n5 - inches to metres\n");
+        scanf(" %c", &input);
+
+        switch (input)
+        {
+        case 'q':
+            printf("Quitting tha program.....");
+            goto end;
+            break;
+        case '1':
+            printf("Enter quantity in terms of first unit - ");
+            scanf("%f", &first);
+            second = first * kmstomiles;
+            printf("%f Kms is equal to %f Miles\n", first, second);
+            goto start;
+            break;
+        case '2':
+            printf("Enter quantity in terms of first unit - ");
+            scanf("%f", &first);
+            second = first * inchestofoot;
+            printf("%f Inches is equal to %f Foots\n", first, second);
+            goto start;
+            break;
+        case '3':
+            printf("Enter quantity in terms of first unit - ");
+            scanf("%f", &first);
+            second = first * cmstoinches;
+            printf("%f Cms is equal to %f Inches\n", first, second);
+            goto start;
+            break;
+        case '4':
+            printf("Enter quantity in terms of first unit - ");
+            scanf("%f", &first);
+            second = first * poundtokgs;
+            printf("%f Pounds is equal to %f Kgs\n", first, second);
+            goto start;
+            break;
+        case '5':
+            printf("Enter quantity in terms of first unit - ");
+            scanf("%f", &first);
+            second = first * inchestometres;
+            printf("%f Inches is equal to Meters%f\n", first, second);
+            goto start;
+            break;
+
+        default:
+            break;
+        }
+    }
+
+end:
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        4. Fibonacci
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>// Calculate Fibonacci both by recursion & iteration
+// Find which takes longer recursion or iteration
+
+#include &lt;stdio.h&gt;
+
+int fib_rec(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return n;
+    }
+    else
+    {
+        return (fib_rec(n - 1) + fib_rec(n - 2));
+    }
+}
+
+int fib_itr(int n)
+{
+    int a, b;
+    a = 0;
+    b = 1;
+    for (int i = 0; i &lt; n; i++)
+    {
+        b = b + a;
+        a = b - a;
+    }
+    return a;
+}
+
+int main()
+{
+    int f_num;
+start:
+    printf("Enter the number you want the fibonacci of - ");
+    scanf("%d", &f_num);
+    printf("fib_itr(%d) = %d\n", f_num, fib_itr(f_num));
+    printf("fib_rec(%d) = %d\n", f_num, fib_rec(f_num));
+
+    goto start;
+
+    return 0;
+}
+
+
+// RESULTS
+// Recursion takes much time than iteration
+// Because in iteration every fibonacci is calculated one time only i.e. fib(40) takes 40 calls
+// While in recursion it makes tree of calls i.e. fib(40) takes 2^40 calls</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project5" class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        5. Roots of Quadratic
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>// Find roots of quadratic equation
+// cofficients should be entered by user
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main()
+{
+    float a, b, c, x1, x2, D, ip, rp;
+start:
+    printf("The equation is ax^2 +bx + c\n");
+
+    printf("Enter a = ");
+    scanf("%f", &a);
+
+    printf("Enter b = ");
+    scanf("%f", &b);
+
+    printf("Enter c = ");
+    scanf("%f", &c);
+
+    rp = ((-1 * b) / (2 * a));
+    D = ((b * b) - ((4 * a) * c));
+
+    if (D &gt; 0)
+    {
+        ip = ((sqrt(D)) / (2 * a));
+        x1 = rp + ip;
+        x2 = rp - ip;
+        printf("\nThe roots of (%0.2f)x^2 + (%0.2f)x + (%0.2f) are REAL & DISTINCT\n", a, b, c);
+        printf("x1 = %0.2f\n", x1);
+        printf("x2 = %0.2f\n\n", x2);
+    }
+    else if (D == 0)
+    {
+        ip = ((sqrt(D)) / (2 * a));
+        x1 = rp + ip;
+        x2 = rp - ip;
+        printf("\nThe roots of (%0.2f)x^2 + (%0.2f)x + (%0.2f) are REAL & EQUAL\n", a, b, c);
+        printf("x1 = %0.2f\n", x1);
+        printf("x2 = %0.2f\n\n", x2);
+    }
+    else
+    {
+        ip = ((sqrt(-1 * D)) / (2 * a));
+        x1 = rp + (ip);
+        x2 = rp - (ip);
+        printf("\nThe roots of (%0.2f)x^2 + (%0.2f)x + (%0.2f) are IMAGINARY\n", a, b, c);
+        printf("x1 = %0.2f + (%0.2f)i\n", rp, ip);
+        printf("x2 = %0.2f - (%0.2f)i\n\n", rp, ip);
+    }
+    goto start;
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        6. Division Processes
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>// Make program which calculate division, quotient, remainder of a division process
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main()
+{
+    float a, b;
+    float c;
+    int d;
+    float e;
+    float f;
+start:
+    printf("You have to divide a by b\n");
+    printf("Enter integer a = ");
+    scanf(" %f", &a);
+    printf("Enter integer b = ");
+    scanf(" %f", &b);
+
+    if (b == 0)
+    {
+        printf("\nb cannot be zero!!!\n\n");
+    }
+    else
+    {
+        printf("\nDividing a by b\n");
+        c = a / b;
+        d = floor(c);
+        e = c - d;
+        f = b * e;
+        printf("The answer is %0.2f\n", c);
+        printf("The quotient is %d\n", d);
+        printf("The remainder is %0.0f\n\n", f);
+    }
+    goto start;
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        7. Star Pattern
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>// Print star pattern til n rows
+// n should be entered by user
+
+#include &lt;stdio.h&gt;
+
+void starPattern(int rows)
+{
+    for (int i = 0; i &lt; rows; i++)
+    {
+        for (int j = 0; j &lt; i + 1; j++)
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+}
+
+void revStarPattern(int rows)
+{
+    for (int i = 0; i &lt; rows; i++)
+    {
+        for (int j = 0; j &lt; rows - i; j++)
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+}
+
+void forback(int rows)
+{
+    for (int i = 0; i &lt; rows; i++)
+    {
+        for (int j = 0; j &lt; i + 1; j++)
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+    for (int i = 0; i &lt; rows; i++)
+    {
+        for (int j = 0; j &lt; rows - i - 1; j++)
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+}
+
+void backfor(int rows)
+{
+    for (int i = 0; i &lt; rows; i++)
+    {
+        for (int j = 0; j &lt; rows - i; j++)
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+    for (int i = 0; i &lt; rows; i++)
+    {
+        for (int j = 0; j &lt; i + 2; j++)
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+}
+
+int main()
+{
+    int rows, input;
+start:
+    printf("How many rows do you want? - ");
+    scanf("%d", &rows);
+    printf("For forward type 1\n");
+    printf("For backward type 2\n");
+    printf("For forward-backward type 3\n");
+    printf("For backward-forward type 4\n");
+    scanf("%d", &input);
+
+    if (input == 1)
+    {
+        starPattern(rows);
+    }
+    else if (input == 2)
+    {
+        revStarPattern(rows);
+    }
+    else if (input == 3)
+    {
+        forback(rows);
+    }
+    else if (input == 4)
+    {
+        backfor(rows);
+    }
+    else
+    {
+        printf("Print valid syntax!!\n");
+    }
+    printf("\n");
+
+    goto start;
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project8" class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        8. Array Reversal
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>// Reverse the given array
+
+#include &lt;stdio.h&gt;
+
+void array_rev(int arg1[])
+{
+    int a;
+    for (int i = 0; i &lt; 4; i++)
+    {
+        a = arg1[i];
+        arg1[i] = arg1[8 - i];
+        arg1[8 - i] = a;
+    }
+}
+
+void array_print(int arg2[])
+{
+    for (int i = 0; i &lt; 9; i++)
+    {
+        printf("%d ", arg2[i]);
+    }
+}
+
+int main()
+{
+    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    array_print(arr);
+    array_rev(arr);
+    printf("\nThe reverse order is :-\n");
+    array_print(arr);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project9" class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        9. HTML Parser
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+Input:
+&lt;h1&gt;    This is a string    &lt;/h1&gt;
+Output:
+This is a string
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void parser(char *str)
+{
+    int in = 0;
+    int index = 0;
+    for (int i = 0; i &lt; strlen(str); i++)
+    {
+        if (str[i] == '&lt;')
+        {
+            in = 1;
+            continue;
+        }
+        else if (str[i] == '&gt;')
+        {
+            in = 0;
+            continue;
+        }
+        if (in == 0)
+        {
+            str[index] = str[i];
+            index++;
+        }
+    }
+    str[index] = '\0';
+
+    // Removing trailing spaces from start
+    while (str[0] == ' ')
+    {
+        // Shift string to left
+        for (int j = 0; j &lt; strlen(str); j++)
+        {
+            str[j] = str[j + 1];
+        }
+    }
+
+    // Removing trailing spaces from end
+    while (str[strlen(str) - 1] == ' ')
+    {
+        str[strlen(str) - 1] = '\0';
+    }
+}
+
+int main()
+{
+    char str[50];
+    printf("Enter a HTML tag to make parser of that:-\n");
+    gets(str);
+    printf("\n");
+    parser(str);
+    printf("The parsed string is:-\n");
+    printf("~~%s~~", str);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project10" class="accordion-item">
+                <h2 class="accordion-header" id="heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        10. Travel Agency
+                    </button>
+                </h2>
+                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+You manage a travel agency & you want you n = 3 drivers to input their following details:
+1. Name
+2. Driving License No
+3. Route
+4. Kms
+Your program should be able to take  n = 3 input and your drivers will startinputing their details.
+Your program should present details of drivers in beautiful manner.
+Only use structures!!
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+typedef struct Drivers
+{
+    char Name[50];
+    char License[50];
+    char Route[50];
+    float Kms;
+} dr;
+
+int main()
+{
+    dr d1, d2, d3;
+
+    printf("Enter details of Driver No 1:-\n");
+    printf("Name - ");
+    scanf(" %s", &d1.Name);
+    printf("Driving License No - ");
+    scanf(" %s", &d1.License);
+    printf("Route - ");
+    scanf(" %s", &d1.Route);
+    printf("Kms of route - ");
+    scanf(" %f", &d1.Kms);
+
+    printf("\nEnter details of Driver No 2:-\n");
+    printf("Name - ");
+    scanf(" %s", &d2.Name);
+    printf("Driving License No - ");
+    scanf(" %s", &d2.License);
+    printf("Route - ");
+    scanf(" %s", &d2.Route);
+    printf("Kms of route - ");
+    scanf(" %f", &d2.Kms);
+
+    printf("\nEnter details of Driver No 3:-\n");
+    printf("Name - ");
+    scanf(" %s", &d3.Name);
+    printf("Driving License No - ");
+    scanf(" %s", &d3.License);
+    printf("Route - ");
+    scanf(" %s", &d3.Route);
+    printf("Kms of route - ");
+    scanf(" %f", &d3.Kms);
+
+    printf("\n******Printing details of drivers:\n");
+
+    printf("For Driver No 1:\n");
+    printf("Name is %s\n", d1.Name);
+    printf("Driving License is %s\n", d1.License);
+    printf("Route is %s\n", d1.Route);
+    printf("Kms is %0.1f\n", d1.Kms);
+
+    printf("\nFor Driver No 2:\n");
+    printf("Name is %s\n", d2.Name);
+    printf("Driving License is %s\n", d2.License);
+    printf("Route is %s\n", d2.Route);
+    printf("Kms is %0.1f\n", d2.Kms);
+
+    printf("\nFor Driver No 3:\n");
+    printf("Name is %s\n", d3.Name);
+    printf("Driving License is %s\n", d3.License);
+    printf("Route is %s\n", d3.Route);
+    printf("Kms is %0.1f\n", d3.Kms);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project11" class="accordion-item">
+                <h2 class="accordion-header" id="heading11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                        11. Employee Manager
+                    </button>
+                </h2>
+                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+ABC Pvt Ltd. manages employee records of other companies.
+Employee Id camn be any length & it can contain any character.
+for 3 employees, you have to take length of employee id as an input.
+Then you have to take employee id as an input & display it on screen.
+Store the id in character array which is allocated dynamically
+You have to create only one character array dynamically
+*/
+
+/*
+Employee 1;
+Enter no of characters in you E-ID - 45
+dynamically allocate the character array.
+Take input from user
+
+Employee 2;
+Enter no of characters in you E-ID - 50
+dynamically allocate the character array.
+Take input from user
+
+Employee 1;
+Enter no of characters in you E-ID - 38
+dynamically allocate the character array.
+Take input from user
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char *ptr_emp;
+    int n, i = 0;
+
+    while (i &lt; 3)
+    {
+        printf("Employee %d:\nEnter the length of your Employee Id - ", i + 1);
+        scanf("%d", &n);
+        ptr_emp = (char *)malloc((n + 1) * sizeof(char));
+        printf("Enter Employee Id - ");
+        scanf("%s", ptr_emp);
+        printf("Employee Id is %s\n", ptr_emp);
+        printf("\n");
+
+        free(ptr_emp);
+        i = i + 1;
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project12" class="accordion-item">
+                <h2 class="accordion-header" id="heading12">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                        12. Rock Paper Scissors
+                    </button>
+                </h2>
+                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+Create Rock, Paper, Scissor
+Player 1 (Take Name as input) : Rock
+Player 2 (Computer) : Scissors --&gt; Player 1 gets 1 point
+Play this game 3 times & display name of winner
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+int randomNum()
+{
+    srand(time(NULL));
+    return rand() % 3;
+}
+
+void choice(int p)
+{
+    if (p == 1)
+    {
+        printf("Rock");
+    }
+    else if (p == 2)
+    {
+        printf("Paper");
+    }
+    else if (p == 3)
+    {
+        printf("Scissor");
+    }
+}
+
+int score(int p1, int p2)
+{
+    if (p1 == p2)
+    {
+        return 0;
+    }
+
+    if ((p1 == 1) && (p2 == 2))
+    {
+        return 1;
+    }
+    if ((p1 == 2) && (p2 == 1))
+    {
+        return -1;
+    }
+
+    if ((p1 == 3) && (p2 == 1))
+    {
+        return 1;
+    }
+    if ((p1 == 1) && (p2 == 3))
+    {
+        return -1;
+    }
+
+    if ((p1 == 2) && (p2 == 3))
+    {
+        return 1;
+    }
+    if ((p1 == 3) && (p2 == 2))
+    {
+        return -1;
+    }
+}
+
+void win(int p1_Score, int p2_Score)
+{
+    if (p1_Score &gt; p2_Score)
+    {
+        printf("Congrats!! You won.\n");
+    }
+    else if (p1_Score &lt; p2_Score)
+    {
+        printf("Alas!! You lost.\n");
+    }
+    else
+    {
+        printf("OK!! Game tied.\n");
+    }
+}
+
+int main()
+{
+    int p1, p2;
+    int p1_Score, p2_Score;
+
+    printf("\nLets Play Game!!!\n\n");
+
+    for (int i = 0; i &lt; 3; i = i)
+    {
+        p1_Score = 0;
+        p2_Score = 0;
+
+        printf("Your turn:\n");
+        printf("Enter 1 for Rock, 2 for Paper, 3 for Scissor\n");
+        scanf("%d", &p1);
+        printf("\n");
+
+        printf("-----Computer's turn-----\n");
+        p2 = randomNum() + 1;
+
+        printf("\nTurn %d:\n", i + 1);
+
+        printf("You: ");
+        choice(p1);
+        printf("\n");
+
+        printf("Computer: ");
+        choice(p2);
+        printf("\n");
+
+        if (score(p1, p2) == 1)
+        {
+            p2_Score = 1;
+        }
+        else if (score(p1, p2) == -1)
+        {
+            p1_Score = 1;
+        }
+        else
+        {
+            p1_Score = 0;
+            p2_Score = 0;
+        }
+
+        printf("\n");
+        win(p1_Score, p2_Score);
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project13" class="accordion-item">
+                <h2 class="accordion-header" id="heading13">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                        13. Matrix Multiplication
+                    </button>
+                </h2>
+                <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int m, n, p, q, sum = 0;
+
+    printf("Enter size of 1st matrix: \n");
+    scanf("%d%d", &m, &n);
+    printf("Enter size of 2nd matrix: \n");
+    scanf("%d%d", &p, &q);
+
+    int a[m][n], b[p][q];
+
+    if (m &gt; 0 && n &gt; 0 && p &gt; 0 && q &gt; 0)
+    {
+        if (n == p)
+        {
+            printf("matrix multiplication is possible\n");
+            int axb[m][q];
+
+            printf("Enter 1st matrix\n");
+            for (int i = 0; i &lt; m; i++)
+            {
+                for (int j = 0; j &lt; n; j++)
+                {
+                    scanf("%d", &a[i][j]);
+                }
+            }
+
+            printf("Enter 2nd matrix\n");
+            for (int i = 0; i &lt; p; i++)
+            {
+                for (int j = 0; j &lt; q; j++)
+                {
+                    scanf("%d", &b[i][j]);
+                }
+            }
+
+            for (int i = 0; i &lt; m; i++)
+            {
+                for (int j = 0; j &lt; q; j++)
+                {
+                    for (int k = 0; k &lt; n; k++)
+                    {
+                        sum += a[i][k] * b[k][j];
+                    }
+                    axb[i][j] = sum;
+                    sum = 0;
+                }
+            }
+
+            printf("mutiplication of matices : \n");
+            for (int i = 0; i &lt; m; i++)
+            {
+                for (int j = 0; j &lt; q; j++)
+                {
+                    printf("%d ", axb[i][j]);
+                }
+                printf("\n");
+            }
+        }
+        else
+        {
+            printf("Column of A should be equal to Row of B\n");
+        }
+    }
+    else
+    {
+        printf("Cannot enter zero or negative values.\n");
+    }
+    
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project14" class="accordion-item">
+                <h2 class="accordion-header" id="heading14">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                        14. Check Palindrome
+                    </button>
+                </h2>
+                <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+User would have to enter a number
+We have to check whether it is palindrome or not
+*/
+
+#include &lt;stdio.h&gt;
+
+void palindrome(int num)
+{
+    int original = num;
+    int reversed = 0;
+    while (num != 0)
+    {
+        reversed = reversed * 10 + num % 10;
+        num = num / 10;
+    }
+
+    if (original == reversed)
+    {
+        printf("%d is a palindrome\n", original);
+    }
+    else
+    {
+        printf("%d is not a palindrome\n", original);
+    }
+}
+
+int main()
+{
+    int num;
+
+    for (int i = 0; i &lt; 2; i = i)
+    {
+        printf("Enter an integer to check palindrome - ");
+        scanf("%d", &num);
+        palindrome(num);
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project15" class="accordion-item">
+                <h2 class="accordion-header" id="heading15">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                        15. Receipt Generator
+                    </button>
+                </h2>
+                <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+You have to fill in values to a template letter.txt
+
+Letter.txt looks like this :-
+"Thanks {{name}} for purchasing {{item}} form our outlet {{outlet}}
+Please visit our outlet {{outlet}} for any kind of problems. We plan to serve you again soon."
+
+You have to read this file & replace these values:
+{{name}} - Saksham
+{{item}} - Table Fan
+{{outlet}} - Ram Laxmi fan outlet
+
+Use function of file to acomplish this
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+
+char *replaceWord(const char *str, const char *oldWord, const char *newWord)
+{
+    char *resultString;
+    int i, count = 0;
+    int newWordLength = strlen(newWord);
+    int oldWordLength = strlen(oldWord);
+
+    // Count times old word occur
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        if (strstr(&str[i], oldWord) == &str[i])
+        {
+            count++;
+
+            // Jump over this word
+            i = i + oldWordLength - 1;
+        }
+    }
+
+    // Making a new string to fit in the replaced words
+    resultString = (char *)malloc(i + count * (newWordLength - oldWordLength) + 1);
+    i = 0;
+    while (*str)
+    {
+        // Compare the substring with result
+        if (strstr(str, oldWord) == str)
+        {
+            strcpy(&resultString[i], newWord);
+            i += newWordLength;
+            str += oldWordLength;
+        }
+        else
+        {
+            resultString[i] = *str;
+            i += 1;
+            str += 1;
+        }
+    }
+    resultString[i] = '\0';
+
+    return resultString;
+}
+
+int main()
+{
+    FILE *ptr = NULL;
+    FILE *ptr2 = NULL;
+    ptr = fopen("ex-15_automated_receipt_generator_template.txt", "r");
+    ptr2 = fopen("ex-15_automated_receipt_generator_template_output.txt", "w");
+    char str[200];
+
+    // Reading a file
+    fgets(str, 200, ptr);
+    printf("The given bill template was :-\n%s\n\n", str);
+
+    char *newStr;
+    newStr = replaceWord(str, "{{name}}", "Saksham");
+    newStr = replaceWord(newStr, "{{item}}", "Table Fan");
+    newStr = replaceWord(newStr, "{{outlet}}", "Ram Laxmi fan outlet");
+    printf("The actual bill template generated is :-\n%s", newStr);
+    fprintf(ptr2, "%s", newStr);
+
+    fclose(ptr);
+    fclose(ptr2);
+
+    return 0;
+}</code></pre>
+                        <pre
+                            class="language-none"><code>Thanks {{name}} for purchasing {{item}} form our outlet {{outlet}}. Please visit our outlet {{outlet}} for any kind of problems. We plan to serve you again soon.</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project16" class="accordion-item">
+                <h2 class="accordion-header" id="heading16">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                        16. Prime or Composite
+                    </button>
+                </h2>
+                <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int remainder_left = -1;
+
+void check(int n)
+{
+    for (int i = 2; i &lt; n; i++)
+    {
+        remainder_left = n % i;
+        if (remainder_left == 0)
+        {
+            break;
+        }
+    }
+}
+
+int main()
+{
+    int n = 0;
+start:
+    printf("Enter the number you want to check for - ");
+    scanf("%d", &n);
+
+    if (n &lt;= 0)
+    {
+        printf("Please Enter Valid Number!!\n");
+    }
+    else if (n == 1)
+    {
+        printf("1 is neither prime nor composite\n");
+    }
+    else if (n == 2)
+    {
+        printf("2 is prime\n");
+    }
+    else
+    {
+        check(n);
+
+        if (remainder_left == 0)
+        {
+            printf("%d is composite\n", n);
+        }
+        else
+        {
+            printf("%d is prime\n", n);
+        }
+    }
+
+    goto start;
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project17" class="accordion-item">
+                <h2 class="accordion-header" id="heading17">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                        17. Command Line Calculator
+                    </button>
+                </h2>
+                <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="heading17"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+You have to create a command line utility to add/subtract/divide/multiply two numbers
+First command line argument must be an operation.
+The next arguments being the two numbers
+For example :-
+&gt;&gt; Command.c add 45 4
+&gt;&gt; 49
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+int main(int argc, char *argv[])
+{
+    char *operation;
+    int num1, num2;
+
+    operation = argv[1];
+    num1 = atoi(argv[2]);
+    num2 = atoi(argv[3]);
+
+    if (strcmp(operation, "add") == 0)
+    {
+        printf("%d\n", num1 + num2);
+    }
+    else if (strcmp(operation, "subtract") == 0)
+    {
+        printf("%d\n", num1 - num2);
+    }
+    else if (strcmp(operation, "multiply") == 0)
+    {
+        printf("%d\n", num1 * num2);
+    }
+    else if (strcmp(operation, "division") == 0)
+    {
+        printf("%d\n", num1 / num2);
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project18" class="accordion-item">
+                <h2 class="accordion-header" id="heading18">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                        18. Area of Circle
+                    </button>
+                </h2>
+                <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="heading18"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+#define pi 3.14
+
+float Edistance(int x1, int x2, int y1, int y2)
+{
+    float Edistance;
+    Edistance = sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));
+    return Edistance;
+}
+
+float area(int x1, int x2, int y1, int y2, float (*fptr)(int, int, int, int))
+{
+    return pi * (fptr(x1, x2, y1, y2) * fptr(x1, x2, y1, y2));
+}
+
+int main()
+{
+    int x1, x2, y1, y2;
+    float area_circle;
+
+start:
+
+    printf("\nEnter first point :-\n");
+    printf("x1 = ");
+    scanf("%d", &x1);
+    printf("y1 = ");
+    scanf("%d", &y1);
+
+    printf("\nEnter second point :-\n");
+    printf("x2 = ");
+    scanf("%d", &x2);
+    printf("y2 = ");
+    scanf("%d", &y2);
+
+    area_circle = area(x1, x2, y1, y2, Edistance);
+    printf("\nThe area of circle whose radius is distance b/w points entered by you is %0.2f\n", area_circle);
+
+    goto start;
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project19" class="accordion-item">
+                <h2 class="accordion-header" id="heading19">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                        19. Pascal's Triangle
+                    </button>
+                </h2>
+                <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+You have to print Pascal's Triangle.
+Take no of rows in triangle as input.
+*/
+
+#include &lt;stdio.h&gt;
+
+// Function for calculating factorial
+int factorial(int num_fac)
+{
+    int res = 1;
+    for (int i = 0; i &lt; num_fac; i++)
+    {
+        res *= (i + 1);
+    }
+    return res;
+}
+
+// Function for calculating nCr
+int combination(int num_comb, int base)
+{
+    int base_fac = factorial(base);
+    int check = 1;
+    for (int i = num_comb; i &gt; num_comb - base; i--)
+    {
+        check *= i;
+    }
+    int res = check / base_fac;
+    return res;
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter no of lines = ");
+    scanf("%d", &n);
+
+    printf("Printing Pascal's Triangle....\n");
+
+    for (int i = 0; i &lt; n; i++)
+    {
+        for (int j = 1; j &lt;= n - i; j++)
+        {
+            printf(" ");
+        }
+
+        for (int k = 0; k &lt; i + 1; k++)
+        {
+            printf("%d ", combination(i, k));
+        }
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project20" class="accordion-item">
+                <h2 class="accordion-header" id="heading20">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                        20. Floyd's Triangle
+                    </button>
+                </h2>
+                <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="heading20"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int row, count = 1;
+
+    printf("Enter the no of rows = ");
+    scanf("%d", &row);
+
+    for (int i = 0; i &lt; row; i++)
+    {
+        for (int j = 0; j &lt; i + 1; j++)
+        {
+            printf("%d ", count);
+            count += 1;
+        }
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project21" class="accordion-item">
+                <h2 class="accordion-header" id="heading21">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+                        21. Sort Array
+                    </button>
+                </h2>
+                <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="heading21"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+void sort(int array[], int n)
+{
+    int temp;
+    for (int i = 0; i &lt; n; i++)
+    {
+        for (int j = i + 1; j &lt; n; j++)
+        {
+            if (array[j] &lt; array[i])
+            {
+                temp = array[j];
+                array[j] = array[i];
+                array[i] = temp;
+            }
+        }
+    }
+    for (int i = 0; i &lt; n; i++)
+    {
+        printf("%d ", array[i]);
+    }
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter no of elements in array = ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    for (int i = 0; i &lt; n; i++)
+    {
+        printf("Enter element %d = ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+
+    sort(arr, n);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project22" class="accordion-item">
+                <h2 class="accordion-header" id="heading22">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                        22. Matrix Algebra
+                    </button>
+                </h2>
+                <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+void add(int m, int n, int p, int q)
+{
+    int a[m][n], b[p][q];
+
+    if (m &gt; 0 && n &gt; 0 && p &gt; 0 && q &gt; 0)
+    {
+        if (m == p && n == q)
+        {
+            printf("Addition is possible\n");
+
+            printf("Enter 1st matrix\n");
+            for (int i = 0; i &lt; m; i++)
+            {
+                for (int j = 0; j &lt; n; j++)
+                {
+                    scanf("%d", &a[i][j]);
+                }
+            }
+
+            printf("Enter 2nd matrix\n");
+            for (int i = 0; i &lt; p; i++)
+            {
+                for (int j = 0; j &lt; q; j++)
+                {
+                    scanf("%d", &b[i][j]);
+                }
+            }
+            int axb[m][n];
+
+            for (int i = 0; i &lt; m; i++)
+            {
+                for (int j = 0; j &lt; n; j++)
+                {
+                    axb[i][j] = (a[i][j] + b[i][j]);
+                }
+            }
+
+            printf("Addition of matices : \n");
+            for (int i = 0; i &lt; m; i++)
+            {
+                for (int j = 0; j &lt; q; j++)
+                {
+                    printf("%d ", axb[i][j]);
+                }
+                printf("\n");
+            }
+        }
+        else
+        {
+            printf("Addition not possible\n");
+        }
+    }
+    else
+    {
+        printf("Addition not possible\n");
+    }
+}
+
+void subtract(int m, int n, int p, int q)
+{
+    int a[m][n], b[p][q];
+
+    if (m &gt; 0 && n &gt; 0 && p &gt; 0 && q &gt; 0)
+    {
+        if (m == p && n == q)
+        {
+            printf("Subtarction is possible\n");
+
+            printf("Enter 1st matrix\n");
+            for (int i = 0; i &lt; m; i++)
+            {
+                for (int j = 0; j &lt; n; j++)
+                {
+                    scanf("%d", &a[i][j]);
+                }
+            }
+
+            printf("Enter 2nd matrix\n");
+            for (int i = 0; i &lt; p; i++)
+            {
+                for (int j = 0; j &lt; q; j++)
+                {
+                    scanf("%d", &b[i][j]);
+                }
+            }
+            int axb[m][n];
+
+            for (int i = 0; i &lt; m; i++)
+            {
+                for (int j = 0; j &lt; n; j++)
+                {
+                    axb[i][j] = (a[i][j] - b[i][j]);
+                }
+            }
+
+            printf("Subtraction of matices : \n");
+            for (int i = 0; i &lt; m; i++)
+            {
+                for (int j = 0; j &lt; q; j++)
+                {
+                    printf("%d ", axb[i][j]);
+                }
+                printf("\n");
+            }
+        }
+        else
+        {
+            printf("Subtraction not possible\n");
+        }
+    }
+    else
+    {
+        printf("Subtraction not possible\n");
+    }
+}
+
+void multiply(int m, int n, int p, int q)
+{
+    int sum = 0;
+    int a[m][n], b[p][q];
+
+    if (m &gt; 0 && n &gt; 0 && p &gt; 0 && q &gt; 0)
+    {
+        if (n == p)
+        {
+            printf("matrix multiplication is possible\n");
+            int axb[m][q];
+
+            printf("Enter 1st matrix\n");
+            for (int i = 0; i &lt; m; i++)
+            {
+                for (int j = 0; j &lt; n; j++)
+                {
+                    scanf("%d", &a[i][j]);
+                }
+            }
+
+            printf("Enter 2nd matrix\n");
+            for (int i = 0; i &lt; p; i++)
+            {
+                for (int j = 0; j &lt; q; j++)
+                {
+                    scanf("%d", &b[i][j]);
+                }
+            }
+
+            for (int i = 0; i &lt; m; i++)
+            {
+                for (int j = 0; j &lt; q; j++)
+                {
+                    for (int k = 0; k &lt; n; k++)
+                    {
+                        sum += a[i][k] * b[k][j];
+                    }
+                    axb[i][j] = sum;
+                    sum = 0;
+                }
+            }
+
+            printf("mutiplication of matices : \n");
+            for (int i = 0; i &lt; m; i++)
+            {
+                for (int j = 0; j &lt; q; j++)
+                {
+                    printf("%d ", axb[i][j]);
+                }
+                printf("\n");
+            }
+        }
+        else
+        {
+            printf("Column of A should be equal to Row of B\n");
+        }
+    }
+    else
+    {
+        printf("Cannot enter zero or negative values.\n");
+    }
+}
+
+int main()
+{
+    int m, n, p, q, process;
+
+    printf("Enter size of 1st matrix: \n");
+    scanf("%d%d", &m, &n);
+    printf("Enter size of 2nd matrix: \n");
+    scanf("%d%d", &p, &q);
+
+    printf("Enter 1 to add\n");
+    printf("Enter 2 to subtract\n");
+    printf("Enter 3 to multiply\n");
+    scanf("%d", &process);
+
+    if (process == 1)
+    {
+        add(m, n, p, q);
+    }
+    else if (process == 2)
+    {
+        subtract(m, n, p, q);
+    }
+    else if (process == 3)
+    {
+        multiply(m, n, p, q);
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project23" class="accordion-item">
+                <h2 class="accordion-header" id="heading23">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                        23. Binary Conversion
+                    </button>
+                </h2>
+                <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="heading23"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>// Program to calculate binary of a number
+
+#include &lt;stdio.h&gt;
+
+// Function for positive numbers
+void positive(int n)
+{
+    int quo = n / 2;
+    int rem_arr[n];
+    rem_arr[0] = n % 2;
+
+    // Loop for storing remainders
+    int i = 1;
+    while (quo != 0)
+    {
+        rem_arr[i] = quo % 2;
+        quo = quo / 2;
+        i += 1;
+    }
+
+    // Printing in reverse order
+    printf("%d in binary is ", n);
+    for (int j = i - 1; j &gt;= 0; j--)
+    {
+        printf("%d", rem_arr[j]);
+    }
+}
+
+// Function for negative numbers
+void negative(int n)
+{
+    int quo = n / 2;
+    int rem_arr[n];
+    rem_arr[0] = n % 2;
+
+    // Loop for storing remainders
+    int i = 1;
+    while (quo != 0)
+    {
+        rem_arr[i] = quo % 2;
+        quo = quo / 2;
+        i += 1;
+    }
+
+    // Adding extra zeroes according to bits
+    int len = 0;
+    int left = 0;
+    if (i &lt;= 8)
+    {
+        len = 8;
+        left = 8 - i;
+        for (int j = 0; j &lt; left; j++)
+        {
+            rem_arr[i + j] = 0;
+        }
+    }
+    else if (i &lt;= 16)
+    {
+        len = 16;
+        left = 16 - i;
+        for (int j = 0; j &lt; left; j++)
+        {
+            rem_arr[i + j] = 0;
+        }
+    }
+    else if (i &lt;= 32)
+    {
+        len = 32;
+        left = 32 - i;
+        for (int j = 0; j &lt; left; j++)
+        {
+            rem_arr[i + j] = 0;
+        }
+    }
+    else if (i &lt;= 64)
+    {
+        len = 64;
+        left = 64 - i;
+        for (int j = 0; j &lt; left; j++)
+        {
+            rem_arr[i + j] = 0;
+        }
+    }
+
+    // Making 1st complement
+    for (int k = 0; k &lt; len; k++)
+    {
+        if (rem_arr[k] == 0)
+        {
+            rem_arr[k] = 1;
+        }
+        else
+        {
+            rem_arr[k] = 0;
+        }
+    }
+
+    // Making 2nd complement
+    for (int k = 0; k &lt; len; k++)
+    {
+        if (rem_arr[k] == 1)
+        {
+            rem_arr[k] = 0;
+        }
+        else
+        {
+            rem_arr[k] = 1;
+            break;
+        }
+    }
+
+    // Printing in reverse order
+    printf("%d in binary is ", -1 * n);
+    for (int j = len - 1; j &gt;= 0; j--)
+    {
+        printf("%d", rem_arr[j]);
+    }
+}
+
+// Main Function
+int main()
+{
+    int n;
+
+    printf("Enter decimal number = ", n);
+    scanf("%d", &n);
+
+    if (n &gt;= 0)
+    {
+        positive(n);
+    }
+    else
+    {
+        negative(-1 * n);
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project24" class="accordion-item">
+                <h2 class="accordion-header" id="heading24">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                        24. Formatting String
+                    </button>
+                </h2>
+                <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+WAP to format a string restrict upto alphabats & spaces only.
+*/
+
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char str[20], arr[20];
+    int count = 0, asc, j = 0;
+
+    // Taking input for string
+    printf("Enter string = ");
+    gets(str);
+
+    // Calculating length of string
+    while (str[count] != '\0')
+    {
+        count += 1;
+    }
+
+    // Loop for checking alphabats
+    for (int i = 0; i &lt; count; i++)
+    {
+        asc = (int)str[i];
+        // If ascii value falls into range of alphabats or space then store in array
+        if ((asc &lt; 91 && asc &gt; 64) || (asc &gt; 96 && asc &lt; 123) || asc == 32)
+        {
+            arr[j] = str[i];
+            j += 1;
+        }
+        else
+        {
+            // Else if characters other than alphabats contains space on both sides then remove one space
+            if ((int)str[i - 1] == 32 && (int)str[i + 1] == 32)
+            {
+                j -= 1;
+            }
+        }
+    }
+
+    // Printing final array as string
+    for (int k = 0; k &lt; j; k++)
+    {
+        printf("%c", arr[k]);
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project25" class="accordion-item">
+                <h2 class="accordion-header" id="heading25">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                        25. String Case Change
+                    </button>
+                </h2>
+                <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="heading25"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>/*
+WAP to convert whole string to uppercase or lowercase as per the choice of user
+*/
+
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char str[20];
+    int count = 0, asc, query;
+
+    // Taking input for string
+    printf("Enter string = ");
+    gets(str);
+
+    // Taking input for user's choice
+    printf("Enter 1 for lowercase & 2 for uppercase = ");
+    scanf("%d", &query);
+
+    // Calculating length of string
+    while (str[count] != '\0')
+    {
+        count += 1;
+    }
+
+    // Loop for checking elements
+    for (int i = 0; i &lt; count; i++)
+    {
+        asc = (int)str[i];
+        // If choice is for lowercase & character falls in uppercase then increase ascii value by 32
+        if ((asc &lt; 91 && asc &gt; 64) && query == 1)
+        {
+            str[i] = (char)(asc + 32);
+        }
+        // If choice is for uppercase & character falls in lowercase then decrease ascii value by 32
+        else if ((asc &gt; 96 && asc &lt; 123) && query == 2)
+        {
+            str[i] = (char)(asc - 32);
+        }
+    }
+
+    // Printing final string
+    puts(str);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>

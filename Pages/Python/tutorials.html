@@ -1,0 +1,2824 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | Python | Tutorials</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c5 {
+            display: none;
+        }
+
+        #d2,
+        #d3,
+        #d4,
+        #d6,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./python.html">Python</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./tutorials.html">Tutorials</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Topic</h3>
+        <hr>
+        <h5 id="nothing">No topic matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        1. Printing Methods
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code># Please dont remove this line
+"""
+multi
+line
+comment
+"""
+print("Hello Saksham!!")
+print("Hello World", end=" ")
+print("Good morning")
+print("Hi", "Good Afternoon")
+print("c:\nsaksham")
+print("c:\\nsaksham")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project2" class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        2. Variable & Data Type
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>var1 = "hello world "
+var2 = 4
+var3 = 36.7
+var4 = "saksham"
+var5 = "10"
+var6 = "15"
+
+print(type(var1))
+print(var1)
+
+print(type(var2))
+print("var2 = ", var2)
+
+print(type(var3))
+print("var3 = ", var3)
+
+print("var2 + var3 = ", var2 + var3)
+
+print("var1 + var4 = ", var1 + var4)
+
+print(int(var5) + int(var6))
+
+print(10 * "Hello Saksham\n")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        3. Take Input
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>print("Enter a number - ", end="")
+var1 = input()
+print("You entered "+ var1)
+
+var2 = int(input("Enter another number - "))
+print("You entered ", var2)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        4. String
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>str1 = "Saksham is a good boy"
+str2 = "Sakshamisagoodboy"
+str3 = "saksham is a good boy"
+
+print("str1 = " + str1)
+print("str1[0] = " + str1[0])
+print("str1[1] = " + str1[1])
+print("str1[0:5] = " + str1[0:5])
+print("Length of str1 is " + str(len(str1)))
+print("str1[0:90] = " + str1[0:90])
+print("str1[0:] = " + str1[0:])  # Second argument is total length by default
+print("str1[:5] = " + str1[:5])  # First argument is 0 by default
+print("str1[::] = " + str1[::])  # Third argument is 1 by default
+print("str1[0:21:2] = " + str1[0:90:2] + " \"Here 2 is jump\"")
+print("str1[0::555] = " + str1[0::555])
+print("str1[-5:] = " + str1[-5:])
+print("str1[-5:-2] = " + str1[-5:-2])
+print("str1[::-1] = " + str1[::-1])
+print("str1[::-2] = " + str1[::-2])
+
+print("is str1 contain only alpha-numerics - " + str(str1.isalnum()))  # Check all chaarcters are alpha-numeric
+print("is str2 contain only alpha-numerics - " + str(str2.isalnum()))
+
+print("is str1 contain only alphabetic - " + str(str1.isalpha()))  # Check all characters are alphabetic
+print("is str2 contain only alphabetic - " + str(str2.isalpha()))
+
+print("is str1 is ending with boy - " + str(str1.endswith("boy")))  # Check ending with argument given
+
+print("Number of s time in str1 is - " + str(str1.count("s")))  # Count no. of occurence of a substring
+print("Number of space time in str1 is - " + str(str1.count(" ")))
+
+print("After first letter capitalize of str3 - " + str(str3.capitalize()))  # Capitalize first letter
+
+print("Index of is in str1 - " + str(str1.find("is")))  # Find index of a substring
+
+print("Lower case of str1 is - " + str(str1.lower()))  # Convert whole string into lower case
+print("Upper case of str1 is - " + str(str1.upper()))  # Convert whole string into upper case
+
+print("After replace is by are in str1 - " + str(str1.replace("is", "are")))  # Replace first item by second
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project5" class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        5. List
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+List is written in [] brackets.
+List is mutable i.e. can be changed.
+"""
+
+list = ["Saksham", 1, 3.14, True]
+list2 = [2, 4, 1, 5.6, 0, 8, -1]
+
+print(type(list))
+print("list is " + str(list))
+print("list[0] is - " + str(list[0]))
+print("list[-1] is - " + str(list[-1]))
+
+# Sort, reverse, append, insert, remove, pop type functions change the original list
+list2.sort()  # Sort items of list in increasing order
+print("list2 after sorting is " + str(list2))
+
+list2.reverse()  # Reverse whole list
+print("list2 after reversing is " + str(list2))
+
+print("list2[0:7] is - " + str(list2[0:7]))
+print("list2[:7] is - " + str(list2[:7]))
+print("list2[:] is - " + str(list2[:]))
+print("list2[:6] is - " + str(list2[:6]))
+print("list2[1:] is - " + str(list2[1:]))
+
+print("list2[::] is - " + str(list2[::]))
+print("list2[::2] is - " + str(list2[::2]))
+
+print("list2[::-1] is - " + str(list2[::-1]))
+print("list2[::-3] is - " + str(list2[::-3]))
+print("list2[1:7:-3] is - " + str(list2[1:7:-3]))
+# It is not better to take more than 1 in negative side
+
+print("length of list2 is " + str(len(list2)))  # Give length of list
+print("max of list2 is " + str(max(list2)))  # Give max number in list
+print("min of list2 is " + str(min(list2)))  # Give min number in list
+
+list2.append(300)  # Append a argument at end
+print("list2 after appending 300 at end is " + str(list2))
+
+list2.insert(1, 50)  # Insert second argument at index of first argument
+print("list2 after inserting 50 at index 1 is " + str(list2))
+
+list2.remove(0)  # Remove item at index of argument
+print("list2 after removing 0 is " + str(list2))
+
+list2.pop()  # Remove last item
+print("list2 after popping out last elememt is " + str(list2))
+
+list2[1] = 100  # Change item at specified index
+print("list2 after changing index 1 to 100 is " + str(list2))
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        6. Tuple
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Tuples are written in () brackets.
+Tuples are immutable i.e. can't be changed
+"""
+
+tup1 = (1, 3.14, True, "Saksham")
+tup2 = (1)  # This is not tuple this in int
+tup3 = (1,)  # If we want to make tuple of single element then we should write like this
+
+print(type(tup1))
+print("tup1 is " + str(tup1))
+print("tup2 is " + str(tup2))
+print("type of tup2 is " + str(type(tup2)))
+print("tup3 is " + str(tup3))
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        7. Dictionary
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Dictionary is written in {} brackets.
+Dictionary is mutable i.e. can be changed.
+"""
+
+d1 = {}
+# Before ':' keys are written & after ':' values corresponding to keys are written
+d2 = {"Saksham": "Burger", "Rohan": "Roti", "Mohan": "Chaval", "Shubham": {"B": "poha", "L": "roti", "D": "sweets"}}
+
+print("d1 = " + str(d1))
+print("d2 = " + str(d2))
+print("Saksham = " + str(d2["Saksham"]))
+print("Rohan = " + str(d2["Rohan"]))
+print("Mohan = " + str(d2["Mohan"]))
+print("Shubham = " + str(d2["Shubham"]))
+print("Shubham[B] = " + str(d2["Shubham"]["B"]))
+
+# Adding an element
+d2["Ankit"] = "Junk Food"
+print("d2 = " + str(d2))
+
+# Removing an element --&gt; use del keyword & enter key as argument
+del d2["Ankit"]
+print("d2 = " + str(d2))
+
+# d3 = d2 --&gt; If we change d3 then d2 also change
+d3 = d2
+d3["Ankit"] = "Junk Food"
+print("d2 = " + str(d2))
+
+# d4 = d2.copy() --&gt; If we change d4 then d2 not change
+d4 = d2.copy()
+del d4["Ankit"]
+print("d2 = " + str(d2))
+
+# Get --&gt; For accessing values by corresponding keys
+d5 = d2.get("Saksham")
+print("d5 = " + str(d5))
+
+# Update --&gt; For updating value of a key
+d2.update({"Rohan": "Toffee"})
+print("d2 = " + str(d2))
+
+# Printing keys, values & items
+print("d2.keys() = " + str(d2.keys()))
+print("d2.values() = " + str(d2.values()))
+print("d2.items() = " + str(d2.items()))
+
+# Converting list into dictionary
+list1 = [["Saksham", 1], ["Rohan", 2], ["Harry", 3], ["Shubham", 4]]
+dict = dict(list1)
+print("dict is", dict)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project8" class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        8. Set
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Set is written in ([]) brackets.
+Sets are collection of well defined objects i.e. one value counted only once doesn't matter how many times
+it is written.
+Sets are mutable.
+Set always print in increasing order.
+"""
+
+s = set([1, 2, 3, 7, 4, 4, 5, 3])
+s1 = set([4, 5, 6, 7, 8, 9])
+s3 = set([15, 16])
+
+print("type of s is", type(s))
+print("s =", s)
+
+# Adding elements
+s.add(6)
+s.add(2)
+print("s after adding 6 & 2 is", s)
+
+# Removing elements
+s.remove(6)
+print("s after removing 6 is", s)
+
+# Union --&gt; values which are in either of sets
+s2 = s.union(s1)
+print("Union of s & s1 is", s2)
+
+# Intersection --&gt; values which are in both sets
+s4 = s.intersection(s1)
+print("Intersection of s & s1 is", s4)
+
+# isdisjoint --&gt; True if both sets have no common element
+print("is s & s1 are disjoint -", s.isdisjoint(s1))
+print("is s & s3 are disjoint -", s.isdisjoint(s3))
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project9" class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        9. If Else
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>a = int(input("Enter a = "))
+b = int(input("Enter b = "))
+
+if a &gt; b:
+    print(a, "is greater than", b)
+elif a == b:
+    print(a, "is equal to", b)
+else:
+    print(a, "is smaller than", b)
+
+list1 = [3, 4, 5, 6]
+
+print(5 in list1)
+if 5 in list1:
+    print("5 is in list1")
+
+print(15 in list1)
+if 15 in list1:
+    print("15 is in list1")
+else:
+    print("15 is not in list1")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project10" class="accordion-item">
+                <h2 class="accordion-header" id="heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        10. For Loops
+                    </button>
+                </h2>
+                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>list1 = ["Saksham", "Rohan", "Harry", "Shubham"]
+list2 = [["Saksham", 1], ["Rohan", 2], ["Harry", 3], ["Shubham", 4]]
+dict1 = dict(list2)
+
+# For printing all items
+for item in list1:
+    print(item)
+
+for item in list2:
+    print(item)
+
+# For printing items & values distinctly
+for item, number in list2:
+    print(item, number)
+
+# For printing keys & values of dictionary
+for item, number in dict1.items():
+    print(item, number)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project11" class="accordion-item">
+                <h2 class="accordion-header" id="heading11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                        11. While Loops
+                    </button>
+                </h2>
+                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>i = 0
+while i &lt; 45:
+    print(i)
+    i = i + 1
+
+"""
+while (1):
+while (True):
+
+These both are infinite loops
+"""
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project12" class="accordion-item">
+                <h2 class="accordion-header" id="heading12">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                        12. Break & Continue
+                    </button>
+                </h2>
+                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Break --&gt; For exiting the loop & execute code after the loop
+Continue --&gt; For exiting the current loop & re-enter in it
+"""
+
+i = 0
+j = 0
+
+while (True):
+    print(i, end=" ")
+    if i == 50:
+        break
+    i = i + 1
+
+print("")
+
+while (1):
+    j = j + 1
+    if j &lt; 5:
+        continue
+    print(j, end=" ")
+    if j == 50:
+        break
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project13" class="accordion-item">
+                <h2 class="accordion-header" id="heading13">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                        13. Operator
+                    </button>
+                </h2>
+                <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code># Arithmetic Operator
+print("5 + 6 =", 5 + 6)
+print("5 - 6 =", 5 - 6)
+print("5 * 6 =", 5 * 6)
+print("5 / 6 =", 5 / 6)
+print("2 ** 5 =", 2 ** 5)  # Used for powers
+print("15 // 6 =", 15 // 6)  # Used for quotient
+print("15 % 6 =", 15 % 6)  # Used for remainder
+print()
+
+# Assignment Operator
+x = 5
+print("x =", x)
+x += 7  # Add & store
+print("x +=", x)
+x -= 9  # Subtract & store
+print("x -=", x)
+x *= 5  # Multiply & store
+print("x *=", x)
+x /= 5  # Divide & store
+print("x /=", x)
+x %= 5  # Take remainder by dividing 5 & store
+print("x %=", x)
+print()
+
+# Comparison Operator
+x = 5
+print("x == 5 is", x == 5)  # True if a = b
+print("x != 5 is", x != 5)  # True if a is not equal to b
+print("x &gt; 5 is", x &gt; 5)  # True if a &gt; b
+print("x &lt;= 5 is", x &lt;= 5)  # True if a &lt; b
+print()
+
+# Logical Operator
+a = True
+b = False
+print("a and b is", a and b)  # And is true when both statement are true
+print("a or b is", a or b)  # Or is false when both statement are false
+print("a and a is", a and a)
+print("b or b is", b and b)
+print()
+
+# Identity Operator
+c = True
+d = False
+print("c is d is", c is d)  # True if a = b
+print("c is not d is", c is not d)  # True if a is not equal to b
+print()
+
+# Membership Operator
+list = [1, 2, 4, 5, 1, 28, 3, 78, 56, 45]
+print("28 in list is", 28 in list)  # Check existence list
+print("248 in list is", 248 in list)
+print("248 not in list is", 248 not in list)
+print()
+
+# Bitwise Operator
+# 0 = 00
+# 1 = 01
+# 2 = 10
+# 3 = 11
+print("0 & 1 is", 0 & 1)  # Work on binary numbers
+print("0 | 1 is", 0 | 1)
+print("2 & 1 is", 2 & 1)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project14" class="accordion-item">
+                <h2 class="accordion-header" id="heading14">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                        14. If Else Short-hand
+                    </button>
+                </h2>
+                <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>a = int(input("Enter a = "))
+b = int(input("Enter b = "))
+
+print("a &gt; b") if a &gt; b else print("a &lt;= b")
+# We should not use this short-hand
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project15" class="accordion-item">
+                <h2 class="accordion-header" id="heading15">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                        15. Functions
+                    </button>
+                </h2>
+                <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>a = int(input("Enter a = "))
+b = int(input("Enter b = "))
+
+c = sum((a, b))  # Built-in Functions
+print("a + b =", c)
+
+
+# User defined functions
+def func1():
+    print("You are a function")
+
+
+func1()  # Calling a function
+print(func1())
+
+
+def sum1(a1, a2):
+    print(a1, "+", a2, "=", a1 + a2)
+
+
+sum1(a, b)
+
+
+def avg1(a, b):
+    """\tThis is a function which returns the average of two numbers only
+    WARNING :- Don't use for more than two numbers"""
+    # The first comment written in a function is doc_string which tells about function
+    return (a + b) / 2
+
+
+avg = avg1(a, b)
+print("average of", a, "and", b, "is =", avg)
+print(avg1.__doc__)  # Accessing doc_string of a function
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project16" class="accordion-item">
+                <h2 class="accordion-header" id="heading16">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                        16. Try Except
+                    </button>
+                </h2>
+                <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Try --&gt; Run code written inside it but if it give error then don't stop program
+Except --&gt; If try give error then don't stop but move ahead to except & if given "Exception as" then store error
+"""
+
+a = input("Enter a = ")
+b = input("Enter b = ")
+
+try:
+    print(a, "+", b, "=", int(a) + int(b))
+except Exception as e:
+    print(e)
+
+print("This line is very important!!")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project17" class="accordion-item">
+                <h2 class="accordion-header" id="heading17">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                        17. Files
+                    </button>
+                </h2>
+                <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="heading17"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code># File I/O basics
+"""
+"r" - Open file for reading - default
+"w" - Open file for writing - if file does not exists then it creates automatically
+"x" - Create file if not exists
+"a" - Add more content to file - if file does not exists then it creates automatically
+"t" - text mode - default
+"b" - binary mode
+"+" - read and write
+"""
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project18" class="accordion-item">
+                <h2 class="accordion-header" id="heading18">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                        18. File Read
+                    </button>
+                </h2>
+                <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="heading18"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>r = open("T18 file read src.txt")
+content = r.read()  # Storing file data in variable
+
+print("The file r \"T18 file read src.txt\" contains :-")
+print(content)
+print()
+
+r.close()  # It is a good practice to close a file so that other programs can use that file
+
+rb = open("T18 file read src.txt", "rb")  # Opening in binary mode
+content = rb.read()
+
+print("The file rb \"T18 file read src.txt\" contains :-")
+print(content)
+print()
+
+rb.close()
+
+rt = open("T18 file read src.txt", "rt")  # Opening in text mode - default
+content = rt.read(3)  # Storing first 3 characters of file
+
+print("The file rt \"T18 file read src.txt\" contains :-")
+print(content)
+content = rt.read(3)  # Storing next 3 characters of file
+print(content)
+print()
+
+rt.close()
+
+line1 = open("T18 file read src.txt", "rt")
+content = line1.read()  # Read all characters one by one
+
+print("The file line1 \"T18 file read src.txt\" contains :-")
+for line in content:
+    print(line)
+print()
+
+line1.close()
+
+line2 = open("T18 file read src.txt", "rt")  # Read all lines one by one
+
+print("The file line2 \"T18 file read src.txt\" contains :-")
+for line in line2:
+    print(line, end="")
+print()
+print()
+
+line2.close()
+
+readline1 = open("T18 file read src.txt", "rt")
+
+print("The file readline1 \"T18 file read src.txt\" contains :-")
+print(readline1.readline(), end="")  # Reading first line
+print(readline1.readline(), end="")  # Reading next line
+print()
+
+readline1.close()
+
+readlines1 = open("T18 file read src.txt", "rt")
+
+print("The file readlines1 \"T18 file read src.txt\" contains :-")
+print(readlines1.readlines(), end="")  # Read all lines at once
+print()
+
+readlines1.close()
+</code></pre>
+                        <pre class="language-none"><code>Saksham is a good boy
+Saksham is king of this universe
+Follow saksham to get latest updates</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project19" class="accordion-item">
+                <h2 class="accordion-header" id="heading19">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                        19. File Write
+                    </button>
+                </h2>
+                <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>f = open("T19 file write src.txt", "w")
+# Deleting whole content & writing this
+a = f.write("Saksham is a good boy\n")  # if we store it in variable then that variable returns no of characters written
+print("No of letters you wrote are =", a)
+f.close()
+
+f = open("T19 file write src.txt", "a")
+# Appending new content after present content of file
+f.write("Saksham is a good boy\n")
+f.close()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project20" class="accordion-item">
+                <h2 class="accordion-header" id="heading20">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                        20. File Read & Write
+                    </button>
+                </h2>
+                <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="heading20"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code># For reading & writing both
+f = open("T20 file read & write src.txt", "r+")
+print(f.read())
+f.write("Thank You\n")
+f.close()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project21" class="accordion-item">
+                <h2 class="accordion-header" id="heading21">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+                        21. File More
+                    </button>
+                </h2>
+                <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="heading21"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>f = open("T21 file more src.txt", "r+")
+print("File handle is at position", f.tell())  # Tell that at which index our pointer is right now
+print(f.readline())  # This read one line so index of pointer changed - refer next line
+print("File handle is at position", f.tell())
+print(f.readline())
+print("File handle is at position", f.tell())
+
+f.seek(5)  # Resetting index of pointer to given argument
+print("File handle is reset to position", f.tell())
+print(f.readline())
+
+f.close()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project22" class="accordion-item">
+                <h2 class="accordion-header" id="heading22">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                        22. File by With
+                    </button>
+                </h2>
+                <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code># This is short hand which is very useful
+with open("T20 file read & write src.txt") as f:
+    print(f.readlines())
+
+# Automatically closes the file
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project23" class="accordion-item">
+                <h2 class="accordion-header" id="heading23">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                        23. Global Variable
+                    </button>
+                </h2>
+                <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="heading23"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>a = 10  # Global Variable
+
+
+def func1():
+    # a = 5  # Local Variable
+    b = 8  # Local Variable
+
+    # We can't change value of global variable locally so use global keyword
+    global a  # If a local variable is also present with same name then it give error
+    a = a + 45
+    print("a =", a, "b =", b)
+
+
+func1()
+print("a =", a)
+
+
+def func2():
+    """
+    In the above function I said that we can't make local variable if we are changing it globally
+    somewhere in function.
+    But here x is not present as global variable so first we have to make a local variable &
+    then change its value in global scope.
+    """
+    x = 20
+
+    def func3():
+        global x  # Only change global variable not local variable of father function
+        x = 88
+
+    print("Before calling func3 x =", x)
+    func3()
+    print("After calling func3 x =", x)
+
+
+func2()
+print("Globally x =", x)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project24" class="accordion-item">
+                <h2 class="accordion-header" id="heading24">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                        24. Recursion
+                    </button>
+                </h2>
+                <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Recursion is just calling a function in itself.
+But if we not declare some base values to end the recursion, then it would calling the function infinite times &
+will give error.
+Recursion is not a good technique because it process in reverse manner hence line of code increase rapidly.
+"""
+
+
+def fac_itr(n):  # This is for iteration i.e. looping
+    fac = 1
+    for i in range(n):
+        fac = fac * (i + 1)
+    return fac
+
+
+def fac_rec(n):  # This is for recursion
+    if n == 0 or n == 1:
+        return 1
+    elif n &gt; 1:
+        return n * fac_rec(n - 1)
+    else:
+        print("Entered incorrect value")
+
+
+number = int(input("Enter a number = "))
+print("Factorial of", number, "using iteration is", fac_itr(number))
+print("Factorial of", number, "using recursion is", fac_itr(number))
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project25" class="accordion-item">
+                <h2 class="accordion-header" id="heading25">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                        25. Lambda Function
+                    </button>
+                </h2>
+                <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="heading25"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Lambda is a one liner function.
+name = lambda arguments: return
+"""
+sum = lambda a, b: a + b
+print("Value of 5 + 4 by lambda is", sum(5, 4))
+
+list = [[1, 24], [3, 6], [5, 18]]
+list.sort(key=lambda x: x[1])  # Taking elements at index 1 & then sorting them.
+print(list)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project26" class="accordion-item">
+                <h2 class="accordion-header" id="heading26">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                        26. Random Module
+                    </button>
+                </h2>
+                <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import random  # This is module for find random numbers.
+
+random_int = random.randint(0, 100)  # Find random integer b/w 0 & 100 both included
+random_number = random.random()  # Find random number from 0 to 1 & multiply it by n if you want from 0 to n
+print("random integer b/w 0 & 100 both included is", random_int)
+print("random number b/w 0 & 100 both included is", random_number * 100)
+
+list = ["saksham", "shubham", "harry", "rohan"]
+choice = random.choice(list)  # Chooses a random element from a list
+print("random choice from list is", choice)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project27" class="accordion-item">
+                <h2 class="accordion-header" id="heading27">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+                        27. F Strings
+                    </button>
+                </h2>
+                <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="heading27"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>me = "Saksham"
+a = 3
+b = "This is %s" % me  # This is a waste method to concatenate a string.
+c = "This is %s %s" % (me, a)
+print("b =", b)
+print("c =", c)
+
+# Also can be written as
+d = "This is {} {}"
+e = "This is {1} {0}"
+
+f = d.format(me, a)
+g = e.format(me, a)
+
+print("f =", f)
+print("g =", g)
+
+# This is f-string method which is very useful.
+h = f"This is {me} {a} {4 * 5}"
+print("h =", h)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project28" class="accordion-item">
+                <h2 class="accordion-header" id="heading28">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                        28. Args Kwargs
+                    </button>
+                </h2>
+                <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="heading28"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+*args --&gt; for taking list as an argument
+**kwargs --&gt; for taking dictionary as an argument
+"""
+
+
+def args(normal, *args, **kwargs):
+    print(normal)
+    for items in args:
+        print(items)
+    print("\nIntroduction:-")
+    for key, value in kwargs.items():
+        print(f"{key} is a {value}")
+
+
+list = ["Saksham", "Shubham", "Rohan", "Harry", "Shivam"]
+kw = {"Saksham": "Programmer", "Shubham": "Manager", "Harry": "Instructor"}
+normal = "The tuple of students is:-"
+
+print("Before appending:-")
+args(normal, *list, **kw)
+
+list.append("Skillf")
+
+print("\nAfter appending:-")
+args(normal, *list, **kw)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project29" class="accordion-item">
+                <h2 class="accordion-header" id="heading29">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
+                        29. Time Module
+                    </button>
+                </h2>
+                <div id="collapse29" class="accordion-collapse collapse" aria-labelledby="heading29"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import time
+
+initial = time.time()  # For present time
+
+for i in range(200):
+    print("This is saksham")
+print(f"For loop run in {time.time() - initial} seconds\n")
+
+k = 0
+while k &lt; 200:
+    print("This is harry")
+    k = k + 1
+print(f"While loop run in {time.time() - initial} seconds\n")
+
+# For printing day, month, date, time up to seconds, year at present
+print(f"Time now is {time.asctime(time.localtime(time.time()))}\n")
+
+for i in range(5):
+    print("This will print in interval of 1 second")
+    time.sleep(1)  # For taking a gap
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project30" class="accordion-item">
+                <h2 class="accordion-header" id="heading30">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse30" aria-expanded="false" aria-controls="collapse30">
+                        30. Enumerate Function
+                    </button>
+                </h2>
+                <div id="collapse30" class="accordion-collapse collapse" aria-labelledby="heading30"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>list = ["bhindi", "aloo", "sticks", "chowmein"]
+
+print("By for loop :-")
+i = 1
+for item in list:
+    if i % 2 != 0:
+        print(f"Please buy {item}")
+    i += 1
+
+print("\nBy enumeration :-")
+for index, item in enumerate(list):  # Can take 2 arguments from list
+    if index % 2 == 0:
+        print(f"Please buy {item}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project31" class="accordion-item">
+                <h2 class="accordion-header" id="heading31">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse31" aria-expanded="false" aria-controls="collapse31">
+                        31. Import
+                    </button>
+                </h2>
+                <div id="collapse31" class="accordion-collapse collapse" aria-labelledby="heading31"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import sklearn as sk
+import sys
+from sklearn.ensemble import RandomForestClassifier
+import T31_how_import_works_2  # Importing a custom file
+from T31_how_import_works_2 import b
+
+print(f"Version of sklearn is {sk.__version__}")  # Printing version of a module
+print(f"path of sys is {sys.path}")  # Printing path of a module
+print(RandomForestClassifier())
+
+print(f"Value of a from source file is {T31_how_import_works_2.a}")  # Recommended
+print(f"Value of b from source file is {b}")
+T31_how_import_works_2.joke("Saksham")</code></pre>
+                        <pre class="language-py"><code># This file is made for previous file.
+a = 7
+b = 5
+
+
+def joke(str):
+    print(f"This function is joke of {str}")</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project32" class="accordion-item">
+                <h2 class="accordion-header" id="heading32">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse32" aria-expanded="false" aria-controls="collapse32">
+                        32. Main Function
+                    </button>
+                </h2>
+                <div id="collapse32" class="accordion-collapse collapse" aria-labelledby="heading32"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import T32_main_function_2
+
+print(T32_main_function_2.printstr("Harry"))
+print(f"4 + 56 is {T32_main_function_2.add(4, 56)}")</code></pre>
+                        <pre class="language-py"><code># This file is made for previous file.
+def printstr(str):
+    return f"This is {str}"
+
+
+def add(a, b):
+    return a + b
+
+
+print(f"Because name is {__name__}")  # This shows that name of every file is __main__
+if __name__ == '__main__':
+    # This code would not export to file in which this file is imported.
+    print(printstr("Saksham"))
+    print(f"4 + 6 is {add(4, 6)}")</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project33" class="accordion-item">
+                <h2 class="accordion-header" id="heading33">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse33" aria-expanded="false" aria-controls="collapse33">
+                        33. Join Function
+                    </button>
+                </h2>
+                <div id="collapse33" class="accordion-collapse collapse" aria-labelledby="heading33"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>list = ["John", "Cena", "Randy", "Orton", "Sheamus", "Khali", "Jinder Mahal"]
+
+print("By for loop :-")
+for item in list:
+    print(f"{item} &", end=" ")
+print("other wwe superstars")
+
+print("By join function :-")
+a = ", ".join(list)  # This joins items of list by value written in " "
+print(a, "& other wwe superstars")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project34" class="accordion-item">
+                <h2 class="accordion-header" id="heading34">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse34" aria-expanded="false" aria-controls="collapse34">
+                        34. Map Function
+                    </button>
+                </h2>
+                <div id="collapse34" class="accordion-collapse collapse" aria-labelledby="heading34"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>numbers = ["3", "45", "23"]
+
+print("By for loop :-")
+for i in range(len(numbers)):
+    numbers[i] = int(numbers[i])
+print(f"number[2] + 1 = {numbers[2] + 1}")
+
+print("By map filter :-")
+# map function map over whole list (second arg) & apply first arg.
+# map function takes first argument as what to do & second argument as on whom to do.
+numbers = list(map(int, numbers))
+print(f"number[1] + 1 = {numbers[1] + 1}")
+
+num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# map with lambda is very useful.
+square = list(map(lambda x: x * x, num))
+print(f"Squares of num is {square}")
+
+
+def square_func(a):
+    return a * a
+
+
+def cube_func(a):
+    return a * a * a
+
+
+math_list = [square_func, cube_func]
+print("List of squares & cube is :-")
+for i in range(5):
+    val = list(map(lambda x: x(i), math_list))
+    print(val)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project35" class="accordion-item">
+                <h2 class="accordion-header" id="heading35">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse35" aria-expanded="false" aria-controls="collapse35">
+                        35. Filter Function
+                    </button>
+                </h2>
+                <div id="collapse35" class="accordion-collapse collapse" aria-labelledby="heading35"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>list1 = [1, 2, 3, 5, 4, 2, 6, 8, 2, 4, 2, 8, 24, 4]
+
+
+def is_gr_5(num):
+    return num &gt; 5
+
+
+# filter function filter whole list (second arg) for first arg.
+# filter function takes first argument as what to do & second argument as on whom to do.
+gr_than_5 = list(filter(is_gr_5, list1))
+print(gr_than_5)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project36" class="accordion-item">
+                <h2 class="accordion-header" id="heading36">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse36" aria-expanded="false" aria-controls="collapse36">
+                        36. Reduce Function
+                    </button>
+                </h2>
+                <div id="collapse36" class="accordion-collapse collapse" aria-labelledby="heading36"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>from functools import reduce  # We have to import reduce first.
+
+list1 = [1, 2, 3, 4, 5, 6]
+# reduce function reduces whole list (second arg) while applying first arg.
+# reduce function takes first argument as what to do & second argument as on whom to do.
+sum = reduce(lambda x, y: x + y, list1)
+print("The reduced sum is", sum)
+
+multi = reduce(lambda x, y: x * y, list1)
+print("The reduced multiply is", multi)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project37" class="accordion-item">
+                <h2 class="accordion-header" id="heading37">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse37" aria-expanded="false" aria-controls="collapse37">
+                        37. Decorators
+                    </button>
+                </h2>
+                <div id="collapse37" class="accordion-collapse collapse" aria-labelledby="heading37"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>def func1():
+    print("Subscribe Now")
+
+
+func2 = func1
+del func1  # For deleting a function
+# If we delete func1 then there is no effect on func2.
+print("The value of func2 is", end=" ")
+func2()
+
+
+def funcret(num):
+    if num == 0:
+        return print
+    elif num == 1:
+        return int
+
+
+print("The value of funcret(0) is", funcret(0))
+print("The value of funcret(1) is", funcret(1))
+
+
+def executor(func):  # Taking function as argument
+    func("This")
+
+
+print("The value of executor is ", end="")
+executor(print)
+
+
+def dec1(func):
+    def nowexc():
+        print("Executing")
+        func()
+        print("Executed")
+
+    return nowexc
+
+
+def saksham():  # This is made for passing in other function manually
+    print("This is saksham")
+
+
+@dec1  # This automatically pass saksham2 in dec1 whenever saksham2 is called
+def saksham2():
+    print("This is saksham2")
+
+
+saksham = dec1(saksham)
+saksham()
+saksham2()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project38" class="accordion-item">
+                <h2 class="accordion-header" id="heading38">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse38" aria-expanded="false" aria-controls="collapse38">
+                        38. OOPS
+                    </button>
+                </h2>
+                <div id="collapse38" class="accordion-collapse collapse" aria-labelledby="heading38"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Classes - Template
+Object - Instance of the class
+DRY - Do not Repeat Yourself
+"""
+
+
+class Student():  # Making class
+    pass  # Used for passing without doing anything
+
+
+var1 = Student()  # Making instances of a class
+var2 = Student()
+
+print("var1 is", var1)  # Printing address of var1
+print("var2 is", var2)
+
+var1.name = "Saksham"  # Giving arguments to instances
+var1.std = "12"
+var1.section = "A"
+
+var2.std = "9"
+var2.section = "B"
+var2.subjects = ["hindi", "science"]
+
+print("\nvar1's details :-")
+print("var1.name =", var1.name)  # Printing details of arguments of instances
+print("var1.std =", var1.std)
+print("var1.section =", var1.section)
+print(var1.__dict__)  # Making dictionary of all data given to instances
+
+print("\nvar2's details :-")
+print("var2.std =", var2.std)
+print("var2.section =", var2.section)
+print("var2.subjects =", var2.subjects)
+print(var2.__dict__)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project39" class="accordion-item">
+                <h2 class="accordion-header" id="heading39">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse39" aria-expanded="false" aria-controls="collapse39">
+                        39. Instance & Class Variables
+                    </button>
+                </h2>
+                <div id="collapse39" class="accordion-collapse collapse" aria-labelledby="heading39"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>class Employee:
+    leaves = 8  # This variable is valid for all instances of this class
+
+
+saksham = Employee()
+harry = Employee()
+
+saksham.name = "Saksham"
+saksham.salary = 5000
+saksham.role = "Programmer"
+
+harry.name = "Harry"
+harry.salary = 2500
+harry.role = "Instructor"
+
+print(f"No of levaes for saksham are {saksham.leaves}")
+print(f"No of levaes for harry are {harry.leaves}")
+
+harry.leaves = 9  # Make an new instance variable only for harry so does not change for all instances
+Employee.leaves = 10  # Change for all instances
+
+print(f"No of levaes for saksham now are {saksham.leaves}")
+print(f"No of levaes for harry now are {harry.leaves}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project40" class="accordion-item">
+                <h2 class="accordion-header" id="heading40">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse40" aria-expanded="false" aria-controls="collapse40">
+                        40. Self
+                    </button>
+                </h2>
+                <div id="collapse40" class="accordion-collapse collapse" aria-labelledby="heading40"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>class Employee:
+    leaves = 8
+
+    def emp_det(self):  # Defining a function in class which takes first argument as self i.e. any instance
+        return f"Name is {self.name}, Salary is {self.salary}, Role is {self.role}"
+
+
+saksham = Employee()
+harry = Employee()
+
+saksham.name = "Saksham"
+saksham.salary = 5000
+saksham.role = "Programmer"
+
+harry.name = "Harry"
+harry.salary = 2500
+harry.role = "Instructor"
+
+print(f"Details of saksham are :-\n{saksham.emp_det()}")  # Calling the class function which takes saksham as self
+print(f"Details of harry are :-\n{harry.emp_det()}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project41" class="accordion-item">
+                <h2 class="accordion-header" id="heading41">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse41" aria-expanded="false" aria-controls="collapse41">
+                        41. Init
+                    </button>
+                </h2>
+                <div id="collapse41" class="accordion-collapse collapse" aria-labelledby="heading41"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>class Employee:
+    leaves = 8
+
+    # By declaring init function we need not to declare arguments again & again in instances.
+    def __init__(self, name, salary, role):  # These are considered as argument of main class
+        self.name = name
+        self.salary = salary
+        self.role = role
+
+    def emp_det(self):
+        return f"Name is {self.name}, Salary is {self.salary}, Role is {self.role}"
+
+
+saksham = Employee("Saksham", 5000, "Programmer")  # Giving argument to class i.e. init function
+harry = Employee("Harry", 2500, "Instructor")
+
+print(f"Details of saksham are :-\n{saksham.emp_det()}")
+print(f"Details of harry are :-\n{harry.emp_det()}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project42" class="accordion-item">
+                <h2 class="accordion-header" id="heading42">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse42" aria-expanded="false" aria-controls="collapse42">
+                        42. Class Methods
+                    </button>
+                </h2>
+                <div id="collapse42" class="accordion-collapse collapse" aria-labelledby="heading42"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>class Employee:
+    leaves = 8
+
+    def __init__(self, name, salary, role):
+        self.name = name
+        self.salary = salary
+        self.role = role
+
+    def emp_det(self):
+        return f"Name is {self.name}, Salary is {self.salary}, Role is {self.role} & leaevs are {self.leaves}"
+
+    @classmethod  # This is class method i.e. it is applied to all instances
+    def change_leaves(cls, newleaves):  # Takes first argument as cls by default
+        cls.leaves = newleaves
+
+
+saksham = Employee("Saksham", 5000, "Programmer")
+harry = Employee("Harry", 2500, "Instructor")
+
+harry.change_leaves(34)  # It would change for all instances now
+
+print(f"Details of saksham are :-\n{saksham.emp_det()}")
+print(f"Details of harry are :-\n{harry.emp_det()}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project43" class="accordion-item">
+                <h2 class="accordion-header" id="heading43">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse43" aria-expanded="false" aria-controls="collapse43">
+                        43. Alternative Constructors
+                    </button>
+                </h2>
+                <div id="collapse43" class="accordion-collapse collapse" aria-labelledby="heading43"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>class Employee:
+    leaves = 8
+
+    def __init__(self, name, salary, role):
+        self.name = name
+        self.salary = salary
+        self.role = role
+
+    def emp_det(self):
+        return f"Name is {self.name}, Salary is {self.salary}, Role is {self.role} & leaevs are {self.leaves}"
+
+    @classmethod
+    def change_leaves(cls, newleaves):
+        cls.leaves = newleaves
+
+    # This is another method of taking argument in easier way
+    @classmethod
+    def from_dash(cls, string):
+        params = string.split("-")
+        return cls(params[0], params[1], params[2])  # Returning items in params one by one
+
+    @classmethod
+    def from_slash(cls, string):
+        params = string.split("-")
+        return cls(*string.split("/"))  # It returns automatically items of params by use of *args
+
+
+saksham = Employee("Saksham", 5000, "Programmer")
+harry = Employee("Harry", 2500, "Instructor")
+karan = Employee.from_dash("Karan-1000-Student")
+rohan = Employee.from_slash("Rohan/1500/Student")
+
+print(f"Details of saksham are :-\n{saksham.emp_det()}")
+print(f"Details of harry are :-\n{harry.emp_det()}")
+print(f"Details of karan are :-\n{karan.emp_det()}")
+print(f"Details of rohan are :-\n{rohan.emp_det()}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project44" class="accordion-item">
+                <h2 class="accordion-header" id="heading44">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse44" aria-expanded="false" aria-controls="collapse44">
+                        44. Static Methods
+                    </button>
+                </h2>
+                <div id="collapse44" class="accordion-collapse collapse" aria-labelledby="heading44"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>class Employee:
+    # This is normal method which not takes self argument
+    @staticmethod
+    def printgood(str):
+        print(f"This is good {str}")
+
+
+Employee.printgood("Saksham")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project45" class="accordion-item">
+                <h2 class="accordion-header" id="heading45">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse45" aria-expanded="false" aria-controls="collapse45">
+                        45. Single Inheritance
+                    </button>
+                </h2>
+                <div id="collapse45" class="accordion-collapse collapse" aria-labelledby="heading45"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>class Employee:
+    leaves = 8
+
+    def __init__(self, name, salary, role):
+        self.name = name
+        self.salary = salary
+        self.role = role
+
+    def emp_det(self):
+        return f"Name is {self.name}, Salary is {self.salary}, Role is {self.role} & leaevs are {self.leaves}"
+
+
+# Inheritance means that Hacker class contains all properties of Employee
+class Hacker(Employee):  # It means that this class is inherited from Employee class
+    # We should use super class here instead of init
+    def __init__(self, name, salary, role, languages):
+        self.name = name
+        self.salary = salary
+        self.role = role
+        self.languages = languages
+
+    def printprog(self):
+        return f"The Hacker's name is {self.name}, Salary is {self.salary}, Role is {self.role}" \
+               f" & leaevs are {self.leaves}.\nHe know {self.languages}"
+
+
+saksham = Employee("Saksham", 5000, "Programmer")
+harry = Hacker("Harry", 2500, "Instructor", "C++")
+karan = Hacker("Karan", "1000", "Hacker", "['C','Pyhton']")
+rohan = Hacker("Rohan", "1500", "Hacker", "['Python']")
+
+print(f"Details of saksham are :-\n{saksham.emp_det()}")
+print(f"Details of harry are :-\n{harry.emp_det()}")
+print(f"Details of karan are :-\n{karan.printprog()}")
+print(f"Details of rohan are :-\n{rohan.printprog()}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project46" class="accordion-item">
+                <h2 class="accordion-header" id="heading46">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse46" aria-expanded="false" aria-controls="collapse46">
+                        46. Multiple Inheritance
+                    </button>
+                </h2>
+                <div id="collapse46" class="accordion-collapse collapse" aria-labelledby="heading46"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+If we write any command to CoolProgrammer then -
+First search for any command in CoolProgrammer,
+then in first argument of CoolProgrammer & then in second argument of CoolProgrammer
+"""
+
+
+class Employee:
+    leaves = 8
+
+    def __init__(self, name, salary, role):
+        self.name = name
+        self.salary = salary
+        self.role = role
+
+    def emp_det(self):
+        return f"Name is {self.name}, Salary is {self.salary}, Role is {self.role} & leaevs are {self.leaves}"
+
+    @classmethod
+    def change_leaves(cls, newleaves):
+        cls.leaves = newleaves
+
+    @classmethod
+    def from_dash(cls, string):
+        params = string.split("-")
+        return cls(params[0], params[1], params[2])
+
+    @classmethod
+    def from_slash(cls, string):
+        params = string.split("-")
+        return cls(*string.split("/"))
+
+
+class Player:
+    no_of_games = 4
+
+    # We should use super class here instead of init
+    def __init__(self, name, game):
+        self.name = name
+        self.game = game
+
+    def printgame(self):
+        return f"The Player's name is {self.name}. He plays {self.game}"
+
+
+class CoolProgrammer(Employee, Player):  # This class inherits from more than 1 class
+    language = "C++"
+
+    def printcool(self):
+        return f"CoolProgrammer's name is {self.name}, Salary is {self.salary}, Role is {self.role} & leaevs are {self.leaves}" \
+               f"\nHe know {self.language}"
+
+
+saksham = Employee("Saksham", 5000, "Programmer")
+harry = Employee("Harry", 2500, "Instructor")
+karan = Player("Karan", ["Cricket"])
+rohan = CoolProgrammer("Rohan", "1500", "CoolProgrammer")
+
+print(f"Details of saksham are :-\n{saksham.emp_det()}")
+print(f"Details of harry are :-\n{harry.emp_det()}")
+print(f"Details of karan are :-\n{karan.printgame()}")
+print(f"Details of rohan are :-\n{rohan.printcool()}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project47" class="accordion-item">
+                <h2 class="accordion-header" id="heading47">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse47" aria-expanded="false" aria-controls="collapse47">
+                        47. Multilevel Inheritance
+                    </button>
+                </h2>
+                <div id="collapse47" class="accordion-collapse collapse" aria-labelledby="heading47"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+If we write any command to son then -
+First search for any command in son,
+then in father & then in grandfather
+"""
+
+
+class Grandfather:
+    basketball = 1
+
+
+class Father(Grandfather):
+    dance = 1
+
+    def father_det(self):
+        return f"Yes i dance {self.dance} times"
+
+
+class Son(Father):
+    dance = 6
+
+    def son_det(self):
+        return f"Yes i dance awesomly {self.dance} times & play basketball {self.basketball} times"
+
+
+darry = Grandfather()
+larry = Father()
+harry = Son()
+
+print(f"harry :-\n{harry.son_det()}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project48" class="accordion-item">
+                <h2 class="accordion-header" id="heading48">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse48" aria-expanded="false" aria-controls="collapse48">
+                        48. Access Specifiers
+                    </button>
+                </h2>
+                <div id="collapse48" class="accordion-collapse collapse" aria-labelledby="heading48"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Public --&gt; var --&gt; access to all
+Protected --&gt; _var --&gt; access to only this program
+Private --&gt; __var --&gt; access to only this class
+"""
+
+
+class Employee:
+    public = 8
+    _protect = 9
+    __private = 10
+
+    def __init__(self, name, salary, role):
+        self.name = name
+        self.salary = salary
+        self.role = role
+
+
+saksham = Employee("Saksham", 5000, "Programmer")
+
+# Method for accessing
+print(f"The public variable is {saksham.public}")
+print(f"The protected variable is {saksham._protect}")
+print(f"The private variable is {saksham._Employee__private}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project49" class="accordion-item">
+                <h2 class="accordion-header" id="heading49">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse49" aria-expanded="false" aria-controls="collapse49">
+                        49. Over-riding
+                    </button>
+                </h2>
+                <div id="collapse49" class="accordion-collapse collapse" aria-labelledby="heading49"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>class A:
+    classvar1 = "class variable in class A"
+
+    def __init__(self):
+        self.var1 = "inside class A's constructor\n"
+        self.classvar1 = "Instance variable in class A\n"
+        self.special = "Special\n"
+
+
+class B(A):
+    classvar1 = "I am in class B"  # Over-riding class variable of class A
+
+    def __init__(self):
+        super().__init__()  # This takes inherited class' variables here
+        self.var1 = "inside class B's constructor\n"
+        self.classvar1 = "Instance variable in class B\n"
+        # But var1 & classvar1 are overrided again so these will print
+
+
+class C(A):
+    classvar1 = "I am in class C"
+
+    def __init__(self):
+        # var1 & classvar1 are over-ride before super so these will not print
+        self.var1 = "inside class C's constructor\n"
+        self.classvar1 = "Instance variable in class C\n"
+        super().__init__()
+
+
+a = A()
+b = B()
+c = C()
+
+print(b.classvar1)
+print(b.special)
+print(c.classvar1)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project50" class="accordion-item">
+                <h2 class="accordion-header" id="heading50">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse50" aria-expanded="false" aria-controls="collapse50">
+                        50. Diamond Shape Problems
+                    </button>
+                </h2>
+                <div id="collapse50" class="accordion-collapse collapse" aria-labelledby="heading50"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>class A:
+    def met(self):
+        print("This is class A")
+
+
+class B(A):
+    def met(self):
+        print("This is class B")
+
+
+class C(A):
+    def met(self):
+        print("This is class C")
+
+
+class D(B, C):
+    def met(self):
+        print("This is class D")
+
+
+a = A()
+b = B()
+c = C()
+d = D()
+
+d.met()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project51" class="accordion-item">
+                <h2 class="accordion-header" id="heading51">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse51" aria-expanded="false" aria-controls="collapse51">
+                        51. Operator Overloading & Dunder Methods
+                    </button>
+                </h2>
+                <div id="collapse51" class="accordion-collapse collapse" aria-labelledby="heading51"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>class Employee:
+    leaves = 8
+
+    def __init__(self, name, salary, role):
+        self.name = name
+        self.salary = salary
+        self.role = role
+
+    def emp_det(self):
+        return f"Name is {self.name}, Salary is {self.salary}, Role is {self.role} & leaevs are {self.leaves}"
+
+    def __add__(self, other):
+        return self.salary + other.salary
+
+    def __truediv__(self, other):
+        return self.salary / other.salary
+
+    def __repr__(self):
+        # If we make str function instead of repr then that would print
+        return f"Employee ({self.name}, {self.salary}, {self.role})"
+
+
+emp1 = Employee("saksham", 2000, "Programmer")
+emp2 = Employee("Rohan", 500, "Student")
+
+print(f"Sum of salaries is {emp1 + emp2}")
+print(f"Division of salaries is {emp1 / emp2}")
+print(f"emp1 is {emp1}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project52" class="accordion-item">
+                <h2 class="accordion-header" id="heading52">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse52" aria-expanded="false" aria-controls="collapse52">
+                        52. Abstract Methods
+                    </button>
+                </h2>
+                <div id="collapse52" class="accordion-collapse collapse" aria-labelledby="heading52"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+# from abc import ABC, abstractmethod
+# class Shape(ABC):
+These will work same
+We cant make objects of abstract class
+"""
+
+from abc import ABCMeta, abstractmethod
+
+
+class Shape(metaclass=ABCMeta):
+    # This is used to tell that classe which inherit from this class have to def a function named printarea
+    @abstractmethod
+    def printarea(self):
+        return 0
+
+
+class Rectangle(Shape):
+    type = "Rectangle"
+    sides = 4
+
+    def __init__(self):
+        self.length = 4
+        self.width = 6
+
+    def printarea(self):
+        return self.length * self.width
+
+
+a = Rectangle()
+print(a.printarea())
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project53" class="accordion-item">
+                <h2 class="accordion-header" id="heading53">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse53" aria-expanded="false" aria-controls="collapse53">
+                        53. Setters & Property Decorators
+                    </button>
+                </h2>
+                <div id="collapse53" class="accordion-collapse collapse" aria-labelledby="heading53"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>class Employee:
+    def __init__(self, fname, lname):
+        self.fname = fname
+        self.lname = lname
+        self.email = f"{fname}.{lname}@gmail.com"
+
+    def explain(self):
+        return f"This employee is {self.fname} {self.lname}\n" \
+               f"His email is {self.email}"
+
+    def printemail(self):
+        pass
+
+
+saksham = Employee("Saksham", "Bindal")
+harry = Employee("Harry", "Gupta")
+
+print(saksham.explain())
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project54" class="accordion-item">
+                <h2 class="accordion-header" id="heading54">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse54" aria-expanded="false" aria-controls="collapse54">
+                        54. Object Introspection
+                    </button>
+                </h2>
+                <div id="collapse54" class="accordion-collapse collapse" aria-labelledby="heading54"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>class Employee:
+    leaves = 8
+
+    def __init__(self, name, salary, role):
+        self.name = name
+        self.salary = salary
+        self.role = role
+
+    def emp_det(self):
+        return f"Name is {self.name}, Salary is {self.salary}, Role is {self.role} & leaevs are {self.leaves}"
+
+    @classmethod  # This is class method i.e. it is applied to all instances
+    def change_leaves(cls, newleaves):  # Takes first argument as cls by default
+        cls.leaves = newleaves
+
+
+saksham = Employee("Saksham", 5000, "Programmer")
+harry = Employee("Harry", 2500, "Instructor")
+
+# Printing name of class of object
+print(type(saksham))
+
+# Printing id of object
+print(id(saksham))
+
+# Printing functions & variables of class of object
+print(dir(saksham))
+
+import inspect
+
+# Printing all information
+print(inspect.getmembers(saksham))
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project55" class="accordion-item">
+                <h2 class="accordion-header" id="heading55">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse55" aria-expanded="false" aria-controls="collapse55">
+                        55. Generators
+                    </button>
+                </h2>
+                <div id="collapse55" class="accordion-collapse collapse" aria-labelledby="heading55"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Iterable --&gt; __iter__() or __getitem__()
+Iterator --&gt; __next__()
+Iteration --&gt; It is a process.
+
+Generator --&gt; It is an iterator which give value only once
+"""
+
+for i in range(10):  # Here range is generator
+    print(i)
+
+
+def gen(n):
+    for i in range(n):
+        yield i
+
+
+g = gen(3)
+print(g.__next__())  # By this type we can print values of generator one by one
+print(g.__next__())
+# This can be done also
+# for i in g:
+#     print(i)
+
+# strings are iterable but int are not
+str1 = "saksham"
+item = iter(str1)
+print(item.__next__())
+print(item.__next__())
+print(item.__next__())
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project56" class="accordion-item">
+                <h2 class="accordion-header" id="heading56">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse56" aria-expanded="false" aria-controls="collapse56">
+                        56. Comprehensions
+                    </button>
+                </h2>
+                <div id="collapse56" class="accordion-collapse collapse" aria-labelledby="heading56"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code># Making list comprehension
+list1 = [i for i in range(100) if i % 3 == 0]
+print(list1)
+
+# Making dict comprehension
+dict1 = {i: f"item{i}" for i in range(1, 101) if i % 10 == 0}
+print(dict1)
+
+# Reversing key_value in dict comprehension
+dict2 = {value: key for key, value in dict1.items()}
+print(dict2)
+
+# Making set comprehension
+numbers = {number for number in [1, 2, 3, 4, 2, 4, 13, 43, 2, 1, 5]}
+print(numbers)
+
+# Making generator comprehension
+evens = (i for i in range(100) if i % 2 == 0)
+print(type(evens))
+print(evens)
+print(evens.__next__())
+print(evens.__next__())
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project57" class="accordion-item">
+                <h2 class="accordion-header" id="heading57">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse57" aria-expanded="false" aria-controls="collapse57">
+                        57. Else with For
+                    </button>
+                </h2>
+                <div id="collapse57" class="accordion-collapse collapse" aria-labelledby="heading57"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>names = ["saksham", "harry", "rahul"]
+for item in names:
+    print(item)
+else:
+    print("This for loop ended successfully")
+
+cities = ["jaipur", "delhi", "bombay"]
+for items in cities:
+    print(items)
+    break
+else:  # Else with for loop work only when loop ended normally i.e. without break
+    print("This for loop ended successfully")
+
+# We use else with for while searching for a item in list
+for items in cities:
+    if items == "kolkata":
+        break
+else:  # Since kolkata is not present in list so loop did not break hence else will be executed
+    print("kolkata was not found")
+
+for items in cities:
+    if items == "delhi":
+        break
+else:  # Since delhi is present in list so loop broke hence else will not be executed
+    print("delhi was not found")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project58" class="accordion-item">
+                <h2 class="accordion-header" id="heading58">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse58" aria-expanded="false" aria-controls="collapse58">
+                        58. Function Catching
+                    </button>
+                </h2>
+                <div id="collapse58" class="accordion-collapse collapse" aria-labelledby="heading58"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+lru_cache start storing values till given maxsize & after maxsize it deletes first value & store next & so on.
+In main function :-
+1. work(3) is stored
+2. work(4) is stored
+3. work(5) is stored
+4. work(6) is stored & work (3) is deleted
+5. work(3) is stored & work (4) is deleted
+5. work(5) is stored & work (5) is deleted
+"""
+
+import time
+from functools import lru_cache
+
+
+@lru_cache(maxsize=3)  # If we not use this then whenever function was called, the time lag would appear
+def work(n):
+    time.sleep(n)
+    return n
+
+
+if __name__ == '__main__':
+    print("Calling work")
+    work(3)  # This take delay of 3 seconds
+    print("Again calling work")
+    work(4)  # This value will be stored & does not take time
+    print("Again calling work")
+    work(5)  # This value will be stored & does not take time
+    print("Again calling work")
+    work(6)  # This value will be stored & does not take time
+    print("Again calling work")
+    # Since maxsize is three in decorator so three values [work(4), work(5), work(6)] before it would stored
+    # So first i.e. work(3) would not stored hence this will take time lag
+    work(3)
+    print("Done.....Calling Again")
+    # Since maxsize is three in decorator so three values [work(5), work(6), work(3)] before it would stored
+    # So work(5) would be stored hence this will not take time lag
+    work(5)
+    print("Done")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project59" class="accordion-item">
+                <h2 class="accordion-header" id="heading59">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse59" aria-expanded="false" aria-controls="collapse59">
+                        59. Else Finally
+                    </button>
+                </h2>
+                <div id="collapse59" class="accordion-collapse collapse" aria-labelledby="heading59"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>f = open("T18 file read src.txt")
+
+try:
+    f1 = open("saksham.txt")
+
+except Exception as e:
+    print(e)
+
+else:
+    print("This will run only when except is not running")
+
+finally:
+    print("This will run when try or except either is running")
+    # f1.close()
+    f.close()
+
+print("This is important line")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project60" class="accordion-item">
+                <h2 class="accordion-header" id="heading60">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse60" aria-expanded="false" aria-controls="collapse60">
+                        60. Co-routines
+                    </button>
+                </h2>
+                <div id="collapse60" class="accordion-collapse collapse" aria-labelledby="heading60"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import time
+
+
+def searcher():
+    # Task which takes 4 seconds to run
+    book = "This book is on saksham"
+    time.sleep(4)
+
+    while True:
+        text = yield
+        if text in book:
+            print(f"{text} is in book")
+        else:
+            print(f"{text} is not in book")
+
+
+print("Search started")
+search = searcher()
+next(search)  # This would take 4 seconds
+search.send("saksham")
+word = input("Enter a word = ")
+search.send(word)  # Now this would not take time again
+
+search.close()  # This is how to close coroutine
+# Now onwards this coroutine will not work until started again
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project61" class="accordion-item">
+                <h2 class="accordion-header" id="heading61">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse61" aria-expanded="false" aria-controls="collapse61">
+                        61. OS Module
+                    </button>
+                </h2>
+                <div id="collapse61" class="accordion-collapse collapse" aria-labelledby="heading61"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import os
+
+print(dir(os))  # Printing all functions
+print(os.getcwd())  # Printing current directory
+os.chdir("D://")  # Changing current directory
+print(os.getcwd())
+print(os.listdir())  # Printing all files in current directory
+# os.mkdir("this") --&gt; Make this folder in current directory
+# os.makedirs("this/that") --&gt; Make that folder in this folder in current directory
+# os.rename("file", "file2) --&gt; Renames file1 to file2
+print(os.environ.get('Path'))  # Printing path environment variable
+# os.path.join("D://","/saksham.txt") --&gt; Join the paths
+print(os.path.exists("C://"))  # Check whether a path exists or not
+print(os.path.isfile("C://"))  # Check whether a file exists or not
+print(os.path.isdir("C://"))  # Check whether a directory exists or not
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project62" class="accordion-item">
+                <h2 class="accordion-header" id="heading62">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse62" aria-expanded="false" aria-controls="collapse62">
+                        62. Request Module
+                    </button>
+                </h2>
+                <div id="collapse62" class="accordion-collapse collapse" aria-labelledby="heading62"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import requests
+
+r = requests.get("https://www.google.com")
+print(r.text)  # Printing all text in request
+print(r.status_code)  # Printing status code of request
+
+# How to use post request
+url = "https://www.google.com"
+data = {
+    "p1": 4,
+    "p2": 5
+}
+r2 = requests.post(url=url, data=data)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project63" class="accordion-item">
+                <h2 class="accordion-header" id="heading63">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse63" aria-expanded="false" aria-controls="collapse63">
+                        63. JSON Module
+                    </button>
+                </h2>
+                <div id="collapse63" class="accordion-collapse collapse" aria-labelledby="heading63"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import json
+
+data = '{"var1":"saksham","var2":"harry"}'
+
+parsed = json.loads(data)  # Parsing a json data
+print(f"data = {data}")
+print(f"parsed = {parsed}")
+print(type(parsed))
+print(f"parsed['var1'] = {parsed['var1']}")
+
+# json.load --&gt; load a json file
+
+data2 = {"name": "saksham",
+         "cars": ['bmw', 'ferrari', 'audi'],
+         "fridge": ('roti', 'chawal'),
+         "isbad": False}
+# This data can be used in python but tuple & list are not defined in javascript so it will not work there
+jscomp = json.dumps(data2)  # This converts python file to java
+print(jscomp)
+
+jscomp2 = json.dumps(data2, sort_keys=True)  # sort_keys parameter sort all data if given True
+print(jscomp2)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project64" class="accordion-item">
+                <h2 class="accordion-header" id="heading64">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse64" aria-expanded="false" aria-controls="collapse64">
+                        64. Pickle Module
+                    </button>
+                </h2>
+                <div id="collapse64" class="accordion-collapse collapse" aria-labelledby="heading64"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import pickle
+
+cars = ["BMW", "MARUTI SUZUKI", "AUDI", "BUGGATI"]
+file = "mycar.pkl"
+fileobj = open(file, 'wb')
+pickle.dump(cars, fileobj)
+fileobj.close()
+
+fileobj2 = open(file, 'rb')
+mycar = pickle.load(fileobj2)
+print(mycar)
+fileobj2.close()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project65" class="accordion-item">
+                <h2 class="accordion-header" id="heading65">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse65" aria-expanded="false" aria-controls="collapse65">
+                        65. Regular Expressions
+                    </button>
+                </h2>
+                <div id="collapse65" class="accordion-collapse collapse" aria-labelledby="heading65"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Meta Characters
+[] A set of characters
+\ Signals a special sequence (can also be used to escape special characters)
+. Any character (except newline character)
+^ Starts with
+$ Ends with
+* Zero or more occurrences
++ One or more occurrences
+{} Exactly the specified number of occurrences
+| Either or
+() Capture and group
+Special Sequences
+\A Returns a match if the specified characters are at the beginning of the string
+\b Returns a match where the specified characters are at the beginning or at the end of a word r"ain\b"
+\B Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word
+
+\d Returns a match where the string contains digits
+\D Returns a match where the string DOES NOT contain digits
+\s Returns a match where the string contains a white space character
+\S Returns a match where the string DOES NOT contain a white space character
+\w Returns a match where the string contains any word characters (characters from a to Z, digits from 0-9, and the underscore _ character)
+\W Returns a match where the string DOES NOT contain any word characters
+\Z Returns a match if the specified characters are at the end of the string
+"""
+
+import re
+
+mystr = '''Tata Limited
+Dr. David Landsman, executive director
+18, Grosvenor Place
+London SW1X 7HSc
+Phone: +44 (20) 7235 8281
+Fax: +44 (20) 7235 8727
+Email: tata@tata.co.uk
+Website: www.europe.tata.com
+Directions: View map
+
+Phone numbers : -
++91 9455462134
++91 9455445634
++91 9445123834
++91 9468462134
++91 9456245878
++91 9455462514
++91 4565485134
++91 9458592134
+
+Tata Sons, North America
+1700 North Moore St, Suite 1520
+Arlington, VA 22209-1911
+USA
+Phone: +1 (703) 243 9787
+Fax: +1 (703) 243 9791
+66-66
+455-4545
+Email: northamerica@tata.com 
+Website: www.northamerica.tata.com
+Directions: View map fass
+harry bhai lekin
+bahut hi badia aadmi haiaiinaiiiiiiiiiiii1234567891011'''
+
+# findall, search, split, sub, finditer
+
+# META CHARACTERS
+# patt = re.compile(r'fass') --&gt; search fass anywhere
+# patt = re.compile(r'.adm') --&gt; search for adm anywhere
+# patt = re.compile(r'.') --&gt; search for all characters except newline character
+# patt = re.compile(r'^Tata') --&gt; match if string starts with Tata
+# patt = re.compile(r'iin$') --&gt; match if string ends with iin
+# patt = re.compile(r'ai*') --&gt; match for a, ai, aii, aiii, aiiii....... (for any number of i)
+# patt = re.compile(r'ai+') --&gt; match for ai, aii, aiii, aiiii....... (for any number of i &gt; 0)
+# patt = re.compile(r'ai{2}') --&gt; match for only aii (for 2 number of i)
+# patt = re.compile(r'(ai){2}') --&gt; match for aiai (for 2 number of ai)
+# patt = re.compile(r'ai{1}|Fax') --&gt; match for either ai or Fax
+
+
+# SPECIAL SEQUENCES
+# patt = re.compile(r'/AFax') --&gt; match if string starts with Fax
+# patt = re.compile(r'Fax\b') --&gt; match for words starting or ending with Fax
+# patt = re.compile(r'Fax\B') --&gt; match for words containing Fax but not at starting or ending
+# patt = re.compile(r'\d{5}') --&gt; search for a number of 5 digits
+# patt = re.compile(r'\D{11}') --&gt; search all substring of length 11 without digits
+# patt = re.compile(r'\s') --&gt; search whitespaces or newline character
+# patt = re.compile(r'\S') --&gt; search characters except whitespaces & \n
+# patt = re.compile(r'\w') --&gt; search alphabets, numbers, '_' character
+# patt = re.compile(r'\W') --&gt; search except alphabets, numbers, '_' character
+# patt = re.compile(r'11\Z') --&gt; search if 11 is at end of string
+
+numbers = re.compile('\+91 \d{10}').finditer(mystr)
+# for match in numbers:
+#     print(match)
+ls = []
+for i in numbers:
+    ls.append(i)
+print(ls)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project66" class="accordion-item">
+                <h2 class="accordion-header" id="heading66">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse66" aria-expanded="false" aria-controls="collapse66">
+                        66. Raise
+                    </button>
+                </h2>
+                <div id="collapse66" class="accordion-collapse collapse" aria-labelledby="heading66"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code># a = input("What is your name = ")
+# b = int(input("What is your age = "))
+#
+# if b &lt; 1:
+#     raise ZeroDivisionError(f"{b} is an invalid age.")  # raise stops the program by putting desired error
+# if a.isnumeric():
+#     raise Exception("Numbers are not allowed in name")
+# print(f"Hello {a}, You are {b} years old")
+
+c = input("What is your name = ")
+try:
+    print(d)
+except Exception as e:
+    if c.lower() == "harry":
+        raise ValueError(f"{c} is blocked to this site")
+    print("Exception handled")
+
+# For more information about errors refer to https://docs.python.org/3/library/exceptions.html
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project67" class="accordion-item">
+                <h2 class="accordion-header" id="heading67">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse67" aria-expanded="false" aria-controls="collapse67">
+                        67. Is vs ==
+                    </button>
+                </h2>
+                <div id="collapse67" class="accordion-collapse collapse" aria-labelledby="heading67"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+== --&gt; value equality --&gt; Two objects have same value
+is --&gt; reference equality --&gt; Two references refer to same object
+"""
+
+a = [1, 2, 3]
+b = a  # By doing this a is pointed by b i.e. both are same object
+print(b == a)  # True because value of a & b is same
+print(b is a)  # True because b & a are same
+b[0] = 0  # Since b & a are same object so by doing this a also change
+print(a)
+
+c = a[:]  # By doing this a is copied to a different object c
+print(c == a)  # True because value of a & c is same
+print(c is a)  # False because c & a are not same
+c[0] = 10  # Since c is copy of a so by doing this a will not change
+print(a)
+
+d = [1, 2, "34"]
+e = [1, 2, "34"]
+print(e is d)  # False because different objects
+print(e == d)  # True because values are same
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project68" class="accordion-item">
+                <h2 class="accordion-header" id="heading68">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse68" aria-expanded="false" aria-controls="collapse68">
+                        68. Command Line Utility
+                    </button>
+                </h2>
+                <div id="collapse68" class="accordion-collapse collapse" aria-labelledby="heading68"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import argparse
+import sys
+
+
+def calc(args):
+    if args.o == 'add':
+        return args.x + args.y
+    elif args.o == 'mul':
+        return args.x * args.y
+    elif args.o == 'div':
+        return args.x / args.y
+    elif args.o == 'sub':
+        return args.x - args.y
+    else:
+        return "Something went wrong"
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--x', type=float, default=1.0, help="Enter first number.")
+    parser.add_argument('--y', type=float, default=3.0, help="Enter second number")
+    parser.add_argument('--o', type=str, default="add", help="Enter operation")
+
+    args = parser.parse_args()
+    sys.stdout.write(str(calc(args)))
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project69" class="accordion-item">
+                <h2 class="accordion-header" id="heading69">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse69" aria-expanded="false" aria-controls="collapse69">
+                        69. Packages
+                    </button>
+                </h2>
+                <div id="collapse69" class="accordion-collapse collapse" aria-labelledby="heading69"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import packagesaksham
+
+packagesaksham.func1(4545)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project70" class="accordion-item">
+                <h2 class="accordion-header" id="heading70">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse70" aria-expanded="false" aria-controls="collapse70">
+                        70. Numpy
+                    </button>
+                </h2>
+                <div id="collapse70" class="accordion-collapse collapse" aria-labelledby="heading70"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import numpy
+
+# Polynomial Functions
+print(numpy.poly([-1, -1, -1]))  # Returns polynomial form by roots given
+print(numpy.roots([1, 2, 1]))  # Returns roots of polynomial whose co-efficients are given
+print(numpy.polyint([1, 2, 1]))  # Return integral of polynomial
+print(numpy.polyder([1, 2, 1]))  # Return derivative of polynomial
+print(numpy.polyval([1, 3, 3, 1], -1))  # Return value of polynomial at specific value
+print(numpy.polyadd([1, 3, 3, 1], [1, 1]))  # Add 2 polynomials
+print(numpy.polysub([1, 3, 3, 1], [1, 1]))  # Subtract 2 polynomials
+print(numpy.polymul([1, 3, 3, 1], [1, 1]))  # Multiply 2 polynomials
+print(numpy.polydiv([1, 3, 3, 1], [1, 1]))  # Divide 2 polynomials
+
+# Linear Algebra
+from numpy import linalg
+
+print(linalg.det([[1, 2], [2, 1]]))  # Find Determinant
+print(linalg.eig([[1, 2], [2, 1]]))  # Find Eigen Values & Vectors
+print(linalg.inv([[1, 2], [2, 1]]))  # Find Inverse
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>

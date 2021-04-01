@@ -1,0 +1,1970 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | C | Tutorials</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c1 {
+            display: none;
+        }
+
+        #d2,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./c.html">C</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./tutorials.html">Tutorials</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Topics</h3>
+        <hr>
+        <h5 id="nothing">No topic matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        1. Hello World
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("Hello World\n");
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project2" class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        2. Adding Numbers
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a, b;
+
+    printf("Enter number a\n");
+    scanf("%d", &a);
+
+    printf("Enter number b\n");
+    scanf("%d", &b);
+
+    printf("The sum is %d\n", a + b);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        3. Finding Size
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("%lu", sizeof(int));
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        4. Operators
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    // Arithmetic Operators
+    int a, b;
+    a = 34;
+    b = 6;
+    printf("a + b = %d\n", a + b);
+    printf("a - b = %d\n", a - b);
+    printf("a * b = %d\n", a * b);
+    printf("a / b = %d\n", a / b);
+
+    int c;
+    float d;
+    c = 34;
+    d = 6.34;
+    printf("c + d = %f\n", c + d);
+    printf("c - d = %f\n", c - d);
+    printf("c * d = %f\n", c * d);
+    printf("c / d = %f\n", c / d);
+
+    // Relational Operators
+    /*
+    If true then return 1
+    If false then return 0
+    */
+    int e, f;
+    e = 34;
+    f = 6;
+    printf("e == f = %d\n", e == f);
+
+    int g, h;
+    g = 34;
+    h = 34;
+    printf("g == h = %d\n", g == h);
+
+    // Logical Operators
+    /*
+    For non zero value is 1
+    For zero value is 0
+    */
+    int i, j;
+    i = 5;
+    j = 34;
+    printf("i && j = %d\n", i && j);
+
+    int k, l;
+    k = 5;
+    l = 0;
+    printf("k && l = %d\n", k && l);
+
+    int m, n;
+    m = 5;
+    n = 0;
+    printf("m || n = %d\n", m || n);
+
+    int o, p;
+    o = 0;
+    p = 5;
+    printf("!(o) = %d\n", !o);
+    printf("!(p) = %d\n", !p);
+
+    // Bitwise Operators
+    // 0 = 00
+    // 1 = 01
+    // 2 = 10
+    // 3 = 11
+    int q, r;
+    q = 2;
+    r = 3;
+    printf("q & r = %d\n", q & r);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project5" class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        5. %f Specifiers
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 8;
+    float b = 7.335;
+
+    printf("The value of a is %d and the value of b is %f\n", a, b);
+
+    printf("Value of b upto 4 decimals is %0.4f\n", b);
+    printf("Value of b upto 2 decimals is %0.2f\n", b);
+    printf("Value of b in 2 offsets left space ahead is %2.2f given\n", b);
+    printf("Value of b in 20 offsets left space ahead is %20.2f given\n", b);
+    printf("Value of b in 2 offsets left space behind is %-2.2f given\n", b);
+    printf("Value of b in 20 offsets left space behind is %-20.2f given\n", b);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        6. Constants
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+#define PI 3.14
+
+int main()
+{
+    const int a = 15;
+    // a = 2;  Cannot do this since a is a constant
+
+    // PI = 7.33;  Cannot do this since PI is a pre-defined constant
+    printf("%f\n", PI);
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        7. Escape Sequences
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    // printf("my backslash \ \n");
+    printf("my backslash \\ \n");
+    printf("my backslash n \\n \n");
+    printf("tab \t\t\t\t character \\t \n");
+    printf("my windows sound is \a");
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project8" class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        8. If Else
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age;
+    printf("Enter your age\n");
+    scanf("%d", &age);
+    printf("Your age is %d.\n", age);
+    if (age &gt;= 18)
+    {
+        printf("You can drive gear vehicles.");
+    }
+    else if (age &gt;= 16)
+    {
+        printf("You can drive non-gear vehicles.");
+    }
+    else if (age &gt;= 10)
+    {
+        printf("You cannot drive but you should start learn driving at your place.");
+    }
+    else
+    {
+        printf("You cannot drive.");
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project9" class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        9. Switch Case
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age;
+    printf("Enter your age\n");
+    scanf("%d", &age);
+
+    switch (age)
+    {
+    case 3:
+        printf("The age is 3\n");
+        break;
+
+    case 13:
+        printf("The age is 13\n");
+        break;
+
+    case 23:
+        printf("The age is 23\n");
+        break;
+
+    default:
+        printf("Age is not among 3,13,23 but it is %d\n", age);
+        break;
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project10" class="accordion-item">
+                <h2 class="accordion-header" id="heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        10. Nested Switch
+                    </button>
+                </h2>
+                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age, marks;
+    printf("Enter your age\n");
+    scanf("%d", &age);
+
+    printf("Enter your marks\n");
+    scanf("%d", &marks);
+
+    switch (age)
+    {
+    case 3:
+        printf("The age is 3\n");
+        switch (marks)
+        {
+        case 45:
+            printf("Your marks are 45\n");
+            break;
+
+        default:
+            printf("Your marks are not 45 but are %d\n", marks);
+            break;
+        }
+        break;
+
+    case 13:
+        printf("The age is 13\n");
+        break;
+
+    case 23:
+        printf("The age is 23\n");
+        break;
+
+    default:
+        printf("Age is not among 3,13,23 but it is %d\n", age);
+        break;
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project11" class="accordion-item">
+                <h2 class="accordion-header" id="heading11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                        11. Do While Loops
+                    </button>
+                </h2>
+                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int num, index;
+    index = 0;
+    printf("Enter a number\n");
+    scanf("%d", &num);
+    printf("The list is\n");
+
+    do
+    {
+        printf("%d\n", index);
+        index = index + 1;
+    } while (index &lt; num);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project12" class="accordion-item">
+                <h2 class="accordion-header" id="heading12">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                        12. While Loops
+                    </button>
+                </h2>
+                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i = 0;
+    while (i &lt; 54)
+    {
+        printf("%d\n", i);
+        i = i + 1;
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project13" class="accordion-item">
+                <h2 class="accordion-header" id="heading13">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                        13. For Loops
+                    </button>
+                </h2>
+                <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("First List\n");
+    int i;
+    for (i = 0; i &lt; 5; i++)
+    {
+        printf("%d\n", i);
+    }
+
+    printf("Second List\n");
+    int a, b;
+    for (a = 0, b = 0; a &lt; 5; a++)
+    {
+        printf("%d %d\n", a, b);
+    }
+
+    printf("Third List\n");
+    int c, d;
+    for (c = 0, d = 0; d &lt; 3, c &lt; 5; c++)
+    {
+        printf("%d %d\n", c, d);
+        d++;
+    }
+
+    printf("Fourth List\n");
+    int e, f;
+    for (e = 0, f = 0; f = 3, e &lt; 5; e++)
+    {
+        printf("%d %d\n", e, f);
+        f++;
+    }
+
+    printf("Fifth List\n");
+    int g, h;
+    for (g = 0, h = 0; g &lt; 5; g++, h++)
+    {
+        printf("%d %d\n", g, h);
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project14" class="accordion-item">
+                <h2 class="accordion-header" id="heading14">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                        14. Break Statements
+                    </button>
+                </h2>
+                <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i, age;
+    for (i = 0; i &lt; 10; i++)
+    {
+        printf("Enter your age\n");
+        scanf("%d", &age);
+        if (age &gt; 10)
+        {
+            printf("Age with greater than 10 cannot play this game!!!");
+            break;
+        }
+        printf("Play the game\n");
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project15" class="accordion-item">
+                <h2 class="accordion-header" id="heading15">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                        15. Continue Statements
+                    </button>
+                </h2>
+                <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main(int argc, char const *argv[])
+{
+    int i, age;
+    for (i = 0; i &lt; 10; i++)
+    {
+        printf("Enter your age\n");
+        scanf("%d", &age);
+        if (age &gt; 10)
+        {
+            continue;
+        }
+        printf("Age not greater than 10 so you should read this!!!\n");
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project16" class="accordion-item">
+                <h2 class="accordion-header" id="heading16">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                        16. Goto Statements
+                    </button>
+                </h2>
+                <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    // label:
+    //     printf("We are inside label\n");
+    //     printf("Hello World\n");
+    //     goto label;
+    // The above will give infinite loop so comment out
+
+    printf("Hello World\n");
+    printf("Hello World\n");
+    goto end;
+    printf("Hello World\n");
+    printf("Hello World\n");
+    printf("Hello World\n");
+end:
+    printf("We are skipped to end!!\n");
+
+    int num;
+    for (int i = 0; i &lt; 8; i++)
+    {
+        printf("Slide - %d\n", i);
+        for (int j = 0; j &lt; 8; j++)
+        {
+            printf("Enter 0 to new slide,1 for start again, 2 for end this game and any other to more instructions.\n");
+            scanf("%d", &num);
+            if (num == 0)
+            {
+                break;
+            }
+
+            if (num == 1)
+            {
+                continue;
+            }
+            if (num == 2)
+            {
+                goto end_game;
+            }
+
+            printf("These are the more instructions\n");
+        }
+    }
+
+end_game:
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project17" class="accordion-item">
+                <h2 class="accordion-header" id="heading17">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                        17. Type Casting
+                    </button>
+                </h2>
+                <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="heading17"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 3;
+    float b = 54.35484;
+    float c = 54 / 7;
+    float d = (float)54 / 7;
+    float e = 54.35484;
+    printf("The value of a is %d\n", a);
+    printf("The value of b is %f\n", b);
+    printf("The value of c is %f\n", c);
+    printf("The value of d is %f\n", d);
+    printf("The value of e is %d\n", (int)e);
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project18" class="accordion-item">
+                <h2 class="accordion-header" id="heading18">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                        18. Functions
+                    </button>
+                </h2>
+                <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="heading18"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int sum(int a, int b)
+{
+    return a + b;
+}
+
+void printstar(int d)
+{
+    for (int e = 0; e &lt; d; e++)
+    {
+        printf("%c", '*');
+    }
+    printf("\n");
+}
+
+int takenum()
+{
+    int f;
+    printf("Enter a number\t");
+    scanf("%d", &f);
+    return f;
+}
+
+void age()
+{
+    int h;
+    printf("Enter your age\t");
+    scanf("%d", &h);
+    printf("Your age is %d\n", h);
+}
+
+int main()
+{
+    int a, b, c, g;
+    a = 9;
+    b = 87;
+    c = sum(a, b);
+    printf("The sum is %d\n", c);
+    printstar(7);
+    g = takenum();
+    printf("The number entered is %d\n", g);
+    age();
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project19" class="accordion-item">
+                <h2 class="accordion-header" id="heading19">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                        19. Recursion
+                    </button>
+                </h2>
+                <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int factorial(int num)
+{
+    if (num == 1 || num == 0)
+    {
+        return 1;
+    }
+    else
+    {
+        return (num * factorial(num - 1));
+    }
+}
+
+int main()
+{
+    int f_num;
+start:
+    printf("Enter the number you want the factorial of - ");
+    scanf("%d", &f_num);
+    printf("The factorial of %d is %d! = %d\n", f_num, f_num, factorial(f_num));
+    goto start;
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project20" class="accordion-item">
+                <h2 class="accordion-header" id="heading20">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                        20. Arrays
+                    </button>
+                </h2>
+                <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="heading20"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int marks[4];
+
+    marks[0] = 34;
+    printf("marks of student 0 is %d\n", marks[0]);
+    marks[0] = 6;
+    marks[1] = 4;
+    marks[2] = 56;
+    marks[3] = 15;
+    printf("marks of student 0 is %d\n", marks[0]);
+
+    for (int i = 0; i &lt; 4; i++)
+    {
+        printf("Enter the value of %d element of the array - ", i);
+        scanf("%d", &marks[i]);
+    }
+    for (int i = 0; i &lt; 4; i++)
+    {
+        printf("The value of %d element of the array is %d\n", i, marks[i]);
+    }
+
+    int points[4] = {45, 67, 54, 98};
+    for (int j = 0; j &lt; 4; j++)
+    {
+        printf("The value of %d element of the array is %d\n", j, points[j]);
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project21" class="accordion-item">
+                <h2 class="accordion-header" id="heading21">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+                        21. 2D Arrays
+                    </button>
+                </h2>
+                <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="heading21"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int marks[2][4] = {{45, 25, 12, 32},
+                       {2, 1, 6, 85}};
+    for (int i = 0; i &lt; 2; i++)
+    {
+        for (int j = 0; j &lt; 4; j++)
+        {
+            printf("marks[%d,%d] is %d\n", i, j, marks[i][j]);
+        }
+        printf("\n");
+    }
+
+    for (int i = 0; i &lt; 2; i++)
+    {
+        for (int j = 0; j &lt; 4; j++)
+        {
+            printf("%d ", marks[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project22" class="accordion-item">
+                <h2 class="accordion-header" id="heading22">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                        22. Pointers
+                    </button>
+                </h2>
+                <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 76;
+    int *ptra = &a;
+    int *ptr2 ;
+    int *ptr3 = NULL;
+    printf("The value of a is %d\n", a);
+    printf("The value of address of a by pointer by x is %x\n", ptra);
+    printf("The value of address of a by pointer by p is %p\n", ptra);
+    printf("The value of address of a by itself by x is %x\n", &a);
+    printf("The value of address of a by itself by p is %p\n", &a);
+    printf("The value of a by pointer is %d\n", *ptra);
+    printf("The value of address of ptr2 is %p\n", ptr2);
+    printf("The value of address of ptr3 is %x\n", ptr3);
+    printf("The value of address of ptr3 is %p\n", ptr3);
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project23" class="accordion-item">
+                <h2 class="accordion-header" id="heading23">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                        23. Array & Pointer
+                    </button>
+                </h2>
+                <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="heading23"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 34;
+    int *ptra = &a;
+    printf("%d\n", ptra);
+    printf("%d\n", ptra + 1);
+    printf("%d\n", ptra - 2);
+    ptra++;
+    printf("%d\n", ptra);
+    ptra--;
+    printf("%d\n", ptra);
+
+    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    printf("\n");
+
+    printf("The vlaue at position 0 of array is - %d\n", *(arr));
+    printf("The vlaue at position 0 of array is - %d\n", *(&arr[0]));
+    printf("The vlaue at position 1 of array is - %d\n", *(&arr[1]));
+    printf("The vlaue at position 1 of array is - %d\n", *(arr + 1));
+
+    printf("\n");
+
+    printf("The address of position 0 of array is - %d\n", arr);
+    printf("The address of position 0 of array is - %d\n", &arr[0]);
+    printf("The address of position 1 of array is - %d\n", &arr[1]);
+    printf("The address of position 1 of array is - %d\n", arr + 1);
+
+    // arr++;  arr--; These give error
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project24" class="accordion-item">
+                <h2 class="accordion-header" id="heading24">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                        24. Function & Pointer
+                    </button>
+                </h2>
+                <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+void swap(int *x, int *y)
+{
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+int main()
+{
+    int a, b;
+
+    printf("Enter a - ");
+    scanf("%d", &a);
+    printf("Enter b - ");
+    scanf("%d", &b);
+
+    printf("a = %d & b = %d", a, b);
+
+    swap(&a, &b);
+    printf("\nswapped\na = %d & b = %d", a, b);
+    
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project25" class="accordion-item">
+                <h2 class="accordion-header" id="heading25">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                        25. Array into Function
+                    </button>
+                </h2>
+                <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="heading25"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int func1(int array[])
+{
+    for (int i = 0; i &lt; 9; i++)
+    {
+        printf("The value at %d is %d\n", i, array[i]);
+    }
+    array[0] = 300;
+    return 0;
+}
+
+int func2(int *ptr)
+{
+    for (int i = 0; i &lt; 9; i++)
+    {
+        printf("The value at %d is %d\n", i, ptr[i]);
+    }
+    printf("\n");
+
+    *(ptr + 2) = 400;
+
+    for (int i = 0; i &lt; 9; i++)
+    {
+        printf("The value at %d is %d\n", i, *(ptr + i));
+    }
+    printf("\n");
+
+    return 0;
+}
+
+void func3(int arr[2][2])
+{
+    for (int i = 0; i &lt; 2; i++)
+    {
+        for (int j = 0; j &lt; 2; j++)
+        {
+            printf("Value at %d, %d is %d\n", i, j, arr[i][j]);
+        }
+    }
+}
+
+int main()
+{
+    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int arr_2D[2][2] = {{10, 20}, {30, 40}};
+    printf("The value at index 0 is %d\n", arr[0]);
+    func1(arr);
+    printf("The value at index 0 is %d\n\n", arr[0]);
+
+    func2(arr);
+    func3(arr_2D);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project26" class="accordion-item">
+                <h2 class="accordion-header" id="heading26">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                        26. Strings
+                    </button>
+                </h2>
+                <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+void printStr(char str[])
+{
+    int i = 0;
+    while (str[i] != '\0')
+    {
+        printf("%c", str[i]);
+        i++;
+    }
+    printf("\n");
+}
+
+void printStr2(char str[])
+{
+    int i = 0;
+    while (str[i] != '\0')
+    {
+        printf("%c", str[i]);
+        i++;
+    }
+    printf("\n");
+}
+
+int main()
+{
+    char str[] = {'s', 'a', 'k', 's', 'h', 'a', 'm', '\0'};
+    printStr(str);
+
+    char str2[] = "Saksham2";
+    printStr2(str2);
+
+    char str3[50];
+    printf("Type string - ");
+    gets(str3);
+    printf("using printf %s\n", str3);
+    printf("using puts ");
+    puts(str3);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project27" class="accordion-item">
+                <h2 class="accordion-header" id="heading27">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+                        27. String Functions
+                    </button>
+                </h2>
+                <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="heading27"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char s1[] = "saksham";
+    char s2[] = "ravi";
+    char s3[54];
+    printf("The concatenaiton of s1 & s2 is %s\n", strcat(s1, s2)); // concatanate into s1
+    printf("The length of s1 is %d\n", strlen(s1));
+    printf("The length of s2 is %d\n", strlen(s2));
+    printf("The reverse of s1 is %s\n", strrev(s1));
+    printf("The reverse of s2 is %s\n", strrev(s2));
+
+    strcpy(s3, strcat(s1, s2));
+    puts(s3);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project28" class="accordion-item">
+                <h2 class="accordion-header" id="heading28">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                        28. Structures
+                    </button>
+                </h2>
+                <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="heading28"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+struct Student
+{
+    char name[50];
+    int id;
+    int marks;
+    char fav_char;
+};
+
+int main()
+{
+    struct Student saksham, ravi, shubham;
+    strcpy(saksham.name,"Saksham");
+    strcpy(ravi.name,"Ravi");
+    strcpy(shubham.name,"Shubham");
+
+    saksham.id = 1;
+    ravi.id = 2;
+    shubham.id = 3;
+
+    saksham.marks = 10;
+    ravi.marks = 10;
+    shubham.marks = 10;
+
+    saksham.fav_char = 'a';
+    ravi.fav_char = 'b';
+    shubham.fav_char = 'c';
+
+    printf("Saksham got %d marks\n", saksham.marks);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project29" class="accordion-item">
+                <h2 class="accordion-header" id="heading29">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
+                        29. Typedef
+                    </button>
+                </h2>
+                <div id="collapse29" class="accordion-collapse collapse" aria-labelledby="heading29"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+typedef struct Student
+{
+    char name[50];
+    int id;
+    int marks;
+    char fav_char;
+} std;
+
+int main()
+{
+    // typedef &lt;previous_name&gt; &lt;alias_name&gt;;
+    typedef unsigned long ul;
+    ul l1, l2, l3;
+    l1 = 100;
+    printf("ul is %d\n", l1);
+
+    std s1, s2;
+    s1.id = 1;
+    s2.id = 2;
+    printf("s1 id is %d\n", s1.id);
+    printf("s2 id is %d\n", s2.id);
+
+    // int *a, b;
+    typedef int *intptr;
+    intptr a, b;
+    int c = 89;
+    a = &c;
+    b = &c;
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project30" class="accordion-item">
+                <h2 class="accordion-header" id="heading30">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse30" aria-expanded="false" aria-controls="collapse30">
+                        30. Type of Variable
+                    </button>
+                </h2>
+                <div id="collapse30" class="accordion-collapse collapse" aria-labelledby="heading30"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int global_var = 20;
+
+void local_func(int local_var)
+{
+    printf("The address of local_var in local_func is %d\n", &local_var);
+    printf("The value of local_var in local_func is - %d", local_var);
+}
+
+void global_func1()
+{
+    int global_var = 21;
+    printf("The address of global_var in global_func1(in which local variable also created) is %d\n", &global_var);
+    printf("The value of global_var in global_func1(in which local variable also created) is - %d", global_var);
+}
+
+void global_func2()
+{
+    printf("The address of global_var in global_func2(in which local variable is not created) is %d\n", &global_var);
+    printf("The value of global_var in global_func2(in which local variable is not created) is - %d", global_var);
+}
+
+int static_func(int b1)
+{
+    // If we do not initialize then automatically take zero
+    static int static_var = 0;
+    printf("The value of static_var is - %d\n", static_var);
+    static_var++;
+    return b1 + static_var;
+}
+
+int main()
+{
+    int local_var = 34;
+    printf("The address of local_var in main is %d\n", &local_var);
+    local_func(local_var);
+    printf("\n\n");
+
+    printf("The address of global_var in main is %d\n", &global_var);
+    global_func1();
+    printf("\n\n");
+
+    printf("The address of global_var in main is %d\n", &global_var);
+    global_func2();
+    printf("\n\n");
+
+    int b = 10;
+    int val = static_func(b);
+    val = static_func(b);
+    val = static_func(b);
+    val = static_func(b);
+    val = static_func(b);
+    // int *ptr = &val;
+    // printf("The value of local_func is %d\n", val);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project31" class="accordion-item">
+                <h2 class="accordion-header" id="heading31">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse31" aria-expanded="false" aria-controls="collapse31">
+                        31. Dynamic Memory
+                    </button>
+                </h2>
+                <div id="collapse31" class="accordion-collapse collapse" aria-labelledby="heading31"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main()
+{
+    // Use of Malloc
+    int *ptr1;
+    int n;
+    printf("Enter the size of array you want to create - ");
+    scanf("%d", &n);
+    ptr1 = (int *)malloc(n * sizeof(int));
+    for (int i = 0; i &lt; n; i++)
+    {
+        printf("Enter the value no %d of this array - ", i);
+        scanf("%d", &ptr1[i]);
+    }
+    for (int i = 0; i &lt; n; i++)
+    {
+        printf("Enter the value no %d of this array is %d\n", i, ptr1[i]);
+    }
+
+    printf("\n");
+
+    // Use of Calloc
+    int *ptr2;
+    int n2;
+    printf("Enter the size of array you want to create - ");
+    scanf("%d", &n2);
+    ptr2 = (int *)calloc(n2, sizeof(int));
+    for (int i = 0; i &lt; n2; i++)
+    {
+        printf("Enter the value no %d of this array - ", i);
+        scanf("%d", &ptr2[i]);
+    }
+    for (int i = 0; i &lt; n2; i++)
+    {
+        printf("Enter the value no %d of this array is %d\n", i, ptr2[i]);
+    }
+
+    printf("\n");
+
+    // Use of Realloc
+    printf("Enter the size of new array you want to create - ");
+    scanf("%d", &n2);
+    ptr2 = (int *)realloc(ptr2, n2 * sizeof(int));
+    for (int i = 0; i &lt; n2; i++)
+    {
+        printf("Enter the value no %d of this array - ", i);
+        scanf("%d", &ptr2[i]);
+    }
+    for (int i = 0; i &lt; n2; i++)
+    {
+        printf("Enter the value no %d of this array is %d\n", i, ptr2[i]);
+    }
+
+    free(ptr2);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project32" class="accordion-item">
+                <h2 class="accordion-header" id="heading32">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse32" aria-expanded="false" aria-controls="collapse32">
+                        32. Union
+                    </button>
+                </h2>
+                <div id="collapse32" class="accordion-collapse collapse" aria-labelledby="heading32"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+union Student
+{
+    int id;
+    int marks;
+    char fav_char;
+    char name[34];
+};
+
+int main()
+{
+    union Student s1;
+    s1.id = 1;
+    s1.marks = 45;
+    s1.fav_char = 'u';
+    strcpy(s1.name, "Saksham");
+
+    printf("The id is - %d\n", s1.id);
+    printf("The marks is - %d\n", s1.marks);
+    printf("The fav_char is - '%c'\n", s1.fav_char);
+    printf("The name is - '%s'\n", s1.name);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project33" class="accordion-item">
+                <h2 class="accordion-header" id="heading33">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse33" aria-expanded="false" aria-controls="collapse33">
+                        33. Storage Classes
+                    </button>
+                </h2>
+                <div id="collapse33" class="accordion-collapse collapse" aria-labelledby="heading33"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>// Declaration --&gt; Telling compiler about the variable (No space reserved)
+// Definition --&gt; Declaration + space reservation
+
+#include &lt;stdio.h&gt;
+
+int sum = 400;
+int sum_func(int a, int b)
+{
+    int sum;
+    sum = a + b;
+    return sum;
+}
+
+int register_func()
+{
+    static int var;
+    var++;
+    printf("The var is %d\n", var);
+    return var;
+}
+
+int main()
+{
+    sum = sum_func(3, 5);
+    printf("The sum is %d\n", sum);
+
+    register int myvar = register_func();
+    myvar = register_func();
+    myvar = register_func();
+    myvar = register_func();
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project34" class="accordion-item">
+                <h2 class="accordion-header" id="heading34">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse34" aria-expanded="false" aria-controls="collapse34">
+                        34. Extern Classes
+                    </button>
+                </h2>
+                <div id="collapse34" class="accordion-collapse collapse" aria-labelledby="heading34"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+#include "34_extern_storage_class_input.c"
+
+extern int sum;
+int sum2 = 3000;
+
+void sum_func()
+{
+    extern int sum2;
+    printf("%d\n", sum2);
+}
+
+int main()
+{
+    printf("%d\n", sum);
+    sum_func();
+
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>int sum = 400;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project35" class="accordion-item">
+                <h2 class="accordion-header" id="heading35">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse35" aria-expanded="false" aria-controls="collapse35">
+                        35. Void Pointer
+                    </button>
+                </h2>
+                <div id="collapse35" class="accordion-collapse collapse" aria-labelledby="heading35"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 345;
+    float b = 8.3;
+    void *ptr;
+
+    ptr = &a;
+    printf("The value of a is %d\n", *((int *)ptr));
+
+    ptr = &b;
+    printf("The value of b is %0.1f\n", *((float *)ptr));
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project36" class="accordion-item">
+                <h2 class="accordion-header" id="heading36">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse36" aria-expanded="false" aria-controls="collapse36">
+                        36. Null Pointer
+                    </button>
+                </h2>
+                <div id="collapse36" class="accordion-collapse collapse" aria-labelledby="heading36"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 34;
+    int *ptr = NULL;
+
+    // If we import value i.e. *ptr then program gets crash
+
+    if (ptr != NULL)
+    {
+        printf("The address of a is %d\n", ptr);
+    }
+    else
+    {
+        printf("The ponter is null so can't be derefenced\n");
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project37" class="accordion-item">
+                <h2 class="accordion-header" id="heading37">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse37" aria-expanded="false" aria-controls="collapse37">
+                        37. Dangling Pointer
+                    </button>
+                </h2>
+                <div id="collapse37" class="accordion-collapse collapse" aria-labelledby="heading37"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int dangling()
+{
+    int a, b, sum;
+    a = 34;
+    b = 67;
+    sum = a + b;
+
+    return sum;
+}
+
+int main()
+{
+
+    // Case 1: De-Allocation of a memory block
+    int *ptr = (int *)malloc(7 * sizeof(int));
+    ptr[0] = 64;
+    ptr[1] = 27;
+    ptr[2] = 50;
+    ptr[3] = 34;
+
+    free(ptr); // ptr is now a danlging pointer
+
+    // Case 2: Function returning local variable address
+    int *ptr2 = dangling(); // ptr2 is now a danlging pointer
+
+    // Case 3: Variable goes out of scope
+    int *ptr3;
+    {
+        int a = 13;
+        ptr3 = &a;
+    }
+    // ptr3 is now a danlging pointer
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project38" class="accordion-item">
+                <h2 class="accordion-header" id="heading38">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse38" aria-expanded="false" aria-controls="collapse38">
+                        38. Wild Pointer
+                    </button>
+                </h2>
+                <div id="collapse38" class="accordion-collapse collapse" aria-labelledby="heading38"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main()
+{
+    int a = 34;
+    int *ptr; // ptr is a wild pointer here
+    // *ptr = 34;  This is not a good thimg to do
+    ptr = &a; // ptr is no longer a wild pointer
+    printf("Value in ptr is %d\n", *ptr);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project39" class="accordion-item">
+                <h2 class="accordion-header" id="heading39">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse39" aria-expanded="false" aria-controls="collapse39">
+                        39. Pre-Processor
+                    </button>
+                </h2>
+                <div id="collapse39" class="accordion-collapse collapse" aria-labelledby="heading39"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+#define pi 3.14
+#define square(x) x *x
+
+int main()
+{
+    int rad = 4;
+    printf("The area of circle is %f\n", pi * square(rad));
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project40" class="accordion-item">
+                <h2 class="accordion-header" id="heading40">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse40" aria-expanded="false" aria-controls="collapse40">
+                        40. Pre-Defined Macros
+                    </button>
+                </h2>
+                <div id="collapse40" class="accordion-collapse collapse" aria-labelledby="heading40"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("The file name is %s\n", __FILE__);
+    printf("Today date is %s\n", __DATE__);
+    printf("Time now is %s\n", __TIME__);
+    printf("Line no is %d\n", __LINE__);
+    printf("ANSI: %d\n", __STDC__);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project41" class="accordion-item">
+                <h2 class="accordion-header" id="heading41">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse41" aria-expanded="false" aria-controls="collapse41">
+                        41. Files
+                    </button>
+                </h2>
+                <div id="collapse41" class="accordion-collapse collapse" aria-labelledby="heading41"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>// If you want to run this file then first uncomment that section
+// Don't uncomment more than 1 section at same time
+
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    FILE *ptr = NULL;
+    char string[34] = "\nThis is a test string";
+
+    // Reading a file
+    // ptr = fopen("42_file_i_o_functions_test.txt", "r");
+    // fscanf(ptr, "%s", string);
+    // printf("The content of this file is\n%s", string);
+
+    // Writing a file
+    // ptr = fopen("42_file_i_o_functions_test.txt", "w");
+    // fprintf(ptr, "%s", string);
+    
+    // Appending a file
+    // ptr = fopen("42_file_i_o_functions_test.txt", "a");
+    // fprintf(ptr, "%s", string);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project42" class="accordion-item">
+                <h2 class="accordion-header" id="heading42">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse42" aria-expanded="false" aria-controls="collapse42">
+                        42. More File Functions
+                    </button>
+                </h2>
+                <div id="collapse42" class="accordion-collapse collapse" aria-labelledby="heading42"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>// If you want to run this file then first uncomment that section
+// Don't uncomment more than 1 section at same time
+
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    FILE *ptr = NULL;
+
+    // r ---&gt; read a file
+    // ptr = fopen("43_more_file_functions.txt", "r");
+    // char c = fgetc(ptr);
+    // printf("The character I read was %c\n", c);
+    // c = fgetc(ptr);
+    // printf("The second character I read was %c\n", c);
+
+    // ptr = fopen("43_more_file_functions.txt", "r");
+    // char str[3];
+    // fgets(str, 4, ptr);
+    // printf("The string I read was %s\n", str);
+
+    // w ---&gt; write in a file after deleting whole content
+    // ptr = fopen("43_more_file_functions.txt", "w");
+    // fputc('o', ptr);
+    // fputs("This is saksham", ptr);
+
+    // r+ ---&gt; read & write in a file after deleting whole content which is equal to length of string
+    // ptr = fopen("43_more_file_functions.txt", "r+");
+    // fputc('o', ptr);
+    // fputs("This is saksham", ptr);
+
+    // w+ ---&gt; read & write in a file after deleting whole content
+    // ptr = fopen("43_more_file_functions.txt", "w+");
+    // fputc('o', ptr);
+    // fputs("This is saksham", ptr);
+
+    // a+ ---&gt; read & append in a file without deleting whole content
+    // ptr = fopen("43_more_file_functions.txt", "a+");
+    // fputc('o', ptr);
+    // fputs("This is saksham", ptr);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project43" class="accordion-item">
+                <h2 class="accordion-header" id="heading43">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse43" aria-expanded="false" aria-controls="collapse43">
+                        43. Command Line Arguments
+                    </button>
+                </h2>
+                <div id="collapse43" class="accordion-collapse collapse" aria-labelledby="heading43"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int main(int argc, char const *argv[])
+{
+    printf("The value of argc is %d\n", argc);
+
+    for (int i = 0; i &lt; argc; i++)
+    {
+        printf("The argument at index %d has value %s\n", i, argv[i]);
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project44" class="accordion-item">
+                <h2 class="accordion-header" id="heading44">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse44" aria-expanded="false" aria-controls="collapse44">
+                        44. Function Pointer
+                    </button>
+                </h2>
+                <div id="collapse44" class="accordion-collapse collapse" aria-labelledby="heading44"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int sum(int a, int b)
+{
+    return a + b;
+}
+
+void greet()
+{
+    printf("Hello world\n");
+}
+
+int main()
+{
+    int (*fptr)(int, int);
+    fptr = &sum ;
+    int d = (*fptr)(4, 6);
+    printf("The value of d is %d\n", d);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project45" class="accordion-item">
+                <h2 class="accordion-header" id="heading45">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse45" aria-expanded="false" aria-controls="collapse45">
+                        45. Callback by Pointer
+                    </button>
+                </h2>
+                <div id="collapse45" class="accordion-collapse collapse" aria-labelledby="heading45"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+
+int sum(int a, int b)
+{
+    return a + b;
+}
+
+void greetHello(int (*fptr)(int, int))
+{
+    printf("Hello\n");
+    printf("The sum of 5 & 7 is %d\n", fptr(5, 7));
+}
+
+void greetGM(int (*fptr)(int, int))
+{
+    printf("Good Morning\n");
+    printf("The sum of 5 & 7 is %d\n", fptr(5, 7));
+}
+
+int main()
+{
+    int (*ptr)(int, int);
+    ptr = sum;
+    greetHello(ptr);
+    greetGM(ptr);
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project46" class="accordion-item">
+                <h2 class="accordion-header" id="heading46">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse46" aria-expanded="false" aria-controls="collapse46">
+                        46. Memory Leak
+                    </button>
+                </h2>
+                <div id="collapse46" class="accordion-collapse collapse" aria-labelledby="heading46"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-c"><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main()
+{
+    int a, i = 0;
+    int *i2;
+    while (i &lt; 45545)
+    {
+        printf("Welcome Saksham Kuamr Bindal\n");
+        i2 = malloc(34444 * sizeof(int));
+        if (i % 100 == 0)
+        {
+            getchar();
+        }
+        i++;
+        free(i2); // If we not do this then memory will rapidly increase & at a time program crash
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>

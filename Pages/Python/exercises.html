@@ -1,0 +1,1208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | Python | Exercises</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c5 {
+            display: none;
+        }
+
+        #d1,
+        #d3,
+        #d4,
+        #d6,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./python.html">Python</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./exercises.html">Exercises</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Exercises</h3>
+        <hr>
+        <h5 id="nothing">No exercise matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        1. Swap Numbers
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Take two numbers a & b as input.
+Then swap their values & print.
+"""
+
+print("Enter number a = ", end="")
+a = input()
+
+print("Enter number b = ", end="")
+b = input()
+
+a, b = b, a
+print("After swapping")
+print("a = " + str(a))
+print("b = " + str(b))
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project2" class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        2. Make Dictionary
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Make a random dictionary & ask user to enter a word.
+Tell him the meaning of word according to your dictionary.
+"""
+
+fruit = {"Apple": "a red fruit source of iron",
+         "Mango": "My favourite",
+         "Pineapple": "Very sour",
+         "Orange": "Khatta Meetha"}
+
+a = input("Enter a value :- ")
+b = a.lower()
+c = b.capitalize()
+print(a, " = ", fruit[c])
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        3. Age Decide
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Take age from user.
+Tell him that he can drive or not according to his age.
+"""
+
+age = int(input("Enter your age - "))
+
+if (age &gt; 6) & (age &lt; 101):
+    if age &lt; 18:
+        print("You cannot drive")
+    elif age == 18:
+        print("We will think about you")
+    else:
+        print("You can drive")
+else:
+    print("Your age is not valid for this program")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        4. Faulty Calculator
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Design a faulty calculator which will correctly solve all problems.
+Except the following ones :-
+45*3 = 555, 56+9=77, 56/6 = 4
+Your program should take operator & 2 numbers as input from user.
+Then return the result
+"""
+
+operator = input("Write an operator :- ")
+opr1 = float(input("Enter first operand = "))
+opr2 = float(input("Enter second operand = "))
+
+if (((opr1 == 45) & (opr2 == 3)) | ((opr1 == 3) & (opr2 == 45))) & (operator == "*"):
+    print(opr1, operator, opr2, "= 455")
+elif (((opr1 == 56) & (opr2 == 9)) | ((opr1 == 9) & (opr2 == 56))) & (operator == "+"):
+    print(opr1, operator, opr2, "= 77")
+elif ((opr1 == 56) & (opr2 == 6)) & (operator == "/"):
+    print(opr1, operator, opr2, "= 4")
+else:
+    if operator == "+":
+        print(opr1, "+", opr2, "=", opr1 + opr2)
+    elif operator == "*":
+        print(opr1, "*", opr2, "=", opr1 * opr2)
+    elif operator == "-":
+        print(opr1, "-", opr2, "=", opr1 - opr2)
+    elif operator == "/":
+        print(opr1, "/", opr2, "=", opr1 / opr2)
+    else:
+        print("You have entered incorrect operator")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project5" class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        5. For Loops
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Make a list & print numbers greater than 6 present in list
+"""
+
+list = ["saksham", True, 11, 5, 2, 25, 0, 8]
+
+print("Items greater than 6 are :-")
+
+for item in list:
+    if str(item).isnumeric() and item &gt; 6:
+        print(item)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        6. While Loops
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Take a number from user.
+If number is less than 100 then take again & again.
+But if number is not less than 100 then stop program
+"""
+
+print("Enter a number not less than 100 to break program")
+
+while (1):
+    i = int(input("Enter a number = "))
+    if i &lt; 100:
+        print("you have entered less than 100 so enter again!!")
+        continue
+    if i &gt;= 100:
+        print("you have entered not less than 100 so we will close this program!!")
+        break
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        7. Guess Number
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+let n = 18
+Ask user to guess a number.
+If he guess greater than 18 than tell to reduce his guess
+If he guess smaller than 18 than tell to grow up his guess
+If he entered 18 then he wins game
+Max no of guesses are 9
+If he can't guess 18 either in 9 guesses then he lose the game
+Print no of guesses left at each term
+"""
+
+n = 18
+guess_num = 1
+
+while guess_num &lt; 10:
+    guess = int(input("Guess a number :- "))
+    if guess == 18:
+        print("Wow!! You guess the number only in", guess_num, "guesses")
+        break
+    elif guess &lt;= 10:
+        print("Enter a big number")
+        print("No of guesses left =", 9 - guess_num)
+        guess_num = guess_num + 1
+        continue
+    elif guess &lt; 18:
+        print("You are very close!!\nEnter a little big number")
+        print("No of guesses left =", 9 - guess_num)
+        guess_num = guess_num + 1
+        continue
+    elif guess &lt; 25:
+        print("You are very close!!\nEnter a little short number")
+        print("No of guesses left =", 9 - guess_num)
+        guess_num = guess_num + 1
+        continue
+    else:
+        print("Enter a short number")
+        print("No of guesses left =", 9 - guess_num)
+        guess_num = guess_num + 1
+
+if guess_num == 10:
+    print("Alas!! You have spent all your turns!!\nGAME OVER")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project8" class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        8. Star Pattern
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Take input for no of rows.
+Take input for type of pattern.
+Then print star pattern accordingly.
+"""
+
+def forward(row):
+    i = 1
+    while i &lt; row + 1:
+        j = 1
+        while j &lt; i + 1:
+            print("*", end="")
+            j = j + 1
+        print()
+        i = i + 1
+
+
+def backward(row):
+    i = 1
+    while i &lt; row + 1:
+        j = row - i + 1
+        while j &gt; 0:
+            print("*", end="")
+            j = j - 1
+        print()
+        i = i + 1
+
+
+def for_back(row):
+    i = 1
+    while i &lt; row + 1:
+        j = 1
+        while j &lt; i + 1:
+            print("*", end="")
+            j = j + 1
+        print()
+        i = i + 1
+    k = 1
+    while k &lt; row:
+        l = row - k
+        while l &gt; 0:
+            print("*", end="")
+            l = l - 1
+        print()
+        k = k + 1
+
+
+def back_for(row):
+    k = 1
+    while k &lt; row:
+        l = row - k + 1
+        while l &gt; 0:
+            print("*", end="")
+            l = l - 1
+        print()
+        k = k + 1
+    i = 1
+    while i &lt; row + 1:
+        j = 1
+        while j &lt; i + 1:
+            print("*", end="")
+            j = j + 1
+        print()
+        i = i + 1
+
+
+while (1):
+    rows = int(input("\nEnter no of rows in star pattern = "))
+    type = int(input("Enter 1 for forward\nEnter 2 for backward\nEnter 3 for for-back\nEnter 4 for back-for\n"))
+    if type == 1:
+        forward(rows)
+    elif type == 2:
+        backward(rows)
+    elif type == 3:
+        for_back(rows)
+    elif type == 4:
+        back_for(rows)
+    else:
+        print("Please enter correct number")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project9" class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        9. Fibonacci
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Fibonacci Series --&gt; 0, 1, 1, 2, 3, 5, 8, 13, ........
+First two elements are 0 & 1
+Then we find Nth element by adding (N-1)th & (N-2)th elements.
+"""
+
+def fib_rec(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    elif n &gt; 1:
+        return fib_rec(n - 1) + fib_rec(n - 2)
+
+
+while (1):
+    number = int(input("Enter a number = "))
+    print("Fibonacci of", number, "is", fib_rec(number))
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project10" class="accordion-item">
+                <h2 class="accordion-header" id="heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        10. Health Management
+                    </button>
+                </h2>
+                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Input 1 --&gt; Ask for enter name among 3 given names.
+Input 2 --&gt; Ask for enter exercise or diet
+Input 3 --&gt; Ask for log the work or retrieve the work.
+Work accordingly.
+"""
+
+import datetime
+
+
+def getdate():
+    return datetime.datetime.now()
+
+
+def log(cleint, work):
+    add = input("Enter the item you want to add = ")
+    if cleint == 1:
+        if work == 1:
+            with open("E10 saksham_exer.txt", "a") as post:
+                post.write("added at :- " + str(getdate()) + "\t" + add + "\n")
+        elif work == 2:
+            with open("E10 saksham_diet.txt", "a") as post:
+                post.write("added at :- " + str(getdate()) + "\t" + add + "\n")
+    elif cleint == 2:
+        if work == 1:
+            with open("E10 harry_exer.txt", "a") as post:
+                post.write("added at :- " + str(getdate()) + "\t" + add + "\n")
+        elif work == 2:
+            with open("E10 harry_diet.txt", "a") as post:
+                post.write("added at :- " + str(getdate()) + "\t" + add + "\n")
+    elif cleint == 3:
+        if work == 1:
+            with open("E10 shubham_exer.txt", "a") as post:
+                post.write("added at :- " + str(getdate()) + "\t" + add + "\n")
+        elif work == 2:
+            with open("E10 shubham_diet.txt", "a") as post:
+                post.write("added at :- " + str(getdate()) + "\t" + add + "\n")
+    print("Item added successfully")
+
+
+def retreive(cleint, work):
+    if cleint == 1:
+        if work == 1:
+            with open("E10 saksham_exer.txt") as post:
+                print(post.readlines())
+        elif work == 2:
+            with open("E10 saksham_diet.txt") as post:
+                print(post.readlines())
+    elif cleint == 2:
+        if work == 1:
+            with open("E10 harry_exer.txt") as post:
+                print(post.readlines())
+        elif work == 2:
+            with open("E10 harry_diet.txt") as post:
+                print(post.readlines())
+    elif cleint == 3:
+        if work == 1:
+            with open("E10 shubham_exer.txt") as post:
+                print(post.readlines())
+        elif work == 2:
+            with open("E10 shubham_diet.txt") as post:
+                print(post.readlines())
+    else:
+        print("Could not retrieve. Please add some item to retreive them.")
+
+
+while (1):
+    print("Press 0 in client to quit")
+    cleint = int(input("Enter 1 for saksham, 2 for harry, 3 for shubham = "))
+    if cleint == 0:
+        break
+    work = int(input("Enter 1 for exercise, 2 for diet = "))
+    type = int(input("Enter 1 for log, 2 for retreive = "))
+
+    if (cleint == 1 or cleint == 2 or cleint == 3) and (work == 1 or work == 2):
+        if type == 1:
+            log(cleint, work)
+        elif type == 2:
+            retreive(cleint, work)
+        else:
+            print("Entered invalid values!!!")
+    else:
+        print("Entered invalid values!!!")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project11" class="accordion-item">
+                <h2 class="accordion-header" id="heading11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                        11. Snake Water Gun
+                    </button>
+                </h2>
+                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Make a program to choose sanke, water or gun.
+Display score of you & computer after every turn.
+Play 10 times.
+At last whose score is highest he wins
+"""
+
+import random
+
+
+def printing():
+    print("Enter 1 for snake")
+    print("Enter 2 for water")
+    print("Enter 3 for gun")
+
+
+sc_you = 0
+sc_comp = 0
+
+
+def score(you, comp):
+    choices = ["Snake", "Water", "Gun"]
+    global sc_you
+    global sc_comp
+    if you == 1 and comp == 2:
+        sc_you = sc_you + 1
+    elif you == 1 and comp == 3:
+        sc_comp = sc_comp + 1
+    elif you == 2 and comp == 3:
+        sc_you = sc_you + 1
+    elif you == 2 and comp == 1:
+        sc_comp = sc_comp + 1
+    elif you == 3 and comp == 1:
+        sc_you = sc_you + 1
+    elif you == 3 and comp == 2:
+        sc_comp = sc_comp + 1
+    else:
+        sc_you = sc_you
+        sc_comp = sc_comp
+    print("Your's choice =", choices[you - 1])
+    print("Comp's choice =", choices[comp - 1])
+    print("Score of yours =", sc_you)
+    print("Score of computer =", sc_comp, "\n")
+
+
+def win(sc_you, sc_comp):
+    if sc_you &gt; sc_comp:
+        print("Congrats!!You won")
+    elif sc_you &lt; sc_comp:
+        print("Alas!!You lost")
+    else:
+        print("Fine!!Game Tied")
+
+
+i = 1
+
+print("\nYou have 10 turns")
+while i &lt; 11:
+    print("Turn no.", i)
+    printing()
+    you = int(input())
+    comp = random.randint(1, 3)
+
+    if you == 1 or you == 2 or you == 3:
+        score(you, comp)
+        i = i + 1
+    else:
+        print("Enter correct value")
+
+win(sc_you, sc_comp)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project12" class="accordion-item">
+                <h2 class="accordion-header" id="heading12">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                        12. Healty Programmer
+                    </button>
+                </h2>
+                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+You work against computer from 9am - 5pm
+So you should foolow these steps for your health
+Water - water.mp3 - every 30 min (1 glass) - enter drank to close & log it
+Eyes - eyes.mp3 - every 30 min - enter Eydone to close & log it
+Physical activity - physical.mp3 - every 45 min - enter Exdone to close & log it
+Use Pygame module for play audio
+"""
+
+from pygame import mixer
+from datetime import datetime
+from time import time
+
+
+def musicloop(file, stopper):
+    mixer.init()
+    mixer.music.load(file)
+    while True:
+        mixer.music.play()
+        a = input(f"Type {stopper} to stop music - ")
+        if a == stopper:
+            mixer.music.stop()
+            break
+
+
+def log(msg):
+    with open("E12 log data.txt", "a") as f:
+        f.write(f"{msg} --&gt; {datetime.now()}\n")
+
+
+if __name__ == '__main__':
+    init_water = time()
+    init_eyes = time()
+    init_exer = time()
+
+    watersec = 5
+    eyessec = 10
+    exersec = 20
+
+    while True:
+        if time() - init_water &gt; watersec:
+            print("Drinking water alarm.")
+            musicloop("water.mp3", "drank")
+            init_water = time()
+            log("Drank water at")
+        if time() - init_eyes &gt; eyessec:
+            print("Exercise eyes alarm.")
+            musicloop("eyes.mp3", "done-eyes")
+            init_eyes = time()
+            log("Done eye exercise at")
+        if time() - init_exer &gt; exersec:
+            print("Physical exercise alarm.")
+            musicloop("physical.mp3", "done-exer")
+            init_exer = time()
+            log("Physical activity at")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project13" class="accordion-item">
+                <h2 class="accordion-header" id="heading13">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                        13. Prettify Folder
+                    </button>
+                </h2>
+                <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code># Oh soldier Prettify my Folder
+
+# path, dictionary file, format
+
+# def soldier("C://", "harry.txt", "jpg")
+
+import os
+
+
+def soldier(path, file, format):
+    os.chdir(path)
+    i = 1
+    files = os.listdir(path)
+    with open(file) as f:
+        filelist = f.read().split("\n")
+
+    for file in files:
+        if file not in filelist:
+            os.rename(file, file.capitalize())
+
+        if os.path.splitext(file)[1] == format:
+            os.rename(file, f"{i}{format}")
+            i += 1
+
+
+soldier(r"C:\Users\Haris\Desktop\testing",
+        r"C:\Users\Haris\PycharmProjects\PythonTuts\ext.txt", ".png")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project14" class="accordion-item">
+                <h2 class="accordion-header" id="heading14">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                        14. Speak News
+                    </button>
+                </h2>
+                <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Use News API websites for current affairs.
+Then make program to speak the newses one by one.
+"""
+
+from win32com.client import Dispatch
+import requests
+import json
+import pyttsx3
+
+
+def speak(str):
+    speak = Dispatch("SAPI.SpVoice")
+    speak.speak(str)
+
+
+if __name__ == '__main__':
+    speak("News for Today.. Lets begin")
+    url = "http://newsapi.org/v2/top-headlines?country=in&apiKey=09def55c3971413f8b7882b3f8f56979"
+    news = requests.get(url).text
+    news_dict = json.loads(news)
+    arts = news_dict["articles"]
+
+    i = 1
+    for article in arts:
+        print(f"news{i} --&gt; {article['title']} --&gt; {article['publishedAt']}")
+        speak(article['title'])
+        i += 1
+        if i &lt; len(arts) + 1:
+            speak(f"Moving on to News number {i}.. Listen Carefully")
+        else:
+            speak("Thanks for listening")
+            speak("If you also want to make such type of program then contact to saksham")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project15" class="accordion-item">
+                <h2 class="accordion-header" id="heading15">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                        15. Pickling Iris
+                    </button>
+                </h2>
+                <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import requests
+import pickle
+
+data = requests.get("https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data").text
+
+l1 = data.split("\n")
+print(l1)
+
+l2 = [item.split(",") for item in l1 if len(item) != 0]
+print(l2)
+
+with open("myiris.pkl", "wb") as f:
+    pickle.dump(l2, f)
+
+with open("myiris.pkl", "rb") as f:
+    print(pickle.load(f))
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project16" class="accordion-item">
+                <h2 class="accordion-header" id="heading16">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                        16. Email Collector
+                    </button>
+                </h2>
+                <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+You are given a long text file in which somewhere emails are also exist.
+Find all the emails & print.
+"""
+
+import re
+
+str = """
+ Email:enquiry@alliance.edu.in   Helpline: +91 80 3093 8100 / 8200 / 4619 9100
+ Media  Library  News  Webmail  Careers
+ Alliance University
+ Conferences
+ Admissions Open
+ Select Language
+UPDATES:
+ABOUT US 
+WHY AU 
+COLLEGES 
+FACULTY
+INTERNATIONAL PROGRAMS
+PROGRAMS
+RESEARCH
+ADMISSIONS 
+PLACEMENTS
+CONTACT US
+Contact UsHome Contact Us
+ Contact Us Back
+ Vice-Chancellor
+Dr. Pavana Dibbur
+ : vc@alliance.edu.in
+ : +91 80 3093 8100/4619 9100
+
+ Pro Vice-Chancellor (Academics, Research & Strategy)
+Dr. Anubha Singh
+ : anubha@alliance.edu.in
+ : +91 80 3093 8102
+
+ Registrar
+Mr. Madhu Sudan Mishra
+ : registrar@alliance.edu.in
+ : +91 80 3093 8100/4619 9100
+
+ Registrar (Examination & Evaluation)
+Dr. Sajan Mathew
+ : registrar.exams@alliance.edu.in
+ : +91 80 3093 8141
+
+ Director (Placements)
+Mr. Mathew Thankachan
+ : placement@alliance.edu.in | mathew.t@alliance.edu.in
+ : +91 80 3093 8124 | 98444 72674
+
+ Director (International Affairs)
+Mr. Rajen Chatterjee
+ : rajen.chatterjee@alliance.edu.in
+ : +91 80 3093 8075
+
+ Director (Admissions)
+Mr. Abhay Chebbi
+ : abhay.chebbi@alliance.edu.in
+ : +91 96636 46464
+
+ Human Resources Department
+ : hrd@alliance.edu.in
+ : +91 80 3093 8210 / 8204
+
+ Student Verification 
+Office of Registrar (Examination & Evaluation)
+ : edu.verify@alliance.edu.in
+ : +91 80 3093 8100 / 8200 | +91 80 4619 9100
+
+ Contacts Info
+ ALLIANCE UNIVERSITY
+ Central Campus
+Chikkahagade Cross, Chandapura - Anekal Main Road, Anekal
+Bengaluru – 562 106, Karnataka,   India. [ Get Route Map ]
++91 80 3093 8100/8200/4619 9100 | Fax: +91 80 4619 9099
+E-mail : enquiry@alliance.edu.in
+
+ Office of Admissions
+UG: +91 9620009825 | 91084 43123 | 91084 42143 | 98806 19618
+PG: +91 98860 02500 | 99002 29974 | 90083 16363
+
+ City Campus 1
+19th Cross, 7th Main, BTM 2nd Stage, N.S. Palya
+Bengaluru – 560 076, Karnataka,   India. [ Get Route Map ]
+Tel.: +91 80 26786020 / 21 , 26789749
+
+ City Campus 2
+2nd Cross, 36th Main, Dollars Scheme, BTM 1st Stage
+Bengaluru – 560 068, Karnataka,   India. [ Get Route Map ]
+Tel.: +91 80 26681444 / 4372 | Fax: +91 80 26782048
+
+ CONTACT INFO
+ Contact Us
+ Enquiry
+ Feedback
+ Get Route from Address
+Quick Course Finder
+
+
+Find Courses
+ SCHOOLS | COLLEGES
+ Alliance School of Business
+ Alliance College of Engineering and Design
+ Alliance School of Law
+ Alliance Ascent College
+ Planned Academic Units
+International Partners
+
+Antwerp Management School
+Antwerp Management School
+Belgium
+Royal Roads University
+Royal Roads University
+Canada
+Beijing Institute of Technology
+Beijing Institute of Technology
+China
+Nanjing University of Aeronautics and Astronautics
+Nanjing University of Aeronautics and Astronautics
+China
+The Sino-British College, USST,
+The Sino-British College, USST,
+China
+INSEEC
+INSEEC
+France
+IPAC School of Management
+IPAC School of Management
+France
+ISEP
+ISEP
+France
+Paris School of Business
+Paris School of Business
+France
+Telecom School of Management
+Telecom School of Management
+France
+Telecom SudParis
+Telecom SudParis
+France
+Toulouse Business School
+Toulouse Business School
+France
+Berlin School of Economics and Law
+Berlin School of Economics and Law
+Germany
+European Business School
+European Business School
+Germany
+University of Applied Sciences
+University of Applied Sciences
+Germany
+Duisenberg School of Finance
+Duisenberg School of Finance
+The Netherlands
+Maastricht School of Management
+Maastricht School of Management
+The Netherlands
+Russian Presidential Academy of National Economy and Public Admi. (RANEPA)
+Russian Presidential Academy of National Economy and Public Admi. (RANEPA)
+Russia
+Togliatti Academy of Management
+Togliatti Academy of Management
+Russia
+Edinburgh Napier University
+Edinburgh Napier University
+UK
+Federation of Schools (FEDE)
+Federation of Schools (FEDE)
+Switzerland
+Swansea Metropolitan University
+Swansea Metropolitan University
+UK
+University of Bedfordshire
+University of Bedfordshire
+UK
+University of Chester
+University of Chester
+UK
+University of Dundee
+University of Dundee
+UK
+Fairleigh Dickinson University
+Fairleigh Dickinson University
+USA
+Georgia State University
+Georgia State University
+USA
+Kennesaw State University
+Kennesaw State University
+US
+Oakland University
+Oakland University
+USA
+San Jose State University
+San Jose State University
+USA
+The University of Memphis
+The University of Memphis
+USA
+Webber International University
+Webber International University
+USA
+ International Programs
+ Testimonials
+ My two years at Alliance University have groomed me to be a confident individual ready to enter the corporate world and has deepened this confidence by helping me get a job in my dream organization. Alliance with its state of the art facilities, competitive curriculum, varied cultural mix and strong faculty base has motivated and guided m...  Read More
+
+ Kiran Varghese Jacob Kiran Varghese Jacob
+Google Google
+ Top University in India for MBA LAW Engineering & Arts and the Humanities
+Alliance University is a private University established in Karnataka State by Act No.34 of year 2010 and is recognized by the University Grants Commission (UGC), New Delhi... 
+
+About Us
+THE UNIVERSITY
+GOVERNANCE
+CORPORATE SOCIAL RESPONSIBILITY
+AACSB
+IACBE
+NIRF
+Useful Links
+PROGRAMS & COURSES
+INTERNATIONAL PROGRAMS
+RESULTS
+FEEDBACK
+DOWNLOADS
+PHOTO GALLERY
+Useful Links
+STUDENT VERIFICATION
+ALLIANCE ADVENTURE CLUB
+ANTI-RAGGING POLICY
+ROUTE MAP
+CONTACT US
+2018 © All Rights Reserved.  | Privacy Policy | Terms & Conditions | Disclaimer | Sitemap
+"""
+
+# email = re.findall(r"[0-9a-zA-Z._+%]+@[0-9a-zA-Z._+%]+[.][a-zA-Z.0-9]+", str)
+email = re.findall(r"[a-zA-Z0-9_.-]+@[a-zA-Z0-9_.-]+\.[a-zA-Z]+", str)
+
+print(email)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project17" class="accordion-item">
+                <h2 class="accordion-header" id="heading17">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                        17. Spamming
+                    </button>
+                </h2>
+                <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="heading17"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import pyautogui
+import time
+
+time.sleep(2)
+while True:
+    pyautogui.write("spam")
+    pyautogui.press('enter')
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project18" class="accordion-item">
+                <h2 class="accordion-header" id="heading18">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                        18. Finding Words
+                    </button>
+                </h2>
+                <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="heading18"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+Take input for a string & n.
+Then find all possible words of length n consisting letters of string only once.
+"""
+
+import random
+from textblob import TextBlob  # pip install textblob
+from englisttohindi.englisttohindi import EngtoHindi  # pip install englisttohindi
+
+
+def factorial(n):
+    i = 1
+    fact = 1
+    while i != n + 1:
+        fact *= i
+        i += 1
+    return fact
+
+
+def permutations(n, r):
+    res = 1
+    for i in range(r):
+        res *= (n - i)
+    return res
+
+
+def choosing(length, list1):
+    indexes = []
+    i = 0
+    while i &lt; length:
+        a = random.randint(0, len(list1) - 1)
+        if a not in indexes:
+            indexes.append(a)
+            i += 1
+    return indexes
+
+
+def all_indexes(length, list1):
+    totals = permutations(len(list1), length)
+    index_list = []
+    i = 0
+    while i &lt; totals:
+        choice_now = choosing(length, list1)
+        if choice_now not in index_list:
+            index_list.append(choice_now)
+            i += 1
+    return index_list
+
+
+def words(length, list1):
+    ret_list = []
+    for item in all_indexes(length, list1):
+        final = []
+        for items in item:
+            final.append(list1[items])
+        final_str = "".join(final)
+        ret_list.append(final_str)
+    ret_list.sort()
+    fin_list = []
+    for i in ret_list:
+        if i not in fin_list:
+            if TextBlob(i) == TextBlob(i).correct():
+                fin_list.append(i)
+    for keys in fin_list:
+        print(f"{keys} - {EngtoHindi(keys).convert}")
+    print(f"Total words found are {len(fin_list)}")
+
+
+if __name__ == '__main__':
+    print("Enter word containing all letters :")
+    inp_str = input()
+    l1 = [i for i in inp_str]
+    length = int(input("Enter length of word = "))
+    words(length, l1)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>

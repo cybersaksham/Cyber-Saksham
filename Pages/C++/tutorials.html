@@ -1,0 +1,4394 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | C++ | Tutorials</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c2 {
+            display: none;
+        }
+
+        #d2,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./c++.html">C++</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./tutorials.html">Tutorials</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Topics</h3>
+        <hr>
+        <h5 id="nothing">No topic matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        1. Hello World
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt; // Header File
+
+int main()
+{
+    std::cout &lt;&lt; "Hello World"; // std::cout for printing
+    // &lt;&lt; is called insertion operator.
+    // &gt;&gt; is called extraction operator.
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project2" class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        2. Variables
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int global = 6; //Global Variable
+
+int main()
+{
+    int a = 4, b = 5;
+    float pi = 3.14;
+    char c = 'u';
+    int glo = 20;        //Local Variable --&gt; Take Precedence
+    bool check = true;   //Value = 1
+    bool check2 = false; //Value = 0
+
+    cout &lt;&lt; "The value of a is " &lt;&lt; a &lt;&lt; ".\nThe value of b is " &lt;&lt; b &lt;&lt; ".";
+    cout &lt;&lt; "\nThe value of PI is " &lt;&lt; pi;
+    cout &lt;&lt; "\nThe value of c is " &lt;&lt; c;
+    cout &lt;&lt; "\nThe value of glo is " &lt;&lt; glo;
+    cout &lt;&lt; "\nThe value of check is " &lt;&lt; check;
+    cout &lt;&lt; "\nThe value of check2 is " &lt;&lt; check2;
+    cout &lt;&lt; endl &lt;&lt; "The value of check2 is " &lt;&lt; check2; // endl also give newline
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        3. Input
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n1, n2;
+
+    cout &lt;&lt; "Enter value of n1 = ";
+    cin &gt;&gt; n1; //For input
+
+    cout &lt;&lt; "Enter value of n2 = ";
+    cin &gt;&gt; n2;
+
+    cout &lt;&lt; "The sum is " &lt;&lt; n1 + n2;
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        4. Header Files
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>// 1. System Header Files --&gt; It comes with the compiler.
+#include &lt;iostream&gt;
+
+// 2. User Defined Header Files --&gt; It is written by programmer.
+#include "T4.h" //Will give error if This file is not present in mentioned directory.
+
+using namespace std;
+
+int main()
+{
+    cout &lt;&lt; "Hello";
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project5" class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        5. Operators
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int a = 4, b = 5;
+
+    // Arithmetic Operators --&gt; +, -, *, /, %, ++, --
+    cout &lt;&lt; "The value of a + b is " &lt;&lt; a + b;   //Add
+    cout &lt;&lt; "\nThe value of a - b is " &lt;&lt; a - b; //Subtract
+    cout &lt;&lt; "\nThe value of a * b is " &lt;&lt; a * b; //Multiply
+    cout &lt;&lt; "\nThe value of a / b is " &lt;&lt; a / b; //Divide
+    cout &lt;&lt; "\nThe value of a % b is " &lt;&lt; a % b; //Modulo --&gt; Remainder
+    cout &lt;&lt; "\nThe value of a++ is " &lt;&lt; a++;     //Post Increment --&gt; First print then increase
+    cout &lt;&lt; "\nThe value of a-- is " &lt;&lt; a--;     //Post Decrement --&gt; First print then decrease
+    cout &lt;&lt; "\nThe value of ++b is " &lt;&lt; ++b;     //Post Increment --&gt; First increase then print
+    cout &lt;&lt; "\nThe value of --b is " &lt;&lt; --b;     //Post Decrement --&gt; First decrease then print
+    cout &lt;&lt; "\n";
+
+    // Assignment Operators --&gt; =
+    int c = 5;
+    c = 9;
+    cout &lt;&lt; "\nThe value of c is " &lt;&lt; c;
+    cout &lt;&lt; "\n";
+
+    // Comparison Operators --&gt; ==, !=, &lt;, &gt;, &lt;=, &gt;=
+    cout &lt;&lt; "\nThe value of a == b is " &lt;&lt; (a == b);
+    cout &lt;&lt; "\nThe value of a != b is " &lt;&lt; (a != b);
+    cout &lt;&lt; "\nThe value of a &lt; b is " &lt;&lt; (a &lt; b);
+    cout &lt;&lt; "\nThe value of a &gt; b is " &lt;&lt; (a &gt; b);
+    cout &lt;&lt; "\nThe value of a &lt;= b is " &lt;&lt; (a &lt;= b);
+    cout &lt;&lt; "\nThe value of a &gt;= b is " &lt;&lt; (a &gt;= b);
+    cout &lt;&lt; "\n";
+
+    // Logical Operators --&gt; &&, ||, !
+    cout &lt;&lt; "\nThe value of ((a == b) && (a != b)) is " &lt;&lt; ((a == b) && (a != b));
+    cout &lt;&lt; "\nThe value of ((a == b) || (a != b)) is " &lt;&lt; ((a == b) || (a != b));
+    cout &lt;&lt; "\nThe value of (!(a == b))is " &lt;&lt; (!(a == b));
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        6. Scope of Variables
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int c = 45; //This is global variable
+
+int main()
+{
+    int a, b, c;
+
+    cout &lt;&lt; "Enter value of a = ";
+    cin &gt;&gt; a;
+    cout &lt;&lt; "Enter value of b = ";
+    cin &gt;&gt; b;
+
+    c = a + b; //This is local variable
+    cout &lt;&lt; "The value of " &lt;&lt; a &lt;&lt; " + " &lt;&lt; b &lt;&lt; " is " &lt;&lt; c;
+    cout &lt;&lt; "\nThe local variable c is " &lt;&lt; c;
+    cout &lt;&lt; "\nThe global variable c is " &lt;&lt; ::c; //:: is scope resolution which is used for printing global variable
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        7. Reference Variable
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    // Reference variables are used to make 2 variable to same address
+
+    float x = 45;
+    float &y = x; //y is reference variable of x
+
+    cout &lt;&lt; x;
+    cout &lt;&lt; "\n"
+         &lt;&lt; y;
+
+    x = 34.1; //If we change value of x then y also changed
+    cout &lt;&lt; "\n"
+         &lt;&lt; x;
+    cout &lt;&lt; "\n"
+         &lt;&lt; y;
+
+    y = 3.14; //If we change value of y then x also changed
+    cout &lt;&lt; "\n"
+         &lt;&lt; x;
+    cout &lt;&lt; "\n"
+         &lt;&lt; y;
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project8" class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        8. Type Casting
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    // Type-casting is used to change data-type of a variable if conversion is valid.
+
+    float a = 3.14;
+    int c = (int)a;
+
+    cout &lt;&lt; "The value of a is " &lt;&lt; a;
+    cout &lt;&lt; "\nThe value of (int)a is " &lt;&lt; (int)a;
+    cout &lt;&lt; "\nThe value of inta(a) is " &lt;&lt; int(a);
+    cout &lt;&lt; "\nThe value of c is " &lt;&lt; c;
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project9" class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        9. Literals
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    float a = 3.14;
+    long double b = 3.15;
+
+    cout &lt;&lt; "The value of a which is float is " &lt;&lt; a;
+    cout &lt;&lt; "\nThe value of b which is long double is " &lt;&lt; b;
+
+    // 3.14 is double by-default in c++
+    cout &lt;&lt; "\n\nThe size of 3.14 is " &lt;&lt; sizeof(3.14); //double
+    cout &lt;&lt; "\nThe size of 3.14f is " &lt;&lt; sizeof(3.14f); //float
+    cout &lt;&lt; "\nThe size of 3.14F is " &lt;&lt; sizeof(3.14F); //float
+    cout &lt;&lt; "\nThe size of 3.14l is " &lt;&lt; sizeof(3.14l); //long double
+    cout &lt;&lt; "\nThe size of 3.14L is " &lt;&lt; sizeof(3.14L); //long double
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project10" class="accordion-item">
+                <h2 class="accordion-header" id="heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        10. Constants
+                    </button>
+                </h2>
+                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    const int a = 5; //This is constant
+    s = 6;           //This will give error
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project11" class="accordion-item">
+                <h2 class="accordion-header" id="heading11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                        11. Manipulators
+                    </button>
+                </h2>
+                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+int main()
+{
+    int a = 1, b = 11, c = 111, d = 1111;
+
+    cout &lt;&lt; "The value of a without setw is " &lt;&lt; a;
+    cout &lt;&lt; "\nThe value of b without setw is " &lt;&lt; b;
+    cout &lt;&lt; "\nThe value of c without setw is " &lt;&lt; c;
+    cout &lt;&lt; "\nThe value of d without setw is " &lt;&lt; d;
+
+    // setw is manipulator which set width of a variable
+    // It can be used to align numbers in right
+    cout &lt;&lt; "\n\nThe value of a with setw is " &lt;&lt; setw(4) &lt;&lt; a;
+    cout &lt;&lt; "\nThe value of b with setw is " &lt;&lt; setw(4) &lt;&lt; b;
+    cout &lt;&lt; "\nThe value of c with setw is " &lt;&lt; setw(4) &lt;&lt; c;
+    cout &lt;&lt; "\nThe value of d with setw is " &lt;&lt; setw(4) &lt;&lt; d;
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project12" class="accordion-item">
+                <h2 class="accordion-header" id="heading12">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                        12. If Else
+                    </button>
+                </h2>
+                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>// If-Else is selection control structure
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int age;
+    cout &lt;&lt; "Tell your age = ";
+    cin &gt;&gt; age;
+
+    // If-Else ladder
+    if (age &lt; 1 || age &gt; 120)
+    {
+        cout &lt;&lt; "Enter correct age";
+    }
+    else if (age &lt; 18)
+    {
+        cout &lt;&lt; "You can not enter the party.";
+    }
+    else if (age == 18)
+    {
+        cout &lt;&lt; "You have to bring kid pass with you to enter the party.";
+    }
+    else
+    {
+        cout &lt;&lt; "You can enter the party.";
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project13" class="accordion-item">
+                <h2 class="accordion-header" id="heading13">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                        13. Switch Case
+                    </button>
+                </h2>
+                <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>// Switch-Case is selection control structure
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int age;
+    cout &lt;&lt; "Tell your age = ";
+    cin &gt;&gt; age;
+
+    //Switch Case Statements
+    switch (age)
+    {
+    case 18:
+        cout &lt;&lt; "\nYou are of 18";
+        break;
+    case 2:
+        cout &lt;&lt; "\nYou are of 2";
+    case 22:
+        cout &lt;&lt; "\nYou are of 22";
+        break;
+    case 45:
+        cout &lt;&lt; "\nYou are of 45";
+        break;
+
+    default:
+        cout &lt;&lt; "\nNo cases defined";
+        break;
+    }
+    // If break is not written then it wil print all values after correct condition until break not found
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project14" class="accordion-item">
+                <h2 class="accordion-header" id="heading14">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                        14. Loops
+                    </button>
+                </h2>
+                <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>//Loops are loop control structure
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    /*
+    There are 3 types of loops in C++:
+        1. For Loop
+        2. While Loop
+        3. Do-while Loop
+    */
+
+    // 1. For Loop
+    /*
+    Syntax :-
+    for (initialization; condition; updation)
+    {
+        Write your code
+    }
+    */
+    cout &lt;&lt; "1. For Loop" &lt;&lt; endl;
+    for (int i = 0; i &lt; 10; i++)
+    {
+        cout &lt;&lt; "   " &lt;&lt; i + 1 &lt;&lt; endl;
+    }
+
+    // Example of infinite for loop
+    /*
+    for (int i = 0; 1 &gt; 0; i++)
+    {
+        cout &lt;&lt; "   " &lt;&lt; i + 1 &lt;&lt; endl;
+        i += 1;
+    }
+    */
+
+    // 2. While Loop
+    /*
+    Syntax :-
+    while (condition)
+    {
+        Write your code
+    }
+    */
+    cout &lt;&lt; "2. While Loop" &lt;&lt; endl;
+    int j = 0;
+    while (j &lt; 10)
+    {
+        cout &lt;&lt; "   " &lt;&lt; j + 1 &lt;&lt; endl;
+        j += 1;
+    }
+
+    // Example of infinite while loop
+    /*
+    while (true)
+    {
+        cout &lt;&lt; "   " &lt;&lt; j + 1 &lt;&lt; endl;
+        j += 1;
+    }
+    */
+
+    // 3. Do-While Loop
+    /*
+    Syntax :-
+    do
+    {
+        Write your code
+    }
+    while (condition)
+    */
+    cout &lt;&lt; "3. Do-While Loop" &lt;&lt; endl;
+    int k = 0;
+    do
+    {
+        cout &lt;&lt; "   " &lt;&lt; k + 1 &lt;&lt; endl;
+        k += 1;
+    } while (k &lt; 10);
+    // Do-While loop runs code atleast once does not matter condition is true or false.
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project15" class="accordion-item">
+                <h2 class="accordion-header" id="heading15">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                        15. Break & Continue
+                    </button>
+                </h2>
+                <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    for (int i = 0; i &lt; 10; i++)
+    {
+        if (i == 2)
+        {
+            continue; //This breaks for only tis iteration and continues to next iteration
+        }
+        cout &lt;&lt; i &lt;&lt; endl;
+        if (i == 6)
+        {
+            break; //This breaks the loop and does not execute for further iterations
+        }
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project16" class="accordion-item">
+                <h2 class="accordion-header" id="heading16">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                        16. Pointers
+                    </button>
+                </h2>
+                <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    // Pointer is data-type which holds adderess fo other variable
+    // & --&gt; Address of
+    // * --&gt; Dereference operator
+    int a = 5;
+    int *b = &a;  //Pointer
+    int **c = &b; //Pointer to Pointer
+
+    cout &lt;&lt; "The value of a is " &lt;&lt; a &lt;&lt; endl;
+    cout &lt;&lt; "The address of a i.e. value of b is " &lt;&lt; b &lt;&lt; endl;
+    cout &lt;&lt; "The value at adress b is " &lt;&lt; *b &lt;&lt; endl;
+    cout &lt;&lt; "The address of b i.e. value of c is " &lt;&lt; c &lt;&lt; endl;
+    cout &lt;&lt; "The value at address value at adress c is " &lt;&lt; **c &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project17" class="accordion-item">
+                <h2 class="accordion-header" id="heading17">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                        17. Arrays
+                    </button>
+                </h2>
+                <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="heading17"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    // Way 1
+    int arr1[] = {10, 20, 30, 40};
+    cout &lt;&lt; "Way 1 :-" &lt;&lt; endl;
+    for (int i = 0; i &lt; 4; i++)
+    {
+        cout &lt;&lt; "  " &lt;&lt; arr1[i] &lt;&lt; endl;
+    }
+
+    // Way 2
+    int arr2[4];
+    arr2[0] = 10;
+    arr2[1] = 20;
+    arr2[2] = 30;
+    arr2[3] = 40;
+    cout &lt;&lt; "Way 2 :-" &lt;&lt; endl;
+    for (int i = 0; i &lt; 4; i++)
+    {
+        cout &lt;&lt; "  " &lt;&lt; arr2[i] &lt;&lt; endl;
+    }
+
+    // Changing Value
+    arr2[2] = 50;
+    cout &lt;&lt; "After Changing :-" &lt;&lt; endl;
+    for (int i = 0; i &lt; 4; i++)
+    {
+        cout &lt;&lt; "  " &lt;&lt; arr2[i] &lt;&lt; endl;
+    }
+
+    // Way 3
+    int arr3[4];
+    cout &lt;&lt; "Way 3" &lt;&lt; endl;
+    cout &lt;&lt; "Taking input for values :-" &lt;&lt; endl;
+    for (int i = 0; i &lt; 4; i++)
+    {
+        cout &lt;&lt; "Enter arr3[" &lt;&lt; i &lt;&lt; "] = ";
+        cin &gt;&gt; arr3[i];
+    }
+    cout &lt;&lt; "Printing :-" &lt;&lt; endl;
+    for (int i = 0; i &lt; 4; i++)
+    {
+        cout &lt;&lt; "  " &lt;&lt; arr3[i] &lt;&lt; endl;
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project18" class="accordion-item">
+                <h2 class="accordion-header" id="heading18">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                        18. Array with Pointers
+                    </button>
+                </h2>
+                <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="heading18"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int arr[] = {1, 2, 3, 4};
+    int *p = arr; //&arr will give error
+
+    for (int i = 0; i &lt; 4; i++)
+    {
+        cout &lt;&lt; "The value of arr[" &lt;&lt; i &lt;&lt; "] which is at address " &lt;&lt; p &lt;&lt; " is " &lt;&lt; *p &lt;&lt; endl;
+        p++;
+    }
+
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project19" class="accordion-item">
+                <h2 class="accordion-header" id="heading19">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                        19. Structures
+                    </button>
+                </h2>
+                <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>// Structure is collection of elements of different data types.
+// It allocates memory equal to total of all data types made.
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// typedef is not necessary but it is used for shortcut
+/*
+// We can define like this also but then we must have to use as used in saksham & shubham
+struct employee
+{
+    int eId;
+    char favChar;
+    float salary;
+};
+*/
+
+typedef struct employee
+{
+    /* data */
+    int eId;
+    char favChar;
+    float salary;
+} emp;
+
+int main()
+{
+    struct employee saksham;
+    saksham.eId = 1;
+    saksham.favChar = 's';
+    saksham.salary = 10000;
+
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "The details of saksham are:" &lt;&lt; endl;
+    cout &lt;&lt; "The Id is " &lt;&lt; saksham.eId &lt;&lt; endl;
+    cout &lt;&lt; "The favourite character is " &lt;&lt; saksham.favChar &lt;&lt; endl;
+    cout &lt;&lt; "The salary is " &lt;&lt; saksham.salary &lt;&lt; endl;
+
+    struct employee shubham;
+    shubham.eId = 2;
+    shubham.favChar = 'a';
+    shubham.salary = 5000;
+
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "The details of shubham are:" &lt;&lt; endl;
+    cout &lt;&lt; "The Id is " &lt;&lt; shubham.eId &lt;&lt; endl;
+    cout &lt;&lt; "The favourite character is " &lt;&lt; shubham.favChar &lt;&lt; endl;
+    cout &lt;&lt; "The salary is " &lt;&lt; shubham.salary &lt;&lt; endl;
+
+    emp rohan;
+    rohan.eId = 3;
+    rohan.favChar = 'r';
+    rohan.salary = 1000;
+
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "The details of rohan are:" &lt;&lt; endl;
+    cout &lt;&lt; "The Id is " &lt;&lt; rohan.eId &lt;&lt; endl;
+    cout &lt;&lt; "The favourite character is " &lt;&lt; rohan.favChar &lt;&lt; endl;
+    cout &lt;&lt; "The salary is " &lt;&lt; rohan.salary &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project20" class="accordion-item">
+                <h2 class="accordion-header" id="heading20">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                        20. Unions
+                    </button>
+                </h2>
+                <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="heading20"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>// Union is same as structure
+// But it allocates memory equal to maximum of all data types made.
+// Because any 1 data type can be accessed at one time from union.
+
+#include &lt;iostream&gt;
+using namespace std;
+
+union money
+{
+    /* data */
+    int rice;
+    char car;
+    float pounds;
+};
+
+int main()
+{
+    union money m1;
+    m1.rice = 100;
+
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "The details of m1 are:" &lt;&lt; endl;
+    cout &lt;&lt; "The rice is " &lt;&lt; m1.rice &lt;&lt; endl;
+    cout &lt;&lt; "The car is " &lt;&lt; m1.car &lt;&lt; endl;
+    cout &lt;&lt; "The pounds is " &lt;&lt; m1.pounds &lt;&lt; endl;
+
+    m1.car = 'a';
+
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "The details of m1 are:" &lt;&lt; endl;
+    cout &lt;&lt; "The rice is " &lt;&lt; m1.rice &lt;&lt; endl;
+    cout &lt;&lt; "The car is " &lt;&lt; m1.car &lt;&lt; endl;
+    cout &lt;&lt; "The pounds is " &lt;&lt; m1.pounds &lt;&lt; endl;
+
+    m1.pounds = 1000;
+
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "The details of m1 are:" &lt;&lt; endl;
+    cout &lt;&lt; "The rice is " &lt;&lt; m1.rice &lt;&lt; endl;
+    cout &lt;&lt; "The car is " &lt;&lt; m1.car &lt;&lt; endl;
+    cout &lt;&lt; "The pounds is " &lt;&lt; m1.pounds &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project21" class="accordion-item">
+                <h2 class="accordion-header" id="heading21">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+                        21. Enums
+                    </button>
+                </h2>
+                <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="heading21"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>// Enums allocate value starting from 0 automatically.
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    enum Meal
+    {
+        breakfast,
+        lunch,
+        dinner
+    };
+
+    Meal m1 = breakfast;
+    Meal m2 = lunch;
+    Meal m3 = dinner;
+
+    cout &lt;&lt; "The m1 is " &lt;&lt; m1 &lt;&lt; endl;
+    cout &lt;&lt; "The m2 is " &lt;&lt; m2 &lt;&lt; endl;
+    cout &lt;&lt; "The m3 is " &lt;&lt; m3 &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project22" class="accordion-item">
+                <h2 class="accordion-header" id="heading22">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                        22. Functions
+                    </button>
+                </h2>
+                <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int sum(int a, int b)
+{
+    int c = a + b;
+    return c;
+}
+
+// Function Protoytpe
+int multi(int a, int b);
+void greet();
+
+int main()
+{
+    int n1, n2;
+
+    cout &lt;&lt; "Enter n1 = ";
+    cin &gt;&gt; n1;
+    cout &lt;&lt; "Enter n2 = ";
+    cin &gt;&gt; n2;
+
+    // n1 & n2 are actual parametres
+    greet();
+    cout &lt;&lt; "The sum of " &lt;&lt; n1 &lt;&lt; " & " &lt;&lt; n2 &lt;&lt; " is " &lt;&lt; sum(n1, n2) &lt;&lt; endl;
+    cout &lt;&lt; "The multiplication of " &lt;&lt; n1 &lt;&lt; " & " &lt;&lt; n2 &lt;&lt; " is " &lt;&lt; multi(n1, n2) &lt;&lt; endl;
+
+    return 0;
+}
+
+// a & b are formal parametres
+int multi(int a, int b)
+{
+    int c = a * b;
+    return c;
+}
+
+void greet()
+{
+    cout &lt;&lt; "Hello, Good Morning!!!" &lt;&lt; endl;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project23" class="accordion-item">
+                <h2 class="accordion-header" id="heading23">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                        23. Function with Pointer
+                    </button>
+                </h2>
+                <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="heading23"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+// Call by value --&gt; does not change actual parametres
+void swap1(int a, int b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+// Call by reference --&gt; changes actual parametres
+void swap2(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+// Call by reference --&gt; using reference variable
+void swap3(int &a, int &b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+// Returning reference variable
+int &swap4(int &a, int &b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+
+    return a;
+}
+
+// Function Protoytpe
+int multi(int a, int b);
+
+int main()
+{
+    int n1, n2;
+
+    cout &lt;&lt; "Enter n1 = ";
+    cin &gt;&gt; n1;
+    cout &lt;&lt; "Enter n2 = ";
+    cin &gt;&gt; n2;
+
+    int n3 = n1, n4 = n2;
+
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "Before swapping!!!" &lt;&lt; endl;
+    cout &lt;&lt; "\tn1 = " &lt;&lt; n1 &lt;&lt; endl;
+    cout &lt;&lt; "\tn2 = " &lt;&lt; n2 &lt;&lt; endl;
+
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "After swapping by call by value!!!" &lt;&lt; endl;
+    swap1(n1, n2);
+    cout &lt;&lt; "\tn1 = " &lt;&lt; n1 &lt;&lt; endl;
+    cout &lt;&lt; "\tn2 = " &lt;&lt; n2 &lt;&lt; endl;
+
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "After swapping by call by reference!!!" &lt;&lt; endl;
+    swap2(&n1, &n2);
+    cout &lt;&lt; "\tn1 = " &lt;&lt; n1 &lt;&lt; endl;
+    cout &lt;&lt; "\tn2 = " &lt;&lt; n2 &lt;&lt; endl;
+
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "After swapping by reference variables!!!" &lt;&lt; endl;
+    swap3(n3, n4);
+    cout &lt;&lt; "\tn1 = " &lt;&lt; n3 &lt;&lt; endl;
+    cout &lt;&lt; "\tn2 = " &lt;&lt; n4 &lt;&lt; endl;
+
+    cout &lt;&lt; endl;
+    // We can return reference variable like this
+    swap4(n3, n4) = 50;
+    cout &lt;&lt; "\tn1 = " &lt;&lt; n3 &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project24" class="accordion-item">
+                <h2 class="accordion-header" id="heading24">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                        24. Inline Functions
+                    </button>
+                </h2>
+                <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Inline functions reduces time.
+But we should not use inline functions in following cases :-
+1. When code inside function is big.
+2. In recursion functions
+3. While using static variables
+4. In loop & switch statements
+
+Finally, we should use inline functions only in simple functions like below.
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+inline int product(int x, int y)
+{
+    return x * y;
+}
+
+int main()
+{
+    int a, b;
+
+    cout &lt;&lt; "Enter value of a & b" &lt;&lt; endl;
+    cin &gt;&gt; a &gt;&gt; b;
+
+    cout &lt;&lt; "Product of a & b is " &lt;&lt; product(a, b) &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project25" class="accordion-item">
+                <h2 class="accordion-header" id="heading25">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                        25. Arguments
+                    </button>
+                </h2>
+                <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="heading25"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+// Here factor has value 1.04 by default which can be overwrite.
+// Default arguments must be written in extreme right.
+
+float moneyReceived(int currentMoney, float factor = 1.04)
+{
+    return currentMoney * factor;
+}
+
+// We use constant variables when we want to remain them constant.
+int sum(const int a)
+{
+    return a + 2;
+}
+
+int main()
+{
+    int money = 100000;
+
+    cout &lt;&lt; "For normal person :" &lt;&lt; endl;
+    cout &lt;&lt; "If you have " &lt;&lt; money &lt;&lt; " Rs the you will receive " &lt;&lt; moneyReceived(money) &lt;&lt; " Rs" &lt;&lt; endl;
+
+    cout &lt;&lt; "For VIP :" &lt;&lt; endl;
+    cout &lt;&lt; "If you have " &lt;&lt; money &lt;&lt; " Rs the you will receive " &lt;&lt; moneyReceived(money, 1.08) &lt;&lt; " Rs" &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project26" class="accordion-item">
+                <h2 class="accordion-header" id="heading26">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                        26. Recursion
+                    </button>
+                </h2>
+                <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+// Recursion is always very slow than iteration
+int factorial(int n)
+{
+    if (n &lt;= 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return n * factorial(n - 1);
+    }
+}
+
+int main()
+{
+    int a;
+
+    cout &lt;&lt; "Enter a = ";
+    cin &gt;&gt; a;
+
+    if (a &gt;= 0)
+    {
+        cout &lt;&lt; a &lt;&lt; "! = " &lt;&lt; factorial(a) &lt;&lt; endl;
+    }
+    else
+    {
+        cout &lt;&lt; "Enter correct number!!!" &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project27" class="accordion-item">
+                <h2 class="accordion-header" id="heading27">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+                        27. Function Overloading
+                    </button>
+                </h2>
+                <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="heading27"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>// When two functions have same name then C++ automatically matches arguments & run accordingly.
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int sum(int a, int b)
+{
+    cout &lt;&lt; "using function of 2 arguments is ";
+    return a + b;
+}
+
+int sum(int a, int b, int c)
+{
+    cout &lt;&lt; "using function of 3 arguments is ";
+    return a + b + c;
+}
+
+int main()
+{
+    cout &lt;&lt; "The sum of 3 & 5 " &lt;&lt; sum(3, 5) &lt;&lt; endl;
+    cout &lt;&lt; "The sum of 3, 5 & 8 " &lt;&lt; sum(3, 5, 8) &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project28" class="accordion-item">
+                <h2 class="accordion-header" id="heading28">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                        28. OOPS
+                    </button>
+                </h2>
+                <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="heading28"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>// Classes are extension of structures
+/*
+Structures had these extension
+    --&gt; members are public
+    --&gt; no methods
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Making Class
+class Employee
+{
+private:
+    int a, b, c;
+
+public:
+    int d, e;
+    void setData(int a1, int b1, int c1);
+    void getData()
+    {
+        cout &lt;&lt; "The value of a is " &lt;&lt; a &lt;&lt; endl;
+        cout &lt;&lt; "The value of b is " &lt;&lt; b &lt;&lt; endl;
+        cout &lt;&lt; "The value of c is " &lt;&lt; c &lt;&lt; endl;
+        cout &lt;&lt; "The value of d is " &lt;&lt; d &lt;&lt; endl;
+        cout &lt;&lt; "The value of e is " &lt;&lt; e &lt;&lt; endl;
+    }
+};
+
+// Making function of class
+void Employee ::setData(int a1, int b1, int c1)
+{
+    a = a1;
+    b = b1;
+    c = c1;
+}
+
+int main()
+{
+    Employee saksham;
+    saksham.setData(1, 2, 3);
+    // saksham.a = 15 --&gt; We cannot do that coz a is private
+    saksham.d = 10;
+    saksham.e = 20;
+    saksham.getData();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project29" class="accordion-item">
+                <h2 class="accordion-header" id="heading29">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
+                        29. Nesting in OOPS
+                    </button>
+                </h2>
+                <div id="collapse29" class="accordion-collapse collapse" aria-labelledby="heading29"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class binary
+{
+    string s;
+
+public:
+    void read(void);
+    void check_bin(void);
+    void ones(void);
+    void display_ones(void);
+};
+
+void binary ::read(void)
+{
+    cout &lt;&lt; "Enter a binary number = ";
+    cin &gt;&gt; s;
+}
+
+void binary ::check_bin(void)
+{
+    for (int i = 0; i &lt; s.length(); i++)
+    {
+        if (s.at(i) != '0' && s.at(i) != '1')
+        {
+            cout &lt;&lt; "Incorrect binary format" &lt;&lt; endl;
+            exit(0);
+        }
+    }
+}
+
+void binary ::ones(void)
+{
+    for (int i = 0; i &lt; s.length(); i++)
+    {
+        if (s.at(i) == '0')
+        {
+            s.at(i) = '1';
+        }
+        else if (s.at(i) == '1')
+        {
+            s.at(i) = '0';
+        }
+    }
+}
+
+void binary ::display_ones(void)
+{
+    cout &lt;&lt; "Displaying complement 1 :" &lt;&lt; endl;
+    for (int i = 0; i &lt; s.length(); i++)
+    {
+        cout &lt;&lt; s.at(i);
+    }
+    cout &lt;&lt; endl;
+}
+
+int main()
+{
+    binary b;
+    b.read();
+    b.check_bin();
+    b.display_ones();
+    b.ones();
+    b.display_ones();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project30" class="accordion-item">
+                <h2 class="accordion-header" id="heading30">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse30" aria-expanded="false" aria-controls="collapse30">
+                        30. Object Memory Allocation
+                    </button>
+                </h2>
+                <div id="collapse30" class="accordion-collapse collapse" aria-labelledby="heading30"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Shop
+{
+    int itemId[100];
+    int itemPrice[100];
+    int counter;
+
+public:
+    void initCounter(void) { counter = 0; }
+    void setPrice(void);
+    void displayPrice(void);
+};
+
+void Shop::setPrice(void)
+{
+    cout &lt;&lt; "Enter Id of item no " &lt;&lt; (counter + 1) &lt;&lt; " = ";
+    cin &gt;&gt; itemId[counter];
+    cout &lt;&lt; "Enter Price of item = ";
+    cin &gt;&gt; itemPrice[counter];
+    counter++;
+}
+
+void Shop::displayPrice(void)
+{
+    for (int i = 0; i &lt; counter; i++)
+    {
+        cout &lt;&lt; "The price of item with id " &lt;&lt; itemId[i] &lt;&lt; " is " &lt;&lt; itemPrice[i] &lt;&lt; endl;
+    }
+}
+
+int main()
+{
+    Shop dukaan;
+    dukaan.initCounter();
+    dukaan.setPrice();
+    dukaan.setPrice();
+    dukaan.setPrice();
+    dukaan.displayPrice();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project31" class="accordion-item">
+                <h2 class="accordion-header" id="heading31">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse31" aria-expanded="false" aria-controls="collapse31">
+                        31. Static Members
+                    </button>
+                </h2>
+                <div id="collapse31" class="accordion-collapse collapse" aria-labelledby="heading31"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Employee
+{
+    int id;
+    // Static variables are class variables & value of these do not change object to object.
+    static int count;
+
+public:
+    void setData(void)
+    {
+        cout &lt;&lt; "Enter the Id = ";
+        cin &gt;&gt; id;
+        count++;
+    }
+    void getData(void)
+    {
+        cout &lt;&lt; "The id of this employee is " &lt;&lt; id &lt;&lt; " and this is employee no " &lt;&lt; count &lt;&lt; endl;
+    }
+    static void getCount(void)
+    {
+        // Static function can access only static members.
+        // cout &lt;&lt; id; --&gt; will throw an error
+        cout &lt;&lt; "The no of employees till now is " &lt;&lt; count &lt;&lt; endl;
+    }
+};
+
+int Employee::count; // Default value is zero
+
+int main()
+{
+    Employee saksham, rohan, harry;
+
+    saksham.setData();
+    saksham.getData();
+    Employee::getCount();
+
+    rohan.setData();
+    rohan.getData();
+    Employee::getCount();
+
+    harry.setData();
+    harry.getData();
+    Employee::getCount();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project32" class="accordion-item">
+                <h2 class="accordion-header" id="heading32">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse32" aria-expanded="false" aria-controls="collapse32">
+                        32. Array of Objects
+                    </button>
+                </h2>
+                <div id="collapse32" class="accordion-collapse collapse" aria-labelledby="heading32"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Employee
+{
+    int id, salary;
+
+public:
+    void setId(void)
+    {
+        salary = 100;
+        cout &lt;&lt; "Enter id of employee = ";
+        cin &gt;&gt; id;
+    }
+    void getId(void)
+    {
+        cout &lt;&lt; "The id of employee is " &lt;&lt; id &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Employee arr[4];
+
+    for (int i = 0; i &lt; 4; i++)
+    {
+        arr[i].setId();
+        arr[i].getId();
+    }
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project33" class="accordion-item">
+                <h2 class="accordion-header" id="heading33">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse33" aria-expanded="false" aria-controls="collapse33">
+                        33. Object as Arguments
+                    </button>
+                </h2>
+                <div id="collapse33" class="accordion-collapse collapse" aria-labelledby="heading33"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class complex
+{
+    int a, b;
+
+public:
+    void setData(int v1, int v2)
+    {
+        a = v1;
+        b = v2;
+    }
+    void setDataBySum(complex o1, complex o2)
+    {
+        a = o1.a + o2.a;
+        b = o1.b + o2.b;
+    }
+    void printNum(void)
+    {
+        cout &lt;&lt; "Your complex no is  " &lt;&lt; a &lt;&lt; " + i(" &lt;&lt; b &lt;&lt; ")" &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    complex c1, c2, c3;
+
+    c1.setData(1, 2);
+    c1.printNum();
+
+    c2.setData(3, 4);
+    c2.printNum();
+
+    c3.setDataBySum(c1, c2);
+    c3.printNum();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project34" class="accordion-item">
+                <h2 class="accordion-header" id="heading34">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse34" aria-expanded="false" aria-controls="collapse34">
+                        34. Friend Functions
+                    </button>
+                </h2>
+                <div id="collapse34" class="accordion-collapse collapse" aria-labelledby="heading34"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Complex
+{
+    int a, b;
+
+public:
+    // Giving access of private mambers to friend function
+    friend Complex sumComplex(Complex o1, Complex o2);
+    void setNumber(int n1, int n2)
+    {
+        a = n1;
+        b = n2;
+    }
+    void printNumber()
+    {
+        cout &lt;&lt; "Your no is " &lt;&lt; a &lt;&lt; " + i(" &lt;&lt; b &lt;&lt; ")" &lt;&lt; endl;
+    }
+};
+
+Complex sumComplex(Complex o1, Complex o2)
+{
+    Complex o3;
+    o3.setNumber((o1.a + o2.a), (o1.b + o2.b));
+
+    return o3;
+}
+
+int main()
+{
+    Complex c1, c2, sum;
+
+    c1.setNumber(1, 4);
+    c2.setNumber(5, 8);
+    c1.printNumber();
+    c2.printNumber();
+
+    sum = sumComplex(c1, c2);
+    sum.printNumber();
+
+    return 0;
+}
+
+/*
+Properties of friend function :
+1. Not in the scope of class
+2. Cannot be called from object of the class
+    --&gt; c1.sumComplex() == INVALID
+3. Can be invoked without help of objects
+4. Usually contains the objects as arguments
+5. Can be declared in either public or private section of class.
+6. It cannot access members directly by name but can access by objects names.
+    --&gt; cout &lt;&lt; a;     == INVALID
+    --&gt; cout &lt;&lt; o1.a   == VALID
+*/
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project35" class="accordion-item">
+                <h2 class="accordion-header" id="heading35">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse35" aria-expanded="false" aria-controls="collapse35">
+                        35. Friend Class
+                    </button>
+                </h2>
+                <div id="collapse35" class="accordion-collapse collapse" aria-labelledby="heading35"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+// Forward Declaration
+class Complex;
+
+// Calculator Class
+class Calculator
+{
+public:
+    int add(int a, int b) { return a + b; }
+
+    // We are only declaring here coz members of complex are not defined
+    int sumReal(Complex o1, Complex o2);
+    int sumImg(Complex o1, Complex o2);
+};
+
+// Complex Class
+class Complex
+{
+    int a, b;
+    // Individually making friend to some functions
+    // friend int Calculator::sumReal(Complex o1, Complex o2);
+    // Here sumImg function will not be a friend
+
+    // Making friend to whole class
+    friend class Calculator;
+
+public:
+    void setNumber(int n1, int n2)
+    {
+        a = n1;
+        b = n2;
+    }
+    void printNumber()
+    {
+        cout &lt;&lt; "Your no is " &lt;&lt; a &lt;&lt; " + i(" &lt;&lt; b &lt;&lt; ")" &lt;&lt; endl;
+    }
+};
+
+// Now members of complex are defined so we can define these functions
+int Calculator::sumReal(Complex o1, Complex o2)
+{
+    return (o1.a + o2.a);
+}
+
+int Calculator::sumImg(Complex o1, Complex o2)
+{
+    return (o1.b + o2.b);
+}
+
+// Main function
+int main()
+{
+    Complex c1, c2;
+    c1.setNumber(1, 4);
+    c2.setNumber(5, 7);
+
+    Calculator calc;
+    int res1 = calc.sumReal(c1, c2);
+    int res2 = calc.sumImg(c1, c2);
+    cout &lt;&lt; "The sum of c1 & c2 is " &lt;&lt; res1 &lt;&lt; " + i(" &lt;&lt; res2 &lt;&lt; ")" &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project36" class="accordion-item">
+                <h2 class="accordion-header" id="heading36">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse36" aria-expanded="false" aria-controls="collapse36">
+                        36. More on Friends
+                    </button>
+                </h2>
+                <div id="collapse36" class="accordion-collapse collapse" aria-labelledby="heading36"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+// Forward declaration
+class Y;
+
+// Class X
+class X
+{
+    int data;
+    friend void add(X, Y);
+
+public:
+    void setValue(int value) { data = value; }
+};
+
+// Class Y
+class Y
+{
+    int data;
+    friend void add(X, Y);
+
+public:
+    void setValue(int value) { data = value; }
+};
+
+// Friend Function
+void add(X o1, Y o2)
+{
+    cout &lt;&lt; "Sum of data of X & Y objects is " &lt;&lt; (o1.data + o2.data) &lt;&lt; endl;
+}
+
+// Main Function
+int main()
+{
+    X a;
+    a.setValue(3);
+
+    Y b;
+    b.setValue(5);
+
+    add(a, b);
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project37" class="accordion-item">
+                <h2 class="accordion-header" id="heading37">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse37" aria-expanded="false" aria-controls="collapse37">
+                        37. More on Friends (2)
+                    </button>
+                </h2>
+                <div id="collapse37" class="accordion-collapse collapse" aria-labelledby="heading37"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+// Forward declaration
+class Y;
+
+// Class X
+class X
+{
+    int data1;
+    friend void swap(X &, Y &);
+
+public:
+    void setValue(int value) { data1 = value; }
+    void display(void) { cout &lt;&lt; data1 &lt;&lt; endl; }
+};
+
+// Class Y
+class Y
+{
+    int data2;
+    friend void swap(X &, Y &);
+
+public:
+    void setValue(int value) { data2 = value; }
+    void display(void) { cout &lt;&lt; data2 &lt;&lt; endl; }
+};
+
+// Friend Function
+void swap(X &o1, Y &o2)
+{
+    int temp = o2.data2;
+    o2.data2 = o1.data1;
+    o1.data1 = temp;
+}
+
+// Main Function
+int main()
+{
+    X a;
+    a.setValue(3);
+
+    Y b;
+    b.setValue(5);
+
+    cout &lt;&lt; "The value of X before swapping becomes: ";
+    a.display();
+    cout &lt;&lt; "The value of Y before swapping becomes: ";
+    b.display();
+
+    swap(a, b);
+    cout &lt;&lt; "The value of X after swapping becomes: ";
+    a.display();
+    cout &lt;&lt; "The value of Y after swapping becomes: ";
+    b.display();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project38" class="accordion-item">
+                <h2 class="accordion-header" id="heading38">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse38" aria-expanded="false" aria-controls="collapse38">
+                        38. Constructors
+                    </button>
+                </h2>
+                <div id="collapse38" class="accordion-collapse collapse" aria-labelledby="heading38"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+// Class Complex
+class Complex
+{
+    int a, b;
+
+public:
+    /*
+    Constructor is a special member function with same name as of the class.
+    It is used to initialize the objects of its class.
+    It is automatically invoked whenever an object is created.
+    */
+    Complex(void); // Constructor declaration
+    void printData(void)
+    {
+        cout &lt;&lt; "The complex no is " &lt;&lt; a &lt;&lt; " + i(" &lt;&lt; b &lt;&lt; ")" &lt;&lt; endl;
+    }
+};
+
+// Default Constructor --&gt; Accepts no argument
+Complex::Complex(void)
+{
+    a = 0;
+    b = 0;
+}
+
+// Main Function
+int main()
+{
+    Complex c;
+    c.printData();
+
+    return 0;
+}
+
+/*
+Properties of Constructors :
+1. It must be declared in public section of class.
+2. They are automatically invoked whenever object is created.
+3. Do not have return type & hence cannot return any value.
+4. It can have default arguments.
+5. We cannnot refer to their address.
+*/
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project39" class="accordion-item">
+                <h2 class="accordion-header" id="heading39">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse39" aria-expanded="false" aria-controls="collapse39">
+                        39. Parameterized Constructors
+                    </button>
+                </h2>
+                <div id="collapse39" class="accordion-collapse collapse" aria-labelledby="heading39"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+// Class Complex
+class Complex
+{
+    int a, b;
+
+public:
+    Complex(int, int);
+    void printData(void)
+    {
+        cout &lt;&lt; "The complex no is " &lt;&lt; a &lt;&lt; " + i(" &lt;&lt; b &lt;&lt; ")" &lt;&lt; endl;
+    }
+};
+
+// Parameterized Constructor --&gt; Takes some parameters
+Complex::Complex(int x, int y)
+{
+    a = x;
+    b = y;
+}
+
+int main()
+{
+    // Implicit Call
+    Complex c1(4, 6);
+    c1.printData();
+
+    // Explicit Call
+    Complex c2 = Complex(5, 7);
+    c2.printData();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project40" class="accordion-item">
+                <h2 class="accordion-header" id="heading40">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse40" aria-expanded="false" aria-controls="collapse40">
+                        40. Example on Constructors
+                    </button>
+                </h2>
+                <div id="collapse40" class="accordion-collapse collapse" aria-labelledby="heading40"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Point
+{
+    int x, y;
+
+public:
+    Point(int a, int b)
+    {
+        x = a;
+        y = b;
+    }
+    void printPoint(void)
+    {
+        cout &lt;&lt; "The point is (" &lt;&lt; x &lt;&lt; ", " &lt;&lt; y &lt;&lt; ")" &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Point p1(1, 1);
+    p1.printPoint();
+
+    Point p2(4, 6);
+    p2.printPoint();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project41" class="accordion-item">
+                <h2 class="accordion-header" id="heading41">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse41" aria-expanded="false" aria-controls="collapse41">
+                        41. Constructor Overloading
+                    </button>
+                </h2>
+                <div id="collapse41" class="accordion-collapse collapse" aria-labelledby="heading41"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Complex
+{
+    int a, b;
+
+public:
+    Complex(int x, int y)
+    {
+        a = x;
+        b = y;
+    }
+    // Overloading --&gt; same as function overloading decides by checking arguments
+    Complex(int x)
+    {
+        a = x;
+        b = 0;
+    }
+    Complex()
+    {
+        a = 0;
+        b = 0;
+    }
+    void printNum(void)
+    {
+        cout &lt;&lt; "The number is " &lt;&lt; a &lt;&lt; " + i(" &lt;&lt; b &lt;&lt; ")" &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Complex c1(4, 6), c2(5), c3;
+
+    c1.printNum();
+    c2.printNum();
+    c3.printNum();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project42" class="accordion-item">
+                <h2 class="accordion-header" id="heading42">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse42" aria-expanded="false" aria-controls="collapse42">
+                        42. Constructor with Default Arguments
+                    </button>
+                </h2>
+                <div id="collapse42" class="accordion-collapse collapse" aria-labelledby="heading42"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Simple
+{
+    int data1, data2;
+
+public:
+    // Here default value of b is 5
+    Simple(int a, int b = 5)
+    {
+        data1 = a;
+        data2 = b;
+    }
+    void printData(void)
+    {
+        cout &lt;&lt; "The value of data is " &lt;&lt; data1 &lt;&lt; " and " &lt;&lt; data2 &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Simple s1(1, 4), s2(2);
+
+    s1.printData();
+    s2.printData();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project43" class="accordion-item">
+                <h2 class="accordion-header" id="heading43">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse43" aria-expanded="false" aria-controls="collapse43">
+                        43. Dynamic Initialization of Objects
+                    </button>
+                </h2>
+                <div id="collapse43" class="accordion-collapse collapse" aria-labelledby="heading43"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Bank
+{
+    int principal, years;
+    float interesetRate, returnValue;
+
+public:
+    Bank() {}
+    Bank(int p, int y, float r); // r can be like 0.04
+    Bank(int p, int y, int r);   // r can be like 42
+    void show(void);
+};
+
+Bank::Bank(int p, int y, float r)
+{
+    principal = p;
+    years = y;
+    interesetRate = r;
+    returnValue = p;
+
+    for (int i = 0; i &lt; y; i++)
+    {
+        returnValue *= (1 + interesetRate);
+    }
+}
+
+Bank::Bank(int p, int y, int r)
+{
+    principal = p;
+    years = y;
+    interesetRate = (float)r / 100;
+    returnValue = p;
+
+    for (int i = 0; i &lt; y; i++)
+    {
+        returnValue *= (1 + interesetRate);
+    }
+}
+
+void Bank::show(void)
+{
+    cout &lt;&lt; "Principal amount was " &lt;&lt; principal &lt;&lt; endl;
+    cout &lt;&lt; "Return Value after " &lt;&lt; years;
+    if (years == 1)
+    {
+        cout &lt;&lt; " yr is ";
+    }
+    else
+    {
+        cout &lt;&lt; " yrs is ";
+    }
+    cout &lt;&lt; returnValue &lt;&lt; endl;
+}
+
+int main()
+{
+    Bank b1, b2, b3;
+    int p, y, R;
+    float r;
+
+    cout &lt;&lt; "Enter value of p, y & r" &lt;&lt; endl;
+    cin &gt;&gt; p &gt;&gt; y &gt;&gt; r;
+    b1 = Bank(p, y, r);
+    b1.show();
+
+    cout &lt;&lt; "Enter value of p, y & R" &lt;&lt; endl;
+    cin &gt;&gt; p &gt;&gt; y &gt;&gt; R;
+    b2 = Bank(p, y, R);
+    b2.show();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project44" class="accordion-item">
+                <h2 class="accordion-header" id="heading44">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse44" aria-expanded="false" aria-controls="collapse44">
+                        44. Copy Constructors
+                    </button>
+                </h2>
+                <div id="collapse44" class="accordion-collapse collapse" aria-labelledby="heading44"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Number
+{
+    int a;
+
+public:
+    Number() { a = 0; }
+    Number(int num) { a = num; }
+
+    // When no copy constructor is found then compiler runs its own copy constructor.
+    Number(Number &obj)
+    {
+        cout &lt;&lt; "Copy constructor is called!!!" &lt;&lt; endl;
+        a = obj.a;
+    }
+
+    void display(void)
+    {
+        cout &lt;&lt; "The number for this object is " &lt;&lt; a &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Number x, y, z(5);
+
+    x.display();
+    y.display();
+    z.display();
+
+    // Methods to invoke user made copy constructor
+
+    // Method 1
+    Number z1(z); // Copy constructor is called
+
+    // Mehthod 2
+    Number z2; // Default copy constructor is called
+    z2 = z;    // User copy constructor is not called coz object is already made
+
+    // Mehthod 3
+    Number z3 = z; // Copy constructor called
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project45" class="accordion-item">
+                <h2 class="accordion-header" id="heading45">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse45" aria-expanded="false" aria-controls="collapse45">
+                        45. Destructors
+                    </button>
+                </h2>
+                <div id="collapse45" class="accordion-collapse collapse" aria-labelledby="heading45"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>// Process of destructors
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Destructor neither takes an argument nor return a value.
+
+class Num
+{
+    static int count;
+
+public:
+    Num()
+    {
+        count++;
+        cout &lt;&lt; "This is time when constructor is called for object no " &lt;&lt; count &lt;&lt; endl;
+    }
+
+    // Destructor
+    ~Num()
+    {
+        cout &lt;&lt; "This is time when destructor is called for object no " &lt;&lt; count &lt;&lt; endl;
+        count--;
+    }
+};
+
+int Num::count;
+
+int main()
+{
+    cout &lt;&lt; "We are in main function" &lt;&lt; endl;
+
+    cout &lt;&lt; "Creating first object n1" &lt;&lt; endl;
+    Num n1;
+
+    {
+        cout &lt;&lt; "Entering this block" &lt;&lt; endl;
+        cout &lt;&lt; "Creating two more objects n2, n3" &lt;&lt; endl;
+        Num n2, n3;
+        cout &lt;&lt; "Exiting this block" &lt;&lt; endl;
+    }
+
+    cout &lt;&lt; "Back to main function" &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project46" class="accordion-item">
+                <h2 class="accordion-header" id="heading46">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse46" aria-expanded="false" aria-controls="collapse46">
+                        46. Inheritance
+                    </button>
+                </h2>
+                <div id="collapse46" class="accordion-collapse collapse" aria-labelledby="heading46"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+// Base Class
+class Employee
+{
+public:
+    int id;
+    float salary;
+    Employee() {}
+    Employee(int inpID)
+    {
+        id = inpID;
+        salary = 34.0;
+    }
+};
+
+// Derived Class
+/* Syntax --&gt; 
+class {{derived-class-name}} : {{viisbility-mode}} {{base-class-name}}
+{
+    class methods ......
+};
+*/
+/* Notes --&gt;
+1. Default visibility mode is private
+2. Public visibility mode --&gt; Public member of base class becomes public members of derived class
+3. Private visibility mode --&gt; Public member of base class becomes private members of derived class
+4. Private members are never inherited.
+*/
+
+// Creating a Programmer class derived from Employee class
+class Programmer : public Employee
+{
+    int languageCode = 9;
+
+public:
+    Programmer(int inpId)
+    {
+        id = inpId;
+    }
+};
+
+int main()
+{
+    Employee emp1(1), emp2(2);
+    cout &lt;&lt; emp1.salary &lt;&lt; endl;
+    cout &lt;&lt; emp2.salary &lt;&lt; endl;
+
+    Programmer pro1(1), pro2(2);
+    cout &lt;&lt; pro1.id &lt;&lt; endl;
+    cout &lt;&lt; pro2.id &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project47" class="accordion-item">
+                <h2 class="accordion-header" id="heading47">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse47" aria-expanded="false" aria-controls="collapse47">
+                        47. Single Inheritance
+                    </button>
+                </h2>
+                <div id="collapse47" class="accordion-collapse collapse" aria-labelledby="heading47"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Single Inheritance :
+Base class A --&gt; Derived class B
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+class Base
+{
+    int data1;
+
+public:
+    int data2;
+    void setData(void);
+    int getData1() { return data1; };
+    int getData2() { return data2; };
+};
+
+void Base::setData(void)
+{
+    data1 = 10;
+    data2 = 20;
+}
+
+class Derived : public Base
+{
+    int data3;
+
+public:
+    void process();
+    void dispaly();
+};
+
+void Derived::process()
+{
+    data3 = data2 * getData1();
+}
+
+void Derived::dispaly()
+{
+    cout &lt;&lt; "Value of Data 1 is " &lt;&lt; getData1() &lt;&lt; endl;
+    cout &lt;&lt; "Value of Data 2 is " &lt;&lt; data2 &lt;&lt; endl;
+    cout &lt;&lt; "Value of Data 3 is " &lt;&lt; data3 &lt;&lt; endl;
+}
+
+int main()
+{
+    Derived der;
+    der.setData();
+    der.process();
+    der.dispaly();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project48" class="accordion-item">
+                <h2 class="accordion-header" id="heading48">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse48" aria-expanded="false" aria-controls="collapse48">
+                        48. Protected Access Modifier
+                    </button>
+                </h2>
+                <div id="collapse48" class="accordion-collapse collapse" aria-labelledby="heading48"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+                        Public Derivation | Private Derivation | Protected Derivation
+1. Private members        Not Inherited   |   Not inherited    |   Not inherited
+2. Protected members      Protected       |   Private          |   Protected
+3. Public members         Public          |   Private          |   Protected
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+class Base
+{
+    int a;
+
+protected:
+    int b;
+};
+
+// Protected variables are same as private but can be inherited.
+
+class Derived : protected Base
+{
+    /*
+    Private   -&gt; ----
+    Protected -&gt; b
+    Public    -&gt; ----
+    */
+};
+
+int main()
+{
+    Derived d1;
+    // cout &lt;&lt; d1.b &lt;&lt; endl; // Cannot do that
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project49" class="accordion-item">
+                <h2 class="accordion-header" id="heading49">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse49" aria-expanded="false" aria-controls="collapse49">
+                        49. Multilevel Inheritance
+                    </button>
+                </h2>
+                <div id="collapse49" class="accordion-collapse collapse" aria-labelledby="heading49"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Multilevel Inheritance :
+Class A --&gt; Class B --&gt; Class C --&gt; ......
+1. A is the base class for B.
+2. B is the base class for C.
+3. A--&gt;B--&gt;C is called inheritance path.
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Student class
+class Student
+{
+protected:
+    int roll_no;
+
+public:
+    void set_roll_no(int);
+    void get_roll_no(void);
+};
+
+void Student::set_roll_no(int r)
+{
+    roll_no = r;
+}
+
+void Student::get_roll_no()
+{
+    cout &lt;&lt; "The roll no is " &lt;&lt; roll_no &lt;&lt; endl;
+}
+
+// Exam class inherited from Student class
+class Exam : public Student
+{
+    /*
+    Private   -&gt; ----
+    Protected -&gt; roll_no
+    Public    -&gt; set_roll_no(), get_roll_no()
+    */
+protected:
+    float math, physics;
+
+public:
+    void set_marks(float, float);
+    void get_marks(void);
+};
+
+void Exam::set_marks(float m1, float m2)
+{
+    math = m1;
+    physics = m2;
+}
+
+void Exam::get_marks()
+{
+    cout &lt;&lt; "The marks obtained in maths are " &lt;&lt; math &lt;&lt; endl;
+    cout &lt;&lt; "The marks obtained in physics are " &lt;&lt; physics &lt;&lt; endl;
+}
+
+// Result class inherited from Exam class
+class Result : public Exam
+{
+    /*
+    Private   -&gt; ----
+    Protected -&gt; roll_no, math, physics
+    Public    -&gt; set_roll_no(), get_roll_no(), set_marks(), get_marks()
+    */
+    float percentage;
+
+public:
+    void display(void)
+    {
+        cout &lt;&lt; endl;
+        get_roll_no();
+        get_marks();
+        cout &lt;&lt; "Your percentage is " &lt;&lt; (math + physics) / 2 &lt;&lt; " %" &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Result s1;
+    s1.set_roll_no(101);
+    s1.set_marks(99.1, 95.6);
+    s1.display();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project50" class="accordion-item">
+                <h2 class="accordion-header" id="heading50">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse50" aria-expanded="false" aria-controls="collapse50">
+                        50. Multiple Inheritance
+                    </button>
+                </h2>
+                <div id="collapse50" class="accordion-collapse collapse" aria-labelledby="heading50"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Multiple Inheritance :
+Class A ---|\
+           | \
+Class B ---|--&gt; Class D
+           | /
+Class C ---|/
+
+Syntax :
+// class Derived : visibility-mode Base1, visibility-mode Base2 { class-body };
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Base1 class
+class Base1
+{
+protected:
+    int base1int;
+
+public:
+    void set_base1int(int a) { base1int = a; }
+};
+
+// Base2 class
+class Base2
+{
+protected:
+    int base2int;
+
+public:
+    void set_base2int(int a) { base2int = a; }
+};
+
+// Derived class inheroted from Base1 & Base2 both
+class Derived : public Base1, public Base2
+{
+    /*
+    Private   -&gt; ----
+    Protected -&gt; base1int, base2int
+    Public    -&gt; set_base1int(), set_base2int()
+    */
+public:
+    void show()
+    {
+        cout &lt;&lt; "The value of base1int is " &lt;&lt; base1int &lt;&lt; endl;
+        cout &lt;&lt; "The value of base2int is " &lt;&lt; base2int &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Derived d1;
+    d1.set_base1int(1);
+    d1.set_base2int(2);
+    d1.show();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project51" class="accordion-item">
+                <h2 class="accordion-header" id="heading51">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse51" aria-expanded="false" aria-controls="collapse51">
+                        51. Ambiguity Resolution
+                    </button>
+                </h2>
+                <div id="collapse51" class="accordion-collapse collapse" aria-labelledby="heading51"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Base1
+{
+public:
+    void greet()
+    {
+        cout &lt;&lt; "How are you?" &lt;&lt; endl;
+    }
+};
+
+class Base2
+{
+public:
+    void greet()
+    {
+        cout &lt;&lt; "Kaise ho?" &lt;&lt; endl;
+    }
+};
+
+class Derived : public Base1, public Base2
+{
+    int a;
+
+public:
+    // Here greet is ambiguous function
+    void greet()
+    {
+        Base1::greet();
+    }
+};
+
+class B
+{
+public:
+    void say()
+    {
+        cout &lt;&lt; "How are you?" &lt;&lt; endl;
+    }
+};
+
+class D : public B
+{
+public:
+    // say() is already defined so it is over-writed here
+    void say()
+    {
+        cout &lt;&lt; "Kaise ho?" &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    // Ambiguity 1
+    Derived d1;
+    d1.greet();
+
+    // Ambiguity 2
+    D d;
+    d.say();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project52" class="accordion-item">
+                <h2 class="accordion-header" id="heading52">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse52" aria-expanded="false" aria-controls="collapse52">
+                        52. Virtual Base Class
+                    </button>
+                </h2>
+                <div id="collapse52" class="accordion-collapse collapse" aria-labelledby="heading52"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Virtual Base Class :
+
+           Class A
+              |
+             / \
+Class B &lt;----   ----&gt; Class C
+             \ /
+              |
+           Class D
+
+In above diagram, suppose a variable {{a}} is present in class A.
+Then it will be inherited to class B & class C both.
+Now we are making a class D inherited from class B & class C both.
+Then variable {{a}} will occur 2 times in class D & will make an ambiguity.
+So in order to resolve this situation we use concept of virtual base class.
+
+Syntax :
+// class B : virtual {{visibility-mode}} A { class-body };
+                     --or--
+// class C : {{visibility-mode}} virtual A { class-body };
+
+In below example, we are using following inheritance path :
+
+           Student
+              |
+             / \
+   Test &lt;----   ----&gt; Sports
+             \ /
+              |
+           Result
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Student Class
+class Student
+{
+protected:
+    int roll_no;
+
+public:
+    void set_roll_no(int a) { roll_no = a; }
+    void print_no()
+    {
+        cout &lt;&lt; "Your roll no is " &lt;&lt; roll_no &lt;&lt; endl;
+    }
+};
+
+// Test Class
+class Test : virtual public Student
+{
+protected:
+    float maths, physics;
+
+public:
+    void set_marks(float a, float b)
+    {
+        maths = a;
+        physics = b;
+    }
+    void print_marks()
+    {
+        cout &lt;&lt; "Your result is here :" &lt;&lt; endl;
+        cout &lt;&lt; "Maths = " &lt;&lt; maths &lt;&lt; endl;
+        cout &lt;&lt; "Physics = " &lt;&lt; physics &lt;&lt; endl;
+    }
+};
+
+// Sports Class
+class Sports : virtual public Student
+{
+protected:
+    float score;
+
+public:
+    void set_score(float a)
+    {
+        score = a;
+    }
+    void print_score()
+    {
+        cout &lt;&lt; "Your PT score is " &lt;&lt; score &lt;&lt; endl;
+    }
+};
+
+// Result Class
+class Result : public Test, public Sports
+{
+    float total;
+
+public:
+    void display()
+    {
+        total = maths + physics + score;
+        print_no();
+        print_marks();
+        print_score();
+        cout &lt;&lt; "Your total score is " &lt;&lt; total &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Result o1;
+    o1.set_roll_no(101);
+    o1.set_marks(94.3, 91.2);
+    o1.set_score(8.7);
+    o1.display();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project53" class="accordion-item">
+                <h2 class="accordion-header" id="heading53">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse53" aria-expanded="false" aria-controls="collapse53">
+                        53. Constructors in Derived Classes
+                    </button>
+                </h2>
+                <div id="collapse53" class="accordion-collapse collapse" aria-labelledby="heading53"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Case 1 :
+class B : public A {};
+// First A() then B() --&gt; Order of execution
+*/
+
+/*
+Case 2 :
+class C : public A, public B {};
+// First A() then B() then C() --&gt; Order of execution
+*/
+
+/*
+Case 3 :
+class C : public A, virtual public B {};
+// First B() then A() then C() --&gt; Order of execution
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Base1 Class
+class Base1
+{
+    int data1;
+
+public:
+    Base1(int i)
+    {
+        data1 = i;
+        cout &lt;&lt; "Base1 class constructor called!!!" &lt;&lt; endl;
+    }
+    void print_data1()
+    {
+        cout &lt;&lt; "The value of data1 is " &lt;&lt; data1 &lt;&lt; endl;
+    }
+};
+
+// Base2 Class
+class Base2
+{
+    int data2;
+
+public:
+    Base2(int i)
+    {
+        data2 = i;
+        cout &lt;&lt; "Base2 class constructor called!!!" &lt;&lt; endl;
+    }
+    void print_data2()
+    {
+        cout &lt;&lt; "The value of data2 is " &lt;&lt; data2 &lt;&lt; endl;
+    }
+};
+
+// Derived Class
+class Derived : public Base1, public Base2
+{
+    int derived1, derived2;
+
+public:
+    // Syntax :
+    Derived(int a, int b, int c, int d) : Base1(a), Base2(b)
+    {
+        derived1 = c;
+        derived2 = d;
+        cout &lt;&lt; "Derived class constructor called!!!" &lt;&lt; endl;
+    }
+    void print_data3()
+    {
+        cout &lt;&lt; "The value of derived1 is " &lt;&lt; derived1 &lt;&lt; endl;
+        cout &lt;&lt; "The value of derived2 is " &lt;&lt; derived2 &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Derived d1(1, 2, 3, 4);
+    d1.print_data1();
+    d1.print_data2();
+    d1.print_data3();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project54" class="accordion-item">
+                <h2 class="accordion-header" id="heading54">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse54" aria-expanded="false" aria-controls="collapse54">
+                        54. Initialization List
+                    </button>
+                </h2>
+                <div id="collapse54" class="accordion-collapse collapse" aria-labelledby="heading54"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Syntax :
+constructor (argument-list) : initialization-section
+{
+    assignments + other code ....
+}
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+class Test
+{
+    int a, b;
+
+public:
+    // Test(int x, int y) : a(x), b(y)
+    // Test(int x, int y) : a(x), b(x + y)
+    // Test(int x, int y) : a(x), b(a + y)
+    // Test(int x, int y) : b(y), a(b + x) --&gt; will give garbage value in a coz a should be initialized first since it is declared first
+    Test(int x, int y) : b(a + y), a(x)
+    {
+        cout &lt;&lt; "Test constructor called!!!" &lt;&lt; endl;
+        cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+        cout &lt;&lt; "b = " &lt;&lt; b &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Test t(4, 5);
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project55" class="accordion-item">
+                <h2 class="accordion-header" id="heading55">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse55" aria-expanded="false" aria-controls="collapse55">
+                        55. New & Delete
+                    </button>
+                </h2>
+                <div id="collapse55" class="accordion-collapse collapse" aria-labelledby="heading55"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    // New Keyword
+
+    int *p = new int(40);
+    cout &lt;&lt; "The value of *p is " &lt;&lt; *p &lt;&lt; endl;
+
+    cout &lt;&lt; endl;
+
+    int *arr = new int[3];
+    arr[0] = 10;
+    arr[1] = 20;
+    arr[2] = 30;
+    cout &lt;&lt; "The value of arr[0] is " &lt;&lt; arr[0] &lt;&lt; endl;
+    cout &lt;&lt; "The value of arr[1] is " &lt;&lt; arr[1] &lt;&lt; endl;
+    cout &lt;&lt; "The value of arr[2] is " &lt;&lt; arr[2] &lt;&lt; endl;
+
+    cout &lt;&lt; endl;
+
+    // Delete Keyword
+    delete arr;
+    cout &lt;&lt; "The value of arr[0] is " &lt;&lt; arr[0] &lt;&lt; endl;
+    cout &lt;&lt; "The value of arr[1] is " &lt;&lt; arr[1] &lt;&lt; endl;
+    cout &lt;&lt; "The value of arr[2] is " &lt;&lt; arr[2] &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project56" class="accordion-item">
+                <h2 class="accordion-header" id="heading56">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse56" aria-expanded="false" aria-controls="collapse56">
+                        56. Pointer to Object
+                    </button>
+                </h2>
+                <div id="collapse56" class="accordion-collapse collapse" aria-labelledby="heading56"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Complex
+{
+    int a, b;
+
+public:
+    void getData()
+    {
+        cout &lt;&lt; "The real part is " &lt;&lt; a &lt;&lt; endl;
+        cout &lt;&lt; "The imaginary part is " &lt;&lt; b &lt;&lt; endl;
+    }
+    void setData(int x, int y)
+    {
+        a = x;
+        b = y;
+    }
+};
+
+int main()
+{
+    // Complex c1;
+    // Complex *ptr = &c1;
+    Complex *ptr = new Complex;
+
+    // (*ptr).setData(4, 6);
+    // (*ptr).getData();
+    ptr-&gt;setData(4, 6); // Arrow Operator
+    ptr-&gt;getData();
+
+    // Array of Objects
+    Complex *ptr1 = new Complex[4];
+    ptr1-&gt;setData(2, 5);
+    ptr1-&gt;getData();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project57" class="accordion-item">
+                <h2 class="accordion-header" id="heading57">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse57" aria-expanded="false" aria-controls="collapse57">
+                        57. Array of Objects by Pointers
+                    </button>
+                </h2>
+                <div id="collapse57" class="accordion-collapse collapse" aria-labelledby="heading57"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Shop
+{
+    int id;
+    float price;
+
+public:
+    void setData(int a, float b)
+    {
+        id = a;
+        price = b;
+    }
+    void getData()
+    {
+        cout &lt;&lt; id &lt;&lt; "\t";
+        cout &lt;&lt; price &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    int size = 3, p;
+    float q;
+    Shop *ptr = new Shop[size];
+    Shop *ptrTemp = ptr;
+
+    for (int i = 0; i &lt; size; i++)
+    {
+        cout &lt;&lt; "Enter id & price of item no " &lt;&lt; i + 1 &lt;&lt; endl;
+        cin &gt;&gt; p &gt;&gt; q;
+        ptr-&gt;setData(p, q);
+        ptr++;
+    }
+
+    cout &lt;&lt; endl;
+    cout &lt;&lt; " Item no \t"
+         &lt;&lt; "Id \t"
+         &lt;&lt; "Price " &lt;&lt; endl;
+    for (int i = 0; i &lt; size; i++)
+    {
+        cout &lt;&lt; "Item no " &lt;&lt; i + 1 &lt;&lt; "\t";
+        ptrTemp-&gt;getData();
+        ptrTemp++;
+    }
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project58" class="accordion-item">
+                <h2 class="accordion-header" id="heading58">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse58" aria-expanded="false" aria-controls="collapse58">
+                        58. This Pointer
+                    </button>
+                </h2>
+                <div id="collapse58" class="accordion-collapse collapse" aria-labelledby="heading58"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class A
+{
+    int a;
+
+public:
+    // void setData(int a) { a = a; } --&gt; This will give garbage value
+    A &setData(int a)
+    {
+        this-&gt;a = a;
+        return *this;
+    }
+    void getData()
+    {
+        cout &lt;&lt; "The value of a is " &lt;&lt; a &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    A a;
+    a.setData(4).getData();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project59" class="accordion-item">
+                <h2 class="accordion-header" id="heading59">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse59" aria-expanded="false" aria-controls="collapse59">
+                        59. Polymorphism
+                    </button>
+                </h2>
+                <div id="collapse59" class="accordion-collapse collapse" aria-labelledby="heading59"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Polymorphism --&gt; One name & Multiple forms
+Types of Polymorphism :
+1. Compile Time Polymorphism --&gt; Function Overloading, Operator Overloading
+2. Run Time Polymorphism --&gt; Virtual Functions
+*/
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project60" class="accordion-item">
+                <h2 class="accordion-header" id="heading60">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse60" aria-expanded="false" aria-controls="collapse60">
+                        60. Pointers to Derived Classes
+                    </button>
+                </h2>
+                <div id="collapse60" class="accordion-collapse collapse" aria-labelledby="heading60"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Base
+{
+public:
+    int var1;
+    void display()
+    {
+        cout &lt;&lt; "var1 = " &lt;&lt; var1 &lt;&lt; endl;
+    }
+};
+
+class Derived : public Base
+{
+public:
+    int var2;
+    void display()
+    {
+        cout &lt;&lt; "var1 = " &lt;&lt; var1 &lt;&lt; endl;
+        cout &lt;&lt; "var2 = " &lt;&lt; var2 &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Base *base_ptr;
+    Base obj_base;
+    Derived obj_derived;
+    base_ptr = &obj_derived; // Pointing Base Class pointer to derived class
+
+    base_ptr-&gt;var1 = 30;
+    base_ptr-&gt;display(); // function of base class would we run
+    // base_ptr-&gt;var2 = 15; --&gt; will throw an error
+
+    // Making Derived Class Pointer
+    Derived *derived_ptr = &obj_derived;
+    derived_ptr-&gt;var2 = 40;
+    derived_ptr-&gt;display();
+
+    // Here display() is present 2 times & it is decided in run time that which function is to run.
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project61" class="accordion-item">
+                <h2 class="accordion-header" id="heading61">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse61" aria-expanded="false" aria-controls="collapse61">
+                        61. Virtual Function
+                    </button>
+                </h2>
+                <div id="collapse61" class="accordion-collapse collapse" aria-labelledby="heading61"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Base
+{
+public:
+    int var1 = 1;
+    virtual void display()
+    {
+        cout &lt;&lt; "var1 = " &lt;&lt; var1 &lt;&lt; endl;
+    }
+};
+
+class Derived : public Base
+{
+public:
+    int var2 = 2;
+    void display()
+    {
+        cout &lt;&lt; "var1 = " &lt;&lt; var1 &lt;&lt; endl;
+        cout &lt;&lt; "var2 = " &lt;&lt; var2 &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Base *base_ptr;
+    Base obj_base;
+    Derived obj_derived;
+    base_ptr = &obj_derived;
+
+    // Since we have made display function of base class virtual so now function of derived class would be run.
+    base_ptr-&gt;display();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project62" class="accordion-item">
+                <h2 class="accordion-header" id="heading62">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse62" aria-expanded="false" aria-controls="collapse62">
+                        62. Virtual Function Creation
+                    </button>
+                </h2>
+                <div id="collapse62" class="accordion-collapse collapse" aria-labelledby="heading62"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Rules for virtual functions :
+1. They cannot be static
+2. They are accessed by object pointers.
+3. They canbe friend of another class.
+4. They might not be used.
+5. If a virtual function is defined in base class then there is no need to define it in derived class i.e. if virtual function is not-redefined then it automatically calls function of base class.
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// CWH class
+class CWH
+{
+protected:
+    string title;
+    float rating;
+
+public:
+    CWH(string s, float r)
+    {
+        title = s;
+        rating = r;
+    }
+    virtual void display() {}
+};
+
+// CWHVideo class
+class CWHVideo : public CWH
+{
+    float videoLen;
+
+public:
+    CWHVideo(string s, float r, float vl) : CWH(s, r) { videoLen = vl; }
+    void display()
+    {
+        cout &lt;&lt; endl
+             &lt;&lt; "This is an amazing video with title " &lt;&lt; title &lt;&lt; endl;
+        cout &lt;&lt; "Ratings : " &lt;&lt; rating &lt;&lt; " out of 5 stars." &lt;&lt; endl;
+        cout &lt;&lt; "Length of this video is " &lt;&lt; videoLen &lt;&lt; " minutes." &lt;&lt; endl;
+    }
+};
+
+// CWHText class
+class CWHText : public CWH
+{
+    int words;
+
+public:
+    CWHText(string s, float r, int wc) : CWH(s, r) { words = wc; }
+    void display()
+    {
+        cout &lt;&lt; endl
+             &lt;&lt; "This is an amazing text tutorial with title " &lt;&lt; title &lt;&lt; endl;
+        cout &lt;&lt; "Ratings : " &lt;&lt; rating &lt;&lt; " out of 5 stars." &lt;&lt; endl;
+        cout &lt;&lt; "No of words in this are " &lt;&lt; words &lt;&lt; " words." &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    string title;
+    float rating, vlen;
+    int words;
+
+    // For CWHVideo
+    title = "Django Tutorial";
+    vlen = 4.56;
+    rating = 4.89;
+
+    CWHVideo djVideo(title, rating, vlen);
+    djVideo.display();
+
+    // For CWHText
+    title = "Django Text Tutorial";
+    words = 433;
+    rating = 4.19;
+
+    CWHText djText(title, rating, words);
+    djText.display();
+
+    CWH *tuts[2];
+    tuts[0] = &djVideo;
+    tuts[1] = &djText;
+
+    tuts[0]-&gt;display();
+    tuts[1]-&gt;display();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project63" class="accordion-item">
+                <h2 class="accordion-header" id="heading63">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse63" aria-expanded="false" aria-controls="collapse63">
+                        63. Abstract Base Class
+                    </button>
+                </h2>
+                <div id="collapse63" class="accordion-collapse collapse" aria-labelledby="heading63"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+// CWH class
+class CWH
+{
+protected:
+    string title;
+    float rating;
+
+public:
+    CWH(string s, float r)
+    {
+        title = s;
+        rating = r;
+    }
+    virtual void display() = 0; // Do-Nothing Function --&gt; Pure Virtual Function
+    // If we do not re-define pure virtual function in derived classes then will give error.
+    // Abstract base class is related with pure virtual function i.e. abstract base class assures that a derived class will be made & it contain re-defining of virtual function.
+};
+
+// CWHVideo class
+class CWHVideo : public CWH
+{
+    float videoLen;
+
+public:
+    CWHVideo(string s, float r, float vl) : CWH(s, r) { videoLen = vl; }
+    void display()
+    {
+        cout &lt;&lt; endl
+             &lt;&lt; "This is an amazing video with title " &lt;&lt; title &lt;&lt; endl;
+        cout &lt;&lt; "Ratings : " &lt;&lt; rating &lt;&lt; " out of 5 stars." &lt;&lt; endl;
+        cout &lt;&lt; "Length of this video is " &lt;&lt; videoLen &lt;&lt; " minutes." &lt;&lt; endl;
+    }
+};
+
+// CWHText class
+class CWHText : public CWH
+{
+    int words;
+
+public:
+    CWHText(string s, float r, int wc) : CWH(s, r) { words = wc; }
+    void display()
+    {
+        cout &lt;&lt; endl
+             &lt;&lt; "This is an amazing text tutorial with title " &lt;&lt; title &lt;&lt; endl;
+        cout &lt;&lt; "Ratings : " &lt;&lt; rating &lt;&lt; " out of 5 stars." &lt;&lt; endl;
+        cout &lt;&lt; "No of words in this are " &lt;&lt; words &lt;&lt; " words." &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    string title;
+    float rating, vlen;
+    int words;
+
+    // For CWHVideo
+    title = "Django Tutorial";
+    vlen = 4.56;
+    rating = 4.89;
+
+    CWHVideo djVideo(title, rating, vlen);
+    djVideo.display();
+
+    // For CWHText
+    title = "Django Text Tutorial";
+    words = 433;
+    rating = 4.19;
+
+    CWHText djText(title, rating, words);
+    djText.display();
+
+    CWH *tuts[2];
+    tuts[0] = &djVideo;
+    tuts[1] = &djText;
+
+    tuts[0]-&gt;display();
+    tuts[1]-&gt;display();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project64" class="accordion-item">
+                <h2 class="accordion-header" id="heading64">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse64" aria-expanded="false" aria-controls="collapse64">
+                        64. Files
+                    </button>
+                </h2>
+                <div id="collapse64" class="accordion-collapse collapse" aria-labelledby="heading64"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+The useful classes for working with files are :
+1. fstreambase
+2. ifstream --&gt; derived from fstreambase
+3. ofstream --&gt; derived from fstreambase
+
+In order to work with files, you will have to open it.
+Primarily, there are 2 ways to open a file :
+1. Using the constructor
+2. Using the member function open() of the class
+*/
+
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+using namespace std;
+
+int main()
+{
+    // string str1 = "This is sample file for T-64.";
+    // // Opening file using constructor & writing it
+    // ofstream out("T64_sample.txt"); // Write Operation
+    // out &lt;&lt; str1;
+
+    string str2;
+    // Opening file using constructor & reading it
+    ifstream in("T64_sample.txt"); // Write Operation
+    // in &gt;&gt; str2; --&gt; This takes only first word
+    getline(in, str2); // --&gt; This takes a line from file.
+    cout &lt;&lt; str2 &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                        <pre class="language-none"><code>This is saksham.
+I am programmer.</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project65" class="accordion-item">
+                <h2 class="accordion-header" id="heading65">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse65" aria-expanded="false" aria-controls="collapse65">
+                        65. Read & Write in Files
+                    </button>
+                </h2>
+                <div id="collapse65" class="accordion-collapse collapse" aria-labelledby="heading65"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main()
+{
+    // Connecting file with ofstream
+    ofstream hout("T64_sample.txt");
+
+    // Creating a name string & taking input for this
+    cout &lt;&lt; "Enter your name" &lt;&lt; endl;
+    string name;
+    cin &gt;&gt; name; // cin only takes first word as input
+
+    // Writing string to file
+    hout &lt;&lt; "My name is " + name;
+
+    // Closing File
+    hout.close();
+
+    ifstream hin("T64_sample.txt");
+    string content;
+    getline(hin, content);
+    cout &lt;&lt; "The content in file is :" &lt;&lt; endl;
+    cout &lt;&lt; content &lt;&lt; endl;
+    hin.close();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project66" class="accordion-item">
+                <h2 class="accordion-header" id="heading66">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse66" aria-expanded="false" aria-controls="collapse66">
+                        66. Open & EOF
+                    </button>
+                </h2>
+                <div id="collapse66" class="accordion-collapse collapse" aria-labelledby="heading66"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main()
+{
+    ofstream hout;
+    hout.open("T64_sample.txt");
+    hout &lt;&lt; "This is saksham.\n";
+    hout &lt;&lt; "I am programmer.\n";
+    hout.close();
+
+    ifstream hin;
+    hin.open("T64_sample.txt");
+    string st;
+    while (hin.eof() == 0)
+    {
+        getline(hin, st);
+        cout &lt;&lt; st &lt;&lt; endl;
+    }
+    hin.close();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project67" class="accordion-item">
+                <h2 class="accordion-header" id="heading67">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse67" aria-expanded="false" aria-controls="collapse67">
+                        67. Templates
+                    </button>
+                </h2>
+                <div id="collapse67" class="accordion-collapse collapse" aria-labelledby="heading67"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+In below example,
+we have a class Vector & we want to make it for any data-type.
+Then we will have to make more than one class.
+So we make a template which is T data-type & when we made object, we specified data-type as int or float .....
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Making Template
+template &lt;class T&gt;
+class Vector
+{
+public:
+    int size;
+    T *arr;
+    Vector(int m)
+    {
+        size = m;
+        arr = new T[size];
+    }
+    T dotProduct(Vector &v)
+    {
+        T d = 0;
+        for (int i = 0; i &lt; size; i++)
+        {
+            d += this-&gt;arr[i] * v.arr[i];
+        }
+        return d;
+    }
+};
+
+int main()
+{
+    Vector&lt;float&gt; v1(3);
+    v1.arr[0] = 1;
+    v1.arr[1] = 2;
+    v1.arr[2] = 3;
+
+    Vector&lt;float&gt; v2(3);
+    v2.arr[0] = 11.1;
+    v2.arr[1] = 21.1;
+    v2.arr[2] = 31.1;
+
+    float a = v1.dotProduct(v2);
+    cout &lt;&lt; a &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project68" class="accordion-item">
+                <h2 class="accordion-header" id="heading68">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse68" aria-expanded="false" aria-controls="collapse68">
+                        68. Templates with Multiple Parametres
+                    </button>
+                </h2>
+                <div id="collapse68" class="accordion-collapse collapse" aria-labelledby="heading68"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Syntax :
+template &lt;class A, class B, ...... (Comma Seperated)&gt;
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;class A, class B&gt;
+class myClass
+{
+public:
+    A data1;
+    B data2;
+    myClass(A a, B b)
+    {
+        data1 = a;
+        data2 = b;
+    }
+    void display()
+    {
+        cout &lt;&lt; this-&gt;data1 &lt;&lt; " " &lt;&lt; this-&gt;data2 &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    myClass&lt;int, char&gt; o1(1, 'c');
+    o1.display();
+
+    myClass&lt;char, float&gt; o2('s', 3.14);
+    o2.display();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project69" class="accordion-item">
+                <h2 class="accordion-header" id="heading69">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse69" aria-expanded="false" aria-controls="collapse69">
+                        69. Templates with Default Parametres
+                    </button>
+                </h2>
+                <div id="collapse69" class="accordion-collapse collapse" aria-labelledby="heading69"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Syntax :
+template &lt;class A = {{default data-type}}, class B, ...... (Comma Seperated)&gt;
+*/
+
+#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;class A = int, class B = char&gt;
+class myClass
+{
+public:
+    A data1;
+    B data2;
+    myClass(A a, B b)
+    {
+        data1 = a;
+        data2 = b;
+    }
+    void display()
+    {
+        cout &lt;&lt; this-&gt;data1 &lt;&lt; " " &lt;&lt; this-&gt;data2 &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    myClass&lt;&gt; o1(1, 'c'); // This will take default int, char
+    o1.display();
+
+    myClass&lt;char, float&gt; o3('s', 3.14);
+    o3.display();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project70" class="accordion-item">
+                <h2 class="accordion-header" id="heading70">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse70" aria-expanded="false" aria-controls="collapse70">
+                        70. Function Templates
+                    </button>
+                </h2>
+                <div id="collapse70" class="accordion-collapse collapse" aria-labelledby="heading70"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;class A, class B&gt;
+float avg(A a, B b)
+{
+    float x = (a + b) / 2.0;
+    return x;
+}
+
+template &lt;class T&gt;
+void swap1(T *a, T *b)
+{
+    T temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main()
+{
+    float a = avg(3, 4.5);
+    cout &lt;&lt; "The average of 3 & 4.5 is " &lt;&lt; a &lt;&lt; endl;
+
+    float b = 8.5, c = 3.4;
+    swap1(&b, &c);
+    cout &lt;&lt; "b = " &lt;&lt; b &lt;&lt; endl;
+    cout &lt;&lt; "c = " &lt;&lt; c &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project71" class="accordion-item">
+                <h2 class="accordion-header" id="heading71">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse71" aria-expanded="false" aria-controls="collapse71">
+                        71. Member Function Templates
+                    </button>
+                </h2>
+                <div id="collapse71" class="accordion-collapse collapse" aria-labelledby="heading71"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;class T&gt;
+class A
+{
+public:
+    T data;
+    A(T a) { data = a; }
+    // void display() { cout &lt;&lt; data &lt;&lt; endl; }
+    void display();
+};
+
+template &lt;class T&gt;
+void A&lt;T&gt;::display()
+{
+    cout &lt;&lt; data &lt;&lt; endl;
+}
+
+int main()
+{
+    A&lt;int&gt; h(5);
+    h.display();
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project72" class="accordion-item">
+                <h2 class="accordion-header" id="heading72">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse72" aria-expanded="false" aria-controls="collapse72">
+                        72. Template Function Overloading
+                    </button>
+                </h2>
+                <div id="collapse72" class="accordion-collapse collapse" aria-labelledby="heading72"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>#include &lt;iostream&gt;
+using namespace std;
+
+void func(int a)
+{
+    cout &lt;&lt; "I am first func() " &lt;&lt; a &lt;&lt; endl;
+}
+
+template &lt;class T&gt;
+void func(T a)
+{
+    cout &lt;&lt; "I am template func() " &lt;&lt; a &lt;&lt; endl;
+}
+
+int main()
+{
+    func(5); // Exact match takes higher priority
+    func(3.14); // Template function called
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project73" class="accordion-item">
+                <h2 class="accordion-header" id="heading73">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse73" aria-expanded="false" aria-controls="collapse73">
+                        73. Standard Template Library
+                    </button>
+                </h2>
+                <div id="collapse73" class="accordion-collapse collapse" aria-labelledby="heading73"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+STL is used it is not a good idea to re-invent wheel.
+
+STL has 3 components :
+1. Containers --- Object which stores data
+    --&gt; Stores data
+    --&gt; Use template class
+2. Alogorithms --- Procedure to process data
+    --&gt; Sorting, searching etc...
+    --&gt; Use template functions
+3. Iterators --- Iterate over elements of container
+    --&gt; It is an object which points to an element in a container
+    --&gt; It is handled just like pointers.
+    --&gt; It connects algorithm with containers.
+*/
+
+/*
+Containers :
+1. Sequence Containers --- Linear Fashion
+    --&gt; Vector, List, Dequeue
+2. Associative Containers --- Direct Access
+    --&gt; Set/Multiset, Map/Multimap
+3. Derived Containers --- Real World Modelling
+    --&gt; Stack, Queue, Priority-queue
+*/
+
+/*
+Sequence Containers :
+1. Vector
+    --&gt; Random Access -- Fast
+    --&gt; Insertion or deletion in middle -- Slow
+    --&gt; Insertion at end -- Fast
+2. List
+    --&gt; Random Access -- Slow
+    --&gt; Insertion or deletion in middle -- Slow
+    --&gt; Insertion at end -- Fast
+*/
+
+/*
+Associative Containers :
+    --&gt; All operation are fast except Random Access
+*/
+
+/*
+Derived Containers :
+    --&gt; Depends
+*/
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project74" class="accordion-item">
+                <h2 class="accordion-header" id="heading74">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse74" aria-expanded="false" aria-controls="collapse74">
+                        74. Vectors
+                    </button>
+                </h2>
+                <div id="collapse74" class="accordion-collapse collapse" aria-labelledby="heading74"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Ways to create a vector :
+1. vector&lt;int&gt; v1; // Zero length vector
+2. vector&lt;char&gt; v2(4); // 4-element vector
+3. vector&lt;char&gt; v3(v2); // 4-element vector
+4. vector&lt;int&gt; v4(a, b); // This is a vector of size a wihch contain only b a times. (b b b .... a times)
+*/
+
+/*
+Some important methods :
+
+-----ITERATORS-----
+1. begin() --- return iterator to beginning
+2. end() --- return iterator to end
+
+-----CAPACITY-----
+1. size() --- returns size of vector
+2. max_size() --- returns maximum size of vector
+3. resize(a) --- if a is less than previous size then only first a elements left in vector
+4. resize(a) --- if a is greater than previous size then size changes to a, previous elements remain same & rest elements become zero
+5. resize(a, b) --- if a is greater than previous size then size changes to a, previous elements remain same & rest elements become b
+6. empty() --- check whether vector is empty
+
+-----ELEMENT ACCESS-----
+1. at(a) --- return element present at position a
+2. front() --- return first element
+3. back() --- return last element
+
+-----MODIFIERS-----
+1. assign(a, b) --- assign b a times (b b b ...... a times)
+2. assign(iter1, iter2) --- assign values at iter1 to iter2
+3. assign(arr, arr + a) --- assign first a elements of arr, if a is greater than size of arr then extra elements become zero
+4. push_back(a) --- inserting a at end
+5. pop_back() --- removing element at end
+4. insert(iter, b) --- insert b at iter
+5. insert(iter, n, b) --- insert n copies of b at iter
+6. insert(iter1, iter2, iter3) --- insert value from iter2 to iter3 at iter1
+7. erase(iter) --- erase value at iter
+8. erase(iter1, iter2) --- erase value from iter1 to iter2
+9. vec1.swap(vec2) --- swap vec1 & vec2 totally
+10. clear() --- clear vector totally
+*/
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+void display(vector&lt;int&gt; &v)
+{
+    for (int i = 0; i &lt; v.size(); i++)
+    {
+        cout &lt;&lt; v[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+}
+
+int main()
+{
+    int a, size;
+    vector&lt;int&gt; vec1;
+
+    cout &lt;&lt; "Enter size = ";
+    cin &gt;&gt; size;
+    cout &lt;&lt; "Enter element to add to this vector" &lt;&lt; endl;
+    for (int i = 0; i &lt; size; i++)
+    {
+        cin &gt;&gt; a;
+        vec1.push_back(a);
+    }
+    display(vec1);
+
+    // Making Iterator
+    vector&lt;int&gt;::iterator iter = vec1.begin();
+    vec1.insert(iter + 1, 50);
+    display(vec1);
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project75" class="accordion-item">
+                <h2 class="accordion-header" id="heading75">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse75" aria-expanded="false" aria-controls="collapse75">
+                        75. Lists
+                    </button>
+                </h2>
+                <div id="collapse75" class="accordion-collapse collapse" aria-labelledby="heading75"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Ways to create a list :
+same as vector
+*/
+
+/*
+Some important methods :
+Most methods are same as vectors but some important different methods are described below :
+
+-----ELEMENT ACCESS-----
+1. at(a) --- this function present in vector but not in list
+
+-----MODIFIERS-----
+1. push_front(a) --- inserting a at starting
+2. pop_front() --- removing element at starting
+
+-----OPERATIONS-----
+1. list1.splice(iter, list2) --- insert whole list2 in list 1 at iter, list2 becomes empty & iter reaches to next of all elements of list2 inserted
+2. list1.splice(iter1, list2, iter2) --- move element present at iter2 of list2 to iter1 of list1, iter2 becomes invalid
+3. list1.splice(iter1, list2, iter2, iter3) --- move elements of list2 present from iter2 to iter3 to iter1 of list1
+4. remove(a) --- deletes all occurences of element a
+5. remove_if(bool) --- deletes all values which retutn true in bool
+6. unique() --- remove duplicates
+7. unique(bool) --- only save first element in all those duplicates which follow bool, remove all others
+8. list1.sort(list2) --- if both are sorted then merge them in list1 & sort it
+                         if not sorted then merge simply in list1
+                         in both cases list2 becomes empty
+9. reverse() --- reverses list
+*/
+
+#include &lt;iostream&gt;
+#include &lt;list&gt;
+using namespace std;
+
+void display(list&lt;int&gt; &lst)
+{
+    list&lt;int&gt;::iterator it;
+    for (it = lst.begin(); it != lst.end(); it++)
+    {
+        cout &lt;&lt; *it &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+}
+
+int main()
+{
+    int a, size;
+    list&lt;int&gt; l1;
+
+    cout &lt;&lt; "Enter size = ";
+    cin &gt;&gt; size;
+    cout &lt;&lt; "Enter element to add to this list" &lt;&lt; endl;
+    for (int i = 0; i &lt; size; i++)
+    {
+        cin &gt;&gt; a;
+        l1.push_back(a);
+        l2.push_back(a * 10);
+    }
+    display(l1);
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project76" class="accordion-item">
+                <h2 class="accordion-header" id="heading76">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse76" aria-expanded="false" aria-controls="collapse76">
+                        76. Map
+                    </button>
+                </h2>
+                <div id="collapse76" class="accordion-collapse collapse" aria-labelledby="heading76"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Ways to create a map :
+same as vector
+*/
+
+/*
+Some important methods :
+Most methods are same as list but some important different methods are described below :
+
+-----ELEMENT ACCESS-----
+1. at(a) --- return value present at key a
+
+-----MODIFIERS-----
+1. push & pull functions are not present
+
+-----OPERATIONS-----
+1. find(a) --- return location of key a
+2. count(a) --- returns no of occurences of key a
+3. lower_bound(a) --- iterator goes to key a
+4. upper_bound(a) --- iterator goes next to key a
+*/
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;map&gt;
+using namespace std;
+
+// Map is an associative array
+int main()
+{
+    map&lt;string, int&gt; marks;
+    marks["saksham"] = 90;
+    marks["rohan"] = 58;
+    marks["rahul"] = 65;
+
+    map&lt;string, int&gt;::iterator it;
+    for (it = marks.begin(); it != marks.end(); it++)
+    {
+        cout &lt;&lt; (*it).first &lt;&lt; " " &lt;&lt; (*it).second &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project77" class="accordion-item">
+                <h2 class="accordion-header" id="heading77">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse77" aria-expanded="false" aria-controls="collapse77">
+                        77. Function Objects
+                    </button>
+                </h2>
+                <div id="collapse77" class="accordion-collapse collapse" aria-labelledby="heading77"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-cpp"><code>/*
+Function Objects (Functors) :
+Function wrapped in a class so that it available like an object.
+*/
+
+#include &lt;iostream&gt;
+#include &lt;functional&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main()
+{
+    int arr[] = {4, 8, 1, 75, 45, 3, 9};
+
+    sort(arr, arr + 7, greater&lt;int&gt;()); // greater is functor which assures that array is sorted in reverse order
+
+    for (int i = 0; i &lt; 7; i++)
+    {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+
+    return 0;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>

@@ -1,0 +1,3202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | Java Script | Tutorials</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c4 {
+            display: none;
+        }
+
+        #d2,
+        #d3,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./js.html">JS</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./tutorials.html">Tutorials</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Topic</h3>
+        <hr>
+        <h5 id="nothing">No topic matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        1. Console
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>// Use console.log(); for printing
+// It is not necessary to put semicolon at end of lines.
+
+console.time('Your code takes time');
+console.log("Hello World");
+console.log(4 + 34);
+console.log(true);
+console.log([1, 2, 3])
+console.log({ 'subject': 'maths', 'marks': 50 });
+console.table({ 'subject': 'maths', 'marks': 50 }); // Makes a table
+console.warn("This is a warning"); // Throw a warning
+// console.clear(); // Clear the console
+console.timeEnd('Your code takes time'); // For printing time difference
+console.assert(500 &lt; 185, "This is not possible");
+console.error("This is an error"); // Will throw an error on console
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project2" class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        2. Variables
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>/*
+Rule for variable :
+1. Cannot start with numbers.
+2. Can start with letters, _ or $
+3. Variables are case sensitive
+*/
+
+// var, let, const
+
+// var can be changed in their scope
+var name = `saksham`; // If we put `..` for strings then we can give quotes also in string
+var marks = 50;
+console.log(name, marks);
+
+// const cannot be changed anywhere
+const a = 10;
+// a = 20; --&gt; will throw an error
+console.log("a = " + a);
+
+{
+    // let has block level scope
+    let marks = 100;
+    console.log(marks);
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        3. Data Types
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>/*
+There are 2 types of data types in javascript :
+1. Primitive Data Type
+    --&gt; String
+    --&gt; Number
+    --&gt; Boolean
+    --&gt; Null
+    --&gt; Undefined
+    --&gt; Symbol
+
+2. Reference Data Types
+    --&gt; Arrays
+    --&gt; Object Literals
+    --&gt; Functions
+    --&gt; Dates
+*/
+
+// String
+let str1 = "Saksham";
+console.log("String is " + str1);
+console.log("Data type of str1 is " + (typeof str1));
+console.log();
+
+// Numbers
+let a = 10;
+console.log("Number is " + a);
+console.log("Data type of a is " + (typeof a));
+console.log();
+
+// Boolean
+let b = true;
+console.log("Boolean is " + b);
+console.log("Data type of b is " + (typeof b));
+console.log();
+
+// Null
+let c = null;
+console.log("Null is " + c);
+console.log("Data type of c is " + (typeof c));
+console.log();
+
+// Undefined
+let d = undefined;
+console.log("Undefined is " + d);
+console.log("Data type of d is " + (typeof d));
+console.log();
+
+// Arrays
+let e = [1, 2, 3.14, "saksham", true];
+e.push(false);
+console.log("Array is " + e);
+console.log("Data type of e is " + (typeof e));
+console.log();
+
+// Object Literals
+let f = {
+    obj1: 1,
+    obj2: 2,
+    obj3: 3
+};
+console.log(f);
+console.table(f);
+console.log("Data type of f is " + (typeof f));
+console.log();
+
+// Functions
+function g() {
+}
+console.log("Data type of g is " + (typeof g));
+console.log();
+
+// Dates
+let h = new Date();
+console.log("Date is " + h);
+console.log("Data type of h is " + (typeof h));
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        4. Type Conversion
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>// Type Conversion
+
+let a = String(54); // Converting to string
+console.log(a, (typeof a));
+console.log();
+
+let arr = String([1, 2, 3, 4, 5]);
+console.log(arr, arr.length, (typeof arr));
+console.log();
+
+let c = Number("3434");
+console.log(c, (typeof c));
+console.log();
+
+let d = Number("343f4"); // Will give NaN
+console.log(d, (typeof d));
+console.log();
+
+let e = parseInt("3.14");
+console.log(e, (typeof e)); // Will output 3 because it is integer
+console.log();
+
+let f = parseFloat("3.14");
+console.log(f, (typeof f)); // Will output 3.14 because it is float
+console.log(f.toFixed(30), (typeof f)); // Will give 30 digits after decimal
+console.log();
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project5" class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        5. Type Coercian
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>// Type Coercian
+
+let a = "34";
+let b = 4;
+console.log(a + b); // Will give 344 because a is string
+
+let c = Number("34");
+let d = 4;
+console.log(c + d); // Will give 38 because both are numbers
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        6. Strings
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>const name = "Saksham";
+const greet = "Good Morning!";
+console.log(greet + " " + name);
+
+/*
+// This ia invalid syntax
+let html;
+html = "&lt;h1&gt;This is heading.&lt;/h1&gt;
+    &lt;p&gt; This is paragraph.&lt;/p&gt; ";
+*/
+
+let html;
+html = "&lt;h1&gt;This is heading.&lt;/h1&gt;" +
+    "&lt;p&gt; This is paragraph.&lt;/p&gt;";
+html = html.concat('hello', ' hi');
+console.log(html);
+
+let a = "Hello World";
+console.log(a.length); // Return length of string
+console.log(a.toLowerCase()); // Return string of lower cases
+console.log(a.toUpperCase()); // Return string of upper cases
+console.log(a); // This remains original
+
+console.log(a.indexOf('l')); // Return first occurence of 'l'
+console.log(a.lastIndexOf('l')); // Return last occurence of 'l'
+
+console.log(a[1]); // Returns value at index 1 (e)
+console.log(a.charAt(2)); // Returns value at index 2 (l)
+
+console.log(a.endsWith('ld')); // Retrun true if string ends with 'ld'
+console.log(a.includes('llo')); // Retrun true if string conatins 'llo'
+
+console.log(a.substring(1, 7)); // Return substring form index 1 to 6
+console.log(a.slice(0, 8)); // Return substring form index 0 to 7
+console.log(a.slice(-3)); // Return substring of last 3 characters
+console.log(a.substring(-3)); // Return whole string
+
+console.log(a.split("l")); // Returns array after spliting at every "l"
+
+console.log(a.replace('l', 'b')); // Returns string after replacing first occurence of "l" with "b"
+
+// Template Literals
+let fruit1 = 'Apple';
+let fruit2 = 'Orange';
+let myHtml = `Hello ${name}
+            &lt;h1&gt;This is heading&lt;/h1&gt;
+            &lt;p&gt;You like ${fruit1} and ${fruit2}.&lt;/p&gt;`;
+console.log(myHtml);
+// document.body.innerHTML = myHtml; --&gt; Send HTML to document
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        7. Arrays
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>// In const arrays we can not intializ array again but can change values
+const marks = [1, 2, 3, 4, 5, 6];
+const fruits = ["Apple", "Orange", "PineApple"];
+const mixed = ["String", true, 1, 3.14, [1, "saksham"]];
+const arr = new Array(1, 2, 3, 4);
+
+console.log(marks);
+console.log(fruits);
+console.log(mixed);
+console.log(arr);
+
+console.log(marks.length); // Return length of array
+console.log(Array.isArray(mixed)); // Check for array or not
+
+console.log(marks.indexOf(5)); // Return index of 5 if not present then -1
+
+marks.push(100); // Insert at end of array
+console.log(marks);
+
+marks.unshift(200); // Insert at start of array
+console.log(marks);
+
+marks.pop(); // Delete element at end of array
+console.log(marks);
+
+marks.shift(); // Delete element at start of array
+console.log(marks);
+
+marks.splice(2, 3); // Delete 3 elements from index 2
+console.log(marks);
+
+marks.reverse(); // Reverse whole array
+console.log(marks);
+
+let marks2 = [100, 200, 300];
+console.log(marks.concat(marks2)); // Concat at end
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project8" class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        8. Objects
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>let obj1 = {
+    name: "saksham",
+    id: 1,
+    isActive: true,
+    marks: [1, 2, 3, 4]
+}
+
+console.table(obj1); // Printing in table form
+
+// Printing individual keys --&gt; 2 Methods
+console.log(obj1['id']);
+console.log(obj1.isActive);
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project9" class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        9. If Else
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>const age = 65;
+if (age == 19) {
+    console.log("Age is 19");
+}
+else if (age == 65) {
+    console.log("Age is 65");
+}
+else {
+    console.log("Age is neither 19 nor 65");
+}
+
+const age_str = `65`;
+if (age_str === 65) { // === return true if value & type both are same
+    console.log("Age is 65 & Number");
+}
+else if (age_str == 65) { // == return true if value is same
+    console.log("Age is 65 & string");
+}
+else {
+    console.log("Age is neither 19 nor 65");
+}
+
+const age_str2 = 65;
+if (age_str2 !== 65) { // !== return true if value & type anyone is different
+    console.log("Age is 65 & Number");
+}
+else if (age_str2 != 65) { // != return true if value is different
+    console.log("Age is 65 & string");
+}
+else {
+    console.log("Age is neither 19 nor 65");
+}
+
+if ((typeof var1) !== 'undefined') {
+    console.log("var1 is defined");
+}
+else {
+    console.log("var1 is not defined");
+}
+
+const doesDrive = true;
+const Age = 20;
+if (doesDrive && age &gt; 18) {
+    console.log("You can drive");
+}
+else {
+    console.log("You cannot drive");
+}
+
+// Ternary Conditions
+const a = 21;
+// console.log(condition ? if true : if false);
+console.log(a == 20 ? "a is 20" : "a is not 20");
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project10" class="accordion-item">
+                <h2 class="accordion-header" id="heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        10. Switch Case
+                    </button>
+                </h2>
+                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>const age = 20;
+
+switch (age) {
+    case 18:
+        console.log("You are 18");
+        break;
+    case 20:
+        console.log("You are 20");
+        break;
+    case 16:
+        console.log("You are 16");
+        break;
+    default: // If no case matches
+        console.log("Age is unknown.");
+        break;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project11" class="accordion-item">
+                <h2 class="accordion-header" id="heading11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                        11. Loops
+                    </button>
+                </h2>
+                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>/*
+There are 4 loops :
+1. For Loop
+2. While Loop
+3. Do-While Loop
+4. ForEach Loop
+*/
+
+// For Loop
+console.log("For Loop");
+for (let i = 0; i &lt; 10; i++) {
+    console.log(i);
+}
+
+// While Loop
+console.log("While Loop");
+let j = 0
+while (j &lt; 10) {
+    console.log(j);
+    j++
+}
+
+// Do-While Loop
+console.log("Do-While Loop");
+let k = 0;
+// Runs atleast once
+do {
+    console.log(k);
+    k++;
+} while (k &lt; 0);
+
+// ForEach Loop
+console.log("ForEach Loop in arrray");
+let arr = [1, 2, 3, 4, 5];
+// arr.forEach(function (item) {
+//     console.log(item);
+// })
+
+arr.forEach(function (item, index, array) {
+    console.log(item, index, array);
+})
+
+console.log("Loop in objects");
+let obj = {
+    v1: 1,
+    v2: true,
+    v3: "saksham"
+}
+for (let key in obj) {
+    console.log(`The ${key} of object is ${obj[key]}`);
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project12" class="accordion-item">
+                <h2 class="accordion-header" id="heading12">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                        12. Break & Continue
+                    </button>
+                </h2>
+                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>for (let i = 0; i &lt; 10; i++) {
+    if (i == 4) {
+        continue; // Forget this iteration & jump to next
+    }
+    if (i == 7) {
+        break; // Break loop & move ahead
+    }
+    console.log(i);
+}
+console.log("Loop ends here...");
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project13" class="accordion-item">
+                <h2 class="accordion-header" id="heading13">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                        13. Functions
+                    </button>
+                </h2>
+                <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>// Non Returning function
+function greet(name) {
+    console.log(`Hello ${name} Happy Birthday!!!`);
+}
+
+let name = "Saksham";
+let name2 = "Harry";
+
+greet(name);
+greet(name2);
+
+// Returning Function
+function add(a, b) {
+    return a + b;
+}
+let sum = add(3, 4);
+console.log("The sum is " + sum);
+
+// Default Arguments
+function func1(a, b = 4) {
+    console.log("a is", a);
+    console.log("b is", b);
+}
+func1(3); // a = 3, b = 4
+func1(3, 5); // a = 3, b = 5
+
+// Stroing function in variable
+const myFunc = function subtract(a, b) { // No need to give name of function
+    return a - b;
+}
+// let ans = subtract(3, 4); // Will throw an error
+let ans = myFunc(3, 4);
+console.log("The sum is " + ans);
+
+// Function in object
+let obj = {
+    v1: 1,
+    v2: function () {
+        return "hello";
+    }
+}
+console.log(obj.v2());
+
+// Function in array
+let arr = [1, 2, 3, 4, 5];
+// arr.forEach(function (item) {
+//     console.log(item);
+// })
+
+arr.forEach(function (item, index, array) {
+    console.log(item, index, array);
+})
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project14" class="accordion-item">
+                <h2 class="accordion-header" id="heading14">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                        14. Scope
+                    </button>
+                </h2>
+                <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-js"><code>/*
+Scope of var is global
+Scope of let & const is in their block
+*/
+
+{
+    var a = 34;
+    let b = 34;
+}
+
+let i = 34;
+function func1() {
+    let i = 10;
+}
+console.log("i = " + i); // Will print 34
+console.log("a =", a); // Will not give error
+// console.log("b =", b); // Will give error
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project15" class="accordion-item">
+                <h2 class="accordion-header" id="heading15">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                        15. Website Manipulating
+                    </button>
+                </h2>
+                <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script src="../JS/T15_website_manipulating.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Window
+let a = window;
+console.log(a);
+
+// alert("This is alert"); // Give alert in site
+// let name = prompt("Enter your name."); // Give prompt in site which takes an input
+// console.log(name);
+
+// let b = confirm("Do you really want to delete this"); // Confirm something
+
+console.log(window.innerHeight); // Tell height of page
+console.log(window.innerWidth); // Tell width of page
+
+console.log(a.scrollY); // Tell how much scrolled in Y
+console.log(a.scrollX); // Tell how much scrolled in X
+
+console.log(a.history); // Tells history
+// history.go(-1); --&gt; Take back
+
+// Location
+let b = location;
+console.log(b);
+// location.href = "https://www.google.com"; --&gt; Goes to Google
+console.log(b.toString()); // Print address
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project16" class="accordion-item">
+                <h2 class="accordion-header" id="heading16">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                        16. DOM
+                    </button>
+                </h2>
+                <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Layout&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Welcome to Layout by DOM.&lt;/h1&gt;
+    &lt;div class="child"&gt;child 1&lt;/div&gt;
+    &lt;div class="child"&gt;child 2&lt;/div&gt;
+    &lt;div class="child"&gt;child 3&lt;/div&gt;
+    &lt;div class="child"&gt;child 4&lt;/div&gt;
+    &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+    &lt;form action=""&gt;
+        &lt;input type="text" name="input" id="input"&gt;
+        &lt;button&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T16_DOM.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// DOM --&gt; Document Object Model
+
+let a = document; // Gives complete html
+console.log(a);
+console.log(a.all); // returns all elements of html file
+console.log(a.head); // returns head elements of html file
+console.log(a.body); // returns body elements of html file
+console.log(a.forms); // returns forms elements of html file
+
+// We can not run for-each loop on any array returned by above methods. For do that see below
+Array.from(a.all).forEach(function (element) {
+    console.log(element);
+})
+
+console.log(a.links[0]); // return link in website
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project17" class="accordion-item">
+                <h2 class="accordion-header" id="heading17">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                        17. HTML Element Selectors
+                    </button>
+                </h2>
+                <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="heading17"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML Element Selectors&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Welcome to HTML Element Selectors.&lt;/h1&gt;
+    &lt;div id="div1" class="child"&gt;child 1&lt;/div&gt;
+    &lt;div id="div2" class="child"&gt;child 2&lt;/div&gt;
+    &lt;div class="child"&gt;child 3&lt;/div&gt;
+    &lt;div class="child"&gt;child 4&lt;/div&gt;
+    &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+    &lt;form action=""&gt;
+        &lt;input type="text" name="input" id="input"&gt;
+        &lt;button&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T17_html_element_selectors.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>/*
+Element Selectors :
+1. Single Element Selectors
+2. Multi Element Selectors
+*/
+
+// 1. Single Element Selectors
+
+let element = document.getElementById("div1");
+console.log(element.className); // Return class name
+console.log(element.childNode); // Returns childs
+console.log(element.parentNode); // Return parent
+element.style.color = 'red';
+element.innerHTML = `&lt;b&gt;This is changed by javascript&lt;/b&gt;`;
+
+let element2 = document.querySelector('#div1'); // Selecting Id
+console.log(element2);
+element2 = document.querySelector('.child'); // Selecting first element of child class
+console.log(element2);
+element2 = document.querySelector('b'); // Selecting fist element with b tag
+console.log(element2);
+
+// 2. Multi Element Selectors
+let elements = document.getElementsByClassName('child');
+console.log(elements);
+elements = document.getElementsByTagName('div');
+console.log(elements);
+
+Array.from(elements).forEach(element =&gt; {
+    console.log(element);
+    element.style.color = 'blue';
+});
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project18" class="accordion-item">
+                <h2 class="accordion-header" id="heading18">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                        18. Traversing DOM
+                    </button>
+                </h2>
+                <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="heading18"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Traversing the DOM&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Welcome to Traversing by DOM.&lt;/h1&gt;
+        &lt;div id="div1" class="child"&gt;child 1&lt;/div&gt;
+        &lt;div id="div2" class="child"&gt;child 2&lt;/div&gt;
+        &lt;div class="child"&gt;child 3&lt;/div&gt;
+        &lt;div class="child"&gt;child 4&lt;/div&gt;
+        &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;form action=""&gt;
+            &lt;input type="text" name="input" id="input"&gt;
+            &lt;button&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class="no"&gt;This is dummy div1&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div2&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div3&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T18_traversing_dom.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>let element = document.querySelector('.container');
+console.log(element.childNodes); // Show comments & newlines etc. also
+console.log(element.children); // Show only elements
+
+let nodeName = element.childNodes[1].nodeName;
+console.log(nodeName);
+
+/*
+// Node Types :
+1. Elements
+2. Attribute
+3. Text Node
+8. Comment
+9. document
+10. docType
+*/
+let nodeType = element.childNodes[1].nodeType;
+console.log(nodeType);
+
+console.log(element.firstChild); // Gives first child in childNodes
+console.log(element.firstElementChild); // Gives first child in children
+
+console.log(element.lastChild); // Gives last child in childNodes
+console.log(element.lastElementChild); // Gives last child in children
+
+console.log(element.childElementCount); // Gives total no of elements in children
+
+console.log(element.firstElementChild.parentNode); // Gives parent
+console.log(element.firstElementChild.nextSibling); // Gives next child
+console.log(element.firstElementChild.nextElementSibling); // Gives next element child
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project19" class="accordion-item">
+                <h2 class="accordion-header" id="heading19">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                        19. Creating & Removing
+                    </button>
+                </h2>
+                <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Craeting & Removing Elements&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Welcome to Craeting & Removing Elements.&lt;/h1&gt;
+        &lt;div id="div1" class="child"&gt;child 1&lt;/div&gt;
+        &lt;div id="div2" class="child"&gt;child 2&lt;/div&gt;
+        &lt;div class="child"&gt;child 3&lt;/div&gt;
+        &lt;div class="child"&gt;child 4&lt;/div&gt;
+        &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;form action=""&gt;
+            &lt;input type="text" name="input" id="input"&gt;
+            &lt;button&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class="no"&gt;This is dummy div1&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div2&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div3&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T19_creating_and_removing.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Creating an element
+let element = document.createElement('p');
+
+// Adding class & id name
+element.className = 'para';
+element.id = 'para1';
+element.setAttribute('title', 'myPara');
+
+// Giving text
+element.innerText = 'This is created by javascript'; // Directly insert text not html
+element.innerHTML = 'This is created by &lt;b&gt;javascript&lt;/b&gt;'; // Insert like html
+
+// Inserting by DOM
+let div = document.querySelector('div.container');
+div.appendChild(element);
+
+// Replacing an element
+let elem2 = document.createElement('h3');
+elem2.id = 'elem2';
+elem2.className = 'elem2';
+let tNode = document.createTextNode('This is created node for elem2');
+elem2.appendChild(tNode);
+element.replaceWith(elem2);
+
+// Replacing child
+let myDiv = document.querySelector('div.container');
+let tNode2 = document.createTextNode('This is replaced child 1');
+myDiv.replaceChild(tNode2, document.getElementById('div1'));
+
+// Removing Child
+myDiv.removeChild(document.getElementById('div2'));
+
+// Getting, Setting & Removing Attributes
+console.log(elem2);
+console.log(elem2.getAttribute('id'));
+console.log(elem2.getAttribute('class'));
+console.log(elem2.hasAttribute('class'));
+console.log(elem2.hasAttribute('njdcjs'));
+elem2.removeAttribute('class');
+elem2.setAttribute('title', 'elemTitle');
+console.log(elem2);
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project20" class="accordion-item">
+                <h2 class="accordion-header" id="heading20">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                        20. Events
+                    </button>
+                </h2>
+                <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="heading20"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Events&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="heading"&gt;Welcome to Events.&lt;/h1&gt;
+        &lt;div id="div1" class="child"&gt;child 1&lt;/div&gt;
+        &lt;div id="div2" class="child"&gt;child 2&lt;/div&gt;
+        &lt;div class="child"&gt;child 3&lt;/div&gt;
+        &lt;div class="child"&gt;child 4&lt;/div&gt;
+        &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;form action="none.html"&gt;
+            &lt;input type="text" name="input" id="input"&gt;
+            &lt;button id="btn"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class="no"&gt;This is dummy div1&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div2&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div3&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T20_events.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>document.getElementById('heading').addEventListener('click', function (e) {
+    console.log("You have clicked on heading!!!");
+    console.log(e);
+
+    // Position relative to object
+    console.log(e.offsetX);
+    console.log(e.offsetY);
+
+    // Position relative to webpage
+    console.log(e.clientX);
+    console.log(e.clientY);
+});
+
+let btn = document.getElementById('btn');
+btn.addEventListener('click', func1); // Only consider left click
+btn.addEventListener('dblclick', func2);
+btn.addEventListener('mousedown', func3); // Consider all types of clicks
+
+function func1(e) {
+    console.log("Thanks", e);
+    e.preventDefault();
+};
+
+function func2(e) {
+    console.log("Thanks its a double click", e);
+    e.preventDefault();
+};
+
+function func3(e) {
+    console.log("Thanks its a Mouse down", e);
+    e.preventDefault();
+};
+
+let elem = document.querySelector('.no');
+
+elem.addEventListener('mouseenter', function (e) {
+    console.log("You entered no class");
+});
+
+elem.addEventListener('mouseleave', function (e) {
+    console.log("You left no class");
+});
+
+elem.addEventListener('mousemove', function (e) {
+    console.log("You moved mouse");
+});
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project21" class="accordion-item">
+                <h2 class="accordion-header" id="heading21">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+                        21. Local & Session Storage
+                    </button>
+                </h2>
+                <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="heading21"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Local & Session Storage&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="heading"&gt;Welcome to Local & Session Storage.&lt;/h1&gt;
+        &lt;div id="div1" class="child"&gt;child 1&lt;/div&gt;
+        &lt;div id="div2" class="child"&gt;child 2&lt;/div&gt;
+        &lt;div class="child"&gt;child 3&lt;/div&gt;
+        &lt;div class="child"&gt;child 4&lt;/div&gt;
+        &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;form action=""&gt;
+            &lt;input type="text" name="input" id="input"&gt;
+            &lt;button&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class="no"&gt;This is dummy div1&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div2&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div3&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T21_local_and_session_storage.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Loacl Storage --&gt; available till not changed threw javascipt
+
+// Setting local storage
+localStorage.setItem('i1', 'Item1');
+localStorage.setItem('i2', 'Item2');
+
+console.log(window.localStorage);
+
+// Getting item from local storage
+console.log(window.localStorage.getItem('i2')); // Item2
+console.log(window.localStorage.getItem('i3')); // null
+
+// Clearing local storage
+localStorage.clear();
+console.log(window.localStorage);
+
+// Removing an particular item
+localStorage.setItem('i1', 'Item1');
+localStorage.setItem('i2', 'Item2');
+localStorage.removeItem('i2');
+console.log(window.localStorage);
+
+// Storing array in local storage
+let myArr = ['name1', 'name2', 'name3'];
+localStorage.setItem('arr', JSON.stringify(myArr));
+console.log(window.localStorage);
+
+// Retrieve array from local storage
+console.log(JSON.parse(localStorage.getItem('arr')));
+
+// Session Storage --&gt; only available till tab is open
+sessionStorage.setItem('i1', 'Item1');
+sessionStorage.setItem('i2', 'Item2');
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project22" class="accordion-item">
+                <h2 class="accordion-header" id="heading22">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                        22. Math Object
+                    </button>
+                </h2>
+                <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Math Object&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="heading"&gt;Welcome to Math Object.&lt;/h1&gt;
+        &lt;div id="div1" class="child"&gt;child 1&lt;/div&gt;
+        &lt;div id="div2" class="child"&gt;child 2&lt;/div&gt;
+        &lt;div class="child"&gt;child 3&lt;/div&gt;
+        &lt;div class="child"&gt;child 4&lt;/div&gt;
+        &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;form action=""&gt;
+            &lt;input type="text" name="input" id="input"&gt;
+            &lt;button&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class="no"&gt;This is dummy div1&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div2&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div3&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T22_math_object.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>console.log(Math); // Printing Math Object
+
+// Some Important Functions
+console.log(Math.E);
+console.log(Math.PI);
+
+console.log(Math.round(5.2)); // 5
+console.log(Math.round(5.5)); // 6
+console.log(Math.round(5.7)); // 6
+console.log(Math.round(-5.7)); // -6
+console.log(Math.round(-5.3)); // -5
+
+console.log(Math.ceil(5.2)); // 6
+console.log(Math.ceil(5.5)); // 6
+console.log(Math.ceil(5.7)); // 6
+console.log(Math.ceil(-5.7)); // -5
+
+console.log(Math.floor(5.2)); // 5
+console.log(Math.floor(5.5)); // 5
+console.log(Math.floor(5.7)); // 5
+console.log(Math.floor(-5.3)); // -6
+
+console.log(Math.abs(-5)); // 5
+console.log(Math.abs(5)); // 5
+
+console.log(Math.sqrt(9)); // 3
+console.log(Math.sqrt(-9)); // NaN
+
+console.log(Math.pow(2, 5)); // 32
+
+console.log(Math.min(5, 4, 8, 1, 8, 2)); // 1
+console.log(Math.max(5, 4, 8, 1, 8, 2)); // 8
+
+console.log(Math.random()); // b/w 0 to 1
+console.log(Math.random() * 100); // b/w 0 to 100
+console.log((Math.random() * 10) + 10); // b/w 10 to 20
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project23" class="accordion-item">
+                <h2 class="accordion-header" id="heading23">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                        23. Date Object
+                    </button>
+                </h2>
+                <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="heading23"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Date Object&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="heading"&gt;Welcome to Date Object.&lt;/h1&gt;
+        &lt;div id="div1" class="child"&gt;child 1&lt;/div&gt;
+        &lt;div id="div2" class="child"&gt;child 2&lt;/div&gt;
+        &lt;div class="child"&gt;child 3&lt;/div&gt;
+        &lt;div class="child"&gt;child 4&lt;/div&gt;
+        &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;form action=""&gt;
+            &lt;input type="text" name="input" id="input"&gt;
+            &lt;button&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class="no"&gt;This is dummy div1&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div2&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div3&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T23_date_object.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>let today = new Date();
+console.log(today);
+console.log(typeof today);
+
+let otherDate = new Date('10-12-2006 04:05:51');
+console.log(otherDate);
+
+let otherDate2 = new Date('Oct 12 2006');
+console.log(otherDate2);
+
+let otherDate3 = new Date('10/12/2006');
+console.log(otherDate3);
+
+console.log(today.getDay()); // 0 for sun, 1 for mon, .......
+
+console.log(today.getDate());
+console.log(today.getMonth()); // Starts from 0
+console.log(today.getFullYear());
+
+console.log(today.getHours());
+console.log(today.getMinutes());
+console.log(today.getSeconds());
+
+console.log(today.getTime()); // no of milli seconds since 1 Jan 1970
+
+// Setting time
+otherDate.setDate(20);
+otherDate.setMonth(2);
+otherDate.setYear(2023);
+console.log(otherDate);
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project24" class="accordion-item">
+                <h2 class="accordion-header" id="heading24">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                        24. Constructors
+                    </button>
+                </h2>
+                <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Constructors&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="heading"&gt;Welcome to Constructors.&lt;/h1&gt;
+        &lt;div id="div1" class="child"&gt;child 1&lt;/div&gt;
+        &lt;div id="div2" class="child"&gt;child 2&lt;/div&gt;
+        &lt;div class="child"&gt;child 3&lt;/div&gt;
+        &lt;div class="child"&gt;child 4&lt;/div&gt;
+        &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;form action=""&gt;
+            &lt;input type="text" name="input" id="input"&gt;
+            &lt;button&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class="no"&gt;This is dummy div1&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div2&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div3&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T24_object_literals.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Object Literal
+let car = {
+    name: "Alto",
+    topSpeed: 100,
+    run: function () {
+        console.log("Car is running...");
+    }
+}
+
+console.log(car);
+console.log(car.name);
+console.log(car.topSpeed);
+console.log(car.run());
+
+// Constructors
+function genCar(givenName, givenSpeed) {
+    this.name = givenName;
+    this.topSpeed = givenSpeed;
+    this.run = function () {
+        console.log(`${this.name} is running...`);
+    }
+    this.analyze = function () {
+        console.log(`This car is slower by ${510 - this.topSpeed} Km/h than buggatti`);
+    }
+}
+
+car1 = new genCar("Audi", 180);
+console.log(car1);
+console.log(car1.name);
+console.log(car1.topSpeed);
+console.log(car1.run());
+console.log(car1.analyze());
+
+car2 = new genCar("Buggatti", 510);
+console.log(car2);
+console.log(car2.name);
+console.log(car2.topSpeed);
+console.log(car2.run());
+console.log(car2.analyze());
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project25" class="accordion-item">
+                <h2 class="accordion-header" id="heading25">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                        25. Object Prototype
+                    </button>
+                </h2>
+                <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="heading25"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Object Prototype&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="heading"&gt;Welcome to Object Prototype.&lt;/h1&gt;
+        &lt;div id="div1" class="child"&gt;child 1&lt;/div&gt;
+        &lt;div id="div2" class="child"&gt;child 2&lt;/div&gt;
+        &lt;div class="child"&gt;child 3&lt;/div&gt;
+        &lt;div class="child"&gt;child 4&lt;/div&gt;
+        &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;form action=""&gt;
+            &lt;input type="text" name="input" id="input"&gt;
+            &lt;button&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class="no"&gt;This is dummy div1&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div2&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div3&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T25_object_prototype.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>function Obj(givenName) {
+    this.name = givenName;
+}
+
+Obj.prototype.getName = function () {
+    return this.name;
+}
+
+let obj = new Obj("Saksham");
+console.log(obj);
+console.log(obj.getName());
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project26" class="accordion-item">
+                <h2 class="accordion-header" id="heading26">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                        26. Prototype Inheritance
+                    </button>
+                </h2>
+                <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Prototype Inheritance&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="heading"&gt;Welcome to Prototype Inheritance.&lt;/h1&gt;
+        &lt;div id="div1" class="child"&gt;child 1&lt;/div&gt;
+        &lt;div id="div2" class="child"&gt;child 2&lt;/div&gt;
+        &lt;div class="child"&gt;child 3&lt;/div&gt;
+        &lt;div class="child"&gt;child 4&lt;/div&gt;
+        &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;form action=""&gt;
+            &lt;input type="text" name="input" id="input"&gt;
+            &lt;button&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class="no"&gt;This is dummy div1&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div2&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div3&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T26_prototype_inheritance.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>const proto1 = {
+    slogan: function () {
+        return "This company is best.";
+    },
+    changeName: function (newName) {
+        this.name = newName;
+    }
+}
+
+// Way 1
+const obj = Object.create(proto1);
+
+console.log(obj);
+
+obj.name = "Saksham";
+obj.role = "Programmer";
+console.log(obj);
+
+console.log(obj.slogan());
+obj.changeName("Shubham");
+console.log(obj);
+
+// Way 2
+const obj2 = Object.create(proto1, {
+    name: { value: "Saksham", writable: true },
+    role: { value: "Programmer" }
+})
+console.log(obj2);
+obj2.changeName("Shubham");
+console.log(obj2);
+
+// Employee Constructor
+function Employee(name, salary, experience) {
+    this.name = name;
+    this.salary = salary;
+    this.experience = experience;
+}
+
+Employee.prototype.slogan = function () {
+    return `This company is best. Regrards, ${this.name}`;
+}
+
+let objEmp = new Employee("Saksham", 100000, 10);
+console.log(objEmp);
+console.log(objEmp.slogan());
+
+// Inheritance
+function Programmer(name, salary, experience, lang) {
+    Employee.call(this, name, salary, experience);
+    this.lang = lang;
+}
+
+// Inheritting prototype
+Programmer.prototype = Object.create(Employee.prototype);
+
+// Manually set the constructor
+Programmer.prototype.constructor = Programmer;
+
+let objEmp2 = new Programmer("Shubham", 50000, 7, "JS");
+console.log(objEmp2);
+console.log(objEmp2.slogan());
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project27" class="accordion-item">
+                <h2 class="accordion-header" id="heading27">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+                        27. Classes
+                    </button>
+                </h2>
+                <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="heading27"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Classes&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="heading"&gt;Welcome to Classes.&lt;/h1&gt;
+        &lt;div id="div1" class="child"&gt;child 1&lt;/div&gt;
+        &lt;div id="div2" class="child"&gt;child 2&lt;/div&gt;
+        &lt;div class="child"&gt;child 3&lt;/div&gt;
+        &lt;div class="child"&gt;child 4&lt;/div&gt;
+        &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;form action=""&gt;
+            &lt;input type="text" name="input" id="input"&gt;
+            &lt;button&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class="no"&gt;This is dummy div1&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div2&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div3&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T27_classes.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>let today = new Date();
+
+class Employee {
+    constructor(givenName, givenExp, givenDiv) {
+        this.name = givenName;
+        this.exp = givenExp;
+        this.div = givenDiv;
+    }
+    slogan() {
+        return `This company is best. Regards, ${this.name}`
+    }
+    joiningYear() {
+        return today.getFullYear() - this.exp;
+    }
+    static add(a, b) {
+        return a + b;
+    }
+}
+
+let emp1 = new Employee("emp1", 20, "div1");
+console.log(emp1);
+console.log(emp1.slogan());
+console.log(emp1.joiningYear());
+
+// Static methods can be used without making object
+console.log(Employee.add(4, 5));
+
+// Inheritance
+class Programmer extends Employee {
+    constructor(givenName, givenExp, givenDiv, lang) {
+        super(givenName, givenExp, givenDiv);
+        this.lang = lang;
+    }
+    favLang() {
+        if (this.lang == "Python") {
+            return `Python`;
+        } else {
+            return `JavaScript`;
+        }
+    }
+}
+
+let emp2 = new Programmer("emp2", 15, "div2", "Python");
+console.log(emp2);
+console.log(emp2.slogan());
+console.log(emp2.joiningYear());
+console.log(emp2.favLang());
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project28" class="accordion-item">
+                <h2 class="accordion-header" id="heading28">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                        28. Asynchronus Programming
+                    </button>
+                </h2>
+                <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="heading28"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Asynchronous Programming&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="heading"&gt;Welcome to Asynchronous Programming.&lt;/h1&gt;
+        &lt;div id="div1" class="child"&gt;child 1&lt;/div&gt;
+        &lt;div id="div2" class="child"&gt;child 2&lt;/div&gt;
+        &lt;div class="child"&gt;child 3&lt;/div&gt;
+        &lt;div class="child"&gt;child 4&lt;/div&gt;
+        &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;form action=""&gt;
+            &lt;input type="text" name="input" id="input"&gt;
+            &lt;button&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class="no"&gt;This is dummy div1&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div2&lt;/div&gt;
+    &lt;div class="no"&gt;This is dummy div3&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T28_asynchronous_programming.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>setTimeout(() =&gt; {
+    for (let i = 0; i &lt; 5; i++) {
+        console.log(i + 1);
+    }
+}, 100);
+
+console.log("Done Printing...");
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project29" class="accordion-item">
+                <h2 class="accordion-header" id="heading29">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
+                        29. AZAX
+                    </button>
+                </h2>
+                <div id="collapse29" class="accordion-collapse collapse" aria-labelledby="heading29"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+
+    &lt;title&gt;AZAX&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;AZAX&lt;/h1&gt;
+    &lt;button type="button" id="fetchBtn" class="btn btn-primary"&gt;Fetch Data&lt;/button&gt;
+    &lt;button type="button" id="postBtn" class="btn btn-primary"&gt;Post Data&lt;/button&gt;
+    &lt;button type="button" id="popBtn" class="btn btn-secondary"&gt;Populate&lt;/button&gt;
+
+    &lt;div class="container"&gt;
+        &lt;ul id="list"&gt;
+
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T29_azax.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>let fetchBtn = document.getElementById('fetchBtn');
+fetchBtn.addEventListener('click', btnClickHandler);
+
+function btnClickHandler() {
+    console.log("fetchBtn clicked!!!");
+
+    // Instantiate an XHR object
+    const xhr = new XMLHttpRequest();
+
+    // Open the object
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
+
+    // What to do on progress
+    xhr.onprogress = function () {
+        console.log("On Progress...");
+    }
+
+    xhr.onreadystatechange = function () {
+        console.log("Ready State is", xhr.readyState);
+    }
+
+    // What to do when response is ready
+    xhr.onload = function () {
+        if (this.status === 200) {
+            console.log(this.responseText);
+        } else {
+            console.log("Some error occurred.");
+        }
+    }
+
+    // Send the request
+    xhr.send();
+
+    console.log("GET done...");
+}
+
+let postBtn = document.getElementById('postBtn');
+postBtn.addEventListener('click', btnClickHandler2);
+
+function btnClickHandler2() {
+    console.log("postBtn clicked!!!");
+
+    // Instantiate an XHR object
+    const xhr = new XMLHttpRequest();
+
+    // Open the object
+    xhr.open('POST', 'https://dummy.restapiexample.com/api/v1/create', true);
+    xhr.getResponseHeader('Content-type', 'application/json');
+
+    // What to do on progress
+    xhr.onprogress = function () {
+        console.log("On Progress...");
+    }
+
+    xhr.onreadystatechange = function () {
+        console.log("Ready State is", xhr.readyState);
+    }
+
+    // What to do when response is ready
+    xhr.onload = function () {
+        if (this.status === 200) {
+            console.log(this.responseText);
+        } else {
+            console.log("Some error occurred.");
+        }
+    }
+
+    // Send the request
+    params = `{"name":"test123","salary":"123","age":"23"}`;
+    xhr.send(params);
+
+    console.log("POST done...");
+}
+
+let popBtn = document.getElementById('popBtn');
+popBtn.addEventListener('click', btnClickHandler3);
+
+function btnClickHandler3() {
+    console.log("popBtn clicked!!!");
+
+    // Instantiate an XHR object
+    const xhr = new XMLHttpRequest();
+
+    // Open the object
+    xhr.open('GET', 'https://dummy.restapiexample.com/api/v1/employees', true);
+
+    // What to do when response is ready
+    xhr.onload = function () {
+        if (this.status === 200) {
+            let obj = JSON.parse(this.responseText);
+            console.log(obj);
+            let list = document.getElementById('list');
+            let str = "";
+            for (let i = 0; i &lt; (obj.data).length; i++) {
+                str += `&lt;li&gt;${obj.data[i].employee_name}&lt;/li&gt;`;
+            }
+            list.innerHTML = str;
+        } else {
+            alert("Some error occurred")
+            console.log("Some error occurred.");
+        }
+    }
+
+    // Send the request
+    xhr.send();
+
+    console.log("POP done...");
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project30" class="accordion-item">
+                <h2 class="accordion-header" id="heading30">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse30" aria-expanded="false" aria-controls="collapse30">
+                        30. Callback Functions
+                    </button>
+                </h2>
+                <div id="collapse30" class="accordion-collapse collapse" aria-labelledby="heading30"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Callback Functions&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="heading"&gt;Welcome to Callback Functions.&lt;/h1&gt;
+        &lt;h1&gt;Student List&lt;/h1&gt;
+        &lt;ul id="students"&gt;
+
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T30_callback_functions.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>const students = [
+    { name: "s1", subject: "JS" },
+    { name: "s2", subject: "Python" }
+]
+
+function enrollStudents(student, callback) {
+    setTimeout(function () {
+        students.push(student);
+        console.log("Enrolled...");
+        callback();
+    }, 3000);
+}
+
+function getStudents() {
+    setTimeout(function () {
+        let str = "";
+        students.forEach(function (student) {
+            str += `&lt;li&gt;${student.name} - ${student.subject}&lt;/li&gt;`;
+        })
+        document.getElementById('students').innerHTML = str;
+        console.log("Fetched...");
+    }, 1000);
+}
+
+let std = {
+    name: "s3",
+    subject: "Java"
+}
+enrollStudents(std, getStudents);
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project31" class="accordion-item">
+                <h2 class="accordion-header" id="heading31">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse31" aria-expanded="false" aria-controls="collapse31">
+                        31. Promises
+                    </button>
+                </h2>
+                <div id="collapse31" class="accordion-collapse collapse" aria-labelledby="heading31"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Promises&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="heading"&gt;Welcome to Promises.&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T31_promises.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>/*
+Promises :
+    - resolve
+    - reject
+    - pending
+*/
+
+function func1() {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() =&gt; {
+            const error = true;
+            if (!error) {
+                console.log("Promise is resolved...");
+                resolve();
+            } else {
+                console.log("Promise is rejected...");
+                reject('Sorry not fulfilled...')
+            }
+        }, 2000);
+    })
+}
+
+func1().then(function () {
+    console.log("Resolved...");
+}).catch(function (error) {
+    console.log(error);
+})
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project32" class="accordion-item">
+                <h2 class="accordion-header" id="heading32">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse32" aria-expanded="false" aria-controls="collapse32">
+                        32. Arrow Functions
+                    </button>
+                </h2>
+                <div id="collapse32" class="accordion-collapse collapse" aria-labelledby="heading32"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Arrow Functions&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Arrow Functions&lt;/h1&gt;
+    &lt;script src="../JS/T32_arrow_function.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Normal Arrow Function
+const func1 = () =&gt; {
+    console.log("This is function 1");
+}
+func1();
+
+// Returning String
+const func2 = () =&gt; "This is function 2";
+console.log(func2());
+
+// Returning Object
+const func3 = () =&gt; ({ 'name': 'saksham' });
+console.log(func3());
+
+// One Argument
+const func4 = name =&gt; "Good Morning " + name;
+console.log(func4('saksham'));
+
+// More than one Argument
+const func5 = (name, end) =&gt; "Good Morning " + name + " " + end;
+console.log(func5('saksham', 'bye'));
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project33" class="accordion-item">
+                <h2 class="accordion-header" id="heading33">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse33" aria-expanded="false" aria-controls="collapse33">
+                        33. Fetch API
+                    </button>
+                </h2>
+                <div id="collapse33" class="accordion-collapse collapse" aria-labelledby="heading33"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"&gt;
+
+    &lt;title&gt;Fetch API&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Fetch API&lt;/h1&gt;
+        &lt;button id="myBtn" type="button" class="btn btn-primary"&gt;Your Btn&lt;/button&gt;
+        &lt;button type="button" class="btn btn-secondary"&gt;Fetch Data&lt;/button&gt;
+        &lt;div id="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+
+    &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+    &lt;!--
+    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;
+&lt;/body&gt;
+&lt;script src="../JS/T33_fetch_api.js"&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>let myBtn = document.getElementById('myBtn');
+let content = document.getElementById('content');
+
+// Getting data from text file
+function getData() {
+    let url = "T33_sample.txt";
+    console.log("Started getData()");
+    fetch(url).then((response) =&gt; {
+        console.log("Inside first then");
+        return response.text();
+    }).then((data) =&gt; {
+        console.log("Inside second then");
+        console.log(data);
+    })
+}
+
+console.log("Before getData()");
+getData();
+console.log("After getData()");
+
+// Getting data from API
+function getJson() {
+    let url = "https://api.github.com/users";
+    console.log("Started getJson()");
+    fetch(url).then((response) =&gt; {
+        console.log("Inside first then");
+        return response.json();
+    }).then((data) =&gt; {
+        console.log("Inside second then");
+        console.log(data);
+    })
+}
+
+console.log("Before getJson()");
+getJson();
+console.log("After getJson()");
+
+// Posting data
+function postJson() {
+    let url = "https://dummy.restapiexample.com/api/v1/create";
+    let data = `{"name":"testsnknk","salary":"123","age":"23"}`;
+    let params = {
+        method: 'post',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: data
+    }
+    console.log("Started postJson()");
+    fetch(url, params).then((response) =&gt; {
+        console.log("Inside first then");
+        return response.json();
+    }).then((data) =&gt; {
+        console.log("Inside second then");
+        console.log(data);
+    })
+}
+
+console.log("Before postJson()");
+postJson();
+console.log("After postJson()");
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project34" class="accordion-item">
+                <h2 class="accordion-header" id="heading34">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse34" aria-expanded="false" aria-controls="collapse34">
+                        34. Async Await
+                    </button>
+                </h2>
+                <div id="collapse34" class="accordion-collapse collapse" aria-labelledby="heading34"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Async/Await&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Async/Await&lt;/h1&gt;
+    &lt;script src="../JS/T34_async_await.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// async returns a promise
+async function greet() {
+    console.log("Inside greet()");
+    return "Hello";
+}
+
+console.log("Before calling greet()");
+console.log(greet());
+console.log("After calling greet()");
+
+// async/await in fetch api
+async function fetchAPI() {
+    console.log("Inside fetchAPI()");
+    const response = await fetch('https://api.github.com/users');
+    console.log('Before response');
+    const users = await response.json();
+    console.log('user resolved');
+    return users;
+}
+
+console.log("Before calling fetchAPI()");
+let a = fetchAPI();
+console.log(a);
+a.then(data =&gt; console.log(data))
+console.log("After calling fetchAPI()");
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project35" class="accordion-item">
+                <h2 class="accordion-header" id="heading35">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse35" aria-expanded="false" aria-controls="collapse35">
+                        35. Error Handling
+                    </button>
+                </h2>
+                <div id="collapse35" class="accordion-collapse collapse" aria-labelledby="heading35"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Error Handling&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Error Handling&lt;/h1&gt;
+    &lt;script src="../JS/T35_error_handling.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>let s1 = "Hello";
+
+if (s1 != undefined) {
+    // throw new Error('this is not undefined');
+    console.log("This is not undefined");
+} else {
+    console.log("This is undefined");
+}
+
+// Error handling
+try {
+    snfjalscji
+} catch (error) {
+    console.log("Here is an error");
+    console.log(error);
+    console.log(error.name);
+    console.log(error.message);
+} finally {
+    console.log("This will run in any condition");
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project36" class="accordion-item">
+                <h2 class="accordion-header" id="heading36">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse36" aria-expanded="false" aria-controls="collapse36">
+                        36. Regular Expression
+                    </button>
+                </h2>
+                <div id="collapse36" class="accordion-collapse collapse" aria-labelledby="heading36"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Regular Expression&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Regular Expression&lt;/h1&gt;
+    &lt;script src="../JS/T36_regular_expression.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Regular Expression Literals
+let reg1 = /hello/;
+let reg2 = /This/g; // Global
+let reg3 = /tHis/i; // No case sensitivity
+let reg4 = /dfs/;
+let reg5 = /is/g;
+
+console.log(reg1, typeof reg1);
+console.log(reg1.source);
+
+// Function to match expressions
+/*
+1. exec() -- return array for match or null for no match
+2. test() -- returns false if exec returns null else true
+3. match() -- return array for match or null for no match -- applied on string
+4. search() -- return index of first match else -1 -- applied on string
+5. replace() -- returns new replaced string with first replacement -- when global flag then all are replaced -- applied on string
+*/
+let s1 = "This is hello world. this is good";
+
+// exec()
+console.log(reg1.exec(s1)); // First occurence
+console.log(reg1.exec(s1)); // First occurence
+
+console.log(reg2.exec(s1)); // First occurence
+console.log(reg2.exec(s1)); // Second occurence
+console.log(reg2.exec(s1)); // Third occurence
+
+console.log(reg3.exec(s1)); // No case sensitivity
+
+// test()
+console.log(reg1.test(s1));
+console.log(reg4.test(s1));
+
+// match()
+console.log(s1.match(reg1));
+console.log(s1.match(reg4));
+console.log(s1.match(reg5));
+
+// search()
+console.log(s1.search(reg1));
+console.log(s1.search(reg4));
+
+// replace()
+console.log(s1.replace(reg3, 'that'));
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project37" class="accordion-item">
+                <h2 class="accordion-header" id="heading37">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse37" aria-expanded="false" aria-controls="collapse37">
+                        37. Meta Characters
+                    </button>
+                </h2>
+                <div id="collapse37" class="accordion-collapse collapse" aria-labelledby="heading37"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Meta Characters&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Meta Characters&lt;/h1&gt;
+    &lt;script src="../JS/T37_meta_characters.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>let reg1 = /this/;
+let str = "this is hello world. this is good. this is awesome."
+
+/*
+Some meta characters :
+1. ^ -- starts with
+2. $ -- ends with
+3. . -- space for one character
+4. * -- space for zero or more characters
+5. ? -- for optional character
+6. \ -- escape character
+*/
+
+// ^
+let reg2 = /^thi/;
+let reg3 = /^hello/;
+console.log(reg2.test(str)); // start with thi
+console.log(reg3.test(str)); // does not start with hello
+
+// $
+let reg4 = /ome.$/;
+let reg5 = /hello$/;
+console.log(reg4.test(str)); // ends with ome.
+console.log(reg5.test(str)); // does not end with hello
+
+// .
+let reg6 = /h.ll/;
+let reg7 = /h...o/;
+let reg8 = /h..o/;
+console.log(reg6.test(str)); // hell matches
+console.log(reg7.test(str)); // hello matches
+console.log(reg8.test(str)); // return false
+
+// *
+let reg9 = /h*ll/;
+let reg10 = /h*o/;
+let reg11 = /h*e/;
+console.log(reg9.test(str)); // hell matches
+console.log(reg10.test(str)); // hello matches
+console.log(reg11.test(str)); // he matches
+
+// ?
+let reg12 = /heg?ll/;
+let reg13 = /hellk?oj?/;
+let reg14 = /helli?k/;
+console.log(reg12.test(str)); // hell matches -- g is optional
+console.log(reg13.test(str)); // hello matches -- k & j are optional
+console.log(reg14.test(str)); // return false -- i is optional but k is not
+
+// \
+let reg15 = /hel\*lo/;
+let reg16 = /hel*lo/;
+console.log(reg15.test(str)); // check for hel*lo
+console.log(reg16.test(str)); // check for hello
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project38" class="accordion-item">
+                <h2 class="accordion-header" id="heading38">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse38" aria-expanded="false" aria-controls="collapse38">
+                        38. Character Sets
+                    </button>
+                </h2>
+                <div id="collapse38" class="accordion-collapse collapse" aria-labelledby="heading38"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Character Sets&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Character Sets&lt;/h1&gt;
+    &lt;script src="../JS/T38_character_sets.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>const str = "hello6 this is hello world";
+
+const r1 = /h[a-z]lo/; // means h_lo where _ have character from a to z
+console.log(r1.test(str)); // false
+
+const r2 = /h[e-t][klb]lo/; // means h12lo where 1 have character from e to t & 2 have character from k, l or b
+console.log(r2.test(str)); // true
+
+const r3 = /he[^klb]lo/; // means he_lo where _ does not have characters from k, l or b
+console.log(r3.test(str)); // false
+
+const r4 = /hello[5-9]/; // means hello_ where _ does not have numbers from 5 to 9
+console.log(r4.test(str)); // true
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project39" class="accordion-item">
+                <h2 class="accordion-header" id="heading39">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse39" aria-expanded="false" aria-controls="collapse39">
+                        39. Quantifiers
+                    </button>
+                </h2>
+                <div id="collapse39" class="accordion-collapse collapse" aria-labelledby="heading39"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Quantifiers&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Quantifiers&lt;/h1&gt;
+    &lt;script src="../JS/T39_quantifiers.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>const str = "hellop";
+const str2 = "harhar1p2p5p";
+
+const r1 = /hel{2}o/; // l can occur exactly 2 time
+console.log(r1.test(str)); // true
+
+const r2 = /hel{2}op{1,3}/; // p can occur exactly 1 to 3 times
+console.log(r2.test(str)); // true
+
+// Grouping
+const r3 = /(har){2}([0-9]p){3}/; // (har) occurs 2 times then [0-9]p occurs 3 times
+console.log(r3.test(str2)); // true
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project40" class="accordion-item">
+                <h2 class="accordion-header" id="heading40">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse40" aria-expanded="false" aria-controls="collapse40">
+                        40. Shorthand Character Classes
+                    </button>
+                </h2>
+                <div id="collapse40" class="accordion-collapse collapse" aria-labelledby="heading40"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Shorthand Character Classes&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Shorthand Character Classes&lt;/h1&gt;
+    &lt;script src="../JS/T40_shorthand_character_classes.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>/*
+Some Shortcuts :
+\w -- word character -- _ or alphabate or numbers
+\w+ -- one or more word characters
+
+\W -- non word character
+\W+ -- one or more non word characters
+
+\d -- digit character -- numbers from 0 to 9
+\d+ -- one or more digit chaarcetrs
+
+\D -- non digit character
+\D+ -- one or more non digit chaarcetrs
+
+\s -- white space
+\s+ -- one or more white space
+
+\S -- non white space
+\S+ -- one or more non white space
+
+\t -- tab character
+
+\b -- word boundary -- a word ends
+
+// Assertions
+a(?=b) -- b after a
+a(?!b) -- anything except b after a
+*/
+
+let str = "h_llo %&%llo 123pj";
+
+let r1 = /\w_ll/;
+console.log(r1.test(str)); // true
+
+let r2 = /\w+ll/;
+console.log(r2.test(str)); // true
+
+let r3 = /\Wll/;
+console.log(r3.test(str)); // true for "%ll"
+
+let r4 = /\W+ll/;
+console.log(r4.test(str)); // true for " %&%ll"
+
+let r5 = /\dpj/;
+console.log(r5.test(str)); // true for "3pj"
+
+let r6 = /\d+pj/;
+console.log(r6.test(str)); // true for "123pj"
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project41" class="accordion-item">
+                <h2 class="accordion-header" id="heading41">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse41" aria-expanded="false" aria-controls="collapse41">
+                        41. Iterators
+                    </button>
+                </h2>
+                <div id="collapse41" class="accordion-collapse collapse" aria-labelledby="heading41"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Iterators&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Iterators&lt;/h1&gt;
+    &lt;script src="../JS/T41_iterators.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>let arr = ['item1', 'item2', 'item3', 'item4'];
+console.log(arr);
+
+// Making iterator
+function iter(values) {
+    let nextIndex = 0;
+    // We will return an object
+    return {
+        next: () =&gt; {
+            if (nextIndex &lt; values.length) {
+                // We will return below object
+                return {
+                    value: values[nextIndex++],
+                    done: false
+                }
+            } else {
+                return { done: true }
+            }
+        }
+    }
+}
+
+// Using iterator
+const obj = iter(arr);
+console.log(obj.next().value); // Item 1
+console.log(obj.next().value); // Item 2
+console.log(obj.next().value); // Item 3
+console.log(obj.next().value); // Item 4
+console.log(obj.next()); // done
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project42" class="accordion-item">
+                <h2 class="accordion-header" id="heading42">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse42" aria-expanded="false" aria-controls="collapse42">
+                        42. Generators
+                    </button>
+                </h2>
+                <div id="collapse42" class="accordion-collapse collapse" aria-labelledby="heading42"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Generators&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Generators&lt;/h1&gt;
+    &lt;script src="../JS/T42_generators.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>function* numberGen(i) {
+    while (true) {
+        yield i++;
+    }
+}
+
+const gen = numberGen(5);
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next());
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project43" class="accordion-item">
+                <h2 class="accordion-header" id="heading43">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse43" aria-expanded="false" aria-controls="collapse43">
+                        43. For...in For...of
+                    </button>
+                </h2>
+                <div id="collapse43" class="accordion-collapse collapse" aria-labelledby="heading43"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;For-in & For-of Loops&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;For-in & For-of Loops&lt;/h1&gt;
+    &lt;script src="../JS/T43_for-in_for-of.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// ITERATING ARRAY
+const items = ["item1", "item2", "item3", "item4", "item5"];
+
+// Traditional For Loop
+console.log("Traditional For Loop in ARRAY");
+for (let index = 0; index &lt; items.length; index++) {
+    const element = items[index];
+    console.log(element);
+}
+
+// For-in Loop
+console.log("For-in Loop in ARRAY");
+for (let key in items) {
+    console.log(items[key]);
+}
+
+// For-of Loop
+console.log("For-of Loop in ARRAY");
+for (let key of items) {
+    console.log(key);
+}
+
+// ITERATING OBJECT
+const obj = {
+    name: "Name",
+    id: "Id",
+    number: "Number"
+}
+
+// Traditional For Loop
+console.log("Traditional For Loop in OBJECT");
+for (let index = 0; index &lt; Object.keys(obj).length; index++) {
+    const element = obj[Object.keys(obj)[index]];
+    console.log(element);
+}
+
+// For-in Loop
+console.log("For-in Loop in OBJECT");
+for (let key in obj) {
+    console.log(obj[key]);
+}
+
+// ITERATING STRING
+const str = "This is a string."
+
+// Traditional For Loop
+console.log("Traditional For Loop in STRING");
+for (let index = 0; index &lt; str.length; index++) {
+    const element = str[index];
+    console.log(element);
+}
+
+// For-in Loop
+console.log("For-in Loop in STRING");
+for (let char in str) {
+    console.log(str[char]);
+}
+
+// For-of Loop
+console.log("For-of Loop in STRING");
+for (let char of str) {
+    console.log(char);
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project44" class="accordion-item">
+                <h2 class="accordion-header" id="heading44">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse44" aria-expanded="false" aria-controls="collapse44">
+                        44. Maps
+                    </button>
+                </h2>
+                <div id="collapse44" class="accordion-collapse collapse" aria-labelledby="heading44"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Maps&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Maps&lt;/h1&gt;
+    &lt;script src="../JS/T44_maps.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Maps are like objects.
+// We can use any type of key or value in maps.
+
+const myMap = new Map();
+console.log(myMap);
+
+const key1 = 'Key 1',
+    key2 = {},
+    key3 = function () { };
+
+// Setting map values
+myMap.set(key1, 'This is a string');
+myMap.set(key2, 'This is blank object');
+myMap.set(key3, 'This is a function');
+
+console.log(myMap);
+
+// Getting map values
+let value1 = myMap.get(key1);
+let value2 = myMap.get(key2);
+let value3 = myMap.get(key3);
+console.log(value1);
+console.log(value2);
+console.log(value3);
+
+// Getting size of map
+console.log(myMap.size);
+
+// Using for-of loop to get key & values
+for (let [key, value] of myMap) {
+    console.log(key, value);
+}
+
+// Getting only keys
+for (let key of myMap.keys()) {
+    console.log(key);
+}
+
+// Getting only values
+for (let value of myMap.values()) {
+    console.log(value);
+}
+
+// Using for-each loop to get key & values
+myMap.forEach((value, key) =&gt; {
+    console.log(key);
+    console.log(value);
+})
+
+// Converting map to array
+let myArr = Array.from(myMap);
+console.log(myArr);
+
+// Converting map keys to array
+let myKeysArr = Array.from(myMap.keys());
+console.log(myKeysArr);
+
+// Converting map values to array
+let myValueArr = Array.from(myMap.values());
+console.log(myValueArr);
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project45" class="accordion-item">
+                <h2 class="accordion-header" id="heading45">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse45" aria-expanded="false" aria-controls="collapse45">
+                        45. Sets
+                    </button>
+                </h2>
+                <div id="collapse45" class="accordion-collapse collapse" aria-labelledby="heading45"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Sets&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Sets&lt;/h1&gt;
+    &lt;script src="../JS/T45_sets.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Set stores unique values
+
+const mySet = new Set();
+console.log(mySet);
+
+// Adding values to set
+mySet.add('this');
+mySet.add('that');
+mySet.add('those');
+mySet.add('this');
+mySet.add(34);
+mySet.add(40);
+mySet.add(34);
+mySet.add(true);
+mySet.add(false);
+mySet.add(true);
+
+console.log(mySet);
+
+// Using Constructor
+let mySet2 = new Set([1, 2, true, 1, { a: 4, b: 8 }, 2, "This", true, "This"])
+console.log(mySet2);
+
+// Getting size
+console.log(mySet.size);
+
+// Checking for elements
+console.log(mySet.has(34)); // true
+console.log(mySet2.has(34)); // false
+
+// Remove elements
+mySet.delete('those');
+console.log(mySet);
+
+// Iterating a set
+console.log("For-of on set");
+for (let item of mySet) {
+    console.log(item);
+}
+
+console.log("For Each on set");
+mySet.forEach((item) =&gt; {
+    console.log(item);
+})
+
+// Converting into array
+let myArr = Array.from(mySet);
+console.log(myArr);
+
+// Converting array into set
+let myArr2 = [1, 2, 1, 5, 4, 1, 2, 6, 5];
+let mySet3 = new Set(myArr2);
+console.log(mySet3);
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project46" class="accordion-item">
+                <h2 class="accordion-header" id="heading46">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse46" aria-expanded="false" aria-controls="collapse46">
+                        46. Symbols
+                    </button>
+                </h2>
+                <div id="collapse46" class="accordion-collapse collapse" aria-labelledby="heading46"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Symbols&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Symbols&lt;/h1&gt;
+    &lt;script src="../JS/T46_symbols.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>// Making Symbol
+const sym1 = Symbol();
+console.log(sym1, typeof sym1);
+
+// Two symbols are not equal although they are looking same
+const sym2 = Symbol();
+console.log(sym1 === sym2); // false
+
+// Giving identifier for debugging
+const sym3 = Symbol("Identifier");
+console.log(sym3);
+
+const k1 = Symbol();
+const k2 = Symbol();
+
+myObj = {};
+myObj[k1] = "Symbol1";
+myObj[k2] = "Symbol2";
+myObj["item"] = "Item1";
+
+console.log(myObj);
+console.log(myObj[k1]); // Cannot do myobj.k1
+console.log(myObj[k2]);
+
+// When iterating Symbols are ignored in for-in loop & JSON
+console.log("For-in loop");
+for (item in myObj) {
+    console.log(myObj[item]);
+}
+
+console.log(JSON.stringify(myObj));
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project47" class="accordion-item">
+                <h2 class="accordion-header" id="heading47">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse47" aria-expanded="false" aria-controls="collapse47">
+                        47. Destructuring
+                    </button>
+                </h2>
+                <div id="collapse47" class="accordion-collapse collapse" aria-labelledby="heading47"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Destructuring&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Destructuring&lt;/h1&gt;
+    &lt;script src="../JS/T47_destructuring.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+                        <pre class="language-js"><code>let a, b, c, d, e, f;
+
+// Syntax 1
+[a, b] = [10, 20];
+console.log(a, b);
+
+// Syntax 2
+[c, d, e, ...f] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(c, d, e, f);
+
+// Syntax 3
+({ a, b, c, ...d } = { a: 100, b: 200, c: 300, d: 400, e: 500 });
+console.log(a, b, c, d);
+
+// Syntax 4
+const nums = [1000, 2000, 3000];
+[a, b, c] = nums;
+console.log(a, b, c);
+
+// Syntax 5
+let obj = {
+    i1: "Item1",
+    i2: "Item2",
+    i3: "Item3"
+}
+const { i1, i2, i3, i4 } = obj;
+console.log(i1, i2, i3, i4); // i4 is undefined
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>

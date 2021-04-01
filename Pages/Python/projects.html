@@ -1,0 +1,2033 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../gallery/logo-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/prism.css">
+
+    <title>Cyber Saksham | Python | Projects</title>
+    <script src="../../JS/prism.js"></script>
+    <style>
+        #c5 {
+            display: none;
+        }
+
+        #d1,
+        #d2,
+        #d4,
+        #d6,
+        #d7 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../"><img id="logo" src="../../gallery/saksham.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../src.html">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./python.html">Python</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="courseList"></div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Domains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./projects.html">Projects</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <div id="domainList"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 px-5">
+        <h3>Project</h3>
+        <hr>
+        <h5 id="nothing">No project matched</h5>
+        <div class="accordion" id="accordionExample">
+            <div id="project1" class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        1. AI Assistant
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import pyttsx3  # pip install pyttsx3
+import pyaudio
+import speech_recognition as sr  # pip install speechRecognition
+import datetime
+import wikipedia  # pip install wikipedia
+import webbrowser
+import os
+import smtplib
+
+engine = pyttsx3.init('sapi5')
+voices = engine.getProperty('voices')
+# print(voices[1].id)
+engine.setProperty('voice', voices[0].id)
+
+
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+
+
+def wishMe():
+    hour = int(datetime.datetime.now().hour)
+    if hour &gt;= 5 and hour &lt; 12:
+        print("Good Morning!")
+        speak("Good Morning!")
+
+    elif hour &gt;= 12 and hour &lt; 16:
+        print("Good Afternoon!")
+        speak("Good Afternoon!")
+
+    elif hour &gt;= 16 and hour &lt; 23:
+        print("Good Evening!")
+        speak("Good Evening!")
+
+    else:
+        print("Hello, I recommend you to sleep coz this is sleeping time")
+        speak("Hello, I recommend you to sleep coz this is sleeping time")
+
+    print("I am Jarvis made by Saksham. Please tell me how may I help you")
+    speak("I am Jarvis made by Saksham. Please tell me how may I help you")
+
+
+def takeCommand():
+    # It takes microphone input from the user and returns string output
+
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print("Listening...")
+        r.pause_threshold = 1
+        audio = r.listen(source)
+
+    try:
+        print("Recognizing...")
+        query = r.recognize_google(audio, language='en-in')
+        print(f"User said: {query}\n")
+
+    except Exception as e:
+        # print(e)    
+        print("Say that again please...")
+        return "None"
+    return query
+
+
+def sendEmail(to, content):
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.login('saksham.bindal2004@gmail.com', 'password')
+    server.sendmail('saksham.bindal2004@gmail.com', to, content)
+    server.close()
+
+
+if __name__ == "__main__":
+    wishMe()
+    while True:
+        # if 1:
+        query = takeCommand().lower()
+
+        # Logic for executing tasks based on query
+        if 'wikipedia' in query:
+            speak('Searching Wikipedia...')
+            query = query.replace("wikipedia", "")
+            results = wikipedia.summary(query, sentences=2)
+            speak("According to Wikipedia")
+            print(results)
+            speak(results)
+
+        elif 'open youtube' in query:
+            webbrowser.open("youtube.com")
+
+        elif 'open google' in query:
+            webbrowser.open("google.com")
+
+        elif 'open stackoverflow' in query:
+            webbrowser.open("stackoverflow.com")
+
+
+        elif 'play music' in query:
+            music_dir = 'D:\\Non Critical\\songs\\Favorite Songs2'
+            songs = os.listdir(music_dir)
+            print(songs)
+            os.startfile(os.path.join(music_dir, songs[0]))
+
+        elif 'the time' in query:
+            strTime = datetime.datetime.now().strftime("%H:%M:%S")
+            print(f"Sir, the time is {strTime}")
+            speak(f"Sir, the time is {strTime}")
+
+        elif 'open code' in query:
+            codePath = "C:\\Users\\SAKSHAM KUMAR BINDAL\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            os.startfile(codePath)
+
+        elif 'vs code' in query:
+            codePath = "C:\\Users\\SAKSHAM KUMAR BINDAL\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            os.startfile(codePath)
+
+        elif 'email' in query:
+            try:
+                speak("What should I say?")
+                content = takeCommand()
+                to = "bindal.bhanu19082002@gmail.com"
+                sendEmail(to, content)
+                speak("Email has been sent!")
+            except Exception as e:
+                print(e)
+                speak("Sorry my friend. I am not able to send this email")
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project2" class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        2. Flappy Bird
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import pygame
+import random
+import sys  # We will use sys.exit to exit program
+from pygame.locals import *
+import time
+
+
+# Game Functions
+def welcomeScreen(score):
+    """
+    Shows welcome images on the screen
+    """
+    messageX = int(SCREENWIDTH - GAME_SPRITES['message'].get_width()) / 2
+    messageY = int(0)
+
+    while True:
+        SCREEN.blit(GAME_SPRITES['message'], (messageX, messageY))
+        pygame.display.update()
+        FPSCLOCK.tick(FPS)
+        for event in pygame.event.get():
+            # If user press cross or esc then quit the game
+            if event.type == QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
+                pygame.quit()
+                sys.exit()
+            # If user press space or up key then start the game
+            elif event.type == KEYDOWN and (event.key == K_SPACE or event.key == K_UP):
+                mainGame()
+                time.sleep(0.5)
+
+
+def mainGame():
+    """
+    Main function which plays the game
+    """
+    score = 0
+    playerX = int(SCREENWIDTH / 5)
+    playerY = int(SCREENHEIGHT - GAME_SPRITES['player'].get_height()) / 2
+
+    baseX = 0
+
+    # Create 2 pipes for blitting on the screen
+    newPipe1 = getRandomPipe()
+    newPipe2 = getRandomPipe()
+    newPipe3 = getRandomPipe()
+
+    # My list of upper pipes
+    upperPipes = [
+        {'x': SCREENWIDTH, 'y': newPipe1[0]['y']},
+        {'x': (4 / 3) * (SCREENWIDTH), 'y': newPipe2[0]['y']},
+        {'x': (5 / 3) * (SCREENWIDTH), 'y': newPipe3[0]['y']}
+    ]
+    # My list of lower pipes
+    lowerPipes = [
+        {'x': SCREENWIDTH, 'y': newPipe1[1]['y']},
+        {'x': (4 / 3) * (SCREENWIDTH), 'y': newPipe2[1]['y']},
+        {'x': (5 / 3) * (SCREENWIDTH), 'y': newPipe3[1]['y']}
+    ]
+
+    pipeVelX = -4
+    playerVelY = -9
+    playerMaxVelY = 10
+    playerMinVelY = -8
+    playerAccY = 1
+    playerFlapAcc = -8
+    playerFlapped = False  # True when bird is flapping
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
+                pygame.quit()
+                sys.exit()
+            if event.type == KEYDOWN and (event.key == K_SPACE or event.key == K_UP):
+                if playerY &gt; 0:
+                    playerVelY = playerFlapAcc
+                    playerFlapped = True
+                    GAME_SOUNDS['wing'].play()
+
+        crashTest = isCollide(playerX, playerY, upperPipes, lowerPipes)  # Return true if crashed
+        if crashTest:
+            print(f"Your score is {score}")
+            return
+
+        # Check for score
+        playerMidPos = playerX + GAME_SPRITES['player'].get_width() / 2
+        for pipe in upperPipes:
+            pipeMidPos = pipe['x'] + GAME_SPRITES['pipe'][0].get_width() / 2
+            if pipeMidPos &lt;= playerMidPos &lt; pipeMidPos + 4:
+                score += 1
+                GAME_SOUNDS['point'].play()
+
+        if playerVelY &lt; playerMaxVelY and not playerFlapped:
+            playerVelY += playerAccY
+
+        if playerFlapped:
+            playerFlapped = False
+
+        playerHeight = GAME_SPRITES['player'].get_height()
+        playerY = playerY + min(playerVelY, GROUNDY - playerY - playerHeight)
+
+        # Move pipes to left
+        for upperPipe, lowerPipe in zip(upperPipes, lowerPipes):
+            upperPipe['x'] += pipeVelX
+            lowerPipe['x'] += pipeVelX
+
+        # Add other pipe when first pipe is about to go
+        if 0 &lt; upperPipes[0]['x'] &lt; 5:
+            newPipe = getRandomPipe()
+            upperPipes.append(newPipe[0])
+            lowerPipes.append(newPipe[1])
+
+        # If pipe is out of screen then remove it
+        if upperPipes[0]['x'] &lt; -GAME_SPRITES['pipe'][0].get_width():
+            upperPipes.pop(0)
+            lowerPipes.pop(0)
+
+        # Lets blit our sprites now
+        SCREEN.blit(GAME_SPRITES['background'], (0, 0))
+        for upperPipe, lowerPipe in zip(upperPipes, lowerPipes):
+            SCREEN.blit(GAME_SPRITES['pipe'][0], (upperPipe['x'], upperPipe['y']))
+            SCREEN.blit(GAME_SPRITES['pipe'][1], (lowerPipe['x'], lowerPipe['y']))
+        SCREEN.blit(GAME_SPRITES['base'], (baseX, GROUNDY))
+        SCREEN.blit(GAME_SPRITES['player'], (playerX, playerY))
+
+        # Showing score
+        myDigits = [int(x) for x in list(str(score))]
+        width = 0
+        for digits in myDigits:
+            width += GAME_SPRITES['numbers'][digits].get_width()
+        Xoffset = (SCREENWIDTH - width) / 2
+
+        for digit in myDigits:
+            SCREEN.blit(GAME_SPRITES['numbers'][digit], (Xoffset, SCREENHEIGHT * 0.01))
+            Xoffset += GAME_SPRITES['numbers'][digit].get_width()
+
+        pygame.display.update()
+        FPSCLOCK.tick(FPS)
+
+
+def getRandomPipe():
+    """
+    Generate position of two pipes for blitting on the screen
+    """
+    pipeHeight = GAME_SPRITES['pipe'][0].get_height()
+    offest = int(GAME_SPRITES['player'].get_height()) + 10
+    y2 = offest + random.randint(150, int(GROUNDY - 1.2 * offest))
+    pipeX = SCREENWIDTH
+    y1 = pipeHeight - y2 + offest + 100
+    pipe = [
+        {'x': pipeX, 'y': -y1},  # Upper Pipe
+        {'x': pipeX, 'y': y2}  # Lower Pipe
+    ]
+    return pipe
+
+
+def isCollide(playerX, playerY, upperPipes, lowerPipes):
+    playerHeight = GAME_SPRITES['player'].get_height()
+    pipeHeight = GAME_SPRITES['pipe'][0].get_height()
+    pipeWidth = GAME_SPRITES['pipe'][0].get_width()
+    if playerY == GROUNDY - playerHeight or playerY &lt; 1:
+        GAME_SOUNDS['die'].play()
+        return True
+    for pipe in upperPipes:
+        pipeHeight = GAME_SPRITES['pipe'][0].get_height()
+        if (playerY &lt; pipeHeight + pipe['y'] and abs(playerX - pipe['x']) &lt; GAME_SPRITES['pipe'][0].get_width()):
+            GAME_SOUNDS['hit'].play()
+            GAME_SOUNDS['die'].play()
+            return True
+
+    for pipe in lowerPipes:
+        if (playerY + GAME_SPRITES['player'].get_height() &gt; pipe['y']) and abs(playerX - pipe['x']) &lt; \
+                GAME_SPRITES['pipe'][0].get_width():
+            GAME_SOUNDS['hit'].play()
+            GAME_SOUNDS['die'].play()
+            return True
+    return False
+
+
+# Global variable for game
+FPS = 32
+SCREENWIDTH = 1095
+SCREENHEIGHT = 624
+GROUNDY = SCREENHEIGHT - 50
+SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
+GAME_SPRITES = {}
+GAME_SOUNDS = {}
+PLAYER = 'images/items/bird.png'
+BACKGROUND = 'images/screen/bg.png'
+PIPE = 'images/items/pipe.png'
+
+if __name__ == '__main__':
+    pygame.init()  # Initialize all pygame modules
+    FPSCLOCK = pygame.time.Clock()
+    pygame.display.set_caption('Flappy Bird by Saksham')  # Title of game
+
+    # Loading scores
+    GAME_SPRITES['numbers'] = (
+        pygame.image.load('images/scores/0.png').convert_alpha(),
+        pygame.image.load('images/scores/1.png').convert_alpha(),
+        pygame.image.load('images/scores/2.png').convert_alpha(),
+        pygame.image.load('images/scores/3.png').convert_alpha(),
+        pygame.image.load('images/scores/4.png').convert_alpha(),
+        pygame.image.load('images/scores/5.png').convert_alpha(),
+        pygame.image.load('images/scores/6.png').convert_alpha(),
+        pygame.image.load('images/scores/7.png').convert_alpha(),
+        pygame.image.load('images/scores/8.png').convert_alpha(),
+        pygame.image.load('images/scores/9.png').convert_alpha(),
+    )
+
+    # Loading accessories
+    GAME_SPRITES['background'] = pygame.image.load(BACKGROUND).convert()
+    GAME_SPRITES['player'] = pygame.image.load(PLAYER).convert_alpha()
+    GAME_SPRITES['message'] = pygame.image.load('images/screen/msg.png').convert_alpha()
+    GAME_SPRITES['base'] = pygame.image.load('images/screen/base.jpg').convert_alpha()
+    GAME_SPRITES['pipe'] = (
+        pygame.transform.rotate(pygame.image.load(PIPE).convert_alpha(), 180),
+        pygame.image.load(PIPE).convert_alpha()
+    )
+
+    # Loading sounds
+    GAME_SOUNDS['die'] = pygame.mixer.Sound('sounds/die.mp3')
+    GAME_SOUNDS['hit'] = pygame.mixer.Sound('sounds/hit.mp3')
+    GAME_SOUNDS['point'] = pygame.mixer.Sound('sounds/point.mp3')
+    GAME_SOUNDS['swoosh'] = pygame.mixer.Sound('sounds/swoosh.mp3')
+    GAME_SOUNDS['wing'] = pygame.mixer.Sound('sounds/wing.mp3')
+    GAME_SOUNDS['back'] = pygame.mixer.Sound('sounds/back.mp3')
+
+    # Game Loop
+    while True:
+        welcomeScreen(0)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project3" class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        3. DRS System
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import pygame
+import tkinter
+import cv2  # pip install opencv-python
+import PIL.Image  # pip install pillow
+import PIL.ImageTk
+import threading
+import time
+import imutils
+from functools import partial  # To give argument in command of buttons
+
+stream = cv2.VideoCapture("clip/clip.mp4")
+flag = True
+pygame.mixer.init()
+tick = pygame.mixer.Sound('sounds/tick.mp3')
+
+
+def play(speed):
+    # Play video in reverse mode
+    frame1 = stream.get(cv2.CAP_PROP_POS_FRAMES)
+    stream.set(cv2.CAP_PROP_POS_FRAMES, frame1 + speed)
+    grabbed, frame = stream.read()
+    frame = imutils.resize(frame, width=SET_WIDTH, height=SET_HEIGHT)
+    frame = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(frame))
+    canvas.image = frame
+    canvas.create_image(0, 0, image=frame, anchor=tkinter.NW)
+
+    global flag
+    if flag:
+        canvas.create_text(240, 50, fill="green", font="Times 20 italic bold", text="Decision Pending")
+    flag = not flag
+
+
+def pending(decision):
+    # Display decision pending
+    frame = cv2.cvtColor(cv2.imread("images/pending.png"), cv2.COLOR_BGR2RGB)
+    frame = imutils.resize(frame, width=SET_WIDTH, height=SET_HEIGHT)
+    frame = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(frame))
+    canvas.image = frame
+    canvas.create_image(0, 0, image=frame, anchor=tkinter.NW)
+
+    # Wait for some time
+    tick.play()
+    time.sleep(2)
+    tick.stop()
+
+    # Display decision
+    if decision == 'out':
+        decisionImg = "images/out.png"
+    else:
+        decisionImg = "images/not-out.png"
+    decisionImg = cv2.cvtColor(cv2.imread(decisionImg), cv2.COLOR_BGR2RGB)
+    decisionImg = imutils.resize(decisionImg, width=SET_WIDTH, height=SET_HEIGHT)
+    decisionImg = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(decisionImg))
+    canvas.image = decisionImg
+    canvas.create_image(0, 0, image=decisionImg, anchor=tkinter.NW)
+
+
+def out():
+    thread = threading.Thread(target=pending, args=("out",))
+    thread.daemon = 1
+    thread.start()
+
+
+def not_out():
+    thread = threading.Thread(target=pending, args=("not out",))
+    thread.daemon = 1
+    thread.start()
+
+
+# Width & Height of our main screen
+SET_WIDTH = 1080
+SET_HEIGHT = 624
+
+# Tkinter GUI starts here
+window = tkinter.Tk()
+window.title("Saksham DRS System")
+cv_img = cv2.cvtColor(cv2.imread("images/welcome.png"), cv2.COLOR_BGR2RGB)
+canvas = tkinter.Canvas(window, width=SET_WIDTH, height=SET_HEIGHT)
+photo = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(cv_img))
+image_on_canvas = canvas.create_image(0, 0, anchor=tkinter.NW, image=photo)
+canvas.pack()
+
+# Buttons to control playback
+btn = tkinter.Button(window, text="&lt;&lt; Previous (fast)", width=50, command=partial(play, -25))
+# If we do not use partial then button will work only once.
+btn.pack()
+
+btn = tkinter.Button(window, text="&lt; Previous (slow)", width=50, command=partial(play, -2))
+btn.pack()
+
+btn = tkinter.Button(window, text="Next (fast) &gt;&gt;", width=50, command=partial(play, 25))
+btn.pack()
+
+btn = tkinter.Button(window, text="Next (slow) &gt;", width=50, command=partial(play, 2))
+btn.pack()
+
+btn = tkinter.Button(window, text="Give Out", width=50, command=out)
+btn.pack()
+
+btn = tkinter.Button(window, text="Give Not Out", width=50, command=not_out)
+btn.pack()
+
+window.mainloop()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        4. Automate Dino
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import pyautogui  # pip install pyautogui
+from PIL import Image, ImageGrab  # pip install pillow
+# from numpy import asarray
+import time
+
+
+def hit(key):
+    pyautogui.keyDown(key)
+    return
+
+
+def isCollide(data):
+    # Draw the rectangle for birds
+    for i in range(230, 415):
+        for j in range(410, 563):
+            if data[i, j] &lt; 100:
+                hit("down")
+                return
+
+    for i in range(230, 570):
+        for j in range(575, 680):
+            if data[i, j] &lt; 100:
+                hit("up")
+                return
+    return
+
+
+if __name__ == "__main__":
+    print("Hey.. Dino game about to start in 2 seconds")
+    time.sleep(2)
+    # hit('up')
+
+    while True:
+        image = ImageGrab.grab().convert('L')
+        data = image.load()
+        isCollide(data)
+
+        # print(asarray(image))
+
+        # # Draw the rectangle for cactus
+        # for i in range(230, 330):
+        #     for j in range(563, 650):
+        #         data[i, j] = 0
+        #
+        # # Draw the rectangle for birds
+        # for i in range(230, 300):
+        #     for j in range(410, 563):
+        #         data[i, j] = 171
+        #
+        # image.show()
+        # break
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project5" class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        5. Indian Flag
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+First download national anthem and save it in the same folder as "anthem.mp3"
+Else code will not work.
+"""
+
+import turtle
+from pygame import mixer
+
+ws = turtle.Screen()
+ws.title("Indian Flag")
+
+mixer.init()
+mixer.music.load('anthem.mp3')
+mixer.music.play()
+
+flagTurtle = turtle.Turtle()
+flagTurtle.speed(300)
+
+# Making sky
+flagTurtle.penup()
+flagTurtle.goto(0, -100)
+flagTurtle.left(180)
+flagTurtle.begin_fill()
+flagTurtle.fillcolor("#b1f9fc")
+flagTurtle.pendown()
+flagTurtle.forward(800)
+flagTurtle.right(90)
+flagTurtle.forward(500)
+flagTurtle.right(90)
+flagTurtle.forward(1600)
+flagTurtle.right(90)
+flagTurtle.forward(500)
+flagTurtle.right(90)
+flagTurtle.forward(800)
+flagTurtle.end_fill()
+
+# Making ground
+flagTurtle.penup()
+flagTurtle.goto(0, -400)
+flagTurtle.begin_fill()
+flagTurtle.pencolor("#e8c8a7")
+flagTurtle.fillcolor("#e8c8a7")
+flagTurtle.pendown()
+flagTurtle.forward(800)
+flagTurtle.right(90)
+flagTurtle.forward(300)
+flagTurtle.right(90)
+flagTurtle.forward(1600)
+flagTurtle.right(90)
+flagTurtle.forward(300)
+flagTurtle.right(90)
+flagTurtle.forward(800)
+flagTurtle.end_fill()
+
+flagTurtle.speed(3)
+# First Rectangle
+flagTurtle.penup()
+flagTurtle.right(90)
+flagTurtle.goto(-180, 200)
+flagTurtle.pendown()
+flagTurtle.begin_fill()
+flagTurtle.fillcolor("orange")
+flagTurtle.pencolor("orange")
+flagTurtle.forward(90)
+flagTurtle.right(90)
+flagTurtle.forward(400)
+flagTurtle.right(90)
+flagTurtle.forward(90)
+flagTurtle.right(90)
+flagTurtle.forward(400)
+flagTurtle.end_fill()
+
+# Second Rectangle
+flagTurtle.begin_fill()
+flagTurtle.fillcolor("white")
+flagTurtle.pencolor("white")
+flagTurtle.left(90)
+flagTurtle.forward(90)
+flagTurtle.left(90)
+flagTurtle.forward(400)
+flagTurtle.left(90)
+flagTurtle.forward(90)
+flagTurtle.left(90)
+flagTurtle.forward(400)
+flagTurtle.left(90)
+flagTurtle.forward(90)
+flagTurtle.end_fill()
+
+# Third Rectangle
+flagTurtle.begin_fill()
+flagTurtle.fillcolor("green")
+flagTurtle.pencolor("green")
+flagTurtle.forward(90)
+flagTurtle.left(90)
+flagTurtle.forward(400)
+flagTurtle.left(90)
+flagTurtle.forward(90)
+flagTurtle.left(90)
+flagTurtle.forward(400)
+flagTurtle.left(90)
+flagTurtle.forward(90)
+flagTurtle.end_fill()
+
+# Pole
+flagTurtle.begin_fill()
+flagTurtle.fillcolor("black")
+flagTurtle.pencolor("black")
+flagTurtle.left(180)
+flagTurtle.forward(270)
+flagTurtle.circle(10, 180)
+flagTurtle.forward(520)
+flagTurtle.left(90)
+flagTurtle.forward(20)
+flagTurtle.left(90)
+flagTurtle.forward(250)
+flagTurtle.left(180)
+flagTurtle.forward(250)
+flagTurtle.end_fill()
+
+# Stand 1
+flagTurtle.begin_fill()
+flagTurtle.fillcolor("brown")
+flagTurtle.right(90)
+flagTurtle.forward(70)
+flagTurtle.circle(25, 90)
+flagTurtle.left(90)
+flagTurtle.forward(170)
+flagTurtle.left(90)
+flagTurtle.circle(25, 90)
+flagTurtle.forward(50)
+flagTurtle.end_fill()
+
+# Stand 2
+flagTurtle.penup()
+flagTurtle.left(90)
+flagTurtle.forward(25)
+flagTurtle.pendown()
+flagTurtle.begin_fill()
+flagTurtle.fillcolor("brown")
+flagTurtle.right(90)
+flagTurtle.forward(90)
+flagTurtle.circle(25, 90)
+flagTurtle.left(90)
+flagTurtle.forward(210)
+flagTurtle.left(90)
+flagTurtle.circle(25, 90)
+flagTurtle.forward(70)
+flagTurtle.end_fill()
+
+# Ashok Chakra
+# Outer Circle
+flagTurtle.pencolor("#000080")
+flagTurtle.penup()
+flagTurtle.goto(-20, 155)
+flagTurtle.forward(2)
+flagTurtle.left(90)
+flagTurtle.begin_fill()
+flagTurtle.fillcolor("#000080")
+flagTurtle.pendown()
+flagTurtle.circle(42)
+flagTurtle.end_fill()
+# Middle Circle
+flagTurtle.penup()
+flagTurtle.left(90)
+flagTurtle.forward(2)
+flagTurtle.right(90)
+flagTurtle.pendown()
+flagTurtle.begin_fill()
+flagTurtle.fillcolor("white")
+flagTurtle.circle(40)
+flagTurtle.end_fill()
+flagTurtle.penup()
+# Sticks
+i = 0
+while i &lt; 24:
+    flagTurtle.goto(20, 155)
+    flagTurtle.right(15)
+    flagTurtle.pendown()
+    flagTurtle.forward(40)
+    flagTurtle.penup()
+    i += 1
+# Inner Circle
+flagTurtle.penup()
+flagTurtle.goto(30, 155)
+flagTurtle.left(180)
+flagTurtle.pendown()
+flagTurtle.begin_fill()
+flagTurtle.fillcolor("#000080")
+flagTurtle.circle(10)
+flagTurtle.end_fill()
+flagTurtle.penup()
+
+# My Name
+flagTurtle.pencolor("black")
+flagTurtle.goto(200, -230)
+style = ('Courier', 90, 'normal')
+flagTurtle.write('Saksham', font=style, align='center')
+
+# Finishing
+turtle.hideturtle()
+flagTurtle.hideturtle()
+turtle.done()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project6" class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        6. Sin Chan
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>from turtle import *
+
+# import time
+s = Screen()
+s.screensize(700, 1000)
+speed(5)
+
+
+def myPosition(x, y):
+    penup()
+    goto(x, y)
+    pendown()
+
+
+pensize(2)
+
+
+def start():
+    fillcolor('#ffec40')
+    begin_fill()
+    right(25)
+    forward(20)
+    right(45)
+    forward(20)
+    left(70)
+    forward(90)
+    left(95)
+    forward(75)
+    left(85)
+    forward(175)
+    left(85)
+    forward(75)
+    left(95)
+    forward(90)
+    left(85)
+    forward(18)
+    end_fill()
+
+
+def leftLeg():
+    myPosition(-39, -25)
+    fillcolor("#ffd699")
+    begin_fill()
+    right(89)
+    forward(25)
+    right(90)
+    forward(50)
+    right(90)
+    forward(20)
+    right(85)
+    forward(50)
+    end_fill()
+
+
+def leftSock():
+    myPosition(-36, -78)
+    fillcolor("#ffffff")
+    begin_fill()
+    right(90)
+    circle(80, 13)
+    right(110)
+    forward(22)
+    right(85)
+    forward(19)
+    right(90)
+    forward(21)
+    end_fill()
+
+
+def leftShoe():
+    myPosition(-69, -112)
+    fillcolor("#b5ae60")
+    begin_fill()
+    right(90)
+    left(5)
+    forward(56)
+    left(105)
+    forward(13)
+    left(75)
+    forward(20)
+    right(90)
+    forward(15)
+    circle(10, 15)
+    left(80)
+    forward(4)
+    circle(10, 15)
+    left(40)
+    circle(20, 15)
+    forward(10)
+    right(45)
+    forward(15)
+    circle(25, 25)
+    end_fill()
+
+
+def rightLeg():
+    myPosition(60, -28)
+    fillcolor("#ffd699")
+    begin_fill()
+    left(128)
+    forward(25)
+    right(95)
+    forward(55)
+    right(90)
+    forward(20)
+    right(85)
+    forward(55)
+    end_fill()
+
+
+def rightSock():
+    myPosition(64, -79)
+    fillcolor("#ffffff")
+    begin_fill()
+    right(90)
+    circle(90, 14)
+    right(110)
+    forward(23)
+    right(90)
+    forward(15)
+    right(80)
+    forward(21)
+    end_fill()
+
+
+def rightShoe():
+    myPosition(64, -108)
+    fillcolor("#b5ae60")
+    begin_fill()
+    right(100)
+    forward(56)
+    left(160)
+    forward(25)
+    right(68)
+    forward(17)
+    left(90)
+    circle(18, 15)
+    forward(5)
+    left(75)
+    forward(11)
+    right(85)
+    forward(20)
+    left(45)
+    circle(10, 30)
+    left(25)
+    forward(5)
+    end_fill()
+
+
+def myShirt():
+    myPosition(-75, 48)
+    fillcolor("red")
+    begin_fill()
+    left(72)
+    forward(185)
+    left(87)
+    forward(75)
+    right(68)
+    circle(20, 8)
+    circle(300, 23)
+    left(90)
+    circle(35, 17)
+    right(38)
+    circle(35, 17)
+    left(58)
+    forward(75)
+    right(12)
+    forward(140)
+    right(40)
+    forward(93)
+    left(120)
+    circle(-20, 65)
+    left(75)
+    forward(10)
+    left(23)
+    forward(88)
+    right(31)
+    forward(87)
+    right(180)
+    forward(108)
+    right(180)
+    forward(104)
+    circle(10, 70)
+    end_fill()
+
+
+def myHead():
+    myPosition(-20, 295)
+    left(20)
+    pensize(2)
+    fillcolor('#fcc6a0')
+    begin_fill()
+    right(90)
+    forward(40)
+    right(90)
+    circle(50, 80)
+    left(10)
+    circle(50, 80)
+    left(2)
+    circle(200, 50)
+
+    left(48)
+    forward(60)
+    circle(45, 60)
+    right(5)
+    circle(100, 85)
+    end_fill()
+    fillcolor('black')
+    begin_fill()
+
+    pensize(2)
+    right(170)
+    circle(-100, 165)
+    right(78)
+    forward(26)
+    right(87)
+    forward(55)
+    circle(45, 60)
+    right(5)
+    circle(100, 85)
+    end_fill()
+
+    fillcolor('#fcc6a0')
+    begin_fill()
+    right(180)
+    circle(-100, 105)
+    right(37)
+    forward(49)
+    pensize(2)
+    left(130)
+    forward(30)
+    circle(-10, 70)
+    right(50)
+    forward(36)
+    right(80)
+    forward(50)
+    pencolor('#fcc6a0')
+    right(90)
+    forward(30)
+
+    end_fill()
+
+
+def rightHand():
+    myPosition(197, 209)
+    pencolor('black')
+    fillcolor('#fcc6a0')
+    begin_fill()
+    right(45)
+    forward(6)
+    left(55)
+    forward(20)
+    circle(-5, 70)
+    right(100)
+    forward(18)
+    left(105)
+    forward(18)
+    circle(-5, 70)
+    right(100)
+    forward(18)
+    left(145)
+    forward(15)
+    circle(-5, 70)
+    right(100)
+    forward(18)
+
+    left(150)
+    forward(13)
+    circle(-5, 70)
+    right(100)
+    forward(15)
+
+    left(150)
+    forward(10)
+    circle(-5, 70)
+    right(100)
+    forward(12)
+    circle(60, 10)
+    left(45)
+    forward(6)
+    right(90)
+    forward(10)
+    end_fill()
+
+
+def leftHand():
+    myPosition(-94, 242)
+    fillcolor('#fcc6a0')
+    begin_fill()
+    right(10)
+    forward(6)
+    left(90)
+    penup()
+    forward(12)
+    pendown()
+    left(90)
+    forward(8)
+    left(90)
+    forward(12)
+    end_fill()
+
+
+def myBis():
+    myPosition(-103, 291)
+    right(90)
+    fillcolor('#02d302')
+    begin_fill()
+    right(90)
+    forward(55)
+    left(80)
+    forward(12)
+    left(10)
+    forward(17)
+    left(10)
+    forward(12)
+    left(80)
+    forward(55)
+    left(80)
+    forward(12)
+    left(10)
+    forward(17)
+    left(10)
+    forward(12)
+    left(80)
+    left(80)
+    forward(12)
+    left(10)
+    forward(17)
+    left(10)
+    forward(12)
+    end_fill()
+    penup()
+    right(100)
+    forward(20)
+    right(90)
+    forward(14)
+    pendown()
+    pencolor('#9c5e4a')
+    fillcolor('#9c5e4a')
+    begin_fill()
+    for i in range(5):
+        forward(15)
+        right(144)
+    end_fill()
+    penup()
+    forward(27)
+    left(90)
+    forward(16)
+    left(90)
+    forward(7)
+    pendown()
+    fillcolor('#9c5e4a')
+    begin_fill()
+    for i in range(5):
+        forward(10)
+        right(144)
+    end_fill()
+    penup()
+    forward(20)
+    right(90)
+    forward(5)
+    pendown()
+    fillcolor('#9c5e4a')
+    begin_fill()
+    for i in range(5):
+        forward(10)
+        right(144)
+    end_fill()
+    penup()
+    right(180)
+    forward(6)
+    pendown()
+    fillcolor('#9c5e4a')
+    begin_fill()
+    for i in range(5):
+        forward(10)
+        right(144)
+    end_fill()
+
+
+def leftHand2():
+    myPosition(-112, 284)
+    pencolor('black')
+    fillcolor('#fcc6a0')
+    begin_fill()
+    right(180)
+    forward(31)
+    left(90)
+    for i in range(2):
+        circle(4, 90)
+    for i in range(3):
+        right(180)
+        for i in range(2):
+            circle(4, 90)
+    end_fill()
+
+
+def myMouth():
+    myPosition(-25, 200)
+    left(65)
+    fillcolor('#77332e')
+    begin_fill()
+    for i in range(2):
+        circle(25, 90)
+        circle(25 // 2, 90)
+    end_fill()
+
+
+def myEyebrow(x, y):
+    myPosition(x, y)
+    pensize(18)
+    right(150)
+    forward(25)
+    right(90)
+    for i in range(1):
+        right(45)
+        dot(15)
+    left(55)
+    forward(25)
+    for i in range(1):
+        right(45)
+        dot(15)
+
+
+def myEyelid(x, y):
+    myPosition(x, y)
+    pensize(2)
+    left(170)
+    circle(-23, 180)
+
+
+def myallEyes1(x, y):
+    myPosition(x, y)
+    right(90)
+    fillcolor('#000000')
+    begin_fill()
+    circle(18)
+    end_fill()
+    left(90)
+    penup()
+    forward(19)
+    right(90)
+    forward(7)
+    pendown()
+    fillcolor('#ffffff')
+    begin_fill()
+    left(90)
+    circle(9)
+    end_fill()
+
+
+def myallEyes2(x, y):
+    myPosition(x, y)
+    right(90)
+    fillcolor('#000000')
+    begin_fill()
+    circle(18)
+    end_fill()
+    left(90)
+    penup()
+    forward(19)
+    right(90)
+    forward(8)
+    pendown()
+    fillcolor('#ffffff')
+    begin_fill()
+    left(90)
+    circle(9)
+    end_fill()
+
+
+def allLegs():
+    leftLeg()
+    leftSock()
+    leftShoe()
+    rightLeg()
+    rightSock()
+    rightShoe()
+
+
+def allHands():
+    rightHand()
+    leftHand()
+    myBis()
+    leftHand2()
+
+
+def allEyebrows():
+    myEyebrow(-8, 300)
+    right(90)
+    myEyebrow(72, 300)
+    myEyelid(-9, 270)
+    left(15)
+    myEyelid(68, 265)
+
+
+def allEyes():
+    myallEyes1(17, 275)
+    myallEyes2(95, 270)
+
+
+if __name__ == '__main__':
+    start()
+    allLegs()
+    myShirt()
+    myHead()
+    allHands()
+    myMouth()
+    allEyebrows()
+    allEyes()
+    ht()
+    done()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project7" class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        7. Snake Game
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""
+First make a directory named "sounds" in same folder as this python file.
+Then download "hit.mp3" & "point.mp3" in that directory.
+Else code will not work.
+"""
+
+import pygame
+import random
+import time
+
+# Initializing all functions of pygame
+pygame.init()
+
+# Initializing colors
+white = (255, 255, 255)
+red = (255, 0, 0)
+black = (0, 0, 0)
+green = (48, 217, 76)
+
+# Creating Window
+screen_width = 900
+screen_height = 600
+gameWindow = pygame.display.set_mode((screen_width, screen_height))
+
+# Game title
+pygame.display.set_caption("Saksham Snake Game")
+pygame.display.update()
+clock = pygame.time.Clock()
+font = pygame.font.SysFont(None, 55)
+
+
+# Typing Text on screen
+def text_screen(text, color, x, y):
+    screen_text = font.render(text, True, color)
+    gameWindow.blit(screen_text, [x, y])
+
+
+# Plotting snake head
+def plot_snake(gameWindow, color, snk_list, snake_size):
+    for x, y in snk_list:
+        pygame.draw.rect(gameWindow, color, [x, y, snake_size, snake_size])
+
+
+# Main Game Loop
+def gameloop():
+    # Declaring Important Variables
+    exit_game = False
+    game_over = False
+    snake_x = 45
+    snake_y = 55
+    velocity_x = 0
+    velocity_y = 0
+    snk_list = []
+    snk_length = 1
+    food_x = random.randint(20, screen_width - 20)
+    food_y = random.randint(60, screen_height - 20)
+    food_x1 = random.randint(20, screen_width - 20)
+    food_y1 = random.randint(60, screen_height - 20)
+    score = 0
+    bonus = 0
+    init_velocity = 4
+    snake_size = 30
+    fps = 60
+    music_count = 0
+    init_time = time.time()
+
+    # Loop which run till we close the window
+    while not exit_game:
+        timer = time.time()  # Timer for bonus ball
+        if game_over:
+            # When game is over then play hit sound
+            if music_count == 0:
+                pygame.mixer.music.load('sounds/hit.mp3')
+                pygame.mixer.music.play()
+                music_count += 1
+                time.sleep(1)
+                pygame.mixer.music.stop()
+            # And now show game over window
+            gameWindow.fill(white)
+            text_screen(f"You score is {(bonus * 10) + (score * 10)}", red, 150, 300)
+            text_screen("Game Over! Press Enter to continue.", red, 100, 250)
+
+            for event in pygame.event.get():
+                # For exiting game
+                if event.type == pygame.QUIT:
+                    exit_game = True
+
+                # For restarting game
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_RETURN:
+                        gameloop()
+
+        # When game is not over
+        else:
+            for event in pygame.event.get():
+                # For exiting the game
+                if event.type == pygame.QUIT:
+                    exit_game = True
+
+                # For directing snake in desired direction
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_RIGHT and velocity_x == 0:
+                        velocity_x = init_velocity
+                        velocity_y = 0
+
+                    if event.key == pygame.K_LEFT and velocity_x == 0:
+                        velocity_x = -init_velocity
+                        velocity_y = 0
+
+                    if event.key == pygame.K_UP and velocity_y == 0:
+                        velocity_y = -init_velocity
+                        velocity_x = 0
+
+                    if event.key == pygame.K_DOWN and velocity_y == 0:
+                        velocity_y = init_velocity
+                        velocity_x = 0
+
+            # For moving snake
+            snake_x = snake_x + velocity_x
+            snake_y = snake_y + velocity_y
+
+            # Setting game window with color and headers
+            gameWindow.fill(white)
+            text_screen("Score:" + str(score * 10), red, 5, 5)
+            text_screen("Bonus:" + str(bonus * 10), red, 500, 5)
+            pygame.draw.line(gameWindow, red, (0, 40), (900, 40), 5)
+
+            # For Bonus Ball
+            if (timer - init_time) &gt;= 10 and (timer - init_time) &lt;= 14:
+                # In gap of every 10 seconds bonus ball appears for 4 seconds
+                pygame.draw.rect(gameWindow, green, [food_x1, food_y1, snake_size, snake_size])
+                # For eating the bonus ball
+                if abs(snake_x - food_x1) &lt; 20 and abs(snake_y - food_y1) &lt; 20:
+                    # Playing point sound
+                    pygame.mixer.music.load('sounds/point.mp3')
+                    pygame.mixer.music.play()
+                    # Increasing bonus score with 5
+                    bonus += 5
+                    # Sending ball again to random position
+                    food_x1 = random.randint(20, screen_width - 30)
+                    food_y1 = random.randint(60, screen_height - 30)
+                    # Resetting time for next bonus ball
+                    init_time = time.time()
+            elif timer - init_time &gt; 14:
+                # If you cannot reach bonus ball in 4 seconds then reset timer
+                init_time = time.time()
+
+            # For Normal Ball
+            pygame.draw.rect(gameWindow, red, [food_x, food_y, snake_size, snake_size])
+            if abs(snake_x - food_x) &lt; 20 and abs(snake_y - food_y) &lt; 20:
+                # When eaten then play point sound
+                pygame.mixer.music.load('sounds/point.mp3')
+                pygame.mixer.music.play()
+                # Increasing score by 1
+                score += 1
+                # Increasing velocity a little bit
+                init_velocity += (1 / 50)
+                # Sending ball again to random position
+                food_x = random.randint(20, screen_width - 30)
+                food_y = random.randint(60, screen_height - 30)
+                # Increasing snake length
+                snk_length += 5
+
+            # Storing position of head in list
+            head = []
+            head.append(snake_x)
+            head.append(snake_y)
+            snk_list.append(head)
+
+            # Formatting snk_list length to length of snake
+            if len(snk_list) &gt; snk_length:
+                del snk_list[0]
+
+            # If head appears in snk_list it means collision
+            if head in snk_list[:-1]:
+                game_over = True
+
+            # Moving snake to negative position when it comes on borders
+            if snake_x &lt; 0:
+                snake_x = screen_width - 20
+
+            if snake_x &gt; screen_width - 20:
+                snake_x = 0
+
+            if snake_y &lt; 50:
+                snake_y = screen_height - 20
+
+            if snake_y &gt; screen_height - 20:
+                snake_y = 50
+
+            # Plotting snake
+            plot_snake(gameWindow, black, snk_list, snake_size)
+
+        # Updating display
+        pygame.display.update()
+        clock.tick(fps)
+    # When exit clicked the close the window
+    pygame.quit()
+    quit()
+
+
+# Main Function
+if __name__ == '__main__':
+    gameloop()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project8" class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        8. Chess Game
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>"""CONVENTIONS:
+positions are done row-column from the bottom left and are both numbers. This corresponds to the alpha-number system in traditional chess while being computationally useful. they are specified as tuples
+"""
+import itertools
+
+WHITE = "white"
+BLACK = "black"
+
+
+class Game:
+    # ive decided since the number of pieces is capped but the type of pieces is not (pawn transformations), I've already coded much of the modularity to support just using a dictionary of pieces
+    def __init__(self):
+        self.playersturn = BLACK
+        self.message = "this is where prompts will go"
+        self.gameboard = {}
+        self.placePieces()
+        print("chess program. enter moves in algebraic notation separated by space")
+        self.main()
+
+    def placePieces(self):
+
+        for i in range(0, 8):
+            self.gameboard[(i, 1)] = Pawn(WHITE, uniDict[WHITE][Pawn], 1)
+            self.gameboard[(i, 6)] = Pawn(BLACK, uniDict[BLACK][Pawn], -1)
+
+        placers = [Rook, Knight, Bishop, Queen, King, Bishop, Knight, Rook]
+
+        for i in range(0, 8):
+            self.gameboard[(i, 0)] = placers[i](WHITE, uniDict[WHITE][placers[i]])
+            self.gameboard[((7 - i), 7)] = placers[i](BLACK, uniDict[BLACK][placers[i]])
+        placers.reverse()
+
+    def main(self):
+
+        while True:
+            self.printBoard()
+            print(self.message)
+            self.message = ""
+            startpos, endpos = self.parseInput()
+            try:
+                target = self.gameboard[startpos]
+            except:
+                self.message = "could not find piece; index probably out of range"
+                target = None
+
+            if target:
+                print("found " + str(target))
+                if target.Color != self.playersturn:
+                    self.message = "you aren't allowed to move that piece this turn"
+                    continue
+                if target.isValid(startpos, endpos, target.Color, self.gameboard):
+                    self.message = "that is a valid move"
+                    self.gameboard[endpos] = self.gameboard[startpos]
+                    del self.gameboard[startpos]
+                    self.isCheck()
+                    if self.playersturn == BLACK:
+                        self.playersturn = WHITE
+                    else:
+                        self.playersturn = BLACK
+                else:
+                    self.message = "invalid move" + str(target.availableMoves(startpos[0], startpos[1], self.gameboard))
+                    print(target.availableMoves(startpos[0], startpos[1], self.gameboard))
+            else:
+                self.message = "there is no piece in that space"
+
+    def isCheck(self):
+        # ascertain where the kings are, check all pieces of opposing color against those kings, then if either get hit, check if its checkmate
+        king = King
+        kingDict = {}
+        pieceDict = {BLACK: [], WHITE: []}
+        for position, piece in self.gameboard.items():
+            if type(piece) == King:
+                kingDict[piece.Color] = position
+            print(piece)
+            pieceDict[piece.Color].append((piece, position))
+        # white
+        if self.canSeeKing(kingDict[WHITE], pieceDict[BLACK]):
+            self.message = "White player is in check"
+        if self.canSeeKing(kingDict[BLACK], pieceDict[WHITE]):
+            self.message = "Black player is in check"
+
+    def canSeeKing(self, kingpos, piecelist):
+        # checks if any pieces in piece list (which is an array of (piece,position) tuples) can see the king in kingpos
+        for piece, position in piecelist:
+            if piece.isValid(position, kingpos, piece.Color, self.gameboard):
+                return True
+
+    def parseInput(self):
+        try:
+            a, b = input().split()
+            a = ((ord(a[0]) - 97), int(a[1]) - 1)
+            b = (ord(b[0]) - 97, int(b[1]) - 1)
+            print(a, b)
+            return (a, b)
+        except:
+            print("error decoding input. please try again")
+            return ((-1, -1), (-1, -1))
+
+    """def validateInput(self, *kargs):
+        for arg in kargs:
+            if type(arg[0]) is not type(1) or type(arg[1]) is not type(1):
+                return False
+        return True"""
+
+    def printBoard(self):
+        print("  1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |")
+        for i in range(0, 8):
+            print("-" * 32)
+            print(chr(i + 97), end="|")
+            for j in range(0, 8):
+                item = self.gameboard.get((i, j), " ")
+                print(str(item) + ' |', end=" ")
+            print()
+        print("-" * 32)
+
+    """game class. contains the following members and methods:
+    two arrays of pieces for each player
+    8x8 piece array with references to these pieces
+    a parse function, which turns the input from the user into a list of two tuples denoting start and end points
+    a checkmateExists function which checks if either players are in checkmate
+    a checkExists function which checks if either players are in check (woah, I just got that nonsequitur)
+    a main loop, which takes input, runs it through the parser, asks the piece if the move is valid, and moves the piece if it is. if the move conflicts with another piece, that piece is removed. ischeck(mate) is run, and if there is a checkmate, the game prints a message as to who wins
+    """
+
+
+class Piece:
+
+    def __init__(self, color, name):
+        self.name = name
+        self.position = None
+        self.Color = color
+
+    def isValid(self, startpos, endpos, Color, gameboard):
+        if endpos in self.availableMoves(startpos[0], startpos[1], gameboard, Color=Color):
+            return True
+        return False
+
+    def __repr__(self):
+        return self.name
+
+    def __str__(self):
+        return self.name
+
+    def availableMoves(self, x, y, gameboard):
+        print("ERROR: no movement for base class")
+
+    def AdNauseum(self, x, y, gameboard, Color, intervals):
+        """repeats the given interval until another piece is run into. 
+        if that piece is not of the same color, that square is added and
+         then the list is returned"""
+        answers = []
+        for xint, yint in intervals:
+            xtemp, ytemp = x + xint, y + yint
+            while self.isInBounds(xtemp, ytemp):
+                # print(str((xtemp,ytemp))+"is in bounds")
+
+                target = gameboard.get((xtemp, ytemp), None)
+                if target is None:
+                    answers.append((xtemp, ytemp))
+                elif target.Color != Color:
+                    answers.append((xtemp, ytemp))
+                    break
+                else:
+                    break
+
+                xtemp, ytemp = xtemp + xint, ytemp + yint
+        return answers
+
+    def isInBounds(self, x, y):
+        "checks if a position is on the board"
+        if x &gt;= 0 and x &lt; 8 and y &gt;= 0 and y &lt; 8:
+            return True
+        return False
+
+    def noConflict(self, gameboard, initialColor, x, y):
+        "checks if a single position poses no conflict to the rules of chess"
+        if self.isInBounds(x, y) and (((x, y) not in gameboard) or gameboard[(x, y)].Color != initialColor): return True
+        return False
+
+
+chessCardinals = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+chessDiagonals = [(1, 1), (-1, 1), (1, -1), (-1, -1)]
+
+
+def knightList(x, y, int1, int2):
+    """sepcifically for the rook, permutes the values needed around a position for noConflict tests"""
+    return [(x + int1, y + int2), (x - int1, y + int2), (x + int1, y - int2), (x - int1, y - int2),
+            (x + int2, y + int1), (x - int2, y + int1), (x + int2, y - int1), (x - int2, y - int1)]
+
+
+def kingList(x, y):
+    return [(x + 1, y), (x + 1, y + 1), (x + 1, y - 1), (x, y + 1), (x, y - 1), (x - 1, y), (x - 1, y + 1),
+            (x - 1, y - 1)]
+
+
+class Knight(Piece):
+    def availableMoves(self, x, y, gameboard, Color=None):
+        if Color is None: Color = self.Color
+        return [(xx, yy) for xx, yy in knightList(x, y, 2, 1) if self.noConflict(gameboard, Color, xx, yy)]
+
+
+class Rook(Piece):
+    def availableMoves(self, x, y, gameboard, Color=None):
+        if Color is None: Color = self.Color
+        return self.AdNauseum(x, y, gameboard, Color, chessCardinals)
+
+
+class Bishop(Piece):
+    def availableMoves(self, x, y, gameboard, Color=None):
+        if Color is None: Color = self.Color
+        return self.AdNauseum(x, y, gameboard, Color, chessDiagonals)
+
+
+class Queen(Piece):
+    def availableMoves(self, x, y, gameboard, Color=None):
+        if Color is None: Color = self.Color
+        return self.AdNauseum(x, y, gameboard, Color, chessCardinals + chessDiagonals)
+
+
+class King(Piece):
+    def availableMoves(self, x, y, gameboard, Color=None):
+        if Color is None: Color = self.Color
+        return [(xx, yy) for xx, yy in kingList(x, y) if self.noConflict(gameboard, Color, xx, yy)]
+
+
+class Pawn(Piece):
+    def __init__(self, color, name, direction):
+        self.name = name
+        self.Color = color
+        # of course, the smallest piece is the hardest to code. direction should be either 1 or -1, should be -1 if the pawn is traveling "backwards"
+        self.direction = direction
+
+    def availableMoves(self, x, y, gameboard, Color=None):
+        if Color is None: Color = self.Color
+        answers = []
+        if (x + 1, y + self.direction) in gameboard and self.noConflict(gameboard, Color, x + 1,
+                                                                        y + self.direction): answers.append(
+            (x + 1, y + self.direction))
+        if (x - 1, y + self.direction) in gameboard and self.noConflict(gameboard, Color, x - 1,
+                                                                        y + self.direction): answers.append(
+            (x - 1, y + self.direction))
+        if (x, y + self.direction) not in gameboard and Color == self.Color: answers.append((x,
+                                                                                             y + self.direction))  # the condition after the and is to make sure the non-capturing movement (the only fucking one in the game) is not used in the calculation of checkmate
+        return answers
+
+
+uniDict = {WHITE: {Pawn: "♙", Rook: "♖", Knight: "♘", Bishop: "♗", King: "♔", Queen: "♕"},
+           BLACK: {Pawn: "♟", Rook: "♜", Knight: "♞", Bishop: "♝", King: "♚", Queen: "♛"}}
+
+Game()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project9" class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        9. Currency Converter
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import json
+import requests
+import tkinter as tk
+from tkinter import *
+
+currencyList = ['INR', 'USD', 'AED', 'AUD', 'BHD', 'BRL', 'CAD', 'CNY', 'EUR', 'HKD']
+
+
+def CreateWidgets():
+    inputAMT_Label = Label(root, text="Enter amount to convert : ", bg="deepskyblue4")
+    inputAMT_Label.grid(row=1, column=0, padx=5, pady=5, columnspan=2)
+    inputAMT_Entry = Entry(root, width=14, textvariable=getAMT, bg="snow3", font=('', 20), justify="center")
+    inputAMT_Entry.grid(row=1, column=2, padx=5, pady=5)
+
+    fromLabel = Label(root, text="From : ", bg="deepskyblue4")
+    fromLabel.grid(row=1, column=0, padx=5, pady=5)
+    root.fromList = Listbox(root, width=20, height=len(currencyList), exportselection=False, bg="snow3")
+    root.fromList.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
+
+    for c in range(len(currencyList)):
+        root.fromList.insert(c, currencyList[c])
+    root.fromList.bind('&lt;&lt;ListboxSelect&gt;&gt;', onFromCurrencySelect)
+
+    toLabel = Label(root, text="To : ", bg="deepskyblue4")
+    toLabel.grid(row=2, column=2, padx=5, pady=5)
+    root.toList = Listbox(root, width=20, height=len(currencyList), exportselection=False, bg="snow3")
+    root.toList.grid(row=3, column=2, columnspan=2, padx=5, pady=5)
+
+    for c in range(len(currencyList)):
+        root.toList.insert(c, currencyList[c])
+    root.toList.bind('&lt;&lt;ListboxSelect&gt;&gt;', onToCurrencySelect)
+
+    convertButton = Button(root, text="CONVERT", width=25, command=Convert)
+    convertButton.grid(row=4, column=0, columnspan=3, padx=5, pady=5)
+
+    exrateLabel = Label(root, text="EXCHANGE RATE : ", bg="deepskyblue4")
+    exrateLabel.grid(row=5, column=0, padx=5, pady=5, columnspan=2)
+    root.exrate = Label(root, width=14, font=('', 20), bg="snow3", justify="center")
+    root.exrate.grid(row=5, column=2, padx=5, pady=5)
+
+    outputLabel = Label(root, text="CONVERTED AMOUNT:", bg="deepskyblue4")
+    outputLabel.grid(row=6, column=0, padx=5, pady=5, columnspan=2)
+    root.outputAMT = Label(root, width=14, font=('', 20), bg="snow3", justify="center")
+    root.outputAMT.grid(row=6, column=2, padx=5, pady=5, columnspan=2)
+
+
+def onFromCurrencySelect(evt):
+    fromCurrencySelection = root.fromList.get(root.fromList.curselection())
+    fromCurrency.set(fromCurrencySelection)
+
+
+def onToCurrencySelect(evt):
+    toCurrencySelction = root.toList.get(root.toList.curseletion())
+    toCurrency.set(toCurrencySelction)
+
+
+def Convert():
+    inputAMT = float(getAMT.get())
+    f_Currency = fromCurrency.get()
+    t_Currency = toCurrency.get()
+
+    apiKey = "YOUR API KEY"
+    baseURL = r"https://www.alphavantage.cp/query?function=CURRENCY_EXCHANGE_RATE"
+    inputURL = baseURL + "&form_currency=" + f_Currency + "&to_currency" + t_Currency + "&apikey" + apiKey
+    response = requests.get(inputURL)
+    result = response.json()
+    print(json.dumps(result, indent=2))
+
+    exchangeRate = float(result["Realtime Currency Exchange Rate"]['5. Exchange Rate'])
+    root.exrate.config(text=str(round(exchangeRate, 2)))
+
+    calculateAmt = round(inputAMT * exchangeRate, 2)
+    root.outputAMT.config(text=str(calculateAmt))
+
+
+if __name__ == '__main__':
+    root = tk.Tk()
+
+    root.geometry("450x400")
+    root.resizable(False, False)
+    root.title("Saksham Currency Converter")
+    root.config(bg="deepskyblue4")
+
+    getAMT = StringVar()
+    fromCurrency = StringVar()
+    toCurrency = StringVar()
+
+    CreateWidgets()
+    root.mainloop()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div id="project10" class="accordion-item">
+                <h2 class="accordion-header" id="heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        10. Face Detection
+                    </button>
+                </h2>
+                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import cv2
+
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+cap = cv2.VideoCapture(0)
+
+while True:
+    a, img = cap.read()
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+    for (x, y, w, h) in faces:
+        cv2.rectangle(img, (x, y), (x + w, y + h), (62, 217, 35), 2)
+    cv2.imshow('img', img)
+    k = cv2.waitKey(30) & 0xff
+    if k == 27:
+        break
+
+cap.release()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="../../JS/addingNew.js"></script>
+<script src="../../JS/addDomain.js"></script>
+<script src="../../JS/search.js"></script>
+
+</html>
