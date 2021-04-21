@@ -284,6 +284,54 @@ clock.mainloop()
                     </div>
                 </div>
             </div>
+            <div id="project4" class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        4. Send Email
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <pre class="language-py"><code>import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+
+
+def send_mail(email_id, sender_mail, sender_pass, subject, message):
+    msg = MIMEMultipart()
+    msg['From'] = sender_mail  # Sender's mail id
+    msg['To'] = email_id  # Receiver's mail id
+    msg['Subject'] = subject  # Subject
+    body = message  # Message
+
+    msg.attach(MIMEText(body, 'html'))
+    s = smtplib.SMTP('smtp.gmail.com', 587)
+    s.starttls()
+    s.login(sender_mail, sender_pass)
+    text = msg.as_string()
+    s.sendmail(sender_mail, email_id, text)
+    s.quit()
+
+
+print("Enter email details :")
+from_email = input("Email : ")
+from_pass = input("Password : ")
+to_email = input("To : ")
+sub_inp = input("Enter subject : ")
+msg_inp = input("Enter message : ")
+
+try:
+    send_mail(to_email, from_email, from_pass, sub_inp, msg_inp)
+    print("Sent Successfully...")
+except Exception as e:
+    print("Some error occurred...")
+</code></pre>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
