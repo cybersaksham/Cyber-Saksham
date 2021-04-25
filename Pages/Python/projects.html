@@ -1620,256 +1620,565 @@ if __name__ == '__main__':
                 <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <pre class="language-py"><code>"""CONVENTIONS:
-positions are done row-column from the bottom left and are both numbers. This corresponds to the alpha-number system in traditional chess while being computationally useful. they are specified as tuples
-"""
-import itertools
+                        <pre class="language-py"><code>import pygame
+import sys
+from pygame.locals import *
 
-WHITE = "white"
-BLACK = "black"
+# Global Variables
+SCREENWIDTH = 600
+SCREENHEIGHT = 600
+SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
+SPRITE_IMAGES = {}
+SPRITE_NAMES_WHITE = []
+SPRITE_NAMES_BLACK = []
+SPRITE_NAMES = []
+PAWN = []
+ROOK = []
+KNIGHT = []
+BISHOP = []
+QUEEN = []
+KING = []
+SPRITE_LOCATIONS = {}
+ALLOWED_SPRITE_LOCATIONS = {}
+BOX_LOCATION_X = [((i * 72) + 40) for i in range(8)]
+BOX_LOCATION_Y = [(520 - (i * 70)) for i in range(8)]
+BOX_X = [[22, 91], [95, 162], [165, 234], [238, 304], [308, 377], [381, 448], [451, 518], [523, 589]]
+BOX_Y = [[507, 573], [434, 502], [364, 430], [293, 360], [222, 287], [151, 218], [80, 146], [9, 76]]
+SPRITE_SELECTED = False
+TURN_BLACK = False
+TURN_WHITE = True
+CLICKED_SPRITE = ""
+BLUE_BOXES = []
+VALID_BOXES = []
+VALID_TURN = True
+IS_KILL = False
+KILL_POSITION = []
+GAME_OVER = False
 
 
-class Game:
-    # ive decided since the number of pieces is capped but the type of pieces is not (pawn transformations), I've already coded much of the modularity to support just using a dictionary of pieces
-    def __init__(self):
-        self.playersturn = BLACK
-        self.message = "this is where prompts will go"
-        self.gameboard = {}
-        self.placePieces()
-        print("chess program. enter moves in algebraic notation separated by space")
-        self.main()
+def setVariables():
+    # Sprite Images
+    global SPRITE_IMAGES
+    SPRITE_IMAGES['board'] = pygame.image.load("Gallery/board.png")
+    for i in range(8):
+        SPRITE_IMAGES[f"w2{i + 1}"] = pygame.image.load(f"Gallery/w1.png")
+        SPRITE_IMAGES[f"b7{i + 1}"] = pygame.image.load(f"Gallery/b1.png")
+    for i in range(1, 6):
+        SPRITE_IMAGES[f"w1{i}"] = pygame.image.load(f"Gallery/w{i + 1}.png")
+        SPRITE_IMAGES[f"b8{i}"] = pygame.image.load(f"Gallery/b{i + 1}.png")
+    for i in range(6, 9):
+        SPRITE_IMAGES[f"w1{i}"] = pygame.image.load(f"Gallery/w{10 - i}.png")
+        SPRITE_IMAGES[f"b8{i}"] = pygame.image.load(f"Gallery/b{10 - i}.png")
 
-    def placePieces(self):
+    # Sprite Names White
+    global SPRITE_NAMES_WHITE
+    for i in range(2):
+        for j in range(8):
+            SPRITE_NAMES_WHITE.append(f"w{i + 1}{j + 1}")
 
-        for i in range(0, 8):
-            self.gameboard[(i, 1)] = Pawn(WHITE, uniDict[WHITE][Pawn], 1)
-            self.gameboard[(i, 6)] = Pawn(BLACK, uniDict[BLACK][Pawn], -1)
+    # Sprite Names Black
+    global SPRITE_NAMES_BLACK
+    for i in range(2):
+        for j in range(8):
+            SPRITE_NAMES_BLACK.append(f"b{i + 7}{j + 1}")
 
-        placers = [Rook, Knight, Bishop, Queen, King, Bishop, Knight, Rook]
+    # Sprite Names
+    global SPRITE_NAMES
+    for i in range(2):
+        for j in range(8):
+            SPRITE_NAMES.append(f"w{i + 1}{j + 1}")
+            SPRITE_NAMES.append(f"b{i + 7}{j + 1}")
 
-        for i in range(0, 8):
-            self.gameboard[(i, 0)] = placers[i](WHITE, uniDict[WHITE][placers[i]])
-            self.gameboard[((7 - i), 7)] = placers[i](BLACK, uniDict[BLACK][placers[i]])
-        placers.reverse()
+    # Sprite Categories
+    global PAWN, ROOK, KNIGHT, BISHOP, QUEEN, KING
+    for i in range(8):
+        PAWN.append(f"w2{i + 1}")
+        PAWN.append(f"b7{i + 1}")
+    ROOK.append("w11")
+    ROOK.append("w18")
+    ROOK.append("b81")
+    ROOK.append("b88")
+    KNIGHT.append("w12")
+    KNIGHT.append("w17")
+    KNIGHT.append("b82")
+    KNIGHT.append("b87")
+    BISHOP.append("w13")
+    BISHOP.append("w16")
+    BISHOP.append("b83")
+    BISHOP.append("b86")
+    QUEEN.append("w14")
+    QUEEN.append("b84")
+    KING.append("w15")
+    KING.append("b85")
 
-    def main(self):
+    # Adding Sprite Locations
+    global SPRITE_LOCATIONS
+    for i in range(2):
+        for j in range(8):
+            SPRITE_LOCATIONS[f"w{i + 1}{j + 1}"] = [i + 1, j + 1]
+            SPRITE_LOCATIONS[f"b{i + 7}{j + 1}"] = [i + 7, j + 1]
 
-        while True:
-            self.printBoard()
-            print(self.message)
-            self.message = ""
-            startpos, endpos = self.parseInput()
-            try:
-                target = self.gameboard[startpos]
-            except:
-                self.message = "could not find piece; index probably out of range"
-                target = None
 
-            if target:
-                print("found " + str(target))
-                if target.Color != self.playersturn:
-                    self.message = "you aren't allowed to move that piece this turn"
-                    continue
-                if target.isValid(startpos, endpos, target.Color, self.gameboard):
-                    self.message = "that is a valid move"
-                    self.gameboard[endpos] = self.gameboard[startpos]
-                    del self.gameboard[startpos]
-                    self.isCheck()
-                    if self.playersturn == BLACK:
-                        self.playersturn = WHITE
-                    else:
-                        self.playersturn = BLACK
-                else:
-                    self.message = "invalid move" + str(target.availableMoves(startpos[0], startpos[1], self.gameboard))
-                    print(target.availableMoves(startpos[0], startpos[1], self.gameboard))
+class Player:
+    __clicked = ""
+    __type = 0
+    __color = 0
+    __box = []
+
+    def __init__(self, clicked):
+        global VALID_BOXES, KILL_POSITION
+        self.__clicked = clicked
+        self.__type = self.__checkType()
+        self.__color = self.__checkColor()
+        self.__box = []
+        KILL_POSITION = []
+        VALID_BOXES = []
+
+    def __checkType(self):
+        if self.__clicked in PAWN:
+            return 1
+        elif self.__clicked in ROOK:
+            return 2
+        elif self.__clicked in KNIGHT:
+            return 3
+        elif self.__clicked in BISHOP:
+            return 4
+        elif self.__clicked in QUEEN:
+            return 5
+        elif self.__clicked in KING:
+            return 6
+
+    @staticmethod
+    def __checkColor():
+        if TURN_BLACK:
+            return 1
+        else:
+            return 2
+
+    def __finalSet(self):
+        global BLUE_BOXES, VALID_BOXES
+        BLUE_BOXES = []
+        VALID_BOXES = []
+        for item in self.__box:
+            rectBox(item)
+            VALID_BOXES.append(item)
+
+    def __suggestions(self, clicked):
+        global VALID_BOXES, SPRITE_LOCATIONS
+        self.__box.append([SPRITE_LOCATIONS[clicked][0], SPRITE_LOCATIONS[clicked][1]])
+        if self.__type == 1:
+            self.__type1(clicked)
+            self.__finalSet()
+            self.__checkOverlap()
+        elif self.__type == 2:
+            self.__type2(clicked)
+        elif self.__type == 3:
+            self.__type3(clicked)
+            self.__finalSet()
+            self.__checkOverlap()
+        elif self.__type == 4:
+            self.__type4(clicked)
+        elif self.__type == 5:
+            self.__type5(clicked)
+        elif self.__type == 6:
+            self.__type6(clicked)
+            self.__finalSet()
+            self.__checkOverlap()
+        self.__checkKill()
+        self.__finalSet()
+
+    def __type1(self, clicked):
+        global KILL_POSITION
+        if self.__color == 1:
+            if self.__box[0][0] == 7:
+                self.__box.append([SPRITE_LOCATIONS[clicked][0], SPRITE_LOCATIONS[clicked][1]])
+                self.__box[0][0] -= 2
+                self.__box[1][0] -= 1
+                for item in SPRITE_NAMES_WHITE:
+                    if SPRITE_LOCATIONS[item][0] == self.__box[1][0] and SPRITE_LOCATIONS[item][1] == self.__box[1][1]:
+                        self.__box = []
+                        break
             else:
-                self.message = "there is no piece in that space"
+                self.__box[0][0] -= 1
+            KILL_POSITION.append([SPRITE_LOCATIONS[clicked][0] - 1, SPRITE_LOCATIONS[clicked][1] - 1])
+            KILL_POSITION.append([SPRITE_LOCATIONS[clicked][0] - 1, SPRITE_LOCATIONS[clicked][1] + 1])
+        else:
+            if self.__box[0][0] == 2:
+                self.__box.append([SPRITE_LOCATIONS[clicked][0], SPRITE_LOCATIONS[clicked][1]])
+                self.__box[0][0] += 2
+                self.__box[1][0] += 1
+                for item in SPRITE_NAMES_BLACK:
+                    if SPRITE_LOCATIONS[item][0] == self.__box[1][0] and SPRITE_LOCATIONS[item][1] == self.__box[1][1]:
+                        self.__box = []
+                        break
+            else:
+                self.__box[0][0] += 1
+            KILL_POSITION.append([SPRITE_LOCATIONS[clicked][0] + 1, SPRITE_LOCATIONS[clicked][1] - 1])
+            KILL_POSITION.append([SPRITE_LOCATIONS[clicked][0] + 1, SPRITE_LOCATIONS[clicked][1] + 1])
 
-    def isCheck(self):
-        # ascertain where the kings are, check all pieces of opposing color against those kings, then if either get hit, check if its checkmate
-        king = King
-        kingDict = {}
-        pieceDict = {BLACK: [], WHITE: []}
-        for position, piece in self.gameboard.items():
-            if type(piece) == King:
-                kingDict[piece.Color] = position
-            print(piece)
-            pieceDict[piece.Color].append((piece, position))
-        # white
-        if self.canSeeKing(kingDict[WHITE], pieceDict[BLACK]):
-            self.message = "White player is in check"
-        if self.canSeeKing(kingDict[BLACK], pieceDict[WHITE]):
-            self.message = "Black player is in check"
+    def __type2(self, clicked):
+        self.__box = []
+        checkPos1 = [SPRITE_LOCATIONS[clicked][0] + 1, SPRITE_LOCATIONS[clicked][1]]
+        checkPos2 = [SPRITE_LOCATIONS[clicked][0] - 1, SPRITE_LOCATIONS[clicked][1]]
+        checkPos3 = [SPRITE_LOCATIONS[clicked][0], SPRITE_LOCATIONS[clicked][1] + 1]
+        checkPos4 = [SPRITE_LOCATIONS[clicked][0], SPRITE_LOCATIONS[clicked][1] - 1]
+        while self.__checkCurOverlap(checkPos1):
+            self.__box.append([checkPos1[0], checkPos1[1]])
+            checkPos1[0] += 1
+        while self.__checkCurOverlap(checkPos2):
+            self.__box.append([checkPos2[0], checkPos2[1]])
+            checkPos2[0] -= 1
+        while self.__checkCurOverlap(checkPos3):
+            self.__box.append([checkPos3[0], checkPos3[1]])
+            checkPos3[1] += 1
+        while self.__checkCurOverlap(checkPos4):
+            self.__box.append([checkPos4[0], checkPos4[1]])
+            checkPos4[1] -= 1
 
-    def canSeeKing(self, kingpos, piecelist):
-        # checks if any pieces in piece list (which is an array of (piece,position) tuples) can see the king in kingpos
-        for piece, position in piecelist:
-            if piece.isValid(position, kingpos, piece.Color, self.gameboard):
-                return True
+    def __type3(self, clicked):
+        global KILL_POSITION
+        self.__box = []
+        checkPos1 = [SPRITE_LOCATIONS[clicked][0] + 2, SPRITE_LOCATIONS[clicked][1] + 1]
+        checkPos2 = [SPRITE_LOCATIONS[clicked][0] - 2, SPRITE_LOCATIONS[clicked][1] + 1]
+        checkPos3 = [SPRITE_LOCATIONS[clicked][0] + 2, SPRITE_LOCATIONS[clicked][1] - 1]
+        checkPos4 = [SPRITE_LOCATIONS[clicked][0] - 2, SPRITE_LOCATIONS[clicked][1] - 1]
+        checkPos5 = [SPRITE_LOCATIONS[clicked][0] + 1, SPRITE_LOCATIONS[clicked][1] + 2]
+        checkPos6 = [SPRITE_LOCATIONS[clicked][0] + 1, SPRITE_LOCATIONS[clicked][1] - 2]
+        checkPos7 = [SPRITE_LOCATIONS[clicked][0] - 1, SPRITE_LOCATIONS[clicked][1] + 2]
+        checkPos8 = [SPRITE_LOCATIONS[clicked][0] - 1, SPRITE_LOCATIONS[clicked][1] - 2]
+        if 9 &gt; checkPos1[0] &gt; 0 and 9 &gt; checkPos1[1] &gt; 0:
+            self.__box.append([checkPos1[0], checkPos1[1]])
+        if 9 &gt; checkPos2[0] &gt; 0 and 9 &gt; checkPos2[1] &gt; 0:
+            self.__box.append([checkPos2[0], checkPos2[1]])
+        if 9 &gt; checkPos3[0] &gt; 0 and 9 &gt; checkPos3[1] &gt; 0:
+            self.__box.append([checkPos3[0], checkPos3[1]])
+        if 9 &gt; checkPos4[0] &gt; 0 and 9 &gt; checkPos4[1] &gt; 0:
+            self.__box.append([checkPos4[0], checkPos4[1]])
+        if 9 &gt; checkPos5[0] &gt; 0 and 9 &gt; checkPos5[1] &gt; 0:
+            self.__box.append([checkPos5[0], checkPos5[1]])
+        if 9 &gt; checkPos6[0] &gt; 0 and 9 &gt; checkPos6[1] &gt; 0:
+            self.__box.append([checkPos6[0], checkPos6[1]])
+        if 9 &gt; checkPos7[0] &gt; 0 and 9 &gt; checkPos7[1] &gt; 0:
+            self.__box.append([checkPos7[0], checkPos7[1]])
+        if 9 &gt; checkPos8[0] &gt; 0 and 9 &gt; checkPos8[1] &gt; 0:
+            self.__box.append([checkPos8[0], checkPos8[1]])
+        for item in self.__box:
+            KILL_POSITION.append(item)
 
-    def parseInput(self):
+    def __type4(self, clicked):
+        self.__box = []
+        checkPos1 = [SPRITE_LOCATIONS[clicked][0] + 1, SPRITE_LOCATIONS[clicked][1] + 1]
+        checkPos2 = [SPRITE_LOCATIONS[clicked][0] - 1, SPRITE_LOCATIONS[clicked][1] + 1]
+        checkPos3 = [SPRITE_LOCATIONS[clicked][0] + 1, SPRITE_LOCATIONS[clicked][1] - 1]
+        checkPos4 = [SPRITE_LOCATIONS[clicked][0] - 1, SPRITE_LOCATIONS[clicked][1] - 1]
+        while self.__checkCurOverlap(checkPos1):
+            self.__box.append([checkPos1[0], checkPos1[1]])
+            checkPos1[0] += 1
+            checkPos1[1] += 1
+        while self.__checkCurOverlap(checkPos2):
+            self.__box.append([checkPos2[0], checkPos2[1]])
+            checkPos2[0] -= 1
+            checkPos2[1] += 1
+        while self.__checkCurOverlap(checkPos3):
+            self.__box.append([checkPos3[0], checkPos3[1]])
+            checkPos3[0] += 1
+            checkPos3[1] -= 1
+        while self.__checkCurOverlap(checkPos4):
+            self.__box.append([checkPos4[0], checkPos4[1]])
+            checkPos4[0] -= 1
+            checkPos4[1] -= 1
+
+    def __type5(self, clicked):
+        self.__type2(clicked)
+        box1 = self.__box
+        self.__type4(clicked)
+        box2 = self.__box
+        self.__box = []
+
+        for item in box1:
+            self.__box.append(item)
+        for item in box2:
+            self.__box.append(item)
+
+    def __type6(self, clicked):
+        global KILL_POSITION
+        self.__box = []
+        checkPos1 = [SPRITE_LOCATIONS[clicked][0] + 1, SPRITE_LOCATIONS[clicked][1] + 1]
+        checkPos2 = [SPRITE_LOCATIONS[clicked][0] + 1, SPRITE_LOCATIONS[clicked][1]]
+        checkPos3 = [SPRITE_LOCATIONS[clicked][0] + 1, SPRITE_LOCATIONS[clicked][1] - 1]
+        checkPos4 = [SPRITE_LOCATIONS[clicked][0] - 1, SPRITE_LOCATIONS[clicked][1] + 1]
+        checkPos5 = [SPRITE_LOCATIONS[clicked][0] - 1, SPRITE_LOCATIONS[clicked][1]]
+        checkPos6 = [SPRITE_LOCATIONS[clicked][0] - 1, SPRITE_LOCATIONS[clicked][1] - 1]
+        checkPos7 = [SPRITE_LOCATIONS[clicked][0], SPRITE_LOCATIONS[clicked][1] + 1]
+        checkPos8 = [SPRITE_LOCATIONS[clicked][0], SPRITE_LOCATIONS[clicked][1] - 1]
+        if 9 &gt; checkPos1[0] &gt; 0 and 9 &gt; checkPos1[1] &gt; 0:
+            self.__box.append([checkPos1[0], checkPos1[1]])
+        if 9 &gt; checkPos2[0] &gt; 0 and 9 &gt; checkPos2[1] &gt; 0:
+            self.__box.append([checkPos2[0], checkPos2[1]])
+        if 9 &gt; checkPos3[0] &gt; 0 and 9 &gt; checkPos3[1] &gt; 0:
+            self.__box.append([checkPos3[0], checkPos3[1]])
+        if 9 &gt; checkPos4[0] &gt; 0 and 9 &gt; checkPos4[1] &gt; 0:
+            self.__box.append([checkPos4[0], checkPos4[1]])
+        if 9 &gt; checkPos5[0] &gt; 0 and 9 &gt; checkPos5[1] &gt; 0:
+            self.__box.append([checkPos5[0], checkPos5[1]])
+        if 9 &gt; checkPos6[0] &gt; 0 and 9 &gt; checkPos6[1] &gt; 0:
+            self.__box.append([checkPos6[0], checkPos6[1]])
+        if 9 &gt; checkPos7[0] &gt; 0 and 9 &gt; checkPos7[1] &gt; 0:
+            self.__box.append([checkPos7[0], checkPos7[1]])
+        if 9 &gt; checkPos8[0] &gt; 0 and 9 &gt; checkPos8[1] &gt; 0:
+            self.__box.append([checkPos8[0], checkPos8[1]])
+        for item in self.__box:
+            KILL_POSITION.append(item)
+
+    def __checkCurOverlap(self, toCheck):
+        global KILL_POSITION
+        if 9 &gt; toCheck[0] &gt; 0 and 9 &gt; toCheck[1] &gt; 0:
+            if self.__color == 1:
+                for item in SPRITE_NAMES_WHITE:
+                    if SPRITE_LOCATIONS[item] == toCheck:
+                        self.__box.append([toCheck[0], toCheck[1]])
+                        KILL_POSITION.append([toCheck[0], toCheck[1]])
+                        return False
+                for item in SPRITE_NAMES_BLACK:
+                    if SPRITE_LOCATIONS[item] == toCheck:
+                        return False
+            else:
+                for item in SPRITE_NAMES_WHITE:
+                    if SPRITE_LOCATIONS[item] == toCheck:
+                        return False
+                for item in SPRITE_NAMES_BLACK:
+                    if SPRITE_LOCATIONS[item] == toCheck:
+                        self.__box.append([toCheck[0], toCheck[1]])
+                        KILL_POSITION.append([toCheck[0], toCheck[1]])
+                        return False
+            return True
+        else:
+            return False
+
+    def __checkOverlap(self):
+        if self.__color == 1:
+            for item in SPRITE_NAMES:
+                if SPRITE_LOCATIONS[item] in VALID_BOXES:
+                    self.__box.remove([SPRITE_LOCATIONS[item][0], SPRITE_LOCATIONS[item][1]])
+        else:
+            for item in SPRITE_NAMES:
+                if SPRITE_LOCATIONS[item] in VALID_BOXES:
+                    self.__box.remove([SPRITE_LOCATIONS[item][0], SPRITE_LOCATIONS[item][1]])
+
+    def __checkKill(self):
+        if self.__color == 1:
+            for item in SPRITE_NAMES_WHITE:
+                if SPRITE_LOCATIONS[item] in KILL_POSITION:
+                    self.__box.append([SPRITE_LOCATIONS[item][0], SPRITE_LOCATIONS[item][1]])
+        else:
+            for item in SPRITE_NAMES_BLACK:
+                if SPRITE_LOCATIONS[item] in KILL_POSITION:
+                    self.__box.append([SPRITE_LOCATIONS[item][0], SPRITE_LOCATIONS[item][1]])
+
+    def startSuggestions(self, clicked):
+        self.__suggestions(clicked)
+
+
+def updateScreen(img, x, y):
+    if img is not None:
+        SCREEN.blit(img, (x, y))
+
+
+def drawRect(color, x1, y1, x2, y2):
+    pygame.draw.rect(SCREEN, color, pygame.Rect(x1, y1, x2, y2), 5)
+
+
+def rectBox(where):
+    global BLUE_BOXES
+    BLUE_BOXES.append([BOX_X[where[1] - 1][0], BOX_Y[where[0] - 1][0], BOX_X[where[1] - 1][1] - BOX_X[where[1] - 1][0],
+                       BOX_Y[where[0] - 1][1] - BOX_Y[where[0] - 1][0]])
+
+
+def playerRole():
+    player = Player(CLICKED_SPRITE)
+    player.startSuggestions(CLICKED_SPRITE)
+
+
+def showSprites():
+    for i in range(2):
+        for j in range(8):
+            try:
+                location = SPRITE_LOCATIONS[f"w{i + 1}{j + 1}"]
+                updateScreen(SPRITE_IMAGES[f"w{i + 1}{j + 1}"], BOX_LOCATION_X[location[1] - 1],
+                             BOX_LOCATION_Y[location[0] - 1])
+            except Exception as e:
+                a = 0
+            try:
+                location = SPRITE_LOCATIONS[f"b{i + 7}{j + 1}"]
+                updateScreen(SPRITE_IMAGES[f"b{i + 7}{j + 1}"], BOX_LOCATION_X[location[1] - 1],
+                             BOX_LOCATION_Y[location[0] - 1])
+            except Exception as e:
+                a = 0
+
+
+def removeSprite(item):
+    global SPRITE_IMAGES, SPRITE_LOCATIONS
+    global SPRITE_NAMES_WHITE, SPRITE_NAMES_BLACK, SPRITE_NAMES
+    global PAWN, ROOK, KNIGHT, BISHOP, QUEEN, KING
+    SPRITE_IMAGES[item] = None
+    try:
+        SPRITE_NAMES_WHITE.remove(item)
+    except Exception as e:
+        a = 1
+    try:
+        SPRITE_NAMES_BLACK.remove(item)
+    except Exception as e:
+        a = 1
+    try:
+        SPRITE_NAMES.remove(item)
+    except Exception as e:
+        a = 1
+    try:
+        PAWN.remove(item)
+    except Exception as e:
+        a = 1
+    try:
+        ROOK.remove(item)
+    except Exception as e:
+        a = 1
+    try:
+        KNIGHT.remove(item)
+    except Exception as e:
+        a = 1
+    try:
+        BISHOP.remove(item)
+    except Exception as e:
+        a = 1
+    try:
+        QUEEN.remove(item)
+    except Exception as e:
+        a = 1
+    try:
+        KING.remove(item)
+    except Exception as e:
+        a = 1
+    SPRITE_LOCATIONS.pop(item)
+
+
+def makeQueen():
+    global PAWN, QUEEN
+    for item in PAWN:
+        if item in SPRITE_NAMES_BLACK:
+            if SPRITE_LOCATIONS[item][0] == 1:
+                PAWN.remove(item)
+                QUEEN.append(item)
+                SPRITE_IMAGES[item] = pygame.image.load(f"Gallery/b5.png")
+        if item in SPRITE_NAMES_WHITE:
+            if SPRITE_LOCATIONS[item][0] == 8:
+                PAWN.remove(item)
+                QUEEN.append(item)
+                SPRITE_IMAGES[item] = pygame.image.load(f"Gallery/w5.png")
+
+
+def gameOver():
+    global GAME_OVER
+    if "w15" not in SPRITE_NAMES_WHITE:
+        GAME_OVER = True
+    if "b85" not in SPRITE_NAMES_BLACK:
+        GAME_OVER = True
+
+
+def selectPlayer(row, column):
+    global SPRITE_SELECTED, CLICKED_SPRITE
+    sprite_iter = []
+    if TURN_BLACK:
+        sprite_iter = SPRITE_NAMES_BLACK
+    else:
+        sprite_iter = SPRITE_NAMES_WHITE
+    for i in range(len(sprite_iter)):
         try:
-            a, b = input().split()
-            a = ((ord(a[0]) - 97), int(a[1]) - 1)
-            b = (ord(b[0]) - 97, int(b[1]) - 1)
-            print(a, b)
-            return (a, b)
-        except:
-            print("error decoding input. please try again")
-            return ((-1, -1), (-1, -1))
-
-    """def validateInput(self, *kargs):
-        for arg in kargs:
-            if type(arg[0]) is not type(1) or type(arg[1]) is not type(1):
-                return False
-        return True"""
-
-    def printBoard(self):
-        print("  1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |")
-        for i in range(0, 8):
-            print("-" * 32)
-            print(chr(i + 97), end="|")
-            for j in range(0, 8):
-                item = self.gameboard.get((i, j), " ")
-                print(str(item) + ' |', end=" ")
-            print()
-        print("-" * 32)
-
-    """game class. contains the following members and methods:
-    two arrays of pieces for each player
-    8x8 piece array with references to these pieces
-    a parse function, which turns the input from the user into a list of two tuples denoting start and end points
-    a checkmateExists function which checks if either players are in checkmate
-    a checkExists function which checks if either players are in check (woah, I just got that nonsequitur)
-    a main loop, which takes input, runs it through the parser, asks the piece if the move is valid, and moves the piece if it is. if the move conflicts with another piece, that piece is removed. ischeck(mate) is run, and if there is a checkmate, the game prints a message as to who wins
-    """
+            key = sprite_iter[i]
+            value = SPRITE_LOCATIONS[key]
+            if value[0] == row and value[1] == column:
+                CLICKED_SPRITE = key
+                break
+        except Exception as e:
+            CLICKED_SPRITE = ""
+    if CLICKED_SPRITE == "":
+        SPRITE_SELECTED = False
+    else:
+        SPRITE_SELECTED = True
+        playerRole()
 
 
-class Piece:
-
-    def __init__(self, color, name):
-        self.name = name
-        self.position = None
-        self.Color = color
-
-    def isValid(self, startpos, endpos, Color, gameboard):
-        if endpos in self.availableMoves(startpos[0], startpos[1], gameboard, Color=Color):
-            return True
-        return False
-
-    def __repr__(self):
-        return self.name
-
-    def __str__(self):
-        return self.name
-
-    def availableMoves(self, x, y, gameboard):
-        print("ERROR: no movement for base class")
-
-    def AdNauseum(self, x, y, gameboard, Color, intervals):
-        """repeats the given interval until another piece is run into. 
-        if that piece is not of the same color, that square is added and
-         then the list is returned"""
-        answers = []
-        for xint, yint in intervals:
-            xtemp, ytemp = x + xint, y + yint
-            while self.isInBounds(xtemp, ytemp):
-                # print(str((xtemp,ytemp))+"is in bounds")
-
-                target = gameboard.get((xtemp, ytemp), None)
-                if target is None:
-                    answers.append((xtemp, ytemp))
-                elif target.Color != Color:
-                    answers.append((xtemp, ytemp))
+def movePlayer(row, column):
+    global SPRITE_LOCATIONS, SPRITE_SELECTED, CLICKED_SPRITE
+    global TURN_BLACK, TURN_WHITE, BLUE_BOXES, VALID_BOXES, VALID_TURN
+    if [row, column] in VALID_BOXES:
+        VALID_TURN = True
+    else:
+        VALID_TURN = False
+    if VALID_TURN:
+        if [row, column] in KILL_POSITION:
+            for item in SPRITE_LOCATIONS:
+                if row == SPRITE_LOCATIONS[item][0] and column == SPRITE_LOCATIONS[item][1]:
+                    removeSprite(item)
                     break
+        SPRITE_LOCATIONS[CLICKED_SPRITE] = [row, column]
+        TURN_BLACK, TURN_WHITE = TURN_WHITE, TURN_BLACK
+    SPRITE_SELECTED = False
+    CLICKED_SPRITE = ""
+    BLUE_BOXES = []
+    makeQueen()
+    gameOver()
+
+
+def boxClick(x, y):
+    row, column = 1, 1
+    for i in range(len(BOX_X)):
+        item = BOX_X[i]
+        if x in range(item[0], item[1] + 1):
+            column = i + 1
+            break
+    for i in range(len(BOX_Y)):
+        item = BOX_Y[i]
+        if y in range(item[0], item[1] + 1):
+            row = i + 1
+            break
+    if SPRITE_SELECTED:
+        movePlayer(row, column)
+    else:
+        selectPlayer(row, column)
+
+
+def resetGame():
+    global GAME_OVER, TURN_BLACK, TURN_WHITE
+    GAME_OVER = False
+    TURN_WHITE = True
+    TURN_BLACK = False
+    setVariables()
+
+
+def mainGame():
+    while True:
+        updateScreen(SPRITE_IMAGES['board'], 0, 0)
+        showSprites()
+        for item in BLUE_BOXES:
+            drawRect((135, 206, 250), item[0], item[1], item[2], item[3])
+        pygame.display.update()
+
+        for event in pygame.event.get():
+            if event.type == QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
+                pygame.quit()
+                sys.exit()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                x, y = pygame.mouse.get_pos()
+                if not GAME_OVER:
+                    boxClick(x, y)
                 else:
-                    break
-
-                xtemp, ytemp = xtemp + xint, ytemp + yint
-        return answers
-
-    def isInBounds(self, x, y):
-        "checks if a position is on the board"
-        if x &gt;= 0 and x &lt; 8 and y &gt;= 0 and y &lt; 8:
-            return True
-        return False
-
-    def noConflict(self, gameboard, initialColor, x, y):
-        "checks if a single position poses no conflict to the rules of chess"
-        if self.isInBounds(x, y) and (((x, y) not in gameboard) or gameboard[(x, y)].Color != initialColor): return True
-        return False
+                    resetGame()
 
 
-chessCardinals = [(1, 0), (0, 1), (-1, 0), (0, -1)]
-chessDiagonals = [(1, 1), (-1, 1), (1, -1), (-1, -1)]
-
-
-def knightList(x, y, int1, int2):
-    """sepcifically for the rook, permutes the values needed around a position for noConflict tests"""
-    return [(x + int1, y + int2), (x - int1, y + int2), (x + int1, y - int2), (x - int1, y - int2),
-            (x + int2, y + int1), (x - int2, y + int1), (x + int2, y - int1), (x - int2, y - int1)]
-
-
-def kingList(x, y):
-    return [(x + 1, y), (x + 1, y + 1), (x + 1, y - 1), (x, y + 1), (x, y - 1), (x - 1, y), (x - 1, y + 1),
-            (x - 1, y - 1)]
-
-
-class Knight(Piece):
-    def availableMoves(self, x, y, gameboard, Color=None):
-        if Color is None: Color = self.Color
-        return [(xx, yy) for xx, yy in knightList(x, y, 2, 1) if self.noConflict(gameboard, Color, xx, yy)]
-
-
-class Rook(Piece):
-    def availableMoves(self, x, y, gameboard, Color=None):
-        if Color is None: Color = self.Color
-        return self.AdNauseum(x, y, gameboard, Color, chessCardinals)
-
-
-class Bishop(Piece):
-    def availableMoves(self, x, y, gameboard, Color=None):
-        if Color is None: Color = self.Color
-        return self.AdNauseum(x, y, gameboard, Color, chessDiagonals)
-
-
-class Queen(Piece):
-    def availableMoves(self, x, y, gameboard, Color=None):
-        if Color is None: Color = self.Color
-        return self.AdNauseum(x, y, gameboard, Color, chessCardinals + chessDiagonals)
-
-
-class King(Piece):
-    def availableMoves(self, x, y, gameboard, Color=None):
-        if Color is None: Color = self.Color
-        return [(xx, yy) for xx, yy in kingList(x, y) if self.noConflict(gameboard, Color, xx, yy)]
-
-
-class Pawn(Piece):
-    def __init__(self, color, name, direction):
-        self.name = name
-        self.Color = color
-        # of course, the smallest piece is the hardest to code. direction should be either 1 or -1, should be -1 if the pawn is traveling "backwards"
-        self.direction = direction
-
-    def availableMoves(self, x, y, gameboard, Color=None):
-        if Color is None: Color = self.Color
-        answers = []
-        if (x + 1, y + self.direction) in gameboard and self.noConflict(gameboard, Color, x + 1,
-                                                                        y + self.direction): answers.append(
-            (x + 1, y + self.direction))
-        if (x - 1, y + self.direction) in gameboard and self.noConflict(gameboard, Color, x - 1,
-                                                                        y + self.direction): answers.append(
-            (x - 1, y + self.direction))
-        if (x, y + self.direction) not in gameboard and Color == self.Color: answers.append((x,
-                                                                                             y + self.direction))  # the condition after the and is to make sure the non-capturing movement (the only fucking one in the game) is not used in the calculation of checkmate
-        return answers
-
-
-uniDict = {WHITE: {Pawn: "♙", Rook: "♖", Knight: "♘", Bishop: "♗", King: "♔", Queen: "♕"},
-           BLACK: {Pawn: "♟", Rook: "♜", Knight: "♞", Bishop: "♝", King: "♚", Queen: "♛"}}
-
-Game()
+if __name__ == '__main__':
+    pygame.init()
+    pygame.display.set_caption("Chess Game By Saksham")
+    setVariables()
+    mainGame()
 </code></pre>
                     </div>
                 </div>
